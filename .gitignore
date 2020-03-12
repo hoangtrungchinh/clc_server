@@ -1,7 +1,7 @@
-
+# cache file
+__pycache__
 */__pycache__
-mysite/__pycache__
-myapi/__pycache__
+*/*/__pycache__
 
 
 # Visual Studio Code # 
