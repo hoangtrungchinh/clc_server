@@ -1,6 +1,5 @@
 # cache file
 __pycache__
-*/__pycache__
 
 # Visual Studio Code # 
 .vscode/* 
