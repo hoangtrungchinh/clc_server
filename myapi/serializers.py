@@ -5,4 +5,4 @@ from .models import clc
 class ClcSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = clc
-        fields = ('src', 'tar')
+        fields = ('id', 'src', 'tar')
