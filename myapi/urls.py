@@ -18,7 +18,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     # url(r'^clc_collection/$', views.clc_collection),
-    url(r'^clc_get_by_src/$', views.clc_get_by_src),
+    url(r'^get_tm_by_src/$', views.get_tm_by_src),
     url(r'^sign_up/$', views.sign_up),
     url(r'^get-token/', v.obtain_auth_token),
     path(r'docs/', include_docs_urls(title='CLC API')),

@@ -43,7 +43,7 @@ class ClcViewSet(viewsets.ModelViewSet):
 #         return Response(clc_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
 @api_view(['GET'])
-def clc_get_by_src(request):
+def get_tm_by_src(request):
     try:
         _src=request.data["src"]
 

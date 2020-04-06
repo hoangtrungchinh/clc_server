@@ -1,0 +1,55 @@
+
+# SIGN UP
+POST http://127.0.0.1:8000/sign_up/ 
+Content-Type: application/json
+
+{
+    "username": "chi",
+    "email": "chi@gmail.com",
+    "password": "123456789"
+}
+
+###
+# SIGN IN
+POST http://127.0.0.1:8000/get-token/ 
+Content-Type: application/json
+Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+
+{
+    "username": "chi",
+    "password": "123456789"
+}
+
+
+# CLC
+###
+GET http://127.0.0.1:8000/clcs/
+Content-Type: application/json
+Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+
+###
+GET http://127.0.0.1:8000/clcs/1
+Content-Type: application/json
+Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+
+###
+POST http://127.0.0.1:8000/clcs/
+Content-Type: application/json
+Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+
+{
+    "src": "Love in your eyes",
+    "tar": "Tình yêu trong mắt em"
+}
+
+###
+# sear by tar
+GET http://127.0.0.1:8000/get_tm_by_src/
+Content-Type: application/json
+Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+
+{
+    "src": "happy"
+}
+
+
