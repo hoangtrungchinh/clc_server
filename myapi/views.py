@@ -4,16 +4,23 @@ from rest_framework import viewsets
 from .serializers import ClcSerializer
 from .models import clc
 
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.authtoken.models import Token
+from rest_framework.permissions import AllowAny
 
+
+from django.contrib.auth.models import User
 
 from django.http import JsonResponse, HttpResponse
 
 from elasticsearch import Elasticsearch 
 from elasticsearch_dsl import Search, Q
+
 import json
+from django.db import IntegrityError
+
 
 class ClcViewSet(viewsets.ModelViewSet):
     queryset = clc.objects.all().order_by('tar')
@@ -61,3 +68,28 @@ def clc_get_by_src(request):
     except Exception as e:
         j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+
+
+
+@api_view(['POST'])
+@permission_classes((AllowAny,))
+def sign_up(request):
+    try:
+        username = request.data["username"]
+        email = request.data["email"]
+        password = request.data["password"]
+
+        # import pdb; pdb.set_trace()
+        user = User.objects.create_user(username, email, password)
+        token = Token.objects.create(user=user)
+
+        j = {"id":user.id, "username":username, "email":email, "token": token.key }
+
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+
+    except IntegrityError as e:
+        j = {"is_success":False, "err_msg": username+" already exists"}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+    except Exception as e:
+        j = {"is_success":False, "err_msg": ""+str(e)}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)

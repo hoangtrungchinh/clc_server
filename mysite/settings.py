@@ -44,6 +44,10 @@ INSTALLED_APPS = [
 
     'myapi.apps.MyapiConfig',
     'rest_framework',
+
+    'django.contrib.sites',
+
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [        
@@ -132,3 +136,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# https://medium.com/quick-code/token-based-authentication-for-django-rest-framework-44586a9a56fb
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated', ),
+
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+
+}
