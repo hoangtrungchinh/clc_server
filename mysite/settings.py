@@ -48,7 +48,10 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'rest_framework.authtoken',
+    'drf_yasg',
 ]
+
+SITE_ID=1
 
 MIDDLEWARE = [        
     'django.middleware.security.SecurityMiddleware',
