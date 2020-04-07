@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 from rest_framework import viewsets
-from .serializers import ClcSerializer
-from .models import clc
+from .serializers import TranslationMemorySerializer
+from .models import TranslationMemory
 
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -22,9 +22,9 @@ import json
 from django.db import IntegrityError
 
 
-class ClcViewSet(viewsets.ModelViewSet):
-    queryset = clc.objects.all().order_by('tar')
-    serializer_class = ClcSerializer
+class TranslationMemoryViewSet(viewsets.ModelViewSet):
+    queryset = TranslationMemory.objects.all().order_by('tar')
+    serializer_class = TranslationMemorySerializer
 
 
 # @api_view(['GET','POST'])
@@ -49,7 +49,7 @@ def get_tm_by_src(request):
 
         client = Elasticsearch()      
         q = Q("match", src=_src) 
-        s = Search(using=client, index="clc").query(q)[0:20] 
+        s = Search(using=client, index="translation_memorys").query(q)[0:20] 
         res = s.execute()
 
         dict={}

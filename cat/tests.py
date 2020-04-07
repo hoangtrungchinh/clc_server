@@ -8,9 +8,9 @@ from rest_framework.test import APIRequestFactory
 from django.contrib.auth import get_user_model
 from rest_framework.authtoken.models import Token
 
-from myapi import views
+from translation_memory import views
 
-class TestClc(APITestCase):
+class TestTranslationMemory(APITestCase):
     def setUp(self):
         self.factory = APIRequestFactory()
         self.view = views.ClcViewSet.as_view({'get': 'list'})

@@ -10,7 +10,7 @@ from rest_framework.schemas.coreapi import AutoSchema
 from django.contrib import admin
 
 router = routers.DefaultRouter()
-router.register(r'clcs', views.ClcViewSet)
+router.register(r'translation_memories', views.TranslationMemoryViewSet)
 
 
 # Wire up our API using automatic URL routing.
@@ -26,8 +26,7 @@ urlpatterns = [
     url(r'^docs/', include_docs_urls(title='My API title', public=True))
 ]
 
-
-
+urlpatterns += router.urls
 
 
 from rest_framework import permissions

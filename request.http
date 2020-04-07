@@ -13,7 +13,7 @@ Content-Type: application/json
 # SIGN IN
 POST http://127.0.0.1:8000/get-token/ 
 Content-Type: application/json
-Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+
 
 {
     "username": "chi",
@@ -23,19 +23,29 @@ Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
 
 # CLC
 ###
-GET http://127.0.0.1:8000/clcs/
+GET http://127.0.0.1:8000/translation_memories/
 Content-Type: application/json
-Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
 
 ###
-GET http://127.0.0.1:8000/clcs/1
+GET http://127.0.0.1:8000/translation_memories/1
 Content-Type: application/json
-Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
 
 ###
-POST http://127.0.0.1:8000/clcs/
+POST http://127.0.0.1:8000/translation_memories/
 Content-Type: application/json
-Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
+
+{
+    "src": "Love in your eyes2",
+    "tar": "Tình yêu trong mắt em2"
+}
+
+###
+PUT http://127.0.0.1:8000/translation_memories/5/
+Content-Type: application/json
+Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
 
 {
     "src": "Love in your eyes",
@@ -43,10 +53,15 @@ Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
 }
 
 ###
+DELETE http://127.0.0.1:8000/translation_memories/5/
+Content-Type: application/json
+Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
+
+###
 # sear by tar
 GET http://127.0.0.1:8000/get_tm_by_src/
 Content-Type: application/json
-Authorization: token e4a39524aa6fcc7c98ddae9da75a1b0218243ac5
+Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
 
 {
     "src": "happy"

@@ -1,5 +1,5 @@
 from django.db import models
-class clc(models.Model):
+class TranslationMemory(models.Model):
     src = models.TextField()
     tar = models.TextField()
     

@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
 
-    'myapi.apps.MyapiConfig',
+    'django_elasticsearch_dsl',
     'rest_framework',
-
+    'cat',
     'django.contrib.sites',
 
     'rest_framework.authtoken',
@@ -93,7 +93,7 @@ DATABASES = {
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myapi',
+        'NAME': 'cat',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',
@@ -151,4 +151,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated', ),
 
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+}
+
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'http://localhost:9200'
+    },
 }
