@@ -1,27 +1,3 @@
-
-# SIGN UP
-POST http://127.0.0.1:8000/sign_up/ 
-Content-Type: application/json
-
-{
-    "username": "chi",
-    "email": "chi@gmail.com",
-    "password": "123456789"
-}
-
-###
-# SIGN IN
-POST http://127.0.0.1:8000/get-token/ 
-Content-Type: application/json
-
-
-{
-    "username": "chi",
-    "password": "123456789"
-}
-
-
-# CLC
 ###
 GET http://127.0.0.1:8000/translation_memories/
 Content-Type: application/json
@@ -66,5 +42,3 @@ Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
 {
     "src": "happy"
 }
-
-
