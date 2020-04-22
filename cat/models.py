@@ -1,18 +1,91 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django import forms
+
 class TranslationMemory(models.Model):
-    src = models.TextField()
-    tar = models.TextField()
+    name = models.TextField()
+    description = models.TextField()
+    src_lang = models.TextField()
+    tar_lang = models.TextField()
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
     
     def __str__(self):
-        return self.src + " | " + self.tar
+        return self.src_lang + " | " + self.tar_lang
         
-# class Glossary(models.Model):
-#     src_lang = models.TextField()
-#     tar_lang = models.TextField()
-#     src_phrase = models.TextField()
-#     tar_phrase = models.TextField()
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+class TMContent(models.Model):
+    src_sentence = models.TextField()
+    tar_sentence = models.TextField()
+    translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.CASCADE)
     
-#     def __str__(self):
-#         return self.src + " | " + self.tar
+    def __str__(self):
+        return self.name
+        
+
+class GlossaryType(models.Model):
+    name = models.TextField()
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class Glosssary(models.Model):
+    name = models.TextField()
+    description = models.TextField()
+    src_lang = models.TextField()
+    tar_lang = models.TextField()
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    Type = models.ForeignKey(GlossaryType, on_delete=models.PROTECT)
+    
+    def __str__(self):
+        return self.src_lang + " | " + self.tar_lang       
+
+
+    
+class GlossaryContent(models.Model):
+    src_phrase = models.TextField()
+    tar_phrase = models.TextField()
+    glosssary = models.ForeignKey(Glosssary, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.src_phrase + " | " + self.tar_phrase
+
+
+
+
+class Project(models.Model):
+    name = models.TextField()
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    src_lang = models.TextField()
+    tar_lang = models.TextField()
+    translate_service = models.TextField()
+    translation_memory = models.ManyToManyField(TranslationMemory)
+    glossary = models.ManyToManyField(Glosssary)
+    
+    def __str__(self):
+        return self.name
+        
+        
+class File(models.Model):
+    file = forms.FileField()
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    confirm = models.IntegerField()
+    
+    def __str__(self):
+        return self.name
+                
+        
+class Sentence(models.Model):
+    file = models.ForeignKey(File, on_delete=models.CASCADE)
+    src_str = models.TextField()
+    tar_str = models.TextField()
+    score = models.FloatField()
+    is_confirmed = models.BooleanField()
+    tag = models.TextField()
+
+    def __str__(self):
+        return self.file.name
+
+
         
