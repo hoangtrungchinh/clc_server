@@ -9,15 +9,26 @@ from rest_framework.schemas.coreapi import AutoSchema
 
 from django.contrib import admin
 
+from .views import *
+
 router = routers.DefaultRouter()
 router.register(r'translation_memories', views.TranslationMemoryViewSet)
+router.register(r'tm_content', views.TMContentViewSet)
+router.register(r'glossary_Type', views.GlossaryTypeViewSet)
+router.register(r'glossary', views.GlossaryViewSet)
+router.register(r'glossary_content', views.GlossaryContentViewSet)
+router.register(r'project', views.ProjectViewSet)
+# router.register(r'file', views.FileViewSet)
+
+
+
 
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-
+    path('file/', FileUploadView.as_view()),  
     # url(r'^clc_collection/$', views.clc_collection),
     url(r'^get_tm_by_src/$', views.get_tm_by_src),
     url(r'^sign_up/$', views.sign_up),

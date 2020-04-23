@@ -1,0 +1,40 @@
+###
+GET http://127.0.0.1:8000/tm_content/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+###
+GET http://127.0.0.1:8000/tm_content/19
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+###
+POST http://127.0.0.1:8000/tm_content/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+{
+    "src_sentence": "Love in your eyes 2",
+    "tar_sentence": "Tình yêu trong mắt em 2",
+    "translation_memory": 1
+}
+
+###
+PUT http://127.0.0.1:8000/tm_content/19/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+{
+    "src_sentence": "Love in your eyes 3",
+    "tar_sentence": "Tình yêu trong mắt em 3",
+    "translation_memory": 2
+}
+
+###
+DELETE http://127.0.0.1:8000/tm_content/19/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+###
+# sear by tar
+GET http://127.0.0.1:8000/get_tm_by_src/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+{
+    "src": "happy"
+}

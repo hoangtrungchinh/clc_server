@@ -1,0 +1,42 @@
+###
+GET http://127.0.0.1:8000/glossary/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+###
+GET http://127.0.0.1:8000/glossary/2
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+###
+POST http://127.0.0.1:8000/glossary/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+{
+  "name": "khxhnv",
+  "description": "Sản phẩm của trường ĐH Khoa học xhnv",
+  "src_lang": "en",
+  "tar_lang": "vi",
+  "user": 1,
+  "Type": 1
+}
+
+###
+PUT http://127.0.0.1:8000/glossary/1/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+{
+  "name": "khxhnv",
+  "description": "Sản phẩm của trường ĐH Khoa học xhnv",
+  "src_lang": "en",
+  "tar_lang": "vi",
+  "user": 1,
+  "Type": 1
+}
+
+###
+DELETE http://127.0.0.1:8000/glossary/3/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732

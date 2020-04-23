@@ -1,15 +1,35 @@
 from django.shortcuts import render
 
 from rest_framework import viewsets
-from .serializers import TranslationMemorySerializer
-from .models import TranslationMemory
+
+from .models import (
+    TranslationMemory,
+    TMContent,
+    GlossaryType,
+    Glossary,
+    GlossaryContent,
+    Project,
+    File,
+)
+
+from .serializers import (
+    TranslationMemorySerializer,
+    TMContentSerializer,
+    GlossaryTypeSerializer,
+    GlossarySerializer,
+    GlossaryContentSerializer,
+    ProjectSerializer,
+    FileSerializer,
+)
+
 
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
-
+from rest_framework.views import APIView
+from rest_framework.parsers import FileUploadParser
 
 from django.contrib.auth.models import User
 
@@ -23,8 +43,56 @@ from django.db import IntegrityError
 
 
 class TranslationMemoryViewSet(viewsets.ModelViewSet):
-    queryset = TranslationMemory.objects.all().order_by('tar')
+    queryset = TranslationMemory.objects.all().order_by('id')
     serializer_class = TranslationMemorySerializer
+
+
+class TMContentViewSet(viewsets.ModelViewSet):
+    queryset = TMContent.objects.all()
+    serializer_class = TMContentSerializer
+
+
+class GlossaryTypeViewSet(viewsets.ModelViewSet):
+    queryset = GlossaryType.objects.all()
+    serializer_class = GlossaryTypeSerializer
+
+
+class GlossaryViewSet(viewsets.ModelViewSet):
+    queryset = Glossary.objects.all()
+    serializer_class = GlossarySerializer
+
+
+class GlossaryContentViewSet(viewsets.ModelViewSet):
+    queryset = GlossaryContent.objects.all()
+    serializer_class = GlossaryContentSerializer
+
+
+class ProjectViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+
+class FileUploadView(APIView):
+    parser_class = (FileUploadParser,)
+
+    def post(self, request, *args, **kwargs):
+
+      file_serializer = FileSerializer(data=request.data)
+
+      if file_serializer.is_valid():
+          file_serializer.save()
+          return Response(file_serializer.data, status=status.HTTP_201_CREATED)
+      else:
+          return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+
+# class FileViewSet(viewsets.ModelViewSet):
+#     queryset = File.objects.all()
+#     serializer_class = FileSerializer
 
 
 # @api_view(['GET','POST'])

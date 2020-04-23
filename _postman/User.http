@@ -4,8 +4,8 @@ POST http://127.0.0.1:8000/sign_up/
 Content-Type: application/json
 
 {
-    "username": "chi",
-    "email": "chi@gmail.com",
+    "username": "chinh",
+    "email": "chinhguitar@gmail.com",
     "password": "123456789"
 }
 
@@ -16,6 +16,6 @@ Content-Type: application/json
 
 
 {
-    "username": "chi",
+    "username": "chinh",
     "password": "123456789"
 }

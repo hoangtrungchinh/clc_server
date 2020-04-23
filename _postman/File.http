@@ -1,0 +1,41 @@
+
+###
+
+
+
+POST http://127.0.0.1:8000/file/
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; project=1;   confirm=1; file="_postman/_example.txt"
+
+
+###
+GET http://127.0.0.1:8000/file/
+Content-Type: multipart/form-data
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+###
+GET http://127.0.0.1:8000/file/2
+Content-Type: multipart/form-data
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+###
+PUT http://127.0.0.1:8000/file/2/
+Content-Type: multipart/form-data
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+{
+  "name": "pj1 updated",
+  "user": 1,
+  "src_lang": "vi",
+  "tar_lang": "en",
+  "translate_service": "GG",
+  "translation_memory": [1,2],
+  "glossary": [1]
+}
+
+
+###
+DELETE http://127.0.0.1:8000/file/2/
+Content-Type: multipart/form-data
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732

@@ -1,0 +1,37 @@
+
+###
+POST http://127.0.0.1:8000/glossary_content/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+{
+  "src_phrase": "I love you",
+  "tar_phrase": "Anh yêu em",
+  "glossary": 1
+}
+
+###
+GET http://127.0.0.1:8000/glossary_content/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+###
+GET http://127.0.0.1:8000/glossary_content/2
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+###
+PUT http://127.0.0.1:8000/glossary_content/1/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+{
+  "src_phrase": "I love you so much",
+  "tar_phrase": "Anh yêu em rất nhiều",
+  "glossary": 1
+}
+
+###
+DELETE http://127.0.0.1:8000/glossary_content/2/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732

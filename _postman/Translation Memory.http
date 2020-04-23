@@ -1,44 +1,36 @@
 ###
 GET http://127.0.0.1:8000/translation_memories/
 Content-Type: application/json
-Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
-
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 ###
 GET http://127.0.0.1:8000/translation_memories/1
 Content-Type: application/json
-Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
-
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 ###
 POST http://127.0.0.1:8000/translation_memories/
 Content-Type: application/json
-Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
-
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 {
-    "src": "Love in your eyes2",
-    "tar": "Tình yêu trong mắt em2"
+    "name": "TM3",
+    "description": "des",
+    "src_lang": "ja",
+    "tar_lang": "vi",
+    "user": 1
 }
 
 ###
-PUT http://127.0.0.1:8000/translation_memories/5/
+PUT http://127.0.0.1:8000/translation_memories/3/
 Content-Type: application/json
-Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
-
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 {
-    "src": "Love in your eyes",
-    "tar": "Tình yêu trong mắt em"
+    "name": "TM3 updated",
+    "description": "des updated",
+    "src_lang": "phil",
+    "tar_lang": "en",
+    "user": 1
 }
 
 ###
-DELETE http://127.0.0.1:8000/translation_memories/5/
+DELETE http://127.0.0.1:8000/translation_memories/3/
 Content-Type: application/json
-Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
-
-###
-# sear by tar
-GET http://127.0.0.1:8000/get_tm_by_src/
-Content-Type: application/json
-Authorization: token afe5a59a13e6928260f6cd6c8ebdc9b4285c2f65
-
-{
-    "src": "happy"
-}
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
