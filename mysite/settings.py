@@ -61,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'request_logging.middleware.LoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -156,5 +158,23 @@ REST_FRAMEWORK = {
 ELASTICSEARCH_DSL = {
     'default': {
         'hosts': 'http://localhost:9200'
+    },
+}
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'DEBUG',  # change debug level as appropiate
+            'propagate': False,
+        },
     },
 }

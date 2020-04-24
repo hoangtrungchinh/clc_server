@@ -1,41 +1,28 @@
-
+# Hiện tại Plugin không không hỗ trợ tốt với upload file (không giống với trang chủ họ nói), vậy nên để chạy được: sử dụng lệnh dước trong cmd
 ###
+curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/_postman/_example.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732" 
 
 
-
+# TODO: Đây là request upload file, sẽ sử dụng sau khi Plugin của vscode Updated
+###
 POST http://127.0.0.1:8000/file/
 Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; project=1;   confirm=1; file="_postman/_example.txt"
 
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="confirm"
 
-###
-GET http://127.0.0.1:8000/file/
-Content-Type: multipart/form-data
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+20
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="project"
 
-###
-GET http://127.0.0.1:8000/file/2
-Content-Type: multipart/form-data
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+1
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Type: text/plain
+Content-Disposition: form-data; name="file"; filename="_example.txt"
 
-###
-PUT http://127.0.0.1:8000/file/2/
-Content-Type: multipart/form-data
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
-
-{
-  "name": "pj1 updated",
-  "user": 1,
-  "src_lang": "vi",
-  "tar_lang": "en",
-  "translate_service": "GG",
-  "translation_memory": [1,2],
-  "glossary": [1]
-}
-
+< /home/chinh/clc_server/_postman/_example.txt
+----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ###
-DELETE http://127.0.0.1:8000/file/2/
-Content-Type: multipart/form-data
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
