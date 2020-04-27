@@ -9,6 +9,7 @@ from .models import (
     GlossaryContent,
     Project,
     File,
+    Sentence,
 )
 
 admin.site.register(TranslationMemory)
@@ -18,4 +19,5 @@ admin.site.register(Glossary)
 admin.site.register(GlossaryContent)
 admin.site.register(Project)
 admin.site.register(File)
+admin.site.register(Sentence)
 

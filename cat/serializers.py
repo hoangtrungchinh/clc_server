@@ -8,6 +8,7 @@ from .models import (
     GlossaryContent,
     Project,
     File,
+    Sentence,
 )
 
 
@@ -50,6 +51,14 @@ class ProjectSerializer(serializers.ModelSerializer):
 class FileSerializer(serializers.ModelSerializer):
     class Meta:
         model = File
+        # fields = ('id', 'file,' 'project,' 'confirm,')
+        fields = "__all__"
+
+
+
+class SentenceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Sentence
         # fields = ('id', 'file,' 'project,' 'confirm,')
         fields = "__all__"
 

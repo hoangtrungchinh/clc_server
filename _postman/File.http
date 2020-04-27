@@ -1,6 +1,36 @@
 # Hiện tại Plugin không không hỗ trợ tốt với upload file (không giống với trang chủ họ nói), vậy nên để chạy được: sử dụng lệnh dước trong cmd
+
+# Upload a english file
 ###
-curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/_postman/_example.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732" 
+curl -v -F "project=3" -F "confirm=1" -F "file=@/home/chinh/clc_server/_postman/_ex_en.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732" 
+
+# Upload a vietnamese file
+###
+curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/_postman/_ex_vi.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732" 
+
+# update a file
+###
+curl -X PUT -v -F "project=3" -F "confirm=10" -F "file=@/home/chinh/clc_server/_postman/File.http" http://127.0.0.1:8000/file/48/ -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732" 
+
+
+# view list of files
+###
+GET http://127.0.0.1:8000/file
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+
+# view list 1 file
+###
+GET http://127.0.0.1:8000/file/38/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+# delete 1 file
+###
+DELETE http://127.0.0.1:8000/file/77/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 
 
 # TODO: Đây là request upload file, sẽ sử dụng sau khi Plugin của vscode Updated

@@ -18,6 +18,7 @@ router.register(r'glossary_Type', views.GlossaryTypeViewSet)
 router.register(r'glossary', views.GlossaryViewSet)
 router.register(r'glossary_content', views.GlossaryContentViewSet)
 router.register(r'project', views.ProjectViewSet)
+router.register(r'sentence', views.SentenceViewSet)
 # router.register(r'file', views.FileViewSet)
 
 
@@ -29,6 +30,7 @@ router.register(r'project', views.ProjectViewSet)
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('file/', FileUploadView.as_view()),  
+    path('file/<int:pk>/', FileUploadDetailView.as_view()),  
     # url(r'^clc_collection/$', views.clc_collection),
     url(r'^get_tm_by_src/$', views.get_tm_by_src),
     url(r'^sign_up/$', views.sign_up),
