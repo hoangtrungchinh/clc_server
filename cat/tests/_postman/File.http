@@ -28,7 +28,7 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 
 # delete 1 file
 ###
-DELETE http://127.0.0.1:8000/file/77/
+DELETE http://127.0.0.1:8000/file/85/
 Content-Type: application/json
 Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 
@@ -56,3 +56,9 @@ Content-Disposition: form-data; name="file"; filename="_example.txt"
 
 ###
 
+
+
+# DELETE FILE IN RANGE (just for testting)
+for i in {86..87}; do
+  curl -X DELETE "http://127.0.0.1:8000/file/$i/" -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732"
+done

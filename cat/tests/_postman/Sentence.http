@@ -32,12 +32,12 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 }
 
 ###
-PUT http://127.0.0.1:8000/sentence/1/
+PUT http://127.0.0.1:8000/sentence/45/
 Content-Type: application/json
 Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 
 {
-  "file": 70,
+  "file": 85,
   "src_str": "Tôi yêu em 2",
   "tar_str": "I love you 2",
   "score": 25,
