@@ -21,6 +21,7 @@ class Base(APITestCase):
     def setup_user():
         User = get_user_model()
         return User.objects.create_user(
+            id=1,
             username="test",
             email="testuser@test.com",
             password="test"

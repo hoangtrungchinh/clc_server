@@ -2,11 +2,11 @@
 
 # Upload a english file
 ###
-curl -v -F "project=3" -F "confirm=1" -F "file=@/home/chinh/clc_server/_postman/_ex_en.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732" 
+curl -v -F "project=3" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_en.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732" 
 
 # Upload a vietnamese file
 ###
-curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/_postman/_ex_vi.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732" 
+curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_vi.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732" 
 
 # update a file
 ###

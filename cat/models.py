@@ -9,12 +9,13 @@ from preprocessor import *
 
 
 class TranslationMemory(models.Model):
-    name = models.TextField()
+    name = models.TextField(unique=True)
     description = models.TextField()
     src_lang = models.TextField()
     tar_lang = models.TextField()
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    
+
+
     def __str__(self):
         # return sys.path
         return str(self.id) + " | " + self.name + " | " + self.src_lang+ " | " + self.tar_lang
@@ -25,12 +26,15 @@ class TMContent(models.Model):
     tar_sentence = models.TextField()
     translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.CASCADE)
     
+    class Meta:
+        unique_together = ('src_sentence', 'tar_sentence',)   
+        
     def __str__(self):
         return str(self.id) + " | " + self.src_sentence + " | " + self.tar_sentence
         
 
 class GlossaryType(models.Model):
-    name = models.TextField()
+    name = models.TextField(unique=True)
     description = models.TextField()
 
     def __str__(self):
@@ -38,12 +42,12 @@ class GlossaryType(models.Model):
 
 
 class Glossary(models.Model):
-    name = models.TextField()
+    name = models.TextField(unique=True)
     description = models.TextField()
     src_lang = models.TextField()
     tar_lang = models.TextField()
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    Type = models.ForeignKey(GlossaryType, on_delete=models.PROTECT)
+    gloss_type = models.ForeignKey(GlossaryType, on_delete=models.PROTECT)
     
     def __str__(self):
         return str(self.id) + " | " + self.src_lang + " | " + self.tar_lang       
@@ -55,6 +59,8 @@ class GlossaryContent(models.Model):
     tar_phrase = models.TextField()
     glossary = models.ForeignKey(Glossary, on_delete=models.CASCADE)
     
+    class Meta:
+        unique_together = ('src_phrase', 'tar_phrase',)    
     def __str__(self):
         return str(self.id) + " | " + self.src_phrase + " | " + self.tar_phrase
 
@@ -68,7 +74,10 @@ class Project(models.Model):
     translate_service = models.TextField()
     translation_memory = models.ManyToManyField(TranslationMemory)
     glossary = models.ManyToManyField(Glossary)
-    
+
+    class Meta:
+        unique_together = ('name', 'user',)
+
     def __str__(self):
         return str(self.id) + " | " + self.name
         

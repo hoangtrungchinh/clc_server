@@ -14,7 +14,7 @@ from .views import *
 router = routers.DefaultRouter()
 router.register(r'translation_memories', views.TranslationMemoryViewSet)
 router.register(r'tm_content', views.TMContentViewSet)
-router.register(r'glossary_Type', views.GlossaryTypeViewSet)
+router.register(r'glossary_type', views.GlossaryTypeViewSet)
 router.register(r'glossary', views.GlossaryViewSet)
 router.register(r'glossary_content', views.GlossaryContentViewSet)
 router.register(r'project', views.ProjectViewSet)

@@ -33,7 +33,8 @@ class GlossaryTypeSerializer(serializers.ModelSerializer):
 class GlossarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Glossary
-        fields = ('id', 'name', 'description', 'src_lang', 'tar_lang', 'user', 'Type')
+        fields = ('id', 'name', 'description', 'src_lang', 'tar_lang', 'user', 'gloss_type')
+        # fields = "__all__"
 
 
 class GlossaryContentSerializer(serializers.ModelSerializer):
