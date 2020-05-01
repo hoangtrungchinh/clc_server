@@ -155,9 +155,10 @@ class FileUploadDetailView(APIView):
         # remove soft file
         if os.path.exists(filePath):
             os.remove(filePath)
-        # remove empty folder        
-        if len(os.listdir(folderPath)) == 0:
-            os.rmdir(folderPath)
+        # remove empty folder     
+        if os.path.exists(folderPath):   
+            if len(os.listdir(folderPath)) == 0:
+                os.rmdir(folderPath)
         #remove record in db
         file.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

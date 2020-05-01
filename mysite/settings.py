@@ -182,3 +182,7 @@ LOGGING = {
 FIXTURE_DIRS = (
    '/cat/fixtures/123.json',
 )
+
+TEST_FILES_DIR = (
+   os.path.join("cat", "tests", "_postman", "data")
+)
