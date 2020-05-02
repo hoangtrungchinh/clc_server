@@ -87,35 +87,39 @@ class SentenceViewSet(viewsets.ModelViewSet):
 
 class FileUploadView(APIView):
     def post(self, request, *args, **kwargs):
-        serializer = FileSerializer(data=request.data)
-        if "file" not in request.data:
-            return Response({"file":["This field is required."]}, status=status.HTTP_400_BAD_REQUEST)          
-        if serializer.is_valid():
-            uf = serializer.save()
-            # Read from file
-            inp_path = os.path.join(settings.BASE_DIR, uf.file.path)
-            with open(inp_path, 'r', encoding='utf8') as f:
-                text = f.read()
-            
-            # Find src_lang
-            # import pdb; pdb.set_trace()
-            project = Project.objects.get(pk=uf.project.id)
-            if project.src_lang == "vi":
-                p = Preprocessor(Language.vietnamese)    
-            elif project.src_lang == "en":
-                p = Preprocessor(Language.english)    
+        try:
+            serializer = FileSerializer(data=request.data)
+            # import pdb; pdb.set_trace() 
+            if "file" not in request.data:
+                return Response({"file":["This field is required."]}, status=status.HTTP_400_BAD_REQUEST)          
+            if serializer.is_valid():
+                uf = serializer.save()
+                # Read from file
+                inp_path = os.path.join(settings.BASE_DIR, uf.file.path)
+                with open(inp_path, 'r', encoding='utf8') as f:
+                    text = f.read()
+                
+                # Find src_lang
+                # import pdb; pdb.set_trace()
+                project = Project.objects.get(pk=uf.project.id)
+                if project.src_lang == "vi":
+                    p = Preprocessor(Language.vietnamese)    
+                elif project.src_lang == "en":
+                    p = Preprocessor(Language.english)    
 
-            sents = p.segment_to_sentences(text)
-            sents_cnt = len(sents)
-            
-            for idx in range(0, sents_cnt):                
-                sentence_serilizer = SentenceSerializer(data = {"src_str":sents[idx],"file":uf.id})
-                if sentence_serilizer.is_valid():
-                    sentence_serilizer.save()
+                sents = p.segment_to_sentences(text)
+                sents_cnt = len(sents)
+                
+                for idx in range(0, sents_cnt):                
+                    sentence_serilizer = SentenceSerializer(data = {"src_str":sents[idx],"file":uf.id})
+                    if sentence_serilizer.is_valid():
+                        sentence_serilizer.save()
 
 
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except ValueError:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     def get(self, request, *args, **kwargs):
         files = File.objects.all()
@@ -135,17 +139,20 @@ class FileUploadDetailView(APIView):
         return Response(serializer.data)       
 
     def put(self, request, pk, format=None):
-        file = self.get_object(pk)
-        # Dont update upload file by remove it from request
-        if "file" in request.data:
-            del request.data["file"]
+        try:
+            file = self.get_object(pk)
+            # Dont update upload file by remove it from request
+            if "file" in request.data:
+                del request.data["file"]
 
-        serializer = FileSerializer(file, data=request.data)
-        print("request.data = ", request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            serializer = FileSerializer(file, data=request.data)
+            print("request.data = ", request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except ValueError:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
     def delete(self, request, pk, format=None):

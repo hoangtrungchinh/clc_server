@@ -2,6 +2,7 @@ from cat.tests.base import Base
 from rest_framework import status
 from cat import views
 from cat.models import GlossaryType, Glossary, TranslationMemory, Project
+import copy
 
 class TestProject(Base):
     def setUp(self):
@@ -121,92 +122,92 @@ class TestProject(Base):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_create_project_with_empty_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["name"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["user"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["src_lang"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["tar_lang"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["translate_service"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["translation_memory"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["glossary"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
         # import pdb; pdb.set_trace() 
     def test_create_project_without_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("name", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("user", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("src_lang", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("tar_lang", None)
         response = self.client.post(self.uri, err_params)        
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("translate_service", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("translation_memory", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("glossary", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_update_project_with_empty_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["name"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["user"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["src_lang"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["tar_lang"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["translate_service"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["translation_memory"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["glossary"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
@@ -214,31 +215,31 @@ class TestProject(Base):
 
         # import pdb; pdb.set_trace() 
     def test_update_project_without_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("name", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("user", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("src_lang", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("tar_lang", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)        
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("translate_service", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("translation_memory", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("glossary", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)

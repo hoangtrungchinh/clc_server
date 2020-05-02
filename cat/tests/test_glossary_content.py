@@ -2,6 +2,7 @@ from cat.tests.base import Base
 from rest_framework import status
 from cat import views
 from cat.models import GlossaryContent, Glossary, GlossaryType
+import copy
 
 class TestGlossaryContent(Base):
     def setUp(self):
@@ -92,58 +93,58 @@ class TestGlossaryContent(Base):
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)  
 
     def test_create_glossary_content_with_empty_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["src_phrase"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["tar_phrase"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["glossary"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
     
         
     def test_create_glossary_content_without_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("src_phrase", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("tar_phrase", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("glossary", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_update_glossary_content_with_empty_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["src_phrase"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["tar_phrase"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["glossary"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
         
     def test_update_glossary_content_without_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("src_phrase", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("tar_phrase", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("glossary", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)

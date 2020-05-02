@@ -2,6 +2,7 @@ from cat.tests.base import Base
 from rest_framework import status
 from cat import views
 from cat.models import GlossaryType
+import copy
 
 class TestGlossaryType(Base):
     def setUp(self):
@@ -69,41 +70,41 @@ class TestGlossaryType(Base):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_create_glossary_type_with_empty_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["name"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["description"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         
     def test_create_glossary_type_without_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("name", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("description", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_update_glossary_type_with_empty_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["name"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["description"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
         
     def test_update_glossary_type_without_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("name", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("description", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)

@@ -4,7 +4,7 @@ from cat import views
 from cat.models import GlossaryType, Glossary, TranslationMemory, Project, File
 from django.core.files import File as SysFile
 from django.conf import settings
-import os
+import os, copy
 
 class TestFile(Base):
     def setUp(self):
@@ -113,57 +113,57 @@ class TestFile(Base):
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)  
 
     def test_create_file_with_empty_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["project"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["confirm"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["file"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
             
     def test_create_file_without_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("project", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("confirm", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("file", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_update_file_with_empty_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["project"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["confirm"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params["file"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
         
     def test_update_file_without_fields(self):
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("project", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("confirm", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        err_params = self.params
+        err_params = copy.copy(self.params)
         err_params.pop("file", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
