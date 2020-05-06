@@ -12,7 +12,7 @@ from django.contrib import admin
 from .views import *
 
 router = routers.DefaultRouter()
-router.register(r'translation_memories', views.TranslationMemoryViewSet)
+router.register(r'translation_memory', views.TranslationMemoryViewSet)
 router.register(r'tm_content', views.TMContentViewSet)
 router.register(r'glossary_type', views.GlossaryTypeViewSet)
 router.register(r'glossary', views.GlossaryViewSet)

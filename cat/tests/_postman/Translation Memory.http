@@ -1,13 +1,13 @@
 ###
-GET http://127.0.0.1:8000/translation_memories/
+GET http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
 Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 ###
-GET http://127.0.0.1:8000/translation_memories/1
+GET http://127.0.0.1:8000/translation_memory/1
 Content-Type: application/json
 Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 ###
-POST http://127.0.0.1:8000/translation_memories/
+POST http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
 Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 {
@@ -19,7 +19,7 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 }
 
 ###
-PUT http://127.0.0.1:8000/translation_memories/3/
+PUT http://127.0.0.1:8000/translation_memory/3/
 Content-Type: application/json
 Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 {
@@ -31,6 +31,6 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 }
 
 ###
-DELETE http://127.0.0.1:8000/translation_memories/13/
+DELETE http://127.0.0.1:8000/translation_memory/13/
 Content-Type: application/json
 Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732

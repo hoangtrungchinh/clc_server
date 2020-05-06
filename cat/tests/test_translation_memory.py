@@ -7,7 +7,7 @@ import copy
 class TestTranslationMemory(Base):
     def setUp(self):
         self.view = views.TranslationMemoryViewSet.as_view({'get': 'list'})
-        self.uri = '/translation_memories/'
+        self.uri = '/translation_memory/'
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
         self.params_default = {
             "name": "TM_1",
