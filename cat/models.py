@@ -19,6 +19,9 @@ class TranslationMemory(models.Model):
     def __str__(self):
         # return sys.path
         return str(self.id) + " | " + self.name + " | " + self.src_lang+ " | " + self.tar_lang
+
+    def get_user_id(self):
+        return self.user.id
         
 
 class TMContent(models.Model):
@@ -52,6 +55,8 @@ class Glossary(models.Model):
     def __str__(self):
         return str(self.id) + " | " + self.src_lang + " | " + self.tar_lang       
 
+    def get_user_id(self):
+        return self.user.id
 
     
 class GlossaryContent(models.Model):

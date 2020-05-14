@@ -43,9 +43,11 @@ INSTALLED_APPS = [
 
 
     'django_elasticsearch_dsl',
+    # 'django_elasticsearch_dsl_drf',
     'rest_framework',
-    'cat',
     'django.contrib.sites',
+    'cat',
+    # 'search_indexes',
 
     'rest_framework.authtoken',
     'drf_yasg',
@@ -161,7 +163,6 @@ ELASTICSEARCH_DSL = {
     },
 }
 
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -186,3 +187,4 @@ FIXTURE_DIRS = (
 TEST_FILES_DIR = (
    os.path.join("cat", "tests", "_postman", "data")
 )
+
