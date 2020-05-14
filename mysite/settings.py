@@ -51,6 +51,9 @@ INSTALLED_APPS = [
 
     'rest_framework.authtoken',
     'drf_yasg',
+
+    'django_postgres_dropdb',
+    'django_postgres_createdb',
 ]
 
 SITE_ID=1

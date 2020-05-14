@@ -3,3 +3,12 @@
 curl -X DELETE 'http://localhost:9200/translation_memory'
 
 ###
+
+# Get TM in by src
+GET http://127.0.0.1:8000/get_tm_by_src_sentence/
+Content-Type: application/json
+Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+
+{
+  "src_sentence": "Love in your eyes"
+}

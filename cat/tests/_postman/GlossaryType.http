@@ -1,27 +1,27 @@
 ###
-GET http://127.0.0.1:8000/glossary_Type/
+GET http://127.0.0.1:8000/glossary_type/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 ###
-GET http://127.0.0.1:8000/glossary_Type/2
+GET http://127.0.0.1:8000/glossary_type/2
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 ###
-POST http://127.0.0.1:8000/glossary_Type/
+POST http://127.0.0.1:8000/glossary_type/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
-  "name": "Khoa học",
-  "description": "bao gồm tất cả các thuật ngữ thuộc lĩnh vực Khoa học"
+  "name": "Uncategory",
+  "description": "Chưa phân nhóm"
 }
 
 ###
-PUT http://127.0.0.1:8000/glossary_Type/2/
+PUT http://127.0.0.1:8000/glossary_type/2/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
   "name": "Lâm nghiệp",
@@ -29,6 +29,6 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 }
 
 ###
-DELETE http://127.0.0.1:8000/glossary_Type/3/
+DELETE http://127.0.0.1:8000/glossary_type/3/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0

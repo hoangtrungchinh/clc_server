@@ -1,28 +1,28 @@
 ###
 GET http://127.0.0.1:8000/tm_content/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 GET http://127.0.0.1:8000/tm_content/19
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 
 ###
 POST http://127.0.0.1:8000/tm_content/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
-    "src_sentence": "Love in your eyes 2",
-    "tar_sentence": "Tình yêu trong mắt em 2",
+    "src_sentence": "Love in your eyes",
+    "tar_sentence": "Tình yêu trong mắt em",
     "translation_memory": 1
 }
 
 ###
 PUT http://127.0.0.1:8000/tm_content/19/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
     "src_sentence": "Love in your eyes 3",
@@ -33,12 +33,12 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 ###
 DELETE http://127.0.0.1:8000/tm_content/19/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 # sear by tar
 GET http://127.0.0.1:8000/get_tm_by_src/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
     "src": "happy"

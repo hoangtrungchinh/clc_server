@@ -171,41 +171,22 @@ class FileUploadDetailView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-# class FileViewSet(viewsets.ModelViewSet):
-#     queryset = File.objects.all()
-#     serializer_class = FileSerializer
-
-
-# @api_view(['GET','POST'])
-# def clc_collection(request):
-#     if request.method =='GET':
-#         my_clc = clc.objects.all()
-#         clc_serializer = ClcSerializer(my_clc,many=True)
-#         return Response(clc_serializer.data)
-#     elif request.method =='POST':
-#         clc_serializer = ClcSerializer(data=request.data)
-#         if clc_serializer.is_valid():
-#             clc_serializer.save()
-#             # post to Elasticsearch
-            
-#             return Response(clc_serializer.data, status=status.HTTP_201_CREATED)
-#         return Response(clc_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        
 @api_view(['GET'])
-def get_tm_by_src(request):
+def get_tm_by_src_sentence(request):
     try:
-        _src=request.data["src"]
+        # import pdb; pdb.set_trace() 
+        _src_sentence=request.data["src_sentence"]
 
         client = Elasticsearch()      
-        q = Q("match", src=_src) 
-        s = Search(using=client, index="translation_memorys").query(q)[0:20] 
+        q = Q("match", src_sentence=_src_sentence) 
+        s = Search(using=client, index="translation_memory").query(q)[0:20] 
         res = s.execute()
 
         dict={}
         for i in range(len(res)):
             child={}
             child.update({"score": res[i].meta.score})
-            child.update({"tar": res[i].tar})
+            child.update({"tar_sentence": res[i].tar_sentence})
             dict.update({i:child})
 
         j = {"is_success":True, "err_msg": None} 

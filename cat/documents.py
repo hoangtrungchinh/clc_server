@@ -27,6 +27,10 @@ class TMContentDocument(Document):
         'user' : fields.TextField(attr="get_user_id"),
     })
 
+    def get_instances_from_related(self, related_instance):
+        """If related_models is set, define how to retrieve the instance(s) from the related model."""
+        if isinstance(related_instance, TranslationMemory):
+            return related_instance.tmcontent_set.all()
 
 
 @registry.register_document
@@ -60,7 +64,10 @@ class GlossaryContentDocument(Document):
         })
     })
 
-
+    def get_instances_from_related(self, related_instance):
+        """If related_models is set, define how to retrieve the instance(s) from the related model."""
+        if isinstance(related_instance, Glossary):
+            return related_instance.glossarycontent_set.all()
 
 #  Run to rebuild index
 #  python3 manage.py search_index --rebuild

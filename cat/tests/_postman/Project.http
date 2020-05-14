@@ -2,7 +2,7 @@
 ###
 POST http://127.0.0.1:8000/project/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
   "name": "pj1",
@@ -17,17 +17,17 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 ###
 GET http://127.0.0.1:8000/project/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 ###
 GET http://127.0.0.1:8000/project/2
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 ###
 PUT http://127.0.0.1:8000/project/2/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
   "name": "pj1 updated",
@@ -35,7 +35,7 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
   "src_lang": "vi",
   "tar_lang": "en",
   "translate_service": "GG",
-  "translation_memory": [1,2],
+  "translation_memory": [1],
   "glossary": [1]
 }
 
@@ -43,4 +43,4 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 ###
 DELETE http://127.0.0.1:8000/project/2/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0

@@ -1,36 +1,52 @@
 ###
 GET http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 GET http://127.0.0.1:8000/translation_memory/1
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 POST http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+
 {
-    "name": "TM3",
-    "description": "des",
-    "src_lang": "ja",
-    "tar_lang": "vi",
-    "user": 1
+  "name": "Default translation memory",
+  "description": "Đây là TM mặc định, bất kỳ ai cũng có thể truy cập",
+  "src_lang": "en",
+  "tar_lang": "vi",
+  "user": 1,
 }
+
+###
+POST http://127.0.0.1:8000/translation_memory/
+Content-Type: application/json
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+
+{
+  "name": "Khoa học tự nhiên",
+  "description": "gồm các TM thuộc lĩnh vực khoa học tự nhiên",
+  "src_lang": "en",
+  "tar_lang": "vi",
+  "user": 1,
+}
+
 
 ###
 PUT http://127.0.0.1:8000/translation_memory/3/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+
 {
-    "name": "TM3 updated",
-    "description": "des updated",
-    "src_lang": "phil",
-    "tar_lang": "en",
-    "user": 1
+  "name": "TM3 updated",
+  "description": "des updated",
+  "src_lang": "phil",
+  "tar_lang": "en",
+  "user": 1
 }
 
 ###
 DELETE http://127.0.0.1:8000/translation_memory/13/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0

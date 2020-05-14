@@ -2,7 +2,7 @@
 ###
 POST http://127.0.0.1:8000/glossary_content/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
   "src_phrase": "I love you",
@@ -13,17 +13,17 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 ###
 GET http://127.0.0.1:8000/glossary_content/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 ###
 GET http://127.0.0.1:8000/glossary_content/2
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 ###
 PUT http://127.0.0.1:8000/glossary_content/1/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
   "src_phrase": "I love you so much",
@@ -34,4 +34,4 @@ Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
 ###
 DELETE http://127.0.0.1:8000/glossary_content/2/
 Content-Type: application/json
-Authorization: token 2ecf7eb2a7e50f8f63dd7fc19c890eecf8c3c732
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0

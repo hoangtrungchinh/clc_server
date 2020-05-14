@@ -19,10 +19,6 @@ router.register(r'glossary', views.GlossaryViewSet)
 router.register(r'glossary_content', views.GlossaryContentViewSet)
 router.register(r'project', views.ProjectViewSet)
 router.register(r'sentence', views.SentenceViewSet)
-# router.register(r'file', views.FileViewSet)
-
-
-
 
 
 # Wire up our API using automatic URL routing.
@@ -32,7 +28,7 @@ urlpatterns = [
     path('file/', FileUploadView.as_view()),  
     path('file/<int:pk>/', FileUploadDetailView.as_view()),  
     # url(r'^clc_collection/$', views.clc_collection),
-    url(r'^get_tm_by_src/$', views.get_tm_by_src),
+    url(r'^get_tm_by_src_sentence/$', views.get_tm_by_src_sentence),
     url(r'^sign_up/$', views.sign_up),
     url(r'^get-token/', v.obtain_auth_token),
     
