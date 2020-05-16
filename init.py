@@ -16,5 +16,5 @@ os.system('python3 manage.py makemigrations')
 os.system('python3 manage.py migrate')
 
 # Load init Data
-os.system('python3 manage.py loaddata initial_data.json')
+os.system('python3 manage.py loaddata initial_1k_data.yaml')
 os.system('python3 manage.py search_index --rebuild')
