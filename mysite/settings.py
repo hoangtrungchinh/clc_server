@@ -30,6 +30,8 @@ SECRET_KEY = 'yi(%^bh(5my=92(=qw6pmc_=!v73f1xsx%ga=s!-nvox0dsqzl'
 DEBUG = True
 ALLOWED_HOSTS = []
 
+INDEX_TM = 'translation_memory'
+INDEX_GLOSSARY = 'glossary'
 
 # Application definition
 

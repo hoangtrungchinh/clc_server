@@ -174,7 +174,6 @@ class FileUploadDetailView(APIView):
 @api_view(['GET'])
 def get_tm_by_src_sentence(request):
     try:
-        # import pdb; pdb.set_trace() 
         _src_sentence=request.data["src_sentence"]
 
         client = Elasticsearch()      

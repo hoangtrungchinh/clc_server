@@ -1,11 +1,12 @@
 from django_elasticsearch_dsl import Document, fields
 from django_elasticsearch_dsl.registries import registry
 from .models import TranslationMemory, TMContent, Glossary, GlossaryContent, GlossaryType
+from django.conf import settings
 
 @registry.register_document
 class TMContentDocument(Document):   
     class Index:
-        name = 'translation_memory'
+        name = settings.INDEX_TM
         settings = {'number_of_shards': 1,
                     'number_of_replicas': 0}
 
@@ -36,7 +37,7 @@ class TMContentDocument(Document):
 @registry.register_document
 class GlossaryContentDocument(Document):   
     class Index:
-        name = 'glossary'
+        name = settings.INDEX_GLOSSARY
         settings = {'number_of_shards': 1,
                     'number_of_replicas': 0}
 

@@ -4978,6 +4978,4028 @@
 - model: cat.glossarycontent
   pk: 1
   fields: {src_phrase: I love you, tar_phrase: "Anh y\xEAu em", glossary: 1}
+- model: cat.glossarycontent
+  pk: 2
+  fields: {src_phrase: a, tar_phrase: "lo\u1EA1i a, h\u1EA1ng nh\u1EA5t, h\u1EA1ng
+      t\u1ED1t nh\u1EA5t, h\u1EA1ng r\u1EA5t t\u1ED1t, m\u1ED9t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 3
+  fields: {src_phrase: a b c-book, tar_phrase: "s\xE1ch v\u1EE1 l\xF2ng, s\xE1ch h\u1ECDc
+      v\u1EA7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 4
+  fields: {src_phrase: a bad patch, tar_phrase: "m\u1ED9t th\u1EDDi k\u1EF3 \u0111\u1EB7c
+      bi\u1EC7t kh\xF3 kh\u0103n, m\u1ED9t th\u1EDDi k\u1EF3 b\u1EA5t h\u1EA1nh",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 5
+  fields: {src_phrase: a batch run, tar_phrase: "m\u1ED9t \u0111\u1EE3t v\u1EADn h\xE0nh",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 6
+  fields: {src_phrase: a bed of roses, tar_phrase: "lu\u1ED1ng hoa h\u1ED3ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 7
+  fields: {src_phrase: a big fish, tar_phrase: "nh\xE2n v\u1EADt c\xF3 th\u1EBF l\u1EF1c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 8
+  fields: {src_phrase: a big pot, tar_phrase: quan to, glossary: 1}
+- model: cat.glossarycontent
+  pk: 9
+  fields: {src_phrase: a bird in the hand, tar_phrase: "v\u1EADt m\xECnh c\xF3 ch\u1EAFc
+      trong tay, \u0111i\u1EC1u m\xECnh ch\u1EAFc ch\u1EAFn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 10
+  fields: {src_phrase: a bit of muslin, tar_phrase: "ng\u01B0\u1EDDi \u0111\xE0n b\xE0",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 11
+  fields: {src_phrase: a bitter pill to swallow, tar_phrase: "vi\xEAn thu\u1ED1c \u0111\u1EAFng
+      ph\u1EA3i u\u1ED1ng, \u0111i\u1EC1u \u0111\u1EAFng cay ph\u1EA3i ch\u1ECBu \u0111\u1EF1ng,
+      \u0111i\u1EC1u cay \u0111\u1EAFng ph\u1EA3i ch\u1ECBu, ph\u1EA3i ng\u1EADm b\u1ED3
+      h\xF2n l\xE0m ng\u1ECDt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 12
+  fields: {src_phrase: a blessing in disguise, tar_phrase: "chuy\u1EC7n kh\xF4ng may
+      m\xE0 l\u1EA1i ho\xE1 may", glossary: 1}
+- model: cat.glossarycontent
+  pk: 13
+  fields: {src_phrase: a blot on the landscape, tar_phrase: "ng\u01B0\u1EDDi gieo
+      tai ti\u1EBFng cho gia \u0111\xECnh, c\xE1i g\xEC l\xE0m h\u1EA1i c\xE1i \u0111\u1EB9p
+      chung, ng\u01B0\u1EDDi l\xE0m tai ti\u1EBFng cho gia \u0111\xECnh, c\xE1i l\xE0m
+      m\u1EA5t v\u1EBB \u0111\u1EB9p chung, c\xE1i l\xE0m m\u1EA5t m\u1EF9 quan chung,
+      c\xE1i l\xE0m m\u1EA5t v\u1EBB \u0111\u1EB9p c\u1EE7a phong c\u1EA3nh, c\xE1i
+      l\xE0m m\u1EA5t m\u1EF9 quan", glossary: 1}
+- model: cat.glossarycontent
+  pk: 14
+  fields: {src_phrase: a born foul, tar_phrase: "ng\u01B0\u1EDDi h\u1EBFt s\u1EE9c
+      \u0111\u1EA7n, ng\u01B0\u1EDDi ch\xED ngu", glossary: 1}
+- model: cat.glossarycontent
+  pk: 15
+  fields: {src_phrase: a bread-and-butter letter, tar_phrase: "cho \u0103n u\u1ED1ng
+      h\u1EADu h\u1EC9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 16
+  fields: {src_phrase: a broken reed, tar_phrase: "ng\u01B0\u1EDDi kh\xF4ng th\u1EC3
+      nh\u1EDD c\u1EADy \u0111\u01B0\u1EE3c, v\u1EADt kh\xF4ng th\u1EC3 d\u1EF1a v\xE0o
+      \u0111\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 17
+  fields: {src_phrase: a bundle of nerves, tar_phrase: "tr\u1EA1ng th\xE1i b\u1ED3n
+      ch\u1ED3n lo \xE2u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 18
+  fields: {src_phrase: a call of nature, tar_phrase: "nhu c\u1EA7u ti\u1EC3u ti\u1EC7n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 19
+  fields: {src_phrase: a calling together, tar_phrase: "s\u1EF1 tri\u1EC7u t\u1EADp",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 20
+  fields: {src_phrase: a capplla, tar_phrase: "kh\xF4ng c\xF3 nh\u1EA1c \u0111\u1EC7m",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 21
+  fields: {src_phrase: a case in point, tar_phrase: "m\u1ED9t th\xED d\u1EE5 th\xEDch
+      h\u1EE3p, m\u1ED9t tr\u01B0\u1EDDng h\u1EE3p th\xEDch h\u1EE3p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 22
+  fields: {src_phrase: a cat-and-dog life, tar_phrase: "cu\u1ED9c s\u1ED1ng kh\u1ED5
+      nh\u01B0 ch\xF3, c\u1EA3nh ch\xF3 m\xE8o, s\u1EF1 x\xEDch m\xEDch v\u1EDBi nhau
+      th\u01B0\u1EDDng xuy\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 23
+  fields: {src_phrase: a change for the better, tar_phrase: "s\u1EF1 thay \u0111\u1ED5i
+      t\u1ED1t h\u01A1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 24
+  fields: {src_phrase: a change of air, tar_phrase: "s\u1EF1 thay \u0111\u1ED5i kh\xF4ng
+      kh\xED, s\u1EF1 thay \u0111\u1ED5i m\xF4i tr\u01B0\u1EDDng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 25
+  fields: {src_phrase: a chink in smb.'s armour, tar_phrase: "\u0111i\u1EC1u sai l\u1EA7m
+      trong l\u1EADp lu\u1EADn c\u1EE7a smb.", glossary: 1}
+- model: cat.glossarycontent
+  pk: 26
+  fields: {src_phrase: a chit of a girl, tar_phrase: "con ranh con, con o\u1EAFt con",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 27
+  fields: {src_phrase: a clean bill of health, tar_phrase: "gi\u1EA5y ch\u1EE9ng nh\u1EADn
+      s\u1EE9c kho\u1EBB t\u1ED1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 28
+  fields: {src_phrase: a clean hand, tar_phrase: "s\u1EF1 trong tr\u1EAFng, s\u1EF1
+      v\xF4 t\u1ED9i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 29
+  fields: {src_phrase: a close thing, tar_phrase: "s\xE1t n\xFAt, su\xFDt thua", glossary: 1}
+- model: cat.glossarycontent
+  pk: 30
+  fields: {src_phrase: a closed-shop agreement, tar_phrase: "s\u1EF1 tho\u1EA3 thu\u1EADn
+      n\u1ED9i b\u1ED9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 31
+  fields: {src_phrase: a cold fish, tar_phrase: "ng\u01B0\u1EDDi l\u1EA1nh l\xF9ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 32
+  fields: {src_phrase: a conceited pup, tar_phrase: "anh ch\xE0ng thanh ni\xEAn t\u1EF1
+      cao t\u1EF1 \u0111\u1EA1i, \u0111\u1EE9a b\xE9 ki\xEAu ng\u1EA1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 33
+  fields: {src_phrase: a cooked-up yarn, tar_phrase: "c\xE2u chuy\xEAn b\u1ECBa",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 34
+  fields: {src_phrase: a cranny in the wall, tar_phrase: "x\xF3 x\u1EC9nh, g\xF3c
+      t\u1ED1i t\u0103m, v\u1EBFt n\u1EE9t tr\xEAn t\u01B0\u1EDDng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 35
+  fields: {src_phrase: a curate's egg, tar_phrase: "c\xE1i c\xF3 c\u1EA3 hai m\u1EB7t
+      t\u1ED1t v\xE0 x\u1EA5u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 36
+  fields: {src_phrase: a cut above, tar_phrase: "s\u1EF1 h\u01A1n m\u1ED9t b\u1EADc",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 37
+  fields: {src_phrase: a dab at smth., tar_phrase: "r\u1EA5t th\u1EA1o, kh\xE9o l\xE9o",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 38
+  fields: {src_phrase: a dab hand at smth., tar_phrase: "r\u1EA5t th\u1EA1o, kh\xE9o
+      l\xE9o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 39
+  fields: {src_phrase: a dark horse, tar_phrase: "con ng\u1EF1a \xEDt ng\u01B0\u1EDDi
+      bi\u1EBFt \u0111\u1EBFn trong cu\u1ED9c \u0111ua", glossary: 1}
+- model: cat.glossarycontent
+  pk: 40
+  fields: {src_phrase: a day two, tar_phrase: "m\u1ED9t v\xE0i ng\xE0y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 41
+  fields: {src_phrase: a dead duck, tar_phrase: "k\u1EBF ho\u1EA1ch b\u1ECB d\u1EB9p
+      b\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 42
+  fields: {src_phrase: a dead letter, tar_phrase: "\u0111i\u1EC1u kh\xF4ng smb. c\xF4ng
+      nh\u1EADn n\u1EEFa, lu\u1EADt l\u1EC7 h\u1EBFt hi\u1EC7u l\u1EF1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 43
+  fields: {src_phrase: a deadletter, tar_phrase: "\u0111i\u1EC1u kh\xF4ng smb. c\xF4ng
+      nh\u1EADn n\u1EEFa, lu\u1EADt l\u1EC7 h\u1EBFt hi\u1EC7u l\u1EF1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 44
+  fields: {src_phrase: a debt of honour, tar_phrase: "n\u1EE3 danh d\u1EF1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 45
+  fields: {src_phrase: a deux, tar_phrase: "ch\u1EC9 c\xF3 hai ng\u01B0\u1EDDi v\u1EDBi
+      nhau", glossary: 1}
+- model: cat.glossarycontent
+  pk: 46
+  fields: {src_phrase: a die-hard, tar_phrase: "k\u1EBB b\u1EA3o th\u1EE7, k\u1EBB
+      h\u1EBFt s\u1EE9c ngoan c\u1ED1, k\u1EBB c\u1EF1c k\u1EF3 ph\u1EA3n \u0111\u1ED9ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 47
+  fields: {src_phrase: a distinction without a difference, tar_phrase: "\u0111i\u1EC1u
+      ph\xE2n bi\u1EC7t gi\u1EA3 t\u1EA1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 48
+  fields: {src_phrase: a dog's breakfast, tar_phrase: "c\u1EA3nh h\u1ED7n lo\u1EA1n,
+      t\xECnh tr\u1EA1ng h\u1ED7n \u0111\u1ED9n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 49
+  fields: {src_phrase: a draw-back, tar_phrase: "\u0111i\u1EC1u tr\u1EDF ng\u1EA1i,
+      m\u1EB7t h\u1EA1n ch\u1EBF, m\u1EB7t kh\xF4ng thu\u1EADn l\u1EE3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 50
+  fields: {src_phrase: a drop in the bucket, tar_phrase: "gi\u1ECDt n\u01B0\u1EDBc
+      trong bi\u1EC3n c\u1EA3, h\u1EA1t c\xE1t trong b\xE3i sa m\u1EA1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 51
+  fields: {src_phrase: a dust, tar_phrase: "l\xE0m \u1EA7m \u0129 c\u1EA3 l\xEAn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 52
+  fields: {src_phrase: a fair question, tar_phrase: "c\xE2u h\u1ECFi t\u1EBF nh\u1ECB,
+      kh\xF3 tr\u1EA3 l\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 53
+  fields: {src_phrase: a fair-haired girl, tar_phrase: "c\xF4 g\xE1i c\xF3 b\u1ED9
+      t\xF3c v\xE0ng hoe", glossary: 1}
+- model: cat.glossarycontent
+  pk: 54
+  fields: {src_phrase: a far cry, tar_phrase: "qu\xE3ng c\xE1ch xa, s\u1EF1 kh\xE1c
+      xa", glossary: 1}
+- model: cat.glossarycontent
+  pk: 55
+  fields: {src_phrase: a fat chance, tar_phrase: "s\u1EF1 \u0111en \u0111\u1EE7i,
+      s\u1EF1 kh\xF4ng may ch\xFAt n\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 56
+  fields: {src_phrase: a fate worse than death, tar_phrase: "ch\u1EBFt c\xF2n s\u01B0\u1EDBng
+      h\u01A1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 57
+  fields: {src_phrase: a feast for the gods, tar_phrase: "m\u1ED9t b\u1EEFa ti\u1EC7c
+      th\u1ECBnh so\u1EA1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 58
+  fields: {src_phrase: a feather in one's cap, tar_phrase: "ni\u1EC1m t\u1EF1 h\xE0o",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 59
+  fields: {src_phrase: "a feeling of d\xE9ja vu", tar_phrase: "c\u1EA3m gi\xE1c nh\xE0m
+      ch\xE1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 60
+  fields: {src_phrase: a fight tooth and nail, tar_phrase: "cu\u1ED9c quy\u1EBFt chi\u1EBFn
+      m\u1ED9t m\u1EA5t m\u1ED9t c\xF2n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 61
+  fields: {src_phrase: a file of men, tar_phrase: "nh\xF3m c\xF4ng t\xE1c hai ng\u01B0\u1EDDi",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 62
+  fields: {src_phrase: a flea in one's ear, tar_phrase: "s\u1EF1 khi\u1EC3n tr\xE1ch
+      n\u1EB7ng n\u1EC1, s\u1EF1 t\u1EEB ch\u1ED1i ph\u0169 ph\xE0ng, s\u1EF1 c\u1EF1
+      tuy\u1EC7t ph\u0169 phang", glossary: 1}
+- model: cat.glossarycontent
+  pk: 63
+  fields: {src_phrase: a flight of fancy, tar_phrase: "\xFD ngh\u0129 vi\u1EC5n v\xF4ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 64
+  fields: {src_phrase: a fly on the wall, tar_phrase: "k\u1EBB nghe tr\u1ED9m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 65
+  fields: {src_phrase: a fond mother, tar_phrase: "ng\u01B0\u1EDDi m\u1EB9 tr\xECu
+      m\u1EBFn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 66
+  fields: {src_phrase: a foot in the door, tar_phrase: "s\u1EF1 thu\u1EADn l\u1EE3i
+      khi b\u1EAFt \u0111\u1EA7u l\xE0m vi\u1EC7c g\xEC", glossary: 1}
+- model: cat.glossarycontent
+  pk: 67
+  fields: {src_phrase: a forlorn hope, tar_phrase: "hy v\u1ECDng h\xE3o huy\u1EC1n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 68
+  fields: {src_phrase: a fox in lamb's skin, tar_phrase: "hy v\u1ECDng h\xE3o huy\u1EC1n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 69
+  fields: {src_phrase: a fridge-freezer, tar_phrase: "t\u1EE7 l\u1EA1nh hai t\u1EA7ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 70
+  fields: {src_phrase: a galloping consumption, tar_phrase: "b\u1EC7nh lao ph\u1ED5i
+      ti\u1EBFn tri\u1EC3n nhanh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 71
+  fields: {src_phrase: a gift from the gods, tar_phrase: "c\u1EE7a tr\u1EDDi cho,
+      l\u1ED9c tr\u1EDDi cho", glossary: 1}
+- model: cat.glossarycontent
+  pk: 72
+  fields: {src_phrase: a given name, tar_phrase: "t\xEAn th\xE1nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 73
+  fields: {src_phrase: a gleam in smb.'s eyes, tar_phrase: "ni\u1EC1m hy v\u1ECDng
+      trong suy ngh\u0129 c\u1EE7a smb.", glossary: 1}
+- model: cat.glossarycontent
+  pk: 74
+  fields: {src_phrase: a golden handshake, tar_phrase: "ti\u1EC1n th\xF4i vi\u1EC7c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 75
+  fields: {src_phrase: a good deal of, tar_phrase: "kh\xE1 nhi\u1EC1u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 76
+  fields: {src_phrase: a good many, tar_phrase: "r\u1EA5t nhi\u1EC1u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 77
+  fields: {src_phrase: a good samaritan, tar_phrase: "ng\u01B0\u1EDDi hay l\xE0m ph\xFAc",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 78
+  fields: {src_phrase: a gorgon stare, tar_phrase: "c\xE1i nh\xECn tr\u1EEBng tr\u1EEBng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 79
+  fields: {src_phrase: a great deal of, tar_phrase: "r\u1EA5t nhi\u1EC1u, m\u1ED9t
+      l\u01B0\u1EE3ng l\u1EDBn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 80
+  fields: {src_phrase: a grecian gift, tar_phrase: "m\xF3n qu\xE0 ph\u1EA3i coi ch\u1EEBng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 81
+  fields: {src_phrase: a hair, tar_phrase: "r\u1EA5t \u0111\xFAng, ho\xE0n to\xE0n
+      \u0111\xFAng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 82
+  fields: {src_phrase: a hairpin bend, tar_phrase: "ch\u1ED7 quanh ch\u1EEF chi",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 83
+  fields: {src_phrase: a hang-over, tar_phrase: "c\xE1i c\xF2n s\xF3t l\u1EA1i, c\xE1i
+      c\xF2n t\u1ED3n t\u1EA1i t\u1EEB qu\xE1 kh\u1EE9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 84
+  fields: {src_phrase: a happy hunting-ground, tar_phrase: "n\u01A1i thu\u1EADn ti\u1EC7n
+      cho vi\u1EC7c l\xE0m \u0103n, \u0111\u1EA5t d\u1EE5ng v\xF5", glossary: 1}
+- model: cat.glossarycontent
+  pk: 85
+  fields: {src_phrase: a hard row to hoe, tar_phrase: "vi\u1EC7c r\u1EA5t kh\xF3 l\xE0m,
+      m\u1ED9t vi\u1EC7c h\u1ED1c b\xFAa, c\xF4ng vi\u1EC7c r\u1EA5t kh\xF3 l\xE0m,
+      c\xF4ng vi\u1EC7c h\u1EAFc b\xFAa", glossary: 1}
+- model: cat.glossarycontent
+  pk: 86
+  fields: {src_phrase: a heavy hand, tar_phrase: "s\u1EF1 ki\u1EC3m so\xE1t nghi\xEAm
+      ng\u1EB7t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 87
+  fields: {src_phrase: a hell of smth., tar_phrase: "kinh kh\u1EE7ng, gh\xEA g\u1EDBm,
+      kh\xF4ng th\u1EC3 ch\u1ECBu \u0111\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 88
+  fields: {src_phrase: a high precision, tar_phrase: "\u0111\u1EBFn \u0111\u1ED9 ch\xEDnh
+      x\xE1c cao", glossary: 1}
+- model: cat.glossarycontent
+  pk: 89
+  fields: {src_phrase: a higher-up, tar_phrase: "ng\u01B0\u1EDDi quy\u1EC1n cao ch\u1EE9c
+      tr\u1ECDng, quan to", glossary: 1}
+- model: cat.glossarycontent
+  pk: 90
+  fields: {src_phrase: a hole in one's coat, tar_phrase: "v\u1EBFt nh\u01A1 \u0111\u1ED1i
+      v\u1EDBi thanh danh c\u1EE7a m\xECnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 91
+  fields: {src_phrase: a hollow race, tar_phrase: "cu\u1ED9c \u0111ua u\u1EC3 o\u1EA3i",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 92
+  fields: {src_phrase: a home bird, tar_phrase: "ng\u01B0\u1EDDi th\xEDch \u1EDF trong
+      nh\xE0", glossary: 1}
+- model: cat.glossarycontent
+  pk: 93
+  fields: {src_phrase: a hornet's nest, tar_phrase: "s\u1EF1 ph\xEA ph\xE1n gay g\u1EAFt,
+      s\u1EF1 ph\u1EA3n \u0111\u1ED1i k\u1ECBch li\u1EC7t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 94
+  fields: {src_phrase: a hostage to fortune, tar_phrase: "con tin c\xF3 t\xEDnh c\xE1ch
+      quy\u1EBFt \u0111\u1ECBnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 95
+  fields: {src_phrase: a hot potato, tar_phrase: "v\u1EA5n \u0111\u1EC1 kh\xF3 gi\u1EA3i
+      quy\u1EBFt, v\u1EA5n \u0111\u1EC1 nan gi\u1EA3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 96
+  fields: {src_phrase: a household name, tar_phrase: "t\u1EEB ng\u1EEF c\u1EEDa mi\u1EC7ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 97
+  fields: {src_phrase: a la mode, tar_phrase: "h\u1EE3p th\u1EDDi trang, \u0111\xFAng
+      m\u1ED1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 98
+  fields: {src_phrase: a lady doctor, tar_phrase: "b\xE0 b\xE1c s\u0129, n\u1EEF b\xE1c
+      s\u0129", glossary: 1}
+- model: cat.glossarycontent
+  pk: 99
+  fields: {src_phrase: a leaf cucullate, tar_phrase: "l\xE1 c\xF3 d\u1EA1ng m\u0169",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 100
+  fields: {src_phrase: a leap in the dark, tar_phrase: "h\xE0nh \u0111\u1ED9ng m\u1EA1o
+      hi\u1EC3m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 101
+  fields: {src_phrase: a left-handed compliment, tar_phrase: "l\u1EDDi khen kh\xF4ng
+      th\xE0nh th\u1EF1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 102
+  fields: {src_phrase: a licence to print money, tar_phrase: "k\u1EBF ho\u1EA1ch v\xF4
+      c\xF9ng t\u1ED1n k\xE9m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 103
+  fields: {src_phrase: a likely story, tar_phrase: "c\u1EE9 nh\u01B0 l\xE0 chuy\u1EC7n
+      th\u1EADt tr\u0103m ph\u1EA7n tr\u0103m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 104
+  fields: {src_phrase: a livebirth, tar_phrase: "tr\u1EBB sinh ra c\xF2n s\u1ED1ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 105
+  fields: {src_phrase: a load of old rubbish, tar_phrase: "chuy\u1EC7n nh\u1EA3m nh\xED,
+      chuy\u1EC7n t\xE0o lao", glossary: 1}
+- model: cat.glossarycontent
+  pk: 106
+  fields: {src_phrase: a long haul, tar_phrase: "m\u1ED9t vi\u1EC7c kh\xF3 kh\u0103n
+      dai d\u1EB3ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 107
+  fields: {src_phrase: a losing battle, tar_phrase: "tr\u1EADn \u0111\xE1nh bi\u1EBFt
+      ch\u1EAFc l\xE0 s\u1EBD thua", glossary: 1}
+- model: cat.glossarycontent
+  pk: 108
+  fields: {src_phrase: a low profile, tar_phrase: "c\xE1ch \u1EE9ng x\u1EED k\xEDn
+      \u0111\xE1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 109
+  fields: {src_phrase: a man in a thousand, tar_phrase: "ng\u01B0\u1EDDi hi\u1EBFm
+      c\xF3, ng\u01B0\u1EDDi m\xE0 h\xE0ng ngh\xECn ng\u01B0\u1EDDi m\u1EDBi c\xF3
+      m\u1ED9t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 110
+  fields: {src_phrase: a man of unsound mind, tar_phrase: "k\u1EBB \u0111i\xEAn lo\u1EA1n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 111
+  fields: {src_phrase: a mare's nest, tar_phrase: "ph\xE1t ki\u1EBFn h\xE3o huy\u1EC1n,
+      \u0111i\u1EC1u ph\xE1t hi\u1EC7n l\xE0 hay nh\u01B0ng r\u1ED1t cu\u1ED9c l\u1EA1i
+      ch\u1EB3ng ra g\xEC", glossary: 1}
+- model: cat.glossarycontent
+  pk: 112
+  fields: {src_phrase: a means to an end, tar_phrase: "ph\u01B0\u01A1ng ti\u1EC7n
+      \u0111\u1EC3 \u0111\u1EA1t c\u1EE9u c\xE1nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 113
+  fields: {src_phrase: a midfield player, tar_phrase: "c\u1EA7u th\u1EE7 trung v\u1EC7",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 114
+  fields: {src_phrase: a ministering angel, tar_phrase: "ng\u01B0\u1EDDi lu\xF4n h\u1EBFt
+      l\xF2ng t\u1EADn t\u1EE5y v\xEC ng\u01B0\u1EDDi kh\xE1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 115
+  fields: {src_phrase: a moment two, tar_phrase: "m\u1ED9t v\xE0i l\xFAc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 116
+  fields: {src_phrase: a murrain on you, tar_phrase: "\u0111\u1ED3 ch\u1EBFt toi,
+      \u0111\u1ED3 ch\u1EBFt ti\u1EC7t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 117
+  fields: {src_phrase: a nail in one's coffin, tar_phrase: "c\xE1i c\xF3 th\u1EC3
+      l\xE0m cho ng\u01B0\u1EDDi ta ch\xF3ng ch\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 118
+  fields: {src_phrase: a name to conjure with, tar_phrase: "ti\u1EBFng t\u0103m \u0111\xE1ng
+      n\u1EC3, ng\u01B0\u1EDDi c\xF3 th\u1EBF l\u1EF1c l\u1EDBn, ng\u01B0\u1EDDi c\xF3
+      nhi\u1EC1u \u1EA3nh h\u01B0\u1EDFng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 119
+  fields: {src_phrase: a nasty piece of work, tar_phrase: "ng\u01B0\u1EDDi kh\xF3
+      g\xE2y c\u1EA3m t\xECnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 120
+  fields: {src_phrase: a near thing, tar_phrase: "s\xE1t n\xFAt, su\xFDt thua", glossary: 1}
+- model: cat.glossarycontent
+  pk: 121
+  fields: {src_phrase: a needlewoman, tar_phrase: "ng\u01B0\u1EDDi \u0111\xE0n b\xE0
+      l\xE0m ngh\u1EC1 may v\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 122
+  fields: {src_phrase: a new lease of life, tar_phrase: "c\u01A1 may s\u1ED1ng kho\u1EBB
+      h\u01A1n, m\u1ED9t d\u1ECBp may m\u1EDBi cho cu\u1ED9c s\u1ED1ng, m\u1ED9t l\u1ED1i
+      s\u1ED1ng t\u1ED1t \u0111\u1EB9p h\u01A1n, m\u1ED9t l\u1ED1i s\u1ED1ng ti\u1EBFn
+      b\u1ED9 h\u01A1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 123
+  fields: {src_phrase: a new row to hoe, tar_phrase: "m\u1ED9t c\xF4ng vi\u1EC7c m\u1EDBi",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 124
+  fields: {src_phrase: a nine day's wonder, tar_phrase: "s\u1EF1 h\u1EA5p d\u1EABn
+      nh\u1EA5t th\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 125
+  fields: {src_phrase: a one, tar_phrase: "hay nh\u1EC9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 126
+  fields: {src_phrase: a paper tiger, tar_phrase: "h\u1ED5 gi\u1EA5y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 127
+  fields: {src_phrase: a path strewn with roses, tar_phrase: "cu\u1ED9c s\u1ED1ng
+      \u0111\u1EA7y l\u1EA1c th\xFA", glossary: 1}
+- model: cat.glossarycontent
+  pk: 128
+  fields: {src_phrase: a pen dipped in gall, tar_phrase: "ng\xF2i b\xFAt ch\xE2m bi\u1EBFm
+      cay \u0111\u1ED9c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 129
+  fields: {src_phrase: a penny for your thoughts, tar_phrase: "anh \u0111ang ngh\u0129
+      g\xEC m\xE0 m\xEA m\u1EA3i th\u1EBF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 130
+  fields: {src_phrase: a place in the sun, tar_phrase: "c\xF4ng b\u1EB1ng b\xECnh
+      \u0111\u1EB3ng, \u0111\u1ECBa v\u1ECB trong x\xE3 h\u1ED9i, ch\u1ED7 \u0111\u1EE9\u1EF1ng
+      d\u01B0\u1EDBi \xE1nh m\u1EB7t tr\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 131
+  fields: {src_phrase: a poet of sorts, tar_phrase: "m\u1ED9t nh\xE0 th\u01A1 gi\u1EA3
+      hi\u1EC7u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 132
+  fields: {src_phrase: a poor relation, tar_phrase: "ng\u01B0\u1EDDi ngh\xE8o, \xEDt
+      quy\u1EC1n l\u1EF1c, \xEDt uy t\xEDn, \xEDt \u0111\u01B0\u1EE3c k\xEDnh n\u1EC3",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 133
+  fields: {src_phrase: a pound two, tar_phrase: "m\u1ED9t v\xE0i pao", glossary: 1}
+- model: cat.glossarycontent
+  pk: 134
+  fields: {src_phrase: a pregnant pause, tar_phrase: "s\u1EF1 ng\u1EADp ng\u1EEBng
+      \u0111\u1EA7y h\xE0m \xFD, s\u1EF1 ng\u1EADp ng\u1EEBng \u0111\u1EA7y \xFD ngh\u0129a",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 135
+  fields: {src_phrase: a prentice hand, tar_phrase: "tay m\u1EDBi h\u1ECDc ngh\u1EC1,
+      tay m\u1EDBi t\u1EADp vi\u1EC7c, tay ng\u01B0\u1EDDi v\u1EE5ng v\u1EC1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 136
+  fields: {src_phrase: a pretty penny, tar_phrase: "nhi\u1EC1u ti\u1EC1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 137
+  fields: {src_phrase: a price on smb.'s head, tar_phrase: "gi\u1EA3i th\u01B0\u1EDFng
+      l\u1EA5y \u0111\u1EA7u smb., gi\u1EA3i treo \u0111\u1EC3 l\u1EA5y \u0111\u1EA7u
+      smb.", glossary: 1}
+- model: cat.glossarycontent
+  pk: 138
+  fields: {src_phrase: a prophet of doom, tar_phrase: "nh\xE0 ti\xEAn tri bi quan",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 139
+  fields: {src_phrase: a queer fish, tar_phrase: "anh ch\xE0ng k\u1EF3 qu\u1EB7c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 140
+  fields: {src_phrase: a quick-eared person, tar_phrase: "ng\u01B0\u1EDDi th\xEDnh
+      tai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 141
+  fields: {src_phrase: a quick-tempered person, tar_phrase: "ng\u01B0\u1EDDi n\xF3ng
+      t\xEDnh, d\u1EC5 c\xE1u g\u1EAFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 142
+  fields: {src_phrase: a race against time, tar_phrase: "tranh th\u1EE7 th\u1EDDi
+      gian", glossary: 1}
+- model: cat.glossarycontent
+  pk: 143
+  fields: {src_phrase: a red cent, tar_phrase: "v\xF4 gi\xE1 tr\u1ECB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 144
+  fields: {src_phrase: a retired life, tar_phrase: "cu\u1ED9c s\u1ED1ng \u1EA9n d\u1EADt",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 145
+  fields: {src_phrase: a retired spot, tar_phrase: "m\u1ED9t n\u01A1i h\u1EBBo l\xE1nh",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 146
+  fields: {src_phrase: a roaring success, tar_phrase: "m\u1ED9t th\xE0nh c\xF4ng r\u1EA5t
+      l\u1EDBn, vang d\u1ED9i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 147
+  fields: {src_phrase: a rope of sand, tar_phrase: "s\u1EF1 v\u1EEFng ch\u1EAFc gi\u1EA3
+      t\u1EA1o, \u1EA3o gi\xE1c, \u1EA3o t\u01B0\u1EDFng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 148
+  fields: {src_phrase: a rum start, tar_phrase: "m\u1ED9t s\u1EF1 x\u1EA3y ra k\u1EF3
+      l\u1EA1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 149
+  fields: {src_phrase: a run of luck, tar_phrase: "m\u1ED9t d\u1ECBp may, m\u1ED9t
+      l\xFAc may m\u1EAFn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 150
+  fields: {src_phrase: a sacred cow, tar_phrase: "kh\xF4ng ch\xEA v\xE0o \u0111\xE2u
+      \u0111\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 151
+  fields: {src_phrase: a safe bet, tar_phrase: "\u0111i\u1EC1u ch\u1EAFc ch\u1EAFn
+      th\xE0nh c\xF4ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 152
+  fields: {src_phrase: a saving grace, tar_phrase: "\u0111i\u1EC1u b\xF9 \u0111\u1EAFp
+      cho ch\u1ED7 khi\u1EBFm khuy\u1EBFt, \u0111i\u1EC1u b\xF9 \u0111\u1EAFp cho
+      nh\u1EEFng ph\u1EA9m ch\u1EA5t k\xE9m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 153
+  fields: {src_phrase: a school of thought, tar_phrase: "m\xF4n ph\xE1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 154
+  fields: {src_phrase: a sea of flame, tar_phrase: "bi\u1EC3n l\u1EEDa", glossary: 1}
+- model: cat.glossarycontent
+  pk: 155
+  fields: {src_phrase: "a sense of d\xE9ja vu", tar_phrase: "c\u1EA3m gi\xE1c ng\u1EDD
+      ng\u1EE3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 156
+  fields: {src_phrase: a shot in the arm, tar_phrase: "li\u1EC1u thu\u1ED1c b\u1ED5",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 157
+  fields: {src_phrase: a shrinking violet, tar_phrase: "con ng\u01B0\u1EDDi nh\xFAt
+      nh\xE1t, ng\u01B0\u1EDDi hay x\u1EA5u h\u1ED5", glossary: 1}
+- model: cat.glossarycontent
+  pk: 158
+  fields: {src_phrase: a side of, tar_phrase: "m\u1ED9t ph\u1EA7n c\u1EE7a, m\u1ED9t
+      kh\xEDa c\u1EA1nh c\u1EE7a, m\u1ED9t m\u1EB7t c\u1EE7a", glossary: 1}
+- model: cat.glossarycontent
+  pk: 159
+  fields: {src_phrase: a sight of smth., tar_phrase: "r\u1EA5t nhi\u1EC1u smth.",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 160
+  fields: {src_phrase: a silver tongue, tar_phrase: "t\xE0i h\xF9ng bi\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 161
+  fields: {src_phrase: a sinking feeling, tar_phrase: "c\u1EA3m th\u1EA5y c\xF3 smth.
+      x\u1EA5u x\u1EA3y ra", glossary: 1}
+- model: cat.glossarycontent
+  pk: 162
+  fields: {src_phrase: a skeleton in the cupboard, tar_phrase: "vi\u1EC7c x\u1EA5u
+      xa ph\u1EA3i gi\u1EA5u gi\u1EBFm, vi\u1EC7c \xF4 nh\u1EE5c ph\u1EA3i che \u0111\u1EADy
+      trong gia \u0111\xECnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 163
+  fields: {src_phrase: a slap in the face, tar_phrase: "s\u1EF1 s\u1EC9 nh\u1EE5c,
+      s\u1EF1 l\u0103ng m\u1EA1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 164
+  fields: {src_phrase: a sleepless night, tar_phrase: "\u0111\xEAm th\u1EE9c tr\u1EAFng,
+      \u0111\xEAm kh\xF4ng ng\u1EE7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 165
+  fields: {src_phrase: a small fortune, tar_phrase: "nhi\u1EC1u ti\u1EC1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 166
+  fields: {src_phrase: a soldier of fortune, tar_phrase: "l\xEDnh \u0111\xE1nh thu\xEA",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 167
+  fields: {src_phrase: a sop in the pan, tar_phrase: "mi\u1EBFng ngon, m\u1ED3i ngon,
+      b\xE1nh m\xEC r\xE1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 168
+  fields: {src_phrase: a sore point subject, tar_phrase: "\u0111i\u1EC3m d\u1EC5 l\xE0m
+      ch\u1EA1m l\xF2ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 169
+  fields: {src_phrase: a sporting chance, tar_phrase: "kh\u1EA3 n\u0103ng c\xF3 th\u1EC3
+      th\u1EAFng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 170
+  fields: {src_phrase: a stab in the back, tar_phrase: "c\xFA \u0111\xE2m sau l\u01B0ng,
+      s\u1EF1 h\xE3m h\u1EA1i, s\u1EF1 ph\u1EA3n b\u1ED9i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 171
+  fields: {src_phrase: a step forward, tar_phrase: "m\u1ED9t b\u01B0\u1EDBc ti\u1EBFn
+      l\xEAn ph\xEDa tr\u01B0\u1EDBc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 172
+  fields: {src_phrase: a sticky wicket, tar_phrase: "m\u1EB7t s\xE2n b\u1ECB \u01B0\u1EDBt,
+      t\xECnh hu\u1ED1ng kh\xF3 gi\u1EA3i quy\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 173
+  fields: {src_phrase: a stiff upper lip, tar_phrase: "kh\u1EA3 n\u0103ng ch\u1ECBu
+      \u0111\u1EF1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 174
+  fields: {src_phrase: a stock argument, tar_phrase: "l\xFD l\u1EBD t\u1EE7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 175
+  fields: {src_phrase: a storm in a teacup, tar_phrase: "vi\u1EC7c b\xE9 x\xE9 ra
+      to, vi\u1EC7c kh\xF4ng \u0111\xE2u c\u0169ng l\xE0m to chuy\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 176
+  fields: {src_phrase: a straight race, tar_phrase: "cu\u1ED9c \u0111ua h\xE0o h\u1EE9ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 177
+  fields: {src_phrase: a straw, tar_phrase: "v\xF4 gi\xE1 tr\u1ECB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 178
+  fields: {src_phrase: a submarine pen, tar_phrase: "b\u1EBFn t\xE0u ng\u1EA7m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 179
+  fields: {src_phrase: a success story, tar_phrase: "ng\u01B0\u1EDDi r\u1EA5t th\xE0nh
+      c\xF4ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 180
+  fields: {src_phrase: a sword of damocles, tar_phrase: "thanh g\u01B0\u01A1m damocles",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 181
+  fields: {src_phrase: a take-off, tar_phrase: "s\u1EF1 nh\u1EA1i, s\u1EF1 gi\u1EC5u,
+      tranh bi\u1EBFm h\u1ECDa, s\u1EF1 c\u1EA5t c\xE1nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 182
+  fields: {src_phrase: a tall story, tar_phrase: "chuy\u1EC7n kh\xF3 tin", glossary: 1}
+- model: cat.glossarycontent
+  pk: 183
+  fields: {src_phrase: a tearing hurry, tar_phrase: "h\u1EBFt s\u1EE9c v\u1ED9i v\u1EA3,
+      cu\u1ED1ng cu\u1ED3ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 184
+  fields: {src_phrase: a thing of the past, tar_phrase: "c\xE1i \u0111\xE3 l\u1ED7i
+      th\u1EDDi, c\xE1i kh\xF4ng c\xF2n h\u1EE3p th\u1EDDi th\u01B0\u1EE3ng n\u1EEFa",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 185
+  fields: {src_phrase: a thorn in smb.'s flesh, tar_phrase: "nh\u01B0 c\xE1i gai tr\u01B0\u1EDBc
+      m\u1EAFt, ch\u01B0\u1EDBng tai gai m\u1EAFt, nh\u01B0 c\xE1i ung c\xE1i nh\u1ECDt",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 186
+  fields: {src_phrase: a thousand and one, tar_phrase: "v\xF4 s\u1ED1, mu\xF4n ng\xE0n,
+      m\u1ED9t ngh\xECn l\u1EBB m\u1ED9t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 187
+  fields: {src_phrase: a through train, tar_phrase: "xe l\u1EEDa ch\u1EA1y su\u1ED1t",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 188
+  fields: {src_phrase: a tight squeeze, tar_phrase: "t\xECnh hu\u1ED1ng t\xF9 t\xFAng,
+      t\xECnh hu\u1ED1ng ch\u1EADt ch\u1ED9i, kh\xF4ng t\u1EF1 do, kh\xF4ng tho\u1EA3i
+      m\xE1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 189
+  fields: {src_phrase: a tittle, tar_phrase: "ho\xE0n to\xE0n, l\xFD t\u01B0\u1EDFng,
+      ch\xEDnh x\xE1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 190
+  fields: {src_phrase: a touch, tar_phrase: "h\u01A1i, m\u1ED9t ch\xFAt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 191
+  fields: {src_phrase: a toy boy, tar_phrase: "h\u1ECDc sinh \u0111\u1EE9ng \u0111\u1EA7u
+      l\u1EDBp", glossary: 1}
+- model: cat.glossarycontent
+  pk: 192
+  fields: {src_phrase: a triton among the minnows, tar_phrase: "ng\u01B0\u1EDDi kh\u1ED5ng
+      l\u1ED3 gi\u1EEFa nh\u1EEFng ng\u01B0\u1EDDi l\xF9n, con h\u1EA1c trong \u0111\xE0n
+      g\xE0", glossary: 1}
+- model: cat.glossarycontent
+  pk: 193
+  fields: {src_phrase: a turn of phrase, tar_phrase: "c\xE1ch di\u1EC5n \u0111\u1EA1t,
+      c\xE1ch m\xF4 t\u1EA3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 194
+  fields: {src_phrase: a turn-up for the book, tar_phrase: "chuy\u1EC7n hoang \u0111\u01B0\u1EDDng,
+      chuy\u1EC7n k\u1EF3 l\u1EA1, s\u1EF1 x\u1EA3y ra b\u1EA5t ng\u1EDD, s\u1EF1
+      x\u1EA3y ra kh\xF4ng b\xECnh th\u01B0\u1EDDng, s\u1EF1 ki\u1EC7n kh\xF4ng b\xECnh
+      th\u01B0\u1EDDng, s\u1EF1 ki\u1EC7n b\u1EA5t ng\u1EDD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 195
+  fields: {src_phrase: a vexed question, tar_phrase: "v\u1EA5n \u0111\u1EC1 g\xE2y
+      nhi\u1EC1u tranh c\xE3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 196
+  fields: {src_phrase: a voice in the wilderness, tar_phrase: "ti\u1EBFng k\xEAu trong
+      sa m\u1EA1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 197
+  fields: {src_phrase: a walk of life, tar_phrase: "t\u1EA7ng l\u1EDBp x\xE3 h\u1ED9i,
+      \u0111\u1ECBa v\u1ECB x\xE3 h\u1ED9i, ngh\u1EC1 nghi\u1EC7p, vi\u1EC7c l\xE0m,
+      l\u0129nh v\u1EF1c ho\u1EA1t \u0111\u1ED9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 198
+  fields: {src_phrase: a walrus moustache, tar_phrase: "ria qu\u1EB7p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 199
+  fields: {src_phrase: a war of words, tar_phrase: "cu\u1ED9c chi\u1EBFn tranh b\u1EB1ng
+      m\u1ED3m, kh\u1EA9u chi\u1EBFn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 200
+  fields: {src_phrase: a weak moment, tar_phrase: "ph\xFAt y\u1EBFu \u0111u\u1ED1i",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 201
+  fields: {src_phrase: a wet blanket, tar_phrase: "ng\u01B0\u1EDDi ph\xE1 ho\u1EA1i
+      ni\u1EC1m vui c\u1EE7a ng\u01B0\u1EDDi kh\xE1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 202
+  fields: {src_phrase: a whale for smth., tar_phrase: "m\u1ED9t tay c\u1EEB v\u1EC1
+      smth., m\u1ED9t ng\u01B0\u1EDDi ham th\xEDch smth.", glossary: 1}
+- model: cat.glossarycontent
+  pk: 203
+  fields: {src_phrase: a whisky straight, tar_phrase: "r\u01B0\u1EE3u uytky kh\xF4ng
+      pha", glossary: 1}
+- model: cat.glossarycontent
+  pk: 204
+  fields: {src_phrase: a will of one.'s own, tar_phrase: "c\xF3 b\xE3n l\u0129nh",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 205
+  fields: {src_phrase: a wind of change, tar_phrase: "\u1EA3nh h\u01B0\u1EDFng l\xE0m
+      thay \u0111\u1ED5i, chi\u1EC1u h\u01B0\u1EDBng thay \u0111\u1ED5i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 206
+  fields: {src_phrase: a winning smile, tar_phrase: "n\u1EE5 c\u01B0\u1EDDi quy\u1EBFn
+      r\u0169", glossary: 1}
+- model: cat.glossarycontent
+  pk: 207
+  fields: {src_phrase: a woman of easy virtue, tar_phrase: "g\xE1i \u0111i\u1EBFm",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 208
+  fields: {src_phrase: a word in season, tar_phrase: "l\u1EDDi n\xF3i \u0111\xFAng
+      l\xFAc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 209
+  fields: {src_phrase: a word to the wise, tar_phrase: "\u0111\u1ED1i v\u1EDBi ng\u01B0\u1EDDi
+      kh\xF4n m\u1ED9t l\u1EDDi c\u0169ng \u0111\u1EE7, \u0111\u1ED1i v\u1EDBi m\u1ED9t
+      ng\u01B0\u1EDDi kh\xF4n m\u1ED9t l\u1EDDi c\u0169ng \u0111\u1EE7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 210
+  fields: {src_phrase: a wrong-headed boy, tar_phrase: "\u0111\u1EE9a tr\u1EBB \u01B0\u01A1ng
+      ng\u1EA1nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 211
+  fields: {src_phrase: a-going, tar_phrase: "\u0111ang ch\u1EA1y, \u0111ang chuy\u1EC3n
+      \u0111\u1ED9ng, \u0111ang ho\u1EA1t \u0111\u1ED9ng, \u0111ang ti\u1EBFn h\xE0nh",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 212
+  fields: {src_phrase: a-pac-thai, tar_phrase: apartheid, glossary: 1}
+- model: cat.glossarycontent
+  pk: 213
+  fields: {src_phrase: a-power, tar_phrase: "c\u01B0\u1EDDng qu\u1ED1c nguy\xEAn t\u1EED,
+      n\u0103ng l\u01B0\u1EE3ng nguy\xEAn t\u1EED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 214
+  fields: {src_phrase: a.d., tar_phrase: "sau c\xF4ng nguy\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 215
+  fields: {src_phrase: aaa, tar_phrase: "h\u1ED9i th\u1EC3 thao kh\xF4ng chuy\xEAn,
+      hi\u1EC7p h\u1ED9i xe h\u01A1i m\u1EF9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 216
+  fields: {src_phrase: aardvark, tar_phrase: "l\u1EE3n \u0111\u1EA5t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 217
+  fields: {src_phrase: aasvogel, tar_phrase: "con k\xEAn k\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 218
+  fields: {src_phrase: ab extra, tar_phrase: "t\u1EEB b\xEAn ngo\xE0i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 219
+  fields: {src_phrase: ab intra, tar_phrase: "ngay t\u1EEB b\xEAn trong", glossary: 1}
+- model: cat.glossarycontent
+  pk: 220
+  fields: {src_phrase: ab ovo, tar_phrase: "t\u1EEB khai thi\xEAn l\u1EADp \u0111\u1ECBa,
+      t\u1EEB nguy\xEAn s\u01A1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 221
+  fields: {src_phrase: abaca, tar_phrase: "c\xE2y chu\u1ED1i abaca, v\u1EA3i d\u1EC7t
+      b\u1EB1ng t\u01A1 chu\u1ED1i abaca", glossary: 1}
+- model: cat.glossarycontent
+  pk: 222
+  fields: {src_phrase: aback, tar_phrase: "b\u1ECB th\u1ED5i \xE9p v\xE0o c\u1ED9t
+      bu\u1ED3m, l\xF9i l\u1EA1i, tr\u1EDF l\u1EA1i ph\xEDa sau, s\u1EEDng s\u1ED1t,
+      ng\u1EA1c nhi\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 223
+  fields: {src_phrase: abaction, tar_phrase: "vi\u1EC7c gia s\xFAc b\u1ECB b\u1EAFt
+      tr\u1ED9m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 224
+  fields: {src_phrase: abacus, tar_phrase: "\u0111\u1EA7u c\u1ED9t, \u0111\u1EC9nh
+      c\u1ED9t, b\xE0n t\xEDnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 225
+  fields: {src_phrase: abaft, tar_phrase: "sau, \u1EDF \u0111\u1EB1ng sau, \u1EDF
+      ph\xEDa sau, \u1EDF ph\xEDa sau b\xE1nh l\xE1i, g\u1EA7n ph\xEDa b\xE1nh l\xE1i",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 226
+  fields: {src_phrase: abalienation, tar_phrase: "s\u1EF1 nh\u01B0\u1EDDng l\u1EA1i
+      t\xE0i s\u1EA3n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 227
+  fields: {src_phrase: abandon, tar_phrase: "t\u1EEB b\u1ECF, b\u1ECF r\u01A1i, ru\u1ED3ng
+      b\u1ECF, s\u1EF1 ph\xF3ng t\xFAng, s\u1EF1 t\u1EF1 do, s\u1EF1 bu\xF4ng th\u1EA3",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 228
+  fields: {src_phrase: abandoner, tar_phrase: "ng\u01B0\u1EDDi r\xFAt \u0111\u01A1n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 229
+  fields: {src_phrase: abapikal, tar_phrase: "d\u01B0\u1EDBi v\u1EF1c, xa \u0111\u1EC9nh,
+      xa ng\u1ECDn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 230
+  fields: {src_phrase: abase, tar_phrase: "l\xE0m h\u1EA1 ph\u1EA9m gi\xE1, l\xE0m
+      m\u1EA5t th\u1EC3 di\u1EC7n, l\xE0m nh\u1EE5c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 231
+  fields: {src_phrase: abash, tar_phrase: "l\xE0m b\u1ED1i r\u1ED1i, l\xE0m l\xFAng
+      t\xFAng, l\xE0m lu\u1ED1ng cu\u1ED1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 232
+  fields: {src_phrase: abask, tar_phrase: "d\u01B0\u1EDBi \xE1nh n\u1EAFng, d\u01B0\u1EDBi
+      \xE1nh m\u1EB7t tr\u1EDDi, trong \xE1nh l\u1EEDa \u1EA5m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 233
+  fields: {src_phrase: abate, tar_phrase: "d\u1ECBu \u0111i, y\u1EBFu \u0111i, nh\u1EE5t
+      \u0111i, \u0111\u1EE1, b\u1EDBt, ng\u1EDBt, h\u1EA1, hu\u1EF7 b\u1ECF, th\u1EE7
+      ti\xEAu, l\xE0m c\xF9n, l\xE0m d\u1ECBu \u0111i, l\xE0m y\u1EBFu \u0111i, l\xE0m
+      gi\u1EA3m b\u1EDBt, l\xE0m nh\u1EE5t, ram, thanh to\xE1n, l\xE0m m\u1EA5t h\u1EBFt",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 234
+  fields: {src_phrase: abater, tar_phrase: "ng\u01B0\u1EDDi gi\u1EA3m b\u1EDBt, thu\u1ED1c
+      l\xE0m d\u1ECBu", glossary: 1}
+- model: cat.glossarycontent
+  pk: 235
+  fields: {src_phrase: abatised, tar_phrase: "c\xF3 \u0111\u1ED1ng c\xE2y ch\u01B0\u1EDBng
+      ng\u1EA1i, c\xF3 \u0111\u1ED1ng c\xE2y c\u1EA3n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 236
+  fields: {src_phrase: abaxial, tar_phrase: "\u1EDF ngo\xE0i tr\u1EE5c, xa tr\u1EE5c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 237
+  fields: {src_phrase: abb, tar_phrase: "s\u1EE3i canh, s\u1EE3i kh\u1ED5", glossary: 1}
+- model: cat.glossarycontent
+  pk: 238
+  fields: {src_phrase: abbatial, tar_phrase: "tr\u01B0\u1EDFng tu vi\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 239
+  fields: {src_phrase: abbey, tar_phrase: "gi\u1EDBi tu s\u0129, tu vi\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 240
+  fields: {src_phrase: abbot, tar_phrase: "cha tr\u01B0\u1EDFng tu vi\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 241
+  fields: {src_phrase: abbreviated, tar_phrase: "ng\u1EAFn c\u0169n c\u1EE1n, t\xF3m
+      t\u1EAFt, vi\u1EBFt t\u1EAFt, r\xFAt ng\u1EAFn l\u1EA1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 242
+  fields: {src_phrase: abbreviator, tar_phrase: "ng\u01B0\u1EDDi t\xF3m t\u1EAFt",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 243
+  fields: {src_phrase: abc-book, tar_phrase: "s\xE1ch v\u1EE1 l\xF2ng, s\xE1ch h\u1ECDc
+      v\u1EA7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 244
+  fields: {src_phrase: abdicate, tar_phrase: "tho\xE1i v\u1ECB, t\u1EEB ng\xF4i, t\u1EEB
+      b\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 245
+  fields: {src_phrase: abdicator, tar_phrase: "ng\u01B0\u1EDDi tho\xE1i v\u1ECB, ng\u01B0\u1EDDi
+      t\u1EEB b\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 246
+  fields: {src_phrase: abdominal, tar_phrase: "b\u1EE5ng, \u1EDF b\u1EE5ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 247
+  fields: {src_phrase: abducens, tar_phrase: "d\xE2y th\u1EA7n kinh n\xE3o vi ra ngo\xE0i",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 248
+  fields: {src_phrase: abduct, tar_phrase: "b\u1EAFt c\xF3c, cu\u1ED7m \u0111i, l\u1EEBa
+      \u0111em \u0111i, r\u1EBD ra, gi\u1EA1ng ra", glossary: 1}
+- model: cat.glossarycontent
+  pk: 249
+  fields: {src_phrase: abductor, tar_phrase: "c\u01A1 gi\u1EA1ng, ng\u01B0\u1EDDi
+      b\u1EAFt c\xF3c, ng\u01B0\u1EDDi cu\u1ED7m \u0111i, ng\u01B0\u1EDDi l\u1EEBa
+      \u0111em \u0111i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 250
+  fields: {src_phrase: abearance, tar_phrase: "ph\u1EA9m h\u1EA1nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 251
+  fields: {src_phrase: abecedaries, tar_phrase: "\u0111i\u1EC1u s\u01A1 b\u1ED9, \u0111i\u1EC1u
+      s\u01A1 \u0111\u1EB3ng, s\xE1ch v\u1EE1 l\xF2ng, s\xE1ch v\u1EA7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 252
+  fields: {src_phrase: abel's test for convergence, tar_phrase: "th\xED nghi\u1EC7m
+      h\u1ED9i t\u1EE5 abel", glossary: 1}
+- model: cat.glossarycontent
+  pk: 253
+  fields: {src_phrase: abel's theorem of power series, tar_phrase: "\u0111\u1ECBnh
+      l\xFD abel v\u1EC1 chu\u1ED7i l\u0169y th\u1EEBa", glossary: 1}
+- model: cat.glossarycontent
+  pk: 254
+  fields: {src_phrase: abelmosk, tar_phrase: "c\xE2y v\xF4ng v\xE0ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 255
+  fields: {src_phrase: aberrance, tar_phrase: "s\u1EF1 kh\xE1c th\u01B0\u1EDDng, s\u1EF1
+      l\u1EA7m l\u1EA1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 256
+  fields: {src_phrase: aberration, tar_phrase: "quang sai, s\u1EF1 k\xE9m tr\xED kh\xF4n,
+      s\u1EF1 lo\u1EA1n tr\xED, s\u1EF1 kh\xE1c th\u01B0\u1EDDng, s\u1EF1 l\u1EA7m
+      l\u1EA1c, ph\xFAt l\u1EA7m l\u1EA1c, t\xEDnh sai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 257
+  fields: {src_phrase: abetment, tar_phrase: "s\u1EF1 ti\u1EBFp tay, s\u1EF1 x\xFAi
+      b\u1EA9y, s\u1EF1 x\xFAi gi\u1EE5c, s\u1EF1 kh\xEDch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 258
+  fields: {src_phrase: abeyance, tar_phrase: "s\u1EF1 \u0111\xECnh ch\u1EC9, s\u1EF1
+      ho\xE3n l\u1EA1i, s\u1EF1 \u0111\u1ECDng l\u1EA1i, t\xECnh tr\u1EA1ng tr\u1ED1ng,
+      t\xECnh tr\u1EA1ng khuy\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 259
+  fields: {src_phrase: abhor, tar_phrase: "gh\xEA t\u1EDFm, gh\xE9t cay gh\xE9t \u0111\u1EAFng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 260
+  fields: {src_phrase: abhorent of, tar_phrase: "gh\xEA t\u1EDFm, gh\xE9t cay gh\xE9t
+      \u0111\u1EAFng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 261
+  fields: {src_phrase: abhorrence, tar_phrase: "\u0111i\u1EC1u gh\xEA t\u1EDFm, b\u1ECB
+      gh\xE9t cay gh\xE9t \u0111\u1EAFng, s\u1EF1 gh\xEA t\u1EDFm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 262
+  fields: {src_phrase: abidance, tar_phrase: "s\u1EF1 t\xF4n tr\u1ECDng, s\u1EF1 tu\xE2n
+      theo, s\u1EF1 thi h\xE0nh \u0111\xFAng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 263
+  fields: {src_phrase: abide by, tar_phrase: "t\xF4n tr\u1ECDng, tu\xE2n theo, trung
+      th\xE0nh v\u1EDBi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 264
+  fields: {src_phrase: abide smo.'s fits of temper, tar_phrase: "ch\u1ECBu \u0111\u1EF1ng
+      nh\u1EEFng c\u01A1n n\xF3ng gi\u1EADn c\u1EE7a smo.", glossary: 1}
+- model: cat.glossarycontent
+  pk: 265
+  fields: {src_phrase: abiding, tar_phrase: "kh\xF4ng thay \u0111\u1ED5i, v\u0129nh
+      c\u1EEDu, t\u1ED3n t\u1EA1i m\xE3i m\xE3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 266
+  fields: {src_phrase: abient, tar_phrase: "tr\xE1nh k\xEDch th\xEDch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 267
+  fields: {src_phrase: abietene, tar_phrase: abietin, glossary: 1}
+- model: cat.glossarycontent
+  pk: 268
+  fields: {src_phrase: ability, tar_phrase: "kh\u1EA3 n\u0103ng thanh to\xE1n \u0111\u01B0\u1EE3c,
+      ngu\u1ED3n v\u1ED1n s\u1EB5n c\xF3, n\u0103ng l\u1EF1c, kh\u1EA3 n\u0103ng,
+      th\u1EA9m quy\u1EC1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 269
+  fields: {src_phrase: ability to conceive, tar_phrase: "kh\u1EA3 n\u0103ng \u0111\u1EC3
+      n\u1EA9y m\u1EA7m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 270
+  fields: {src_phrase: abiogenesis, tar_phrase: "s\u1EF1 ph\xE1t sinh t\u1EF1 nhi\xEAn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 271
+  fields: {src_phrase: abiogenetically, tar_phrase: "ph\xE1t sinh t\u1EF1 nhi\xEAn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 272
+  fields: {src_phrase: abiogenous, tar_phrase: "ph\xE1t sinh t\u1EF1 nhi\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 273
+  fields: {src_phrase: abioseston, tar_phrase: "ch\u1EA5t v\xF4 c\u01A1 l\u01A1 l\u1EEDng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 274
+  fields: {src_phrase: abiotrophic, tar_phrase: "ki\u1EC7t s\u1EE9c s\u1ED1ng, suy
+      s\u1EE9c s\u1ED1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 275
+  fields: {src_phrase: abirritate, tar_phrase: "gi\u1EA3m k\xEDch th\xEDch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 276
+  fields: {src_phrase: abject, tar_phrase: "h\xE8n h\u1EA1, th\u1EA5p h\xE8n, \u0111\xEA
+      ti\u1EC7n, \u0111\xE1ng khinh, kh\u1ED1n kh\u1ED5, kh\u1ED1n n\u1EA1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 277
+  fields: {src_phrase: abjectly, tar_phrase: "h\xE8n h\u1EA1, \u0111\xEA ti\u1EC7n,
+      kh\u1ED1n kh\u1ED5, kh\u1ED1n n\u1EA1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 278
+  fields: {src_phrase: abjudicate, tar_phrase: "th\u1EC1 b\u1ECF \u0111\u1EA1o, tuy\xEAn
+      b\u1ED1 t\u1EEB b\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 279
+  fields: {src_phrase: abjure, tar_phrase: "r\xFAt lui, tuy\xEAn b\u1ED1 b\u1ECF,
+      nguy\u1EC7n b\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 280
+  fields: {src_phrase: ablastous, tar_phrase: "kh\xF4ng m\u1EA7m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 281
+  fields: {src_phrase: ablation, tar_phrase: "s\u1EF1 c\u1EAFt b\u1ECF, s\u1EF1 t\u1EA3i
+      m\xF2n, s\u1EF1 ti\xEAu m\xF2n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 282
+  fields: {src_phrase: ablaut, tar_phrase: "hi\u1EC7n t\u01B0\u1EE3ng bi\u1EBFn \xE2m
+      s\u1EAFc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 283
+  fields: {src_phrase: able, tar_phrase: "c\xF3 \u0111\u1EE7 t\u01B0 c\xE1ch, c\xF3
+      \u0111\u1EE7 th\u1EA9m quy\u1EC1n, c\xF3 n\u0103ng l\u1EF1c, c\xF3 t\xE0i",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 284
+  fields: {src_phrase: ablegate, tar_phrase: "\u0111\u1EA1i s\u1EE9 gi\xE1o ho\xE0ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 285
+  fields: {src_phrase: ableness, tar_phrase: "n\u0103ng l\u1EF1c, t\xE0i n\u0103ng,
+      s\u1EF1 c\u01B0\u1EDDng tr\xE1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 286
+  fields: {src_phrase: ablings, tar_phrase: "c\xF3 l\u1EBD, c\xF3 th\u1EC3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 287
+  fields: {src_phrase: abluent, tar_phrase: "ch\u1EA5t t\u1EA9y, thu\u1ED1c t\u1EA9y,
+      r\u1EEDa s\u1EA1ch, t\u1EA9y s\u1EA1ch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 288
+  fields: {src_phrase: ablution, tar_phrase: "l\u1EC5 r\u1EEDa t\u1ED9i, l\u1EC5 t\u1EAFm
+      g\u1ED9i, l\u1EC5 r\u1EEDa s\u1EA1ch c\xE1c \u0111\u1ED3 th\u1EDD, n\u01B0\u1EDBc
+      t\u1EAFm g\u1ED9i, n\u01B0\u1EDBc r\u1EEDa \u0111\u1ED3 th\u1EDD, s\u1EF1 t\u1EAFm
+      g\u1ED9i, s\u1EF1 r\u1EEDa r\xE1y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 289
+  fields: {src_phrase: abm, tar_phrase: "t\xEAn l\u1EEDa ch\u1ED1ng t\xEAn l\u1EEDa
+      \u0111\u1EA1n \u0111\u1EA1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 290
+  fields: {src_phrase: abnegation, tar_phrase: "s\u1EF1 b\u1ECF, s\u1EF1 t\u1EEB b\u1ECF,
+      s\u1EF1 t\u1EEB ch\u1ED1i, s\u1EF1 t\u1EEB ch\u1ED1i kh\xF4ng nh\u1EADn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 291
+  fields: {src_phrase: abnormalcy, tar_phrase: "s\u1EF1 kh\xF4ng b\xECnh th\u01B0\u1EDDng,
+      s\u1EF1 kh\xE1c th\u01B0\u1EDDng, s\u1EF1 d\u1ECB th\u01B0\u1EDDng, v\u1EADt
+      k\u1EF3 qu\xE1i, qu\xE1i v\u1EADt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 292
+  fields: {src_phrase: aboard, tar_phrase: "l\xEAn tr\xEAn, d\u1ECDc theo, g\u1EA7n,
+      k\u1EBF, tr\xEAn t\xE0u, tr\xEAn boong t\xE0u, tr\xEAn thuy\u1EC1n, tr\xEAn
+      xe l\u1EEDa, tr\xEAn m\xE1y bay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 293
+  fields: {src_phrase: aboil, tar_phrase: "\u0111ang s\xF4i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 294
+  fields: {src_phrase: abolishable, tar_phrase: "c\xF3 th\u1EC3 th\u1EE7 ti\xEAu,
+      c\xF3 th\u1EC3 b\xE3i b\u1ECF, c\xF3 th\u1EC3 hu\u1EF7 b\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 295
+  fields: {src_phrase: abolishment, tar_phrase: "s\u1EF1 th\u1EE7 ti\xEAu, s\u1EF1
+      b\xE3i b\u1ECF, s\u1EF1 hu\u1EF7 b\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 296
+  fields: {src_phrase: abolitionism, tar_phrase: "ch\u1EE7 ngh\u0129a b\xE3i n\xF4",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 297
+  fields: {src_phrase: abolitionize, tar_phrase: "l\xE0m cho theo ch\u1EE7 ngh\u0129a
+      b\xE3i n\xF4", glossary: 1}
+- model: cat.glossarycontent
+  pk: 298
+  fields: {src_phrase: abominable, tar_phrase: "gh\xEA t\u1EDFm, kinh t\u1EDFm, t\u1ED3i,
+      t\u1ED3i t\u1EC7, r\u1EA5t x\u1EA5u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 299
+  fields: {src_phrase: abominableness, tar_phrase: "s\u1EF1 gh\xEA t\u1EDFm, s\u1EF1
+      kinh t\u1EDFm, s\u1EF1 t\u1ED3i t\u1EC7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 300
+  fields: {src_phrase: abominate, tar_phrase: "gh\xEA t\u1EDFm, gh\xE9t cay gh\xE9t
+      \u0111\u1EAFng, kh\xF4ng \u01B0a, gh\xE9t m\u1EB7t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 301
+  fields: {src_phrase: aboral, tar_phrase: "xa mi\u1EC7ng, \u0111\u1ED1i mi\u1EC7ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 302
+  fields: {src_phrase: aboriginality, tar_phrase: "\u0111\u1EB7c \u0111i\u1EC3m nguy\xEAn
+      s\u01A1, t\xEDnh thu\u1EA7n ph\xE1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 303
+  fields: {src_phrase: abort, tar_phrase: "b\u1ECF d\u1EDF, kh\xF4ng ph\xE1t tri\u1EC3n,
+      l\xE0m s\u1EA9y thai, ph\xE1 thai, s\u1EA9y thai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 304
+  fields: {src_phrase: aborticide, tar_phrase: "thu\u1ED1c gi\u1EBFt thai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 305
+  fields: {src_phrase: abortin, tar_phrase: "ch\u1EA5t s\u1EA9y thai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 306
+  fields: {src_phrase: abortionist, tar_phrase: "ng\u01B0\u1EDDi ph\xE1 thai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 307
+  fields: {src_phrase: abortively, tar_phrase: "non y\u1EC3u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 308
+  fields: {src_phrase: aboulia, tar_phrase: "ch\u1EE9ng m\u1EA5t \xFD ch\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 309
+  fields: {src_phrase: abounding, tar_phrase: "nhi\u1EC1u, phong ph\xFA, th\u1EEBa
+      th\xE3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 310
+  fields: {src_phrase: about, tar_phrase: "l\xE1i theo h\u01B0\u1EDBng kh\xE1c, b\u1EADn,
+      \u0111ang l\xE0m, \u1EDF, trong ng\u01B0\u1EDDi, theo v\u1EDBi, kho\u1EA3ng
+      ch\u1EEBng, v\xE0o kho\u1EA3ng, quanh qu\u1EA5t, quanh qu\u1EA9n \u0111\xE2y
+      \u0111\xF3, r\u1EA3i r\xE1c, v\u1EC1, xung quanh, \u0111\u1EB1ng sau, kho\u1EA3ng,
+      g\u1EA7n, v\xF2ng, quanh qu\u1EA9n, \u0111\xE2y \u0111\xF3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 311
+  fields: {src_phrase: about and about, tar_phrase: "r\u1EA5t gi\u1ED1ng nhau", glossary: 1}
+- model: cat.glossarycontent
+  pk: 312
+  fields: {src_phrase: about right, tar_phrase: "t\u1ED1t, \u0111\u01B0\u1EE3c, g\u1EA7n
+      \u0111\xFAng, t\u1EA1m \u0111\u01B0\u1EE3c, \u0111\xFAng, \u0111\xFAng \u0111\u1EAFn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 313
+  fields: {src_phrase: about turn, tar_phrase: "\u0111\u1EB1ng sau quay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 314
+  fields: {src_phrase: about-sledge, tar_phrase: "b\xFAa t\u1EA1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 315
+  fields: {src_phrase: above, tar_phrase: "c\xE1i \u1EDF tr\xEAn, \u0111i\u1EC1u k\u1EC3
+      tr\xEAn, \u0111i\u1EC1u n\xF3i tr\xEAn, \u1EDF tr\xEAn, qu\xE1, v\u01B0\u1EE3t,
+      cao h\u01A1n, tr\xEAn, h\u01A1n, l\xEAn tr\xEAn, ng\u01B0\u1EE3c d\xF2ng, l\xEAn
+      g\xE1c, tr\xEAn \u0111\u1EA7u, tr\xEAn \u0111\u1EC9nh \u0111\u1EA7u, tr\xEAn
+      thi\xEAn \u0111\u01B0\u1EDDng, k\u1EC3 tr\xEAn, n\xF3i tr\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 316
+  fields: {src_phrase: above all things, tar_phrase: "tr\xEAn h\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 317
+  fields: {src_phrase: above mach number, tar_phrase: "tr\xEAn s\u1ED1 mach", glossary: 1}
+- model: cat.glossarycontent
+  pk: 318
+  fields: {src_phrase: above price, tar_phrase: "v\xF4 c\xF9ng qu\xED gi\xE1, v\xF4
+      gi\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 319
+  fields: {src_phrase: above rubies, tar_phrase: "v\xF4 gi\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 320
+  fields: {src_phrase: above-board, tar_phrase: "th\u1EB3ng th\u1EAFn, kh\xF4ng che
+      \u0111\u1EADy, kh\xF4ng gi\u1EA5u gi\u1EBFm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 321
+  fields: {src_phrase: above-ground, tar_phrase: "\u1EDF tr\xEAn m\u1EB7t \u0111\u1EA5t,
+      l\xFAc c\xF2n s\u1ED1ng \u1EDF tr\xEAn \u0111\u1EDDi, c\xF2n s\u1ED1ng tr\xEAn
+      \u0111\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 322
+  fields: {src_phrase: above-named, tar_phrase: "\u0111\xE3 n\xF3i \u1EDF tr\xEAn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 323
+  fields: {src_phrase: abrachia, tar_phrase: "t\u1EADt thi\u1EBFu tay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 324
+  fields: {src_phrase: abrachius, tar_phrase: "qu\xE1i thai kh\xF4ng tay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 325
+  fields: {src_phrase: abrade, tar_phrase: "l\xE0m tr\u1EA7y, c\u1ECD x\u01A1 ra,
+      m\xE0i m\xF2n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 326
+  fields: {src_phrase: abrase, tar_phrase: "c\u1EAFt m\u1EA5t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 327
+  fields: {src_phrase: abrasive, tar_phrase: "ch\u1EA5t m\xE0i m\xF2n, \u0111\u1EC3
+      c\u1ECD x\u01A1 ra, \u0111\u1EC3 m\xE0i m\xF2n, l\xE0m tr\u1EA7y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 328
+  fields: {src_phrase: abreaction, tar_phrase: "s\u1EF1 gi\u1EA3i to\u1EA3 m\u1EB7c
+      c\u1EA3m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 329
+  fields: {src_phrase: abreast the times, tar_phrase: "k\u1ECBp v\u1EDBi th\u1EDDi
+      \u0111\u1EA1i, s\xE1t v\u1EDBi th\u1EDDi \u0111\u1EA1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 330
+  fields: {src_phrase: abridge, tar_phrase: "h\u1EA1n ch\u1EBF, gi\u1EA3m b\u1EDBt,
+      l\u1EA5y, t\u01B0\u1EDBc, r\xFAt ng\u1EAFn l\u1EA1i, c\xF4 g\u1ECDn, t\xF3m
+      t\u1EAFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 331
+  fields: {src_phrase: abroach, tar_phrase: "b\u1ECB gi\xF9i l\u1ED7, b\u1ECB ch\u1ECDc
+      th\u1EE7ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 332
+  fields: {src_phrase: abrogable, tar_phrase: "c\xF3 th\u1EC3 h\u1EE7y b\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 333
+  fields: {src_phrase: abrogation, tar_phrase: "s\u1EF1 b\xE3i b\u1ECF, s\u1EF1 hu\u1EF7
+      b\u1ECF, s\u1EF1 th\u1EE7 ti\xEAu, s\u1EF1 b\xE0i tr\u1EEB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 334
+  fields: {src_phrase: abrupt, tar_phrase: "b\u1EA5t ng\u1EDD, \u0111\u1ED9t ng\u1ED9t,
+      v\u1ED9i v\xE3, b\u1ECB \u0111\u1ED1n, b\u1ECB ch\u1EB7t c\u1EE5t, nh\u01B0
+      th\u1EC3 b\u1ECB \u0111\u1ED1n, c\u1ED9c l\u1ED1c, l\u1EA5c c\u1EA5c, th\xF4
+      l\u1ED7, d\u1ED1c \u0111\u1EE9ng, hi\u1EC3m tr\u1EDF, gian nan, tr\xFAc tr\u1EAFc,
+      r\u1EDDi r\u1EA1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 335
+  fields: {src_phrase: abruptly, tar_phrase: "b\u1EA5t ng\u1EDD, \u0111\u1ED9t ng\u1ED9t,
+      l\u1EA5c c\u1EA5c, x\u1EA5c x\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 336
+  fields: {src_phrase: abscess, tar_phrase: "\xE1p xe, ch\u1ED7 r\u1ED7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 337
+  fields: {src_phrase: abscise, tar_phrase: "c\u1EAFt ra, b\u1ECB c\u1EAFt ra", glossary: 1}
+- model: cat.glossarycontent
+  pk: 338
+  fields: {src_phrase: abscissa, tar_phrase: "to\u1EA1 \u0111\u1ED9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 339
+  fields: {src_phrase: abscond, tar_phrase: "b\u1ECF tr\u1ED1n, tr\u1ED1n tr\xE1nh
+      ph\xE1p lu\u1EADt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 340
+  fields: {src_phrase: abseil, tar_phrase: "tr\xE8o xu\u1ED1ng, t\u1EE5t xu\u1ED1ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 341
+  fields: {src_phrase: absence of mind, tar_phrase: "s\u1EF1 l\u01A1 \u0111\xE3ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 342
+  fields: {src_phrase: absent without leave, tar_phrase: "v\u1EAFng kh\xF4ng ph\xE9p,
+      v\u1EAFng kh\xF4ng b\xE1o tr\u01B0\u1EDBc, v\u1EAFng m\u1EB7t kh\xF4ng ph\xE9p,
+      v\u1EAFng m\u1EB7t m\xE0 kh\xF4ng b\xE1o tr\u01B0\u1EDBc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 343
+  fields: {src_phrase: absent-mindedly, tar_phrase: "\u0111\xE3ng tr\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 344
+  fields: {src_phrase: absentation, tar_phrase: "danh t\u1EEB, s\u1EF1 v\u1EAFng m\u1EB7t,
+      tr\u1EA1ng th\xE1i l\u01A1 \u0111\xE3ng, kh\xF4ng ch\xFA \xFD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 345
+  fields: {src_phrase: absentee ballot, tar_phrase: "vi\u1EC7c b\u1ECF phi\u1EBFu
+      tr\u01B0\u1EDBc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 346
+  fields: {src_phrase: absently, tar_phrase: "l\u01A1 \u0111\xE3ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 347
+  fields: {src_phrase: absinth, tar_phrase: "c\xE2y apxin, c\xE2y ng\u1EA3i \u0111\u1EAFng,
+      r\u01B0\u1EE3u apxin, tinh d\u1EA7u apxin", glossary: 1}
+- model: cat.glossarycontent
+  pk: 348
+  fields: {src_phrase: absolutary, tar_phrase: "x\xE1 t\u1ED9i, tha t\u1ED9i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 349
+  fields: {src_phrase: absolute majority, tar_phrase: "\u0111a s\u1ED1 tuy\u1EC7t
+      \u0111\u1ED1i, tuy\u1EC7t \u0111\u1EA1i \u0111a s\u1ED1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 350
+  fields: {src_phrase: absolute temperature, tar_phrase: "nhi\u1EC7t \u0111\u1ED9
+      tuy\u1EC7t \u0111\u1ED1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 351
+  fields: {src_phrase: absolutely, tar_phrase: "chuy\xEAn ch\u1EBF, \u0111\u1ED9c
+      \u0111o\xE1n, nh\u1EA5t \u0111\u1ECBnh, ch\u1EAFc ch\u1EAFn, t\u1EA5t nhi\xEAn,
+      ho\xE0n to\xE0n nh\u01B0 v\u1EADy, \u0111\xFAng nh\u01B0 v\u1EADy, tuy\u1EC7t
+      \u0111\u1ED1i, ho\xE0n to\xE0n, v\xF4 \u0111i\u1EC1u ki\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 352
+  fields: {src_phrase: absolution, tar_phrase: "s\u1EF1 tha t\u1ED9i, s\u1EF1 mi\u1EC5n
+      x\xE1, s\u1EF1 x\xE1 t\u1ED9i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 353
+  fields: {src_phrase: absolutist, tar_phrase: "ng\u01B0\u1EDDi theo ch\xEDnh th\u1EC3
+      chuy\xEAn ch\u1EBF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 354
+  fields: {src_phrase: absonant, tar_phrase: "kh\xF4ng h\u1EE3p \u0111i\u1EC7u, kh\xF4ng
+      ho\xE0 h\u1EE3p, kh\xF4ng h\u1EE3p l\xFD, kh\xF4ng h\u1EE3p v\u1EDBi, tr\xE1i
+      v\u1EDBi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 355
+  fields: {src_phrase: absorbability, tar_phrase: "kh\u1EA3 n\u0103ng h\xFAt thu",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 356
+  fields: {src_phrase: absorbed, tar_phrase: "mi\u1EC7t m\xE0i, m\xEA m\u1EA3i, say
+      m\xEA, ch\u0103m ch\xFA", glossary: 1}
+- model: cat.glossarycontent
+  pk: 357
+  fields: {src_phrase: absorbefacient, tar_phrase: "thu\u1ED1c l\xE0m ti\xEAu, thu\u1ED1c
+      l\xE0m tan, l\xE0m ti\xEAu \u0111i, l\xE0m tan \u0111i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 358
+  fields: {src_phrase: absorber, tar_phrase: "c\xE1i gi\u1EA3m x\xF3c, thi\u1EBFt
+      b\u1ECB h\xFAt thu", glossary: 1}
+- model: cat.glossarycontent
+  pk: 359
+  fields: {src_phrase: absorption, tar_phrase: "s\u1EF1 h\xFAt, s\u1EF1 h\xFAt thu,
+      s\u1EF1 say m\xEA, mi\u1EC7t m\xE0i, s\u1EF1 m\xEA m\u1EA3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 360
+  fields: {src_phrase: absorptive, tar_phrase: "h\xFAt thu", glossary: 1}
+- model: cat.glossarycontent
+  pk: 361
+  fields: {src_phrase: absquatulate, tar_phrase: "tr\u1ED1n ch\u1EA1y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 362
+  fields: {src_phrase: abstain from, tar_phrase: "ki\xEAng, ki\xEAng khem", glossary: 1}
+- model: cat.glossarycontent
+  pk: 363
+  fields: {src_phrase: abstaining, tar_phrase: "s\u1EF1 ki\xEAng khem", glossary: 1}
+- model: cat.glossarycontent
+  pk: 364
+  fields: {src_phrase: abstemiously, tar_phrase: "ch\u1EEBng m\u1EF1c, \u0111i\u1EC1u
+      \u0111\u1ED9, ti\u1EBFt \u0111\u1ED9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 365
+  fields: {src_phrase: abstention, tar_phrase: "s\u1EF1 kh\xF4ng tham gia b\u1ECF
+      phi\u1EBFu, s\u1EF1 ki\xEAng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 366
+  fields: {src_phrase: abstergent, tar_phrase: "thu\u1ED1c l\xE0m s\u1EA1ch, t\u1EA9y,
+      l\xE0m s\u1EA1ch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 367
+  fields: {src_phrase: abstersive, tar_phrase: "t\u1EA9y, l\xE0m s\u1EA1ch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 368
+  fields: {src_phrase: abstinency, tar_phrase: "th\xF3i quen \u0103n u\u1ED1ng \u0111i\u1EC1u
+      \u0111\u1ED9, s\u1EF1 ki\xEAng khem", glossary: 1}
+- model: cat.glossarycontent
+  pk: 369
+  fields: {src_phrase: abstract, tar_phrase: "l\xE0m \u0111\xE3ng tr\xED, l\u1EA5y
+      tr\u1ED9m, \u0103n c\u1EAFp, r\xFAt ra, chi\u1EBFt ra, t\xE1ch ra, tr\u1EEBu
+      t\u01B0\u1EE3ng ho\xE1, b\u1EA3n t\xF3m t\u1EAFt, \xFD ni\u1EC7m tr\u1EEBu t\u01B0\u1EE3ng,
+      t\xE1c ph\u1EA9m ngh\u1EC7 thu\u1EADt tr\u1EEBu t\u01B0\u1EE3ng, l\xFD thuy\u1EBFt,
+      kh\xF4ng th\u1EF1c t\u1EBF, tr\u1EEBu t\u01B0\u1EE3ng, kh\xF3 hi\u1EC3u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 370
+  fields: {src_phrase: abstract from, tar_phrase: "l\u1EA5y ra t\u1EEB, r\xFAt ra
+      t\u1EEB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 371
+  fields: {src_phrase: abstract number, tar_phrase: "s\u1ED1 h\u01B0", glossary: 1}
+- model: cat.glossarycontent
+  pk: 372
+  fields: {src_phrase: abstractedly, tar_phrase: "l\u01A1 \u0111\xE3ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 373
+  fields: {src_phrase: abstraction, tar_phrase: "c\xE1ch nh\xECn tr\u1EEBu t\u01B0\u1EE3ng,
+      quan \u0111i\u1EC3m tr\u1EEBu t\u01B0\u1EE3ng, kh\xE1i ni\u1EC7m tr\u1EEBu t\u01B0\u1EE3ng,
+      v\u1EADt tr\u1EEBu t\u01B0\u1EE3ng, s\u1EF1 chi\u1EBFt ra, s\u1EF1 r\xFAt ra,
+      s\u1EF1 l\u01A1 \u0111\xE3ng, s\u1EF1 tr\u1EEBu t\u01B0\u1EE3ng, s\u1EF1 tr\u1EEBu
+      t\u01B0\u1EE3ng ho\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 374
+  fields: {src_phrase: abstractionist, tar_phrase: "ng\u01B0\u1EDDi theo ch\u1EE7
+      ngh\u0129a tr\u1EEBu t\u01B0\u1EE3ng, theo l\u1ED1i tr\u1EEBu t\u01B0\u1EE3ng,
+      tr\u1EEBu t\u01B0\u1EE3ng ch\u1EE7 ngh\u0129a", glossary: 1}
+- model: cat.glossarycontent
+  pk: 375
+  fields: {src_phrase: abstrahent, tar_phrase: "tr\u1EEBu t\u01B0\u1EE3ng, kh\xF3
+      hi\u1EC3u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 376
+  fields: {src_phrase: abstruse, tar_phrase: "kh\xF3 hi\u1EC3u, th\xE2m thu\xFD, s\xE2u
+      s\u1EAFc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 377
+  fields: {src_phrase: abstruseness, tar_phrase: "t\xEDnh kh\xF3 hi\u1EC3u, t\xEDnh
+      th\xE2m thu\xFD, t\xEDnh s\xE2u s\u1EAFc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 378
+  fields: {src_phrase: absurdity, tar_phrase: "\u0111i\u1EC1u v\xF4 l\xFD, \u0111i\u1EC1u
+      ng\u1EDB ng\u1EA9n, s\u1EF1 v\xF4 l\xFD, s\u1EF1 ngu xu\u1EA9n, s\u1EF1 ng\u1EDB
+      ng\u1EA9n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 379
+  fields: {src_phrase: abterminal, tar_phrase: "xa ng\u1ECDn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 380
+  fields: {src_phrase: abundant, tar_phrase: "phong ph\xFA, nhi\u1EC1u, chan ch\u1EE9a,
+      th\u1EEBa th\xE3i, d\u01B0 d\u1EADt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 381
+  fields: {src_phrase: abuse, tar_phrase: "l\u0103ng m\u1EA1, s\u1EC9 nh\u1EE5c, l\u1EA1m
+      d\u1EE5ng, ng\u01B0\u1EE3c \u0111\xE3i, h\xE0nh h\u1EA1, h\xE0nh \u0111\u1ED9ng
+      b\u1EA5t l\u01B0\u01A1ng, s\u1EF1 l\u0103ng m\u1EA1, s\u1EF1 s\u1EC9 nh\u1EE5c,
+      s\u1EF1 ch\u1EEDi r\u1EE7a, s\u1EF1 x\u1EC9 v\u1EA3, s\u1EF1 l\u1EA1m d\u1EE5ng,
+      s\u1EF1 ng\u01B0\u1EE3c \u0111\xE3i, s\u1EF1 h\xE0nh h\u1EA1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 382
+  fields: {src_phrase: abusive, tar_phrase: "l\u0103ng m\u1EA1, s\u1EC9 nh\u1EE5c,
+      ch\u1EEDi r\u1EE7a, l\u1EA1m d\u1EE5ng, l\u1EEBa d\u1ED1i, l\u1EEBa g\u1EA1t,
+      ng\u01B0\u1EE3c \u0111\xE3i, h\xE0nh h\u1EA1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 383
+  fields: {src_phrase: abusiveness, tar_phrase: "s\u1EF1 l\u0103ng m\u1EA1, s\u1EF1
+      s\u1EC9 nh\u1EE5c, s\u1EF1 ch\u1EEDi r\u1EE7a th\u1EADm t\u1EC7, s\u1EF1 l\u1EA1m
+      d\u1EE5ng, s\u1EF1 l\u1EEBa d\u1ED1i, s\u1EF1 l\u1EEBa g\u1EA1t, s\u1EF1 ng\u01B0\u1EE3c
+      \u0111\xE3i, s\u1EF1 h\xE0nh h\u1EA1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 384
+  fields: {src_phrase: abutilon, tar_phrase: "gi\u1ED1ng c\xE2y c\u1ED1i xay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 385
+  fields: {src_phrase: abuttal, tar_phrase: "gi\u1EDBi h\u1EA1n, ch\u1ED7 ti\u1EBFp
+      gi\xE1p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 386
+  fields: {src_phrase: abutting, tar_phrase: "gi\u1EDBi h\u1EA1n, ti\u1EBFp gi\xE1p",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 387
+  fields: {src_phrase: abysmal, tar_phrase: "kh\xF4ng \u0111\xE1y, th\u0103m th\u1EB3m,
+      s\xE2u kh\xF4ng d\xF2 \u0111\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 388
+  fields: {src_phrase: abysopelagic, tar_phrase: "thu\u1ED9c v\xF9ng kh\u01A1i-s\xE2u
+      th\u1EB3m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 389
+  fields: {src_phrase: abyssal, tar_phrase: "bi\u1EC3n th\u1EB3m, s\xE2u th\u1EB3m,
+      s\xE2u th\u0103m th\u1EB3m, s\xE2u nh\u01B0 v\u1EF1c th\u1EB3m, s\xE2u kh\xF4ng
+      d\xF2 \u0111\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 390
+  fields: {src_phrase: ac, tar_phrase: "d\xF2ng \u0111i\u1EC7n xoay chi\u1EC1u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 391
+  fields: {src_phrase: academe, tar_phrase: "h\u1ECDc vi\u1EC7n, tr\u01B0\u1EDDng
+      \u0111\u1EA1i h\u1ECDc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 392
+  fields: {src_phrase: academia, tar_phrase: "gi\u1EDBi h\u1ECDc vi\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 393
+  fields: {src_phrase: academic fredom, tar_phrase: "quy\u1EC1n t\u1EF1 do d\u1EA1y
+      v\xE0 h\u1ECDc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 394
+  fields: {src_phrase: academical, tar_phrase: "h\u1ECDc vi\u1EC7n, tr\u01B0\u1EDDng
+      \u0111\u1EA1i h\u1ECDc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 395
+  fields: {src_phrase: academicals, tar_phrase: "m\u0169 \xE1o \u0111\u1EA1i h\u1ECDc",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 396
+  fields: {src_phrase: academy, tar_phrase: "h\u1ECDc vi\u1EC7n, tr\u01B0\u1EDDng
+      chuy\xEAn nghi\u1EC7p, tr\u01B0\u1EDDng t\u01B0 th\u1EE5c, v\u01B0\u1EDDn a-ca-\u0111\xEA-mi,
+      tr\u01B0\u1EDDng ph\xE1i tri\u1EBFt h\u1ECDc pla-ton, m\xF4n \u0111\u1EC7 c\u1EE7a
+      pla-ton, vi\u1EC7n h\xE0n l\xE2m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 397
+  fields: {src_phrase: acanthocarp, tar_phrase: "qu\u1EA3 gai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 398
+  fields: {src_phrase: acanthocephalan, tar_phrase: "s\xE2u b\u1ECD \u0111\u1EA7u
+      gai, thu\u1ED9c s\xE2u b\u1ECD \u0111\u1EA7u gai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 399
+  fields: {src_phrase: acanthocladous, tar_phrase: "c\xF3 c\xE0nh gai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 400
+  fields: {src_phrase: acanthoma, tar_phrase: "b\u01B0\u1EDBu gai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 401
+  fields: {src_phrase: acanthophysis, tar_phrase: "s\u1EF1 r\u1EE5ng gai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 402
+  fields: {src_phrase: acanthus, tar_phrase: "c\xE2y \xF4 r\xF4, h\xECnh trang tr\xED
+      l\xE1 \xF4 r\xF4", glossary: 1}
+- model: cat.glossarycontent
+  pk: 403
+  fields: {src_phrase: acardia, tar_phrase: "t\u1EADt thi\u1EBFu tim", glossary: 1}
+- model: cat.glossarycontent
+  pk: 404
+  fields: {src_phrase: acarpellous, tar_phrase: "kh\xF4ng l\xE1 no\xE3n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 405
+  fields: {src_phrase: acarus, tar_phrase: "c\xE1i gh\u1EBB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 406
+  fields: {src_phrase: acatalectic, tar_phrase: "c\xE2u c\xF3 s\u1ED1 \xE2m ti\u1EBFt
+      \u0111\u1EA7y \u0111\u1EE7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 407
+  fields: {src_phrase: acaulosia, tar_phrase: "s\u1EF1 kh\xF4ng ph\xE1t tri\u1EC3n
+      th\xE2n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 408
+  fields: {src_phrase: accede, tar_phrase: "\u0111\u1ED3ng \xFD, t\xE1n th\xE0nh,
+      th\u1EEBa nh\u1EADn, b\u1EB1ng l\xF2ng, gia nh\u1EADp, tham gia, l\xEAn, nh\u1EADm",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 409
+  fields: {src_phrase: accelerando, tar_phrase: "s\u1EF1 nhanh l\xEAn, nhanh l\xEAn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 410
+  fields: {src_phrase: accelerant, tar_phrase: "ch\u1EA5t x\xFAc t\xE1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 411
+  fields: {src_phrase: accelerate from rest, tar_phrase: "t\u0103ng t\u1ED1c ngh\u1EC9",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 412
+  fields: {src_phrase: accelerating, tar_phrase: "gia t\u1ED1c, l\xE0m nhanh th\xEAm",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 413
+  fields: {src_phrase: acceleration due to gravity, tar_phrase: "s\u1EF1 gia t\u1ED1c
+      tr\u1ECDng tr\u01B0\u1EDDng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 414
+  fields: {src_phrase: accelerative, tar_phrase: "l\xE0m nhanh th\xEAm, l\xE0m mau
+      th\xEAm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 415
+  fields: {src_phrase: accelerometer, tar_phrase: "d\u1EE5ng c\u1EE5 \u0111o gia t\u1ED1c,
+      gia t\u1ED1c k\u1EBF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 416
+  fields: {src_phrase: accentor, tar_phrase: "chim ch\xEDch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 417
+  fields: {src_phrase: accentuate, tar_phrase: "nh\u1EA5n m\u1EA1nh, l\xE0m n\u1ED5i
+      b\u1EADt, n\xEAu b\u1EADt, nh\u1EA5n tr\u1ECDng \xE2m, \u0111\u1EB7t tr\u1ECDng
+      \xE2m, \u0111\xE1nh d\u1EA5u tr\u1ECDng \xE2m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 418
+  fields: {src_phrase: accept, tar_phrase: "\u0111\u1EA3m nh\u1EADn, nh\u1EADn thanh
+      to\xE1n, nh\u1EADn, ch\u1EA5p nh\u1EADn, ch\u1EA5p thu\u1EADn, th\u1EEBa nh\u1EADn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 419
+  fields: {src_phrase: acceptability, tar_phrase: "t\xEDnh ch\u1EA5t c\xF3 th\u1EC3
+      ch\u1EA5p nh\u1EADn, t\xEDnh ch\u1EA5t c\xF3 th\u1EC3 th\u1EEBa nh\u1EADn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 420
+  fields: {src_phrase: acceptable to, tar_phrase: "c\xF3 th\u1EC3 ch\u1EA5p nh\u1EADn,
+      c\xF3 th\u1EC3 th\u1EEBa nh\u1EADn, l\xE0m h\xE0i l\xF2ng, \u0111\u01B0\u1EE3c
+      hoan ngh\xEAnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 421
+  fields: {src_phrase: acceptance, tar_phrase: "s\u1EF1 hoan ngh\xEAnh, s\u1EF1 t\xE1n
+      th\u01B0\u1EDFng, s\u1EF1 t\xE1n th\xE0nh, s\u1EF1 tin, s\u1EF1 nh\u1EADn thanh
+      to\xE1n, ho\xE1 \u0111\u01A1n \u0111\u01B0\u1EE3c nh\u1EADn thanh to\xE1n, s\u1EF1
+      nh\u1EADn, s\u1EF1 ch\u1EA5p nh\u1EADn, s\u1EF1 ch\u1EA5p thu\u1EADn, s\u1EF1
+      th\u1EEBa nh\u1EADn, s\u1EF1 c\xF4ng nh\u1EADn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 422
+  fields: {src_phrase: acceptation, tar_phrase: "ngh\u0129a \u0111\u01B0\u1EE3c th\u1EEBa
+      nh\u1EADn, \xFD ngh\u0129a \u0111\u1EB7c bi\u1EC7t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 423
+  fields: {src_phrase: acceptor, tar_phrase: "ch\u1EA5t nh\u1EADn, ng\u01B0\u1EDDi
+      nh\u1EADn thanh to\xE1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 424
+  fields: {src_phrase: access time, tar_phrase: "th\u1EDDi gian truy c\u1EADp th\xF4ng
+      tin", glossary: 1}
+- model: cat.glossarycontent
+  pk: 425
+  fields: {src_phrase: accessible, tar_phrase: "c\xF3 th\u1EC3 t\u1EDBi \u0111\u01B0\u1EE3c,
+      c\xF3 th\u1EC3 g\u1EA7n \u0111\u01B0\u1EE3c, d\u1EC5 b\u1ECB \u1EA3nh h\u01B0\u1EDFng,
+      d\u1EC5 g\u1EA7n g\u0169i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 426
+  fields: {src_phrase: accessing model, tar_phrase: "m\xF4 h\xECnh truy nh\u1EADp",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 427
+  fields: {src_phrase: accessorius, tar_phrase: "c\u01A1 ph\u1EE5, d\xE2y th\u1EA7n
+      kinh n\xE3o x", glossary: 1}
+- model: cat.glossarycontent
+  pk: 428
+  fields: {src_phrase: accessory to, tar_phrase: "a t\xF2ng, \u0111\u1ED3ng l\xF5a,
+      t\xF2ng ph\u1EA1m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 429
+  fields: {src_phrase: accidence, tar_phrase: "h\xECnh th\xE1i h\u1ECDc, y\u1EBFu
+      t\u1ED1 c\u01A1 s\u1EDF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 430
+  fields: {src_phrase: accident-prone, tar_phrase: "th\u01B0\u1EDDng x\u1EA3y ra tai
+      n\u1EA1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 431
+  fields: {src_phrase: accidentally, tar_phrase: "t\xECnh c\u1EDD, ng\u1EABu nhi\xEAn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 432
+  fields: {src_phrase: accipiter, tar_phrase: "chim \u01B0ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 433
+  fields: {src_phrase: accipitrine, tar_phrase: "li\xEAn quan t\u1EDBi chim \u01B0ng,
+      gi\u1ED1ng nh\u01B0 chim \u01B0ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 434
+  fields: {src_phrase: acclamation, tar_phrase: "s\u1EF1 hoan h\xF4 nhi\u1EC7t li\u1EC7t,
+      ti\u1EBFng reo hoan h\xF4, ti\u1EBFng tung h\xF4", glossary: 1}
+- model: cat.glossarycontent
+  pk: 435
+  fields: {src_phrase: acclimatization, tar_phrase: "s\u1EF1 th\xEDch nghi kh\xED
+      h\u1EADu, s\u1EF1 l\xE0m h\u1EE3p thu\u1EF7 th\u1ED5", glossary: 1}
+- model: cat.glossarycontent
+  pk: 436
+  fields: {src_phrase: acclivity, tar_phrase: "d\u1ED1c ng\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 437
+  fields: {src_phrase: accolade, tar_phrase: "d\u1EA5u g\u1ED9p, s\u1EF1 \xF4m h\xF4n,
+      s\u1EF1 g\xF5 nh\u1EB9 s\u1ED1ng g\u01B0\u01A1m l\xEAn vai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 438
+  fields: {src_phrase: accommodate a quarrel, tar_phrase: "d\xE0n x\u1EBFp m\u1ED9t
+      cu\u1ED9c c\xE3i nhau", glossary: 1}
+- model: cat.glossarycontent
+  pk: 439
+  fields: {src_phrase: accommodate opinions, tar_phrase: "\u0111\u1ED3ng \xFD v\u1EDBi
+      \xFD ki\u1EBFn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 440
+  fields: {src_phrase: accommodating, tar_phrase: "d\u1EC5 d\xE3i, d\u1EC5 t\xEDnh,
+      xu\u1EC1 xo\xE0, hay gi\xFAp \u0111\u1EE1, s\u1EB5n l\xF2ng gi\xFAp \u0111\u1EE1,
+      hay l\xE0m \u01A1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 441
+  fields: {src_phrase: accommodation address, tar_phrase: "\u0111\u1ECBa ch\u1EC9
+      t\u1EA1m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 442
+  fields: {src_phrase: accommodation road, tar_phrase: "\u0111\u01B0\u1EDDng x\xE1
+      \u0111\u1EB7c bi\u1EC7t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 443
+  fields: {src_phrase: accommodation unit, tar_phrase: "n\u01A1i \u1EDF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 444
+  fields: {src_phrase: accompaniment, tar_phrase: "s\u1EF1 \u0111\u1EC7m, ph\u1EA7n
+      nh\u1EA1c \u0111\u1EC7m, v\u1EADt ph\u1EE5 thu\u1ED9c, v\u1EADt k\xE8m theo,
+      c\xE1i b\u1ED5 sung", glossary: 1}
+- model: cat.glossarycontent
+  pk: 445
+  fields: {src_phrase: accompany, tar_phrase: "\u0111i theo, \u0111i c\xF9ng, \u0111i
+      k\xE8m, h\u1ED9 t\u1ED1ng, \u0111\u1EC7m, ph\u1EE5 th\xEAm, k\xE8m theo", glossary: 1}
+- model: cat.glossarycontent
+  pk: 446
+  fields: {src_phrase: accomplish, tar_phrase: "ho\xE0n th\xE0nh, l\xE0m xong, l\xE0m
+      tr\u1ECDn, l\xE0m ho\xE0n h\u1EA3o, l\xE0m \u0111\u1EA1t t\u1EDBi s\u1EF1 ho\xE0n
+      m\u1EF9, th\u1EF1c hi\u1EC7n, \u0111\u1EA1t t\u1EDBi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 447
+  fields: {src_phrase: accomplishment, tar_phrase: "s\u1EF1 ho\xE0n th\xE0nh, s\u1EF1
+      l\xE0m xong, s\u1EF1 l\xE0m tr\u1ECDn, s\u1EF1 th\u1EF1c hi\u1EC7n, t\xE0i n\u0103ng,
+      t\xE0i ngh\u1EC7, t\xE0i v\u1EB7t, vi\u1EC7c \u0111\xE3 ho\xE0n th\xE0nh, vi\u1EC7c
+      l\xE0m xong, \xFD \u0111\u1ECBnh \u0111\xE3 th\u1EF1c hi\u1EC7n \u0111\u01B0\u1EE3c,
+      th\xE0nh qu\u1EA3, th\xE0nh t\u1EF1u, th\xE0nh t\xEDch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 448
+  fields: {src_phrase: accordance, tar_phrase: "s\u1EF1 \u0111\u1ED3ng \xFD, s\u1EF1
+      tho\u1EA3 thu\u1EADn, s\u1EF1 cho, s\u1EF1 ban cho, s\u1EF1 ph\xF9 h\u1EE3p,
+      s\u1EF1 theo \u0111\xFAng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 449
+  fields: {src_phrase: according as, tar_phrase: "t\xF9y theo", glossary: 1}
+- model: cat.glossarycontent
+  pk: 450
+  fields: {src_phrase: according to all accounts, tar_phrase: "theo s\u1EF1 \u0111\xE1nh
+      gi\xE1 chung, theo \xFD ki\u1EBFn chung", glossary: 1}
+- model: cat.glossarycontent
+  pk: 451
+  fields: {src_phrase: accordion, tar_phrase: "\u0111\xE0n x\u1EBFp, \u0111\xE0n \u0103ccoc",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 452
+  fields: {src_phrase: accost, tar_phrase: "m\u1ED3i ch\xE0i, g\u1EA1 g\u1EABm, b\u1EAFt
+      m\u1ED1i, x\xE1p \u0111\u1EBFn g\u1EA7n \u0111\u1EC3 h\u1ECFi chuy\u1EC7n, b\u1EAFt
+      chuy\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 453
+  fields: {src_phrase: accoucheur, tar_phrase: "ng\u01B0\u1EDDi \u0111\u1EE1 \u0111\u1EBB",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 454
+  fields: {src_phrase: account, tar_phrase: "b\u1EAFn \u0111\u01B0\u1EE3c, h\u1EA1
+      \u0111\u01B0\u1EE3c, coi, coi nh\u01B0, coi l\xE0, cho l\xE0, gi\u1EA3i th\xEDch,
+      b\xE1o c\xE1o, b\xE0i t\u01B0\u1EDDng thu\u1EADt, s\u1EF1 t\u01B0\u1EDDng thu\u1EADt,
+      s\u1EF1 mi\xEAu t\u1EA3, b\u1EA3n k\xEA khai, b\u1EA3n thanh to\xE1n ti\u1EC1n,
+      b\u1EA3n ghi nh\u1EEFng m\xF3n ti\u1EC1n ph\u1EA3i tr\u1EA3, l\u1EE3i, l\u1EE3i
+      \xEDch, l\xFD do, nguy\xEAn nh\xE2n, s\u1EF1 gi\u1EA3i th\xEDch, s\u1EF1 \u0111\xE1nh
+      gi\xE1, s\u1EF1 ch\xFA \xFD, s\u1EF1 l\u01B0u t\xE2m, s\u1EF1 k\u1EBF to\xE1n,
+      s\u1ED5 s\xE1ch, k\u1EBF to\xE1n, s\u1EF1 thanh to\xE1n, s\u1EF1 tr\u1EA3 d\u1EA7n,
+      s\u1EF1 tr\u1EA3 l\xE0m nhi\u1EC1u k\u1EF3, s\u1EF1 t\xEDnh to\xE1n, t\xE0i
+      kho\u1EA3n, s\u1ED1 ti\u1EC1n g\u1EEDi, t\u1EA7m quan tr\u1ECDng, gi\xE1 tr\u1ECB",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 455
+  fields: {src_phrase: account to, tar_phrase: "gi\u1EA3i th\xEDch v\u1EDBi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 456
+  fields: {src_phrase: accountability, tar_phrase: "tr\xE1ch nhi\u1EC7m gi\u1EA3i
+      tr\xECnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 457
+  fields: {src_phrase: accountable to smth. for, tar_phrase: "ch\u1ECBu tr\xE1ch nhi\u1EC7m
+      v\u1EDBi v\u1EC1 smth.", glossary: 1}
+- model: cat.glossarycontent
+  pk: 458
+  fields: {src_phrase: accountant, tar_phrase: "nh\xE2n vi\xEAn k\u1EBF to\xE1n, ng\u01B0\u1EDDi
+      gi\u1EEF s\u1ED5 s\xE1ch k\u1EBF to\xE1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 459
+  fields: {src_phrase: accountantship, tar_phrase: "ch\u1EE9c k\u1EBF to\xE1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 460
+  fields: {src_phrase: accoutre, tar_phrase: "m\u1EB7c cho, trang b\u1ECB cho", glossary: 1}
+- model: cat.glossarycontent
+  pk: 461
+  fields: {src_phrase: accredit, tar_phrase: "g\xE1n cho, quy cho, \u0111\u1ED5 cho,
+      l\xE0m cho \u0111\u01B0\u1EE3c t\xEDn nhi\u1EC7m, g\xE2y uy t\xEDn cho, l\xE0m
+      cho ng\u01B0\u1EDDi ta tin, u\u1EF7 nhi\u1EC7m l\xE0m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 462
+  fields: {src_phrase: accrescent, tar_phrase: "c\xF9ng ph\xE1t tri\u1EC3n, c\xF9ng
+      l\u1EDBn l\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 463
+  fields: {src_phrase: accretion, tar_phrase: "ph\u1EA7n b\u1ED3i th\xEAm, ph\u1EA7n
+      ph\xE1t tri\u1EC3n d\u1EA7n l\xEAn, s\u1EF1 b\u1ED3i d\u1EA7n v\xE0o, s\u1EF1
+      l\u1EDBn d\u1EA7n l\xEAn, s\u1EF1 ph\xE1t tri\u1EC3n d\u1EA7n l\xEAn, s\u1EF1
+      t\u0103ng th\xEAm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 464
+  fields: {src_phrase: accretion in cells, tar_phrase: "s\u1EF1 t\xEDch t\u1EE5 v\u1EADt
+      ch\u1EA5t trong t\u1EBF b\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 465
+  fields: {src_phrase: accrual, tar_phrase: "s\u1ED1 l\u01B0\u1EE3ng d\u1ED3n l\u1EA1i,
+      s\u1ED1 l\u01B0\u1EE3ng t\xEDch l\u1EA1i, s\u1EF1 d\u1ED3n l\u1EA1i, s\u1EF1
+      t\xEDch l\u1EA1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 466
+  fields: {src_phrase: accrue from, tar_phrase: "sinh ra t\u1EEB, do smth. m\xE0 c\xF3",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 467
+  fields: {src_phrase: acculturate, tar_phrase: "ti\u1EBFp bi\u1EBFn v\u1EC1 v\u0103n
+      ho\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 468
+  fields: {src_phrase: accumbent, tar_phrase: "\xE1p ngo\xE0i, c\u1EA1p v\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 469
+  fields: {src_phrase: accumulation, tar_phrase: "\u0111\u1ED1ng, s\u1EF1 ch\u1EA5t
+      \u0111\u1ED1ng, s\u1EF1 ch\u1ED3ng ch\u1EA5t, s\u1EF1 t\xEDch lu\u1EF9, s\u1EF1
+      t\xEDch l\u1EA1i, s\u1EF1 t\xEDch t\u1EE5, s\u1EF1 g\xF3p nh\u1EB7t, s\u1EF1
+      l\xE0m gi\xE0u, s\u1EF1 t\xEDch c\u1EE7a, s\u1EF1 thi c\xF9ng m\u1ED9t l\xFAc
+      nhi\u1EC1u b\u1EB1ng, s\u1EF1 t\xEDch th\xEAm v\u1ED1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 470
+  fields: {src_phrase: accumulator, tar_phrase: "\u0103cquy, ng\u01B0\u1EDDi thi c\xF9ng
+      m\u1ED9t l\xFAc nhi\u1EC1u b\u1EB1ng, ng\u01B0\u1EDDi th\xEDch l\xE0m gi\xE0u,
+      ng\u01B0\u1EDDi tr\u1EEF c\u1EE7a, ng\u01B0\u1EDDi t\xEDch lu\u1EF9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 471
+  fields: {src_phrase: accuracy to size, tar_phrase: "\u0111\u1ED9 ch\xEDnh x\xE1c
+      k\xEDch th\u01B0\u1EDBc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 472
+  fields: {src_phrase: accurate in, tar_phrase: "ch\xEDnh x\xE1c v\u1EC1, ch\xEDnh
+      x\xE1c trong", glossary: 1}
+- model: cat.glossarycontent
+  pk: 473
+  fields: {src_phrase: accurately, tar_phrase: "\u0111\xFAng \u0111\u1EAFn, ch\xEDnh
+      x\xE1c, x\xE1c \u0111\xE1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 474
+  fields: {src_phrase: accusation, tar_phrase: "c\xE1o tr\u1EA1ng, s\u1EF1 k\u1EBFt
+      t\u1ED9i, s\u1EF1 bu\u1ED9c t\u1ED9i, s\u1EF1 b\u1ECB k\u1EBFt t\u1ED9i, s\u1EF1
+      t\u1ED1 c\xE1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 475
+  fields: {src_phrase: accusatorial, tar_phrase: "bu\u1ED9c t\u1ED9i, k\u1EBFt t\u1ED9i,
+      t\u1ED1 c\xE1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 476
+  fields: {src_phrase: accuse of, tar_phrase: "bu\u1ED9c t\u1ED9i, k\u1EBFt t\u1ED9i",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 477
+  fields: {src_phrase: accuser, tar_phrase: "nguy\xEAn c\xE1o, u\u1EF7 vi\xEAn c\xF4ng
+      t\u1ED1, ng\u01B0\u1EDDi bu\u1ED9c t\u1ED9i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 478
+  fields: {src_phrase: accustom, tar_phrase: "l\xE0m cho quen, t\u1EADp cho quen",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 479
+  fields: {src_phrase: accustomed, tar_phrase: "quen v\u1EDBi, th\xE0nh th\xF3i quen,
+      th\xE0nh th\u01B0\u1EDDng l\u1EC7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 480
+  fields: {src_phrase: ace, tar_phrase: "ch\xFAt x\xEDu, c\xFA giao b\xF3ng th\u1EAFng
+      \u0111i\u1EC3m, \u0111i\u1EC3m th\u1EAFng giao b\xF3ng, phi c\xF4ng xu\u1EA5t
+      s\u1EAFc, v\u1EADn \u0111\u1ED9ng vi\xEAn xu\u1EA5t s\u1EAFc, ng\u01B0\u1EDDi
+      gi\u1ECFi nh\u1EA5t, nh\xE0 v\xF4 \u0111\u1ECBch, qu\xE2n \xE1t, qu\xE2n x\xEC,
+      \u0111i\u1EC3m 1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 481
+  fields: {src_phrase: acellular, tar_phrase: "kh\xF4ng c\xF3 t\u1EBF b\xE0o, kh\xF4ng
+      chia th\xE0nh t\u1EBF b\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 482
+  fields: {src_phrase: acephalous, tar_phrase: "c\u1EE5t \u0111\u1EA7u, b\u1ECB ch\u1EB7t
+      ng\u1ECDn, kh\xF4ng c\xF3 \u0111\u1EA7u, kh\xF4ng c\xF3 t\u01B0\u1EDBng, kh\xF4ng
+      c\xF3 ng\u01B0\u1EDDi c\u1EA7m \u0111\u1EA7u, kh\xF4ng ch\u1ECBu nh\u1EADn ai
+      l\xE0 ng\u01B0\u1EDDi c\u1EA7m \u0111\u1EA7u, thi\u1EBFu \xE2m \u0111\u1EA7u",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 483
+  fields: {src_phrase: acerbic, tar_phrase: "chua ch\xE1t, gay g\u1EAFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 484
+  fields: {src_phrase: acerose, tar_phrase: "h\xECnh kim", glossary: 1}
+- model: cat.glossarycontent
+  pk: 485
+  fields: {src_phrase: acervuline, tar_phrase: "chen ch\xFAc, d\xE0y \u0111\u1EB7c,
+      th\xE0nh c\u1EE5m, th\xE0nh ch\xF9m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 486
+  fields: {src_phrase: acetabuliform, tar_phrase: "d\u1EA1ng c\u1ED1i, d\u1EA1ng ch\xE9n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 487
+  fields: {src_phrase: acetate, tar_phrase: axetat, glossary: 1}
+- model: cat.glossarycontent
+  pk: 488
+  fields: {src_phrase: acetification, tar_phrase: "s\u1EF1 ho\xE1 gi\u1EA5m, s\u1EF1
+      l\xE0m th\xE0nh gi\u1EA5m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 489
+  fields: {src_phrase: acetone, tar_phrase: axeton, glossary: 1}
+- model: cat.glossarycontent
+  pk: 490
+  fields: {src_phrase: acetylene, tar_phrase: "ax\xEAtylen", glossary: 1}
+- model: cat.glossarycontent
+  pk: 491
+  fields: {src_phrase: acheless, tar_phrase: "kh\xF4ng \u0111au \u0111\u1EDBn, kh\xF4ng
+      \u0111au x\xF3t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 492
+  fields: {src_phrase: acheno carp, tar_phrase: "c\xF3 qu\u1EA3 \u0111\xF3ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 493
+  fields: {src_phrase: achievable, tar_phrase: "c\xF3 th\u1EC3 \u0111\u1EA1t \u0111\u01B0\u1EE3c,
+      c\xF3 th\u1EC3 th\u1EF1c hi\u1EC7n \u0111\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 494
+  fields: {src_phrase: achievement, tar_phrase: "huy hi\u1EC7u, huy ch\u01B0\u01A1ng,
+      s\u1EF1 \u0111\u1EA1t \u0111\u01B0\u1EE3c, s\u1EF1 gi\xE0nh \u0111\u01B0\u1EE3c,
+      s\u1EF1 ho\xE0n th\xE0nh, th\xE0nh t\xEDch, th\xE0nh t\u1EF1u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 495
+  fields: {src_phrase: achilles' heel, tar_phrase: "g\xF3t a-sin, \u0111i\u1EC3m d\u1EC5
+      b\u1ECB t\u1ED5n th\u01B0\u01A1ng, \u0111i\u1EC3m y\u1EBFu ho\u1EB7c d\u1EC5
+      t\u1ED5n th\u01B0\u01A1ng, nh\u01B0\u1EE3c \u0111i\u1EC3m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 496
+  fields: {src_phrase: aching, tar_phrase: "s\u1EF1 \u0111au \u0111\u1EDBn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 497
+  fields: {src_phrase: achondroplasia, tar_phrase: "t\xECnh tr\u1EA1ng thi\u1EBFu
+      ph\xE1t tri\u1EC3n s\u1EE5n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 498
+  fields: {src_phrase: achromat, tar_phrase: "k\xEDnh kh\xF4ng m\xE0u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 499
+  fields: {src_phrase: achromatism, tar_phrase: "t\xEDnh kh\xF4ng m\xE0u, t\xEDnh
+      kh\xF4ng s\u1EAFc, t\xEDnh ti\xEAu s\u1EAFc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 500
+  fields: {src_phrase: achromatous, tar_phrase: "kh\xF4ng m\xE0u, kh\xF4ng s\u1EAFc",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 501
+  fields: {src_phrase: acicula, tar_phrase: "d\u1EA1ng kim", glossary: 1}
+- model: cat.glossarycontent
+  pk: 502
+  fields: {src_phrase: acid, tar_phrase: "axit, a x\xEDt, ch\u1EA5t chua, chua cay,
+      gay g\u1EAFt, g\u1EAFt g\u1ECFng, chua, gay go", glossary: 1}
+- model: cat.glossarycontent
+  pk: 503
+  fields: {src_phrase: acid test, tar_phrase: "s\u1EF1 th\u1EED ph\u1EA3n \u1EE9ng
+      axit, h\xF2n \u0111\xE1 th\u1EED v\xE0ng, th\u1EED th\xE1ch gay go", glossary: 1}
+- model: cat.glossarycontent
+  pk: 504
+  fields: {src_phrase: acid-soluble, tar_phrase: tan trong axit, glossary: 1}
+- model: cat.glossarycontent
+  pk: 505
+  fields: {src_phrase: acidification, tar_phrase: "s\u1EF1 axit ho\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 506
+  fields: {src_phrase: acidify, tar_phrase: "axit ho\xE1, th\xE0nh axit, ho\xE1 chua",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 507
+  fields: {src_phrase: acidity, tar_phrase: "t\xEDnh axit, \u0111\u1ED9 axit, v\u1ECB
+      chua", glossary: 1}
+- model: cat.glossarycontent
+  pk: 508
+  fields: {src_phrase: acidofuge, tar_phrase: "tr\xE1nh axit", glossary: 1}
+- model: cat.glossarycontent
+  pk: 509
+  fields: {src_phrase: acidophily, tar_phrase: "t\xEDnh \u01B0a axit, t\xEDnh \u01B0a
+      chua", glossary: 1}
+- model: cat.glossarycontent
+  pk: 510
+  fields: {src_phrase: acidose, tar_phrase: "s\u1EF1 nhi\u1EC5m axit", glossary: 1}
+- model: cat.glossarycontent
+  pk: 511
+  fields: {src_phrase: acidotrophic, tar_phrase: "dinh d\u01B0\u1EE1ng axit, \u0103n
+      ch\u1EA5t chua", glossary: 1}
+- model: cat.glossarycontent
+  pk: 512
+  fields: {src_phrase: acidulate, tar_phrase: "l\xE0m cho h\u01A1i chua, pha axit",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 513
+  fields: {src_phrase: acidulous, tar_phrase: "c\xF3 pha axit, chua cay, gay g\u1EAFt,
+      h\u01A1i chua", glossary: 1}
+- model: cat.glossarycontent
+  pk: 514
+  fields: {src_phrase: aciform, tar_phrase: "h\xECnh kim", glossary: 1}
+- model: cat.glossarycontent
+  pk: 515
+  fields: {src_phrase: acinose, tar_phrase: "nhi\u1EC1u h\u1EA1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 516
+  fields: {src_phrase: ack-emma, tar_phrase: "bu\u1ED5i s\xE1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 517
+  fields: {src_phrase: acknowledge the corn, tar_phrase: "nh\u1EADn l\u1ED7i, c\xF4ng
+      nh\u1EADn l\u1EDDi c\u1EE7a smb. l\xE0 \u0111\xFAng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 518
+  fields: {src_phrase: acleidian, tar_phrase: "kh\xF4ng x\u01B0\u01A1ng \u0111\xF2n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 519
+  fields: {src_phrase: aclinic, tar_phrase: "kh\xF4ng nghi\xEAng, v\xF4 khuynh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 520
+  fields: {src_phrase: acne, tar_phrase: "m\u1EE5n tr\u1EE9ng c\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 521
+  fields: {src_phrase: acold, tar_phrase: "l\u1EA1nh to\xE1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 522
+  fields: {src_phrase: aconite, tar_phrase: "c\xE2y ph\u1EE5 t\u1EED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 523
+  fields: {src_phrase: acorn cup, tar_phrase: "\u0111\u1EA5u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 524
+  fields: {src_phrase: acotyledon, tar_phrase: "c\xE2y kh\xF4ng l\xE1 m\u1EA7m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 525
+  fields: {src_phrase: acoumeter, tar_phrase: "thi\u1EBFt b\u1ECB \u0111o th\xEDnh
+      l\u1EF1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 526
+  fields: {src_phrase: acoustically, tar_phrase: "v\u1EC1 \xE2m thanh, v\u1EC1 \u0111\u1ED9
+      vang \xE2m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 527
+  fields: {src_phrase: acoustics, tar_phrase: "\xE2m h\u1ECDc, \u0111\u1ED9 vang \xE2m",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 528
+  fields: {src_phrase: acquaint oneself. with, tar_phrase: "l\xE0m quen v\u1EDBi",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 529
+  fields: {src_phrase: acquaintance, tar_phrase: "ng\u01B0\u1EDDi quen, s\u1EF1 bi\u1EBFt,
+      s\u1EF1 hi\u1EC3u bi\u1EBFt, s\u1EF1 quen, s\u1EF1 quen bi\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 530
+  fields: {src_phrase: acquainted, tar_phrase: "quen bi\u1EBFt, quen thu\u1ED9c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 531
+  fields: {src_phrase: acquest, tar_phrase: "c\u1EE7a l\xE0m ra, v\u1EADt ki\u1EBFm
+      \u0111\u01B0\u1EE3c, c\u1EE7a c\u1EA3i l\xE0m ra", glossary: 1}
+- model: cat.glossarycontent
+  pk: 532
+  fields: {src_phrase: acquiescence, tar_phrase: "s\u1EF1 b\u1EB1ng l\xF2ng, s\u1EF1
+      \u01B0ng thu\u1EADn, s\u1EF1 \u0111\u1ED3ng \xFD, s\u1EF1 b\u1EB1ng l\xF2ng
+      ng\u1EA7m, s\u1EF1 m\u1EB7c nh\u1EADn, s\u1EF1 ph\u1EE5c t\xF9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 533
+  fields: {src_phrase: acquire, tar_phrase: "\u0111\u01B0\u1EE3c, gi\xE0nh \u0111\u01B0\u1EE3c,
+      thu \u0111\u01B0\u1EE3c, \u0111\u1EA1t \u0111\u01B0\u1EE3c, ki\u1EBFm \u0111\u01B0\u1EE3c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 534
+  fields: {src_phrase: acquired immune deficiency syndrome, tar_phrase: "b\u1EC7nh
+      li\u1EC7t kh\xE1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 535
+  fields: {src_phrase: acquisition, tar_phrase: "c\xE1i gi\xE0nh \u0111\u01B0\u1EE3c,
+      c\xE1i thu nh\u1EADn \u0111\u01B0\u1EE3c, s\u1EF1 \u0111\u01B0\u1EE3c, s\u1EF1
+      gi\xE0nh \u0111\u01B0\u1EE3c, s\u1EF1 thu \u0111\u01B0\u1EE3c, s\u1EF1 \u0111\u1EA1t
+      \u0111\u01B0\u1EE3c, s\u1EF1 ki\u1EBFm \u0111\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 536
+  fields: {src_phrase: acquisitiveness, tar_phrase: "t\xEDnh c\xF3 th\u1EC3 h\u1ECDc
+      h\u1ECFi, kh\u1EA3 n\u0103ng ti\u1EBFp thu, kh\u1EA3 n\u0103ng l\u0129nh h\u1ED9i,
+      t\xEDnh th\xEDch tr\u1EEF c\u1EE7a, t\xEDnh h\xE1m l\u1EE3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 537
+  fields: {src_phrase: acquit of, tar_phrase: "th\u1EE9 l\u1ED7i, tha th\u1EE9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 538
+  fields: {src_phrase: acquit oneself of, tar_phrase: "l\xE0m xong, l\xE0m tr\u1ECDn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 539
+  fields: {src_phrase: acquit oneself. well, tar_phrase: "x\u1EED s\u1EF1 t\u1ED1t,
+      l\xE0m t\u1ED1t ph\u1EA7n m\xECnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 540
+  fields: {src_phrase: acquittance, tar_phrase: "bi\xEAn lai, s\u1EF1 tr\u1EA3 n\u1EE3,
+      s\u1EF1 trang tr\u1EA3i h\u1EBFt n\u1EE3 n\u1EA7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 541
+  fields: {src_phrase: acral, tar_phrase: "thu\u1ED9c ph\xEDa \u0111\u1EA7u, thu\u1ED9c
+      ph\xEDa ngo\xE0i c\xF9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 542
+  fields: {src_phrase: acraspedout, tar_phrase: "kh\xF4ng di\u1EC1m, thi\u1EBFu di\u1EC1m",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 543
+  fields: {src_phrase: acreage, tar_phrase: "di\u1EC7n t\xEDch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 544
+  fields: {src_phrase: acres in crops, tar_phrase: "di\u1EC7n t\xEDch gieo", glossary: 1}
+- model: cat.glossarycontent
+  pk: 545
+  fields: {src_phrase: acrid, tar_phrase: "chua cay, gay g\u1EAFt, h\u0103ng, cay
+      s\xE8", glossary: 1}
+- model: cat.glossarycontent
+  pk: 546
+  fields: {src_phrase: acrimonious, tar_phrase: "chua cay, gay g\u1EAFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 547
+  fields: {src_phrase: acrimony, tar_phrase: "s\u1EF1 chua cay, s\u1EF1 gay g\u1EAFt",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 548
+  fields: {src_phrase: acrobatically, tar_phrase: "t\xE0i t\xECnh, \u0111i\xEAu luy\u1EC7n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 549
+  fields: {src_phrase: acrobatism, tar_phrase: "thu\u1EADt leo d\xE2y, thu\u1EADt
+      nh\xE0o l\u1ED9n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 550
+  fields: {src_phrase: acrocarpous, tar_phrase: "c\xF3 qu\u1EA3 \u1EDF ng\u1ECDn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 551
+  fields: {src_phrase: acrogenous, tar_phrase: "sinh \u1EDF ng\u1ECDn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 552
+  fields: {src_phrase: acromegaly, tar_phrase: "b\u1EC7nh to c\u1EF1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 553
+  fields: {src_phrase: acropetal, tar_phrase: "h\u01B0\u1EDBng ng\u1ECDn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 554
+  fields: {src_phrase: acrophily, tar_phrase: "t\xEDnh \u01B0a ng\u1ECDn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 555
+  fields: {src_phrase: acropodium, tar_phrase: "ng\xF3n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 556
+  fields: {src_phrase: acroscopic, tar_phrase: "\u0111\u1ED1i ng\u1ECDn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 557
+  fields: {src_phrase: acrospore, tar_phrase: "b\xE0o t\u1EED ng\u1ECDn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 558
+  fields: {src_phrase: across the board, tar_phrase: "to\xE0n di\u1EC7n, tr\xEAn m\u1ECDi
+      l\u0129nh v\u1EF1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 559
+  fields: {src_phrase: acrotropism, tar_phrase: "t\xEDnh h\u01B0\u1EDBng ng\u1ECDn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 560
+  fields: {src_phrase: act, tar_phrase: "\u0111\xF3ng k\u1ECBch, di\u1EC5n k\u1ECBch,
+      th\u1EE7 vai, \u0111\xF3ng vai, c\u01B0 x\u1EED, \u0111\u1ED1i x\u1EED, gi\u1EEF
+      nhi\u1EC7m v\u1EE5, l\xE0m c\xF4ng t\xE1c, l\xE0m, gi\u1EA3 v\u1EDD, gi\u1EA3
+      \u0111\xF2 \u0111\xF3ng k\u1ECBch, h\xE0nh \u0111\u1ED9ng theo, l\xE0m theo,
+      h\xE0nh \u0111\u1ED9ng, t\xE1c \u0111\u1ED9ng, c\xF3 t\xE1c d\u1EE5ng, c\xF3
+      \u1EA3nh h\u01B0\u1EDFng, th\u1EF1c h\xE0nh cho x\u1EE9ng \u0111\xE1ng v\u1EDBi,
+      h\xE0nh \u0111\u1ED9ng cho x\u1EE9ng \u0111\xE1ng v\u1EDBi, \u0111\u1EA1o lu\u1EADt,
+      ch\u1EE9ng th\u01B0, vi\u1EC7c l\xE0m, c\u1EED ch\u1EC9, h\xE0nh vi, h\u1ED3i,
+      m\xE0n, lu\u1EADn \xE1n, kho\xE1 lu\u1EADn, ti\u1EBFt m\u1EE5c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 561
+  fields: {src_phrase: act for, tar_phrase: "h\xE0nh \u0111\u1ED9ng thay cho", glossary: 1}
+- model: cat.glossarycontent
+  pk: 562
+  fields: {src_phrase: act in concert with, tar_phrase: "h\xE0nh \u0111\u1ED9ng ph\u1ED1i
+      h\u1EE3p v\u1EDBi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 563
+  fields: {src_phrase: act of god, tar_phrase: "c\xE1i g\xEC v\u01B0\u1EE3t qu\xE1
+      kh\u1EA3 n\u0103ng c\u1EE7a con ng\u01B0\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 564
+  fields: {src_phrase: act of obilivion, tar_phrase: "s\u1EAFc l\u1EC7nh \xE2n x\xE1",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 565
+  fields: {src_phrase: act one.'s kind, tar_phrase: "h\xE0nh \u0111\u1ED9ng theo b\u1EA3n
+      t\xEDnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 566
+  fields: {src_phrase: act under, tar_phrase: "h\xE0nh \u0111\u1ED9ng theo, h\xE0nh
+      \u0111\u1ED9ng d\u1EF1a v\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 567
+  fields: {src_phrase: act upon, tar_phrase: "l\xE0m theo, h\xE0nh \u0111\u1ED9ng
+      theo", glossary: 1}
+- model: cat.glossarycontent
+  pk: 568
+  fields: {src_phrase: actin, tar_phrase: "ti\u1EC1n t\u1ED1 ch\u1EC9 to\u1EA3 quang",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 569
+  fields: {src_phrase: acting, tar_phrase: "h\xE0nh \u0111\u1ED9ng, ngh\u1EC7 thu\u1EADt
+      \u0111\xF3ng k\u1ECBch, s\u1EF1 th\u1EE7 vai, s\u1EF1 \u0111\xF3ng k\u1ECBch,
+      thay quy\u1EC1n, quy\u1EC1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 570
+  fields: {src_phrase: actinic, tar_phrase: "quang ho\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 571
+  fields: {src_phrase: actinidia, tar_phrase: "c\xE2y d\u01B0\u01A1ng \u0111\xE0o",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 572
+  fields: {src_phrase: actinism, tar_phrase: "t\xEDnh quang ho\xE1, \u0111\u1ED9 quang
+      ho\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 573
+  fields: {src_phrase: actinobiology, tar_phrase: "sinh h\u1ECDc b\u1EE9c x\u1EA1",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 574
+  fields: {src_phrase: actinocarpic, tar_phrase: "thu\u1ED9c qu\u1EA3 x\u1EBFp to\u1EA3
+      tia", glossary: 1}
+- model: cat.glossarycontent
+  pk: 575
+  fields: {src_phrase: actinoid, tar_phrase: "d\u1EA1ng to\u1EA3 tia", glossary: 1}
+- model: cat.glossarycontent
+  pk: 576
+  fields: {src_phrase: actinometer, tar_phrase: "thi\u1EBFt b\u1ECB \u0111o nh\u1EADt
+      x\u1EA1, thi\u1EBFt b\u1ECB \u0111o quang ho\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 577
+  fields: {src_phrase: actinomycet, tar_phrase: "khu\u1EA9n tia, actinomixet", glossary: 1}
+- model: cat.glossarycontent
+  pk: 578
+  fields: {src_phrase: actinon, tar_phrase: actinon, glossary: 1}
+- model: cat.glossarycontent
+  pk: 579
+  fields: {src_phrase: actinotherapy, tar_phrase: "li\u1EC7u ph\xE1p tia s\xE1ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 580
+  fields: {src_phrase: actinula, tar_phrase: "\u1EA5u tr\xF9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 581
+  fields: {src_phrase: action at a distance, tar_phrase: "t\xE1c d\u1EE5ng \u1EDF
+      kho\u1EA3ng c\xE1ch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 582
+  fields: {src_phrase: action painting, tar_phrase: "tranh tr\u1EEBu t\u01B0\u1EE3ng
+      \u0111\u01B0\u1EE3c t\xF4 m\xE0u s\u01A1 s\xE0i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 583
+  fields: {src_phrase: actions speak louder than words, tar_phrase: "l\xE0m c\xF3
+      \xFD ngh\u0129a h\u01A1n n\xF3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 584
+  fields: {src_phrase: activated, tar_phrase: "\u0111\xE3 ho\u1EA1t ho\xE1, \u0111\xE3
+      l\xE0m ph\xF3ng x\u1EA1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 585
+  fields: {src_phrase: activation analysis, tar_phrase: "s\u1EF1 ph\xE2n t\xEDch b\u1EB1ng
+      ph\xF3ng x\u1EA1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 586
+  fields: {src_phrase: actively, tar_phrase: "t\xEDch c\u1EF1c, h\u0103ng h\xE1i",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 587
+  fields: {src_phrase: activist, tar_phrase: "nh\xE0 ho\u1EA1t \u0111\u1ED9ng x\xE3
+      h\u1ED9i, nh\xE0 ho\u1EA1t \u0111\u1ED9ng ch\xEDnh tr\u1ECB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 588
+  fields: {src_phrase: actor, tar_phrase: "di\u1EC5n vi\xEAn, k\xE9p, k\xE9p h\xE1t,
+      ng\u01B0\u1EDDi l\xE0m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 589
+  fields: {src_phrase: actress, tar_phrase: "n\u1EEF di\u1EC5n vi\xEAn, \u0111\xE0o
+      h\xE1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 590
+  fields: {src_phrase: actuality, tar_phrase: "\u0111i\u1EC1u ki\u1EC7n hi\u1EC7n
+      t\u1EA1i, \u0111i\u1EC1u ki\u1EC7n th\u1EF1c t\u1EBF, hi\u1EC7n th\u1EF1c, th\u1EF1c
+      t\u1EBF, th\u1EF1c t\u1EA1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 591
+  fields: {src_phrase: actualize, tar_phrase: "m\xF4 t\u1EA3 r\u1EA5t hi\u1EC7n th\u1EF1c,
+      th\u1EF1c hi\u1EC7n, bi\u1EBFn th\xE0nh hi\u1EC7n th\u1EF1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 592
+  fields: {src_phrase: actuarial, tar_phrase: "chuy\xEAn vi\xEAn th\u1ED1ng k\xEA
+      b\u1EA3o hi\u1EC3m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 593
+  fields: {src_phrase: actuate, tar_phrase: "ph\xE1t \u0111\u1ED9ng, kh\u1EDFi \u0111\u1ED9ng,
+      th\xFAc \u0111\u1EA9y, k\xEDch th\xEDch, l\xE0 \u0111\u1ED9ng c\u01A1 th\xFAc
+      \u0111\u1EA9y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 594
+  fields: {src_phrase: actuation, tar_phrase: "s\u1EF1 ph\xE1t \u0111\u1ED9ng, s\u1EF1
+      kh\u1EDFi \u0111\u1ED9ng, s\u1EF1 th\xFAc \u0111\u1EA9y, s\u1EF1 k\xEDch th\xEDch",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 595
+  fields: {src_phrase: acuity, tar_phrase: "\u0111\u1ED9 k\u1ECBch li\u1EC7t, t\xEDnh
+      s\u1EAFc nh\u1ECDn, t\xEDnh s\u1EAFc b\xE9n, t\xEDnh s\u1EAFc s\u1EA3o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 596
+  fields: {src_phrase: aculeate, tar_phrase: "c\xF3 gai, c\xF3 ng\xF2i \u0111\u1ED1t,
+      ch\xE2m ch\u1ECDc, chua cay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 597
+  fields: {src_phrase: aculeus, tar_phrase: "gai, tr\xE2m \u0111\u1ED1t, ng\xF2i \u0111\u1ED1t",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 598
+  fields: {src_phrase: acuminate, tar_phrase: "nh\u1ECDn m\u0169i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 599
+  fields: {src_phrase: acuminiferous, tar_phrase: "c\xF3 c\u1EE7 nh\u1ECDn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 600
+  fields: {src_phrase: acupuncturist, tar_phrase: "chuy\xEAn gia v\u1EC1 khoa ch\xE2m
+      c\u1EE9u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 601
+  fields: {src_phrase: acutely, tar_phrase: "s\xE2u s\u1EAFc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 602
+  fields: {src_phrase: acutiflorous, tar_phrase: "c\xF3 hoa nh\u1ECDn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 603
+  fields: {src_phrase: acyclic, tar_phrase: "kh\xF4ng v\xF2ng, x\u1EBFp xo\u1EAFn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 604
+  fields: {src_phrase: ad, tar_phrase: "qu\u1EA3ng c\xE1o, sau c\xF4ng nguy\xEAn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 605
+  fields: {src_phrase: ad hoc, tar_phrase: "\u0111\u1EB7c bi\u1EC7t, kh\xF4ng d\u1EF1
+      t\xEDnh tr\u01B0\u1EDBc, kh\xF4ng theo th\u1EC3 th\u1EE9c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 606
+  fields: {src_phrase: ad infinitum, tar_phrase: "v\xF4 c\xF9ng, v\xF4 t\u1EADn, kh\xF4ng
+      gi\u1EDBi h\u1EA1n, m\xE3i m\xE3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 607
+  fields: {src_phrase: ad lib, tar_phrase: "c\u01B0\u01A1ng th\xEAm, n\xF3i th\xEAm,
+      h\xE1t th\xEAm, ch\u01A1i th\xEAm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 608
+  fields: {src_phrase: ad rem, tar_phrase: "nh\u1EB1m \u0111\xFAng s\u1EF1 vi\u1EC7c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 609
+  fields: {src_phrase: ad verbum, tar_phrase: "\u0111\xFAng t\u1EEBng ch\u1EEF m\u1ED9t",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 610
+  fields: {src_phrase: adage, tar_phrase: "c\xE1ch ng\xF4n, ch\xE2m ng\xF4n, ng\u1EA1n
+      ng\u1EEF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 611
+  fields: {src_phrase: adam, tar_phrase: a-dam, glossary: 1}
+- model: cat.glossarycontent
+  pk: 612
+  fields: {src_phrase: adamant, tar_phrase: "\u0111\xE1 nam ch\xE2m, c\xE1i c\u1EE9ng
+      r\u1EAFn, c\xE1i s\u1EAFt \u0111\xE1, k\u1EC9 c\u01B0\u01A1ng, c\u1EE9ng r\u1EAFn,
+      r\u1EAFn nh\u01B0 kim c\u01B0\u01A1ng, s\u1EAFt \u0111\xE1, gang th\xE9p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 613
+  fields: {src_phrase: adamantly, tar_phrase: "c\u1EE9ng r\u1EAFn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 614
+  fields: {src_phrase: adamic, tar_phrase: "c\u1EE7a hay gi\u1ED1ng th\u1EDDi k\u1EF3
+      adam, nguy\xEAn th\u1EE7y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 615
+  fields: {src_phrase: adapt, tar_phrase: "l\xE0m th\xEDch nghi, l\xE0m th\xEDch \u1EE9ng,
+      ph\u1ECFng theo, s\u1EEDa l\u1EA1i cho h\u1EE3p, th\xEDch nghi, tra v\xE0o,
+      l\u1EAFp v\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 616
+  fields: {src_phrase: adaptability, tar_phrase: "kh\u1EA3 n\u0103ng ph\u1ECFng theo
+      \u0111\u01B0\u1EE3c, kh\u1EA3 n\u0103ng s\u1EEDa l\u1EA1i \u0111\u01B0\u1EE3c
+      cho h\u1EE3p, kh\u1EA3 n\u0103ng th\xEDch nghi, kh\u1EA3 n\u0103ng th\xEDch
+      \u1EE9ng, t\xEDnh c\xF3 th\u1EC3 tra v\xE0o, t\xEDnh c\xF3 th\u1EC3 l\u1EAFp
+      v\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 617
+  fields: {src_phrase: adaptation, tar_phrase: "s\u1EF1 ph\u1ECFng theo, s\u1EF1 s\u1EEDa
+      l\u1EA1i cho h\u1EE3p, s\u1EF1 th\xEDch nghi, s\u1EF1 tra v\xE0o, s\u1EF1 l\u1EAFp
+      v\xE0o, t\xE0i li\u1EC7u vi\u1EBFt ph\u1ECFng theo, ph\xF3ng t\xE1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 618
+  fields: {src_phrase: adapted for, tar_phrase: "s\u1EEDa l\u1EA1i cho h\u1EE3p v\u1EDBi,
+      cho th\xEDch nghi v\u1EDBi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 619
+  fields: {src_phrase: adapter, tar_phrase: "ng\u01B0\u1EDDi l\xE0m th\xEDch nghi,
+      ng\u01B0\u1EDDi l\xE0m th\xEDch \u1EE9ng, ng\u01B0\u1EDDi ph\u1ECFng theo, ng\u01B0\u1EDDi
+      s\u1EEDa l\u1EA1i cho h\u1EE3p, thi\u1EBFt b\u1ECB ti\u1EBFp h\u1EE3p, \u1ED1ng
+      n\u1ED1i, c\xE1i n\u1EAFn \u0111i\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 620
+  fields: {src_phrase: adaxial, tar_phrase: "h\u01B0\u1EDBng tr\u1EE5c, b\xEAn tr\u1EE5c,
+      g\u1EA7n tr\u1EE5c, d\xEDnh tr\u1EE5c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 621
+  fields: {src_phrase: adcauline, tar_phrase: "b\xEAn th\xE2n, d\xEDnh th\xE2n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 622
+  fields: {src_phrase: add alkali, tar_phrase: "ki\u1EC1m h\xF3a", glossary: 1}
+- model: cat.glossarycontent
+  pk: 623
+  fields: {src_phrase: add fuel to the flames, tar_phrase: "l\u1EEDa ch\xE1y \u0111\u1ED5
+      th\xEAm d\u1EA7u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 624
+  fields: {src_phrase: add insult to injury, tar_phrase: "mi\u1EC7ng ch\u1EEDi tay
+      \u0111\u1EA5m, mi\u1EC7ng n\xF3i tay \u0111\u1EA5m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 625
+  fields: {src_phrase: addax, tar_phrase: "linh d\u01B0\u01A1ng s\u1EEBng queo", glossary: 1}
+- model: cat.glossarycontent
+  pk: 626
+  fields: {src_phrase: adder, tar_phrase: "ng\u01B0\u1EDDi c\u1ED9ng, m\xE1y c\u1ED9ng,
+      r\u1EAFn vipe", glossary: 1}
+- model: cat.glossarycontent
+  pk: 627
+  fields: {src_phrase: addict, tar_phrase: "ng\u01B0\u1EDDi nghi\u1EC7n, ng\u01B0\u1EDDi
+      say m\xEA, ng\u01B0\u1EDDi quan t\xE2m \u0111\u1EBFn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 628
+  fields: {src_phrase: addicted, tar_phrase: "say m\xEA, nghi\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 629
+  fields: {src_phrase: adding-machine, tar_phrase: "m\xE1y c\u1ED9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 630
+  fields: {src_phrase: addition, tar_phrase: "s\u1EF1 th\xEAm, ph\u1EA7n th\xEAm,
+      t\xEDnh c\u1ED9ng, ph\xE9p c\u1ED9ng, s\u1EF1 c\u1ED9ng l\u1EA1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 631
+  fields: {src_phrase: additionally, tar_phrase: "th\xEAm n\u1EEFa, ngo\xE0i ra",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 632
+  fields: {src_phrase: addle, tar_phrase: "l\xE0m l\u1EABn, l\xE0m qu\u1EABn, l\xE0m
+      r\u1ED1i \xF3c, l\xE0m th\u1ED1i, l\xE0m h\u1ECFng, l\xE0m ung, l\u1EABn, qu\u1EABn,
+      r\u1ED1i tr\xED, th\u1ED1i, h\u1ECFng, ung", glossary: 1}
+- model: cat.glossarycontent
+  pk: 633
+  fields: {src_phrase: addle-brained, tar_phrase: "\u0111\u1EA7u \xF3c l\u1EABn qu\u1EABn,
+      qu\u1EABn tr\xED, r\u1ED1i tr\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 634
+  fields: {src_phrase: address, tar_phrase: "\u0111\u1EC1 \u0111\u1ECBa ch\u1EC9,
+      g\u1EEDi, n\xF3i v\u1EDBi, n\xF3i chuy\u1EC7n v\u1EDBi, di\u1EC5n thuy\u1EBFt
+      tr\u01B0\u1EDBc, vi\u1EBFt cho, nh\u1EAFm, to\xE0n t\xE2m to\xE0n \xFD, x\u01B0ng
+      h\xF4, g\u1ECDi, \u0111\u1ECBa ch\u1EC9, b\xE0i n\xF3i chuy\u1EC7n, di\u1EC5n
+      v\u0103n, c\xE1ch n\xF3i n\u0103ng, t\xE1c phong l\xFAc n\xF3i chuy\u1EC7n,
+      s\u1EF1 g\u1EEDi \u0111i m\u1ED9t chuy\u1EBFn t\xE0u h\xE0ng, s\u1EF1 kh\xE9o
+      l\xE9o, s\u1EF1 kh\xF4n ngoan, s\u1EF1 ng\u1ECF \xFD, s\u1EF1 t\u1ECF t\xECnh,
+      s\u1EF1 t\xE1n t\u1EC9nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 635
+  fields: {src_phrase: adduce, tar_phrase: "vi\u1EC7n, vi\u1EC7n d\u1EABn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 636
+  fields: {src_phrase: adducent, tar_phrase: "kh\xE9p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 637
+  fields: {src_phrase: adduction, tar_phrase: "s\u1EF1 kh\xE9p, s\u1EF1 vi\u1EC7n
+      d\u1EABn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 638
+  fields: {src_phrase: ademption, tar_phrase: "s\u1EF1 t\u01B0\u1EDBc b\u1ECF quy\u1EC1n
+      th\u1EEBa k\u1EBF t\xE0i s\u1EA3n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 639
+  fields: {src_phrase: adenoidal, tar_phrase: "b\u1ECB b\u1EC7nh v. a", glossary: 1}
+- model: cat.glossarycontent
+  pk: 640
+  fields: {src_phrase: adenoids, tar_phrase: "b\u1EC7nh s\xF9i v\xF2m h\u1ECDng, b\u1EC7nh
+      v. a, n\u1EA5m v. a, s\xF9i v\xF2m h\u1ECDng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 641
+  fields: {src_phrase: adept, tar_phrase: "ng\u01B0\u1EDDi gi\u1ECFi, ng\u01B0\u1EDDi
+      tinh th\xF4ng, ng\u01B0\u1EDDi th\xF4ng th\u1EA1o, ng\u01B0\u1EDDi l\xE3o luy\u1EC7n,
+      nh\xE0 luy\u1EC7n \u0111an th\xF4ng th\u1EA1o, nh\xE0 gi\u1EA3 kim l\xE3o luy\u1EC7n,
+      gi\u1ECFi, th\u1EA1o, tinh th\xF4ng, l\xE3o luy\u1EC7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 642
+  fields: {src_phrase: adequate, tar_phrase: "\u0111\u1EE7, \u0111\u1EA7y \u0111\u1EE7,
+      t\u01B0\u01A1ng x\u1EE9ng, x\u1EE9ng \u0111\xE1ng, th\xEDch h\u1EE3p, th\xEDch
+      \u0111\xE1ng, tho\u1EA3 \u0111\xE1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 643
+  fields: {src_phrase: adequately, tar_phrase: "t\u01B0\u01A1ng x\u1EE9ng, th\xEDch
+      \u0111\xE1ng, tho\u1EA3 \u0111\xE1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 644
+  fields: {src_phrase: adespota, tar_phrase: "nh\u1EEFng t\xE1c ph\u1EA9m khuy\u1EBFt
+      danh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 645
+  fields: {src_phrase: adhere to, tar_phrase: "d\xEDnh ch\u1EB7t v\xE0o, b\xE1m ch\u1EB7t
+      v\xE0o, tham gia, gia nh\u1EADp, trung th\xE0nh v\u1EDBi, g\u1EAFn b\xF3 v\u1EDBi",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 646
+  fields: {src_phrase: adherence to specification, tar_phrase: "s\u1EF1 tu\xE2n th\u1EE7
+      quy ph\u1EA1m k\u1EF9 thu\u1EADt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 647
+  fields: {src_phrase: adhesion, tar_phrase: "s\u1EF1 d\xEDnh ch\u1EB7t v\xE0o, s\u1EF1
+      b\xE1m ch\u1EB7t v\xE0o, s\u1EF1 t\xE1n \u0111\u1ED3ng, s\u1EF1 \u0111\u1ED3ng
+      \xFD, s\u1EF1 tham gia, s\u1EF1 gia nh\u1EADp, s\u1EF1 trung th\xE0nh v\u1EDBi,
+      s\u1EF1 gi\u1EEF v\u1EEFng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 648
+  fields: {src_phrase: adhesiveness, tar_phrase: "t\xEDnh d\xEDnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 649
+  fields: {src_phrase: adiabatic, tar_phrase: "\u0111o\u1EA1n nhi\u1EC7t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 650
+  fields: {src_phrase: adiastiole, tar_phrase: "s\u1EF1 suy t\xE2m tr\u01B0\u01A1ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 651
+  fields: {src_phrase: adient, tar_phrase: "h\u01B0\u1EDBng k\xEDch th\xEDch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 652
+  fields: {src_phrase: adios, tar_phrase: "xin t\u1EEB bi\u1EC7t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 653
+  fields: {src_phrase: adipocyte, tar_phrase: "t\u1EBF b\xE0o t\u1EA1o m\u1EE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 654
+  fields: {src_phrase: adipolysis, tar_phrase: "s\u1EF1 ti\xEAu m\u1EE1, s\u1EF1 ph\xE2n
+      gi\u1EA3i m\u1EE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 655
+  fields: {src_phrase: adipose, tar_phrase: "b\xE9o, ch\u1EE9a m\u1EE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 656
+  fields: {src_phrase: adiposity, tar_phrase: "t\xECnh tr\u1EA1ng b\xE9o ph\xEC, t\xECnh
+      tr\u1EA1ng ph\xE1t ph\xEC", glossary: 1}
+- model: cat.glossarycontent
+  pk: 657
+  fields: {src_phrase: aditus, tar_phrase: "c\u1EEDa, l\u1ED7 m\u1EDF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 658
+  fields: {src_phrase: adjacent, tar_phrase: "g\u1EA7n k\u1EC1, k\u1EBF li\u1EC1n,
+      s\xE1t ngay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 659
+  fields: {src_phrase: adjacently, tar_phrase: "c\u1EADn k\u1EC1 nhau", glossary: 1}
+- model: cat.glossarycontent
+  pk: 660
+  fields: {src_phrase: adjective, tar_phrase: "t\xEDnh t\u1EEB, ph\u1EE5 tr\u1EE3,
+      l\u1EC7 thu\u1ED9c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 661
+  fields: {src_phrase: adjoining, tar_phrase: "g\u1EA7n k\u1EC1, k\u1EBF b\xEAn, ti\u1EBFp
+      gi\xE1p, b\xEAn c\u1EA1nh, s\xE1t n\xE1ch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 662
+  fields: {src_phrase: adjournment, tar_phrase: "s\u1EF1 d\u1EDDi sang m\u1ED9t n\u01A1i
+      kh\xE1c, s\u1EF1 chuy\u1EC3n ch\u1ED7 h\u1ED9i h\u1ECDp, s\u1EF1 ho\xE3n l\u1EA1i,
+      s\u1EF1 ng\u1EEBng h\u1ECDp", glossary: 1}
+- model: cat.glossarycontent
+  pk: 663
+  fields: {src_phrase: adjudgment, tar_phrase: "s\u1EF1 c\u1EA5p cho, s\u1EF1 ban
+      cho, s\u1EF1 k\u1EBFt \xE1n, s\u1EF1 tuy\xEAn \xE1n, s\u1EF1 x\xE9t s\u1EED,
+      s\u1EF1 ph\xE2n x\u1EED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 664
+  fields: {src_phrase: adjudication, tar_phrase: "s\u1EF1 x\xE9t x\u1EED, s\u1EF1
+      ph\xE2n x\u1EED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 665
+  fields: {src_phrase: adjunct, tar_phrase: "\u0111i\u1EC1u th\xEAm v\xE0o, c\xE1i
+      ph\u1EE5 v\xE0o, v\u1EADt ph\u1EE5 thu\u1ED9c, \u0111\u1ECBnh ng\u1EEF, b\u1ED5
+      ng\u1EEF, ng\u01B0\u1EDDi ph\u1EE5 vi\u1EC7c, ph\u1EE5 t\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 666
+  fields: {src_phrase: adjunction, tar_phrase: "s\u1EF1 th\xEAm v\xE0o, s\u1EF1 ph\u1EE5
+      v\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 667
+  fields: {src_phrase: adjuration, tar_phrase: "l\u1EDDi th\u1EC1, l\u1EDDi tuy\xEAn
+      th\u1EC7, s\u1EF1 kh\u1EA9n n\xE0i, s\u1EF1 van n\xE0i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 668
+  fields: {src_phrase: adjust, tar_phrase: "ch\u1EC9nh l\xFD, l\xE0m cho th\xEDch
+      h\u1EE3p, ho\xE0 gi\u1EA3i, d\xE0n x\u1EBFp, l\u1EAFp, s\u1EEDa l\u1EA1i cho
+      \u0111\xFAng, \u0111i\u1EC1u ch\u1EC9nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 669
+  fields: {src_phrase: adjust a drill, tar_phrase: "s\u1EEDa l\u1EA1i m\xE1y gieo",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 670
+  fields: {src_phrase: adjust ph, tar_phrase: "\u0111i\u1EC1u h\xF2a \u0111\u1ED9
+      ph", glossary: 1}
+- model: cat.glossarycontent
+  pk: 671
+  fields: {src_phrase: adjust work for position, tar_phrase: "\u0111\u1ECBnh v\u1ECB
+      chi ti\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 672
+  fields: {src_phrase: adjustable while running, tar_phrase: "\u0111i\u1EC1u ch\u1EC9nh
+      \u0111\u01B0\u1EE3c trong v\u1EADn h\xE0nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 673
+  fields: {src_phrase: adjustment, tar_phrase: "s\u1EF1 ho\xE0 gi\u1EA3i, s\u1EF1
+      d\xE0n x\u1EBFp, s\u1EF1 s\u1EEDa l\u1EA1i cho \u0111\xFAng, s\u1EF1 \u0111i\u1EC1u
+      ch\u1EC9nh, s\u1EF1 ch\u1EC9nh l\xFD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 674
+  fields: {src_phrase: adjutage, tar_phrase: "\u1ED1ng v\xF2i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 675
+  fields: {src_phrase: adjutant, tar_phrase: "c\xF2 gi\xE0, ng\u01B0\u1EDDi ph\u1EE5
+      t\xE1, s\u0129 quan ph\u1EE5 t\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 676
+  fields: {src_phrase: adjuvant, tar_phrase: "t\xE1 d\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 677
+  fields: {src_phrase: admeasure, tar_phrase: "quy \u0111\u1ECBnh t\u1EEBng ph\u1EA7n,
+      chia ph\u1EA7n ra", glossary: 1}
+- model: cat.glossarycontent
+  pk: 678
+  fields: {src_phrase: adminiculum, tar_phrase: "gai v\u1EADn \u0111\u1ED9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 679
+  fields: {src_phrase: administrate, tar_phrase: "tr\xF4ng nom, qu\u1EA3n l\xFD, cai
+      qu\u1EA3n, cai tr\u1ECB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 680
+  fields: {src_phrase: administrative, tar_phrase: "ch\xEDnh quy\u1EC1n, nh\xE0 n\u01B0\u1EDBc,
+      h\xE0nh ch\xEDnh, qu\u1EA3n tr\u1ECB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 681
+  fields: {src_phrase: administrator, tar_phrase: "ng\u01B0\u1EDDi c\u1EA7m quy\u1EC1n
+      h\xE0nh ch\xEDnh, ng\u01B0\u1EDDi c\u1EA7m quy\u1EC1n cai tr\u1ECB, ng\u01B0\u1EDDi
+      qu\u1EA3n l\xFD t\xE0i s\u1EA3n, ng\u01B0\u1EDDi qu\u1EA3n l\xFD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 682
+  fields: {src_phrase: administratrix, tar_phrase: "b\xE0 qu\u1EA3n l\xFD t\xE0i s\u1EA3n,
+      b\xE0 qu\u1EA3n l\xFD, ng\u01B0\u1EDDi \u0111\xE0n b\xE0 c\u1EA7m quy\u1EC1n
+      h\xE0nh ch\xEDnh, ng\u01B0\u1EDDi \u0111\xE0n b\xE0 c\u1EA7m quy\u1EC1n cai
+      tr\u1ECB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 683
+  fields: {src_phrase: admirable, tar_phrase: "\u0111\xE1ng ph\u1EE5c, \u0111\xE1ng
+      kh\xE2m ph\u1EE5c, \u0111\xE1ng ca t\u1EE5ng, \u0111\xE1ng h\xE2m m\u1ED9, \u0111\xE1ng
+      ng\u01B0\u1EE1ng m\u1ED9, tuy\u1EC7t di\u1EC7u, tuy\u1EC7t v\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 684
+  fields: {src_phrase: admiral, tar_phrase: "\u0111\xF4 \u0111\u1ED1c, b\u01B0\u1EDBm
+      gi\xE1p, ng\u01B0\u1EDDi ch\u1EC9 huy \u0111o\xE0n t\xE0u \u0111\xE1nh c\xE1,
+      ng\u01B0\u1EDDi ch\u1EC9 huy h\u1EA1m \u0111\u1ED9i, t\xE0u r\u1ED3ng, k\u1EF3
+      h\u1EA1m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 685
+  fields: {src_phrase: admiralty, tar_phrase: "b\u1ED9 h\u1EA3i qu\xE2n, ch\u1EE7
+      quy\u1EC1n tr\xEAn m\u1EB7t bi\u1EC3n, ch\u1EE9c \u0111\xF4 \u0111\u1ED1c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 686
+  fields: {src_phrase: admire, tar_phrase: "ao \u01B0\u1EDBc, khao kh\xE1t, kh\xE2m
+      ph\u1EE5c, th\xE1n ph\u1EE5c, c\u1EA3m ph\u1EE5c, h\xE2m m\u1ED9, ng\u01B0\u1EE1ng
+      m\u1ED9, khen ng\u1EE3i, ca t\u1EE5ng, l\u1EA5y l\xE0m l\u1EA1, l\u1EA5y l\xE0m
+      ng\u1EA1c nhi\xEAn, ng\u1EAFm nh\xECn m\u1ED9t c\xE1ch vui th\xEDch, say m\xEA,
+      m\xEA", glossary: 1}
+- model: cat.glossarycontent
+  pk: 687
+  fields: {src_phrase: admiring, tar_phrase: "kh\xE2m ph\u1EE5c, c\u1EA3m ph\u1EE5c,
+      th\xE1n ph\u1EE5c, ng\u01B0\u1EE1ng m\u1ED9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 688
+  fields: {src_phrase: admissibility, tar_phrase: "t\xEDnh c\xF3 th\u1EC3 ch\u1EA5p
+      nh\u1EADn \u0111\u01B0\u1EE3c, t\xEDnh c\xF3 th\u1EC3 th\u1EEBa nh\u1EADn \u0111\u01B0\u1EE3c,
+      t\xEDnh c\xF3 th\u1EC3 nh\u1EADn, t\xEDnh c\xF3 th\u1EC3 thu n\u1EA1p, t\xEDnh
+      c\xF3 th\u1EC3 k\u1EBFt n\u1EA1p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 689
+  fields: {src_phrase: admission, tar_phrase: "n\u1EA1p, s\u1EF1 cho v\xE0o c\u1EEDa,
+      s\u1EF1 cho v\xE0o, s\u1EF1 nh\u1EADn v\xE0o, s\u1EF1 thu n\u1EA1p v\xE0o, s\u1EF1
+      k\u1EBFt n\u1EA1p, s\u1EF1 nh\u1EADn, s\u1EF1 th\xFA nh\u1EADn, ti\u1EC1n v\xE0o
+      c\u1EEDa, ti\u1EC1n nh\u1EADp h\u1ECDc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 690
+  fields: {src_phrase: admit a solution, tar_phrase: "ch\u1EA5p nh\u1EADn m\u1ED9t
+      gi\u1EA3i ph\xE1p, nh\u1EADn m\u1ED9t l\u1EDDi gi\u1EA3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 691
+  fields: {src_phrase: admit of, tar_phrase: "c\xF3, c\xF3 ch\u1ED7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 692
+  fields: {src_phrase: admittable, tar_phrase: "c\xF3 th\u1EC3 \u0111\u1EC3 cho v\xE0o",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 693
+  fields: {src_phrase: admittedly, tar_phrase: "ph\u1EA3i nh\u1EADn, ph\u1EA3i th\u1EEBa
+      nh\u1EADn, ph\u1EA3i th\xFA nh\u1EADn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 694
+  fields: {src_phrase: admixture, tar_phrase: "s\u1EF1 tr\u1ED9n l\u1EABn, s\u1EF1
+      h\u1ED7n h\u1EE3p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 695
+  fields: {src_phrase: admonition, tar_phrase: "s\u1EF1 c\u1EA3nh c\xE1o, l\u1EDDi
+      c\u1EA3nh c\xE1o, s\u1EF1 khi\u1EC3n tr\xE1ch, s\u1EF1 qu\u1EDF m\u1EAFng, s\u1EF1
+      la r\u1EA7y, s\u1EF1 nh\u1EAFc nh\u1EDF, l\u1EDDi nh\u1EAFc nh\u1EDF, s\u1EF1
+      r\u0103n b\u1EA3o l\u1EDDi khuy\xEAn r\u0103n, l\u1EDDi khuy\xEAn nh\u1EE7,
+      l\u1EDDi \u0111\u1ED9ng vi\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 696
+  fields: {src_phrase: adnate, tar_phrase: "h\u1EE3p sinh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 697
+  fields: {src_phrase: adnexed, tar_phrase: "\u0111\xEDnh th\xE2n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 698
+  fields: {src_phrase: ado, tar_phrase: "s\u1EF1 kh\xF3 nh\u1ECDc, s\u1EF1 kh\xF3
+      kh\u0103n, c\xF4ng s\u1EE9c, s\u1EF1 r\u1ED1i r\xEDt, s\u1EF1 h\u1ED1i h\u1EA3
+      ng\u01B0\u1EE3c xu\xF4i, vi\u1EC7c l\xE0m, c\xF4ng vi\u1EC7c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 699
+  fields: {src_phrase: adolescaria, tar_phrase: "\u1EA5u tr\xF9ng k\u1EBFt k\xE9n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 700
+  fields: {src_phrase: adolescent, tar_phrase: "ng\u01B0\u1EDDi thanh ni\xEAn, \u0111ang
+      tu\u1ED5i thanh ni\xEAn, tr\u1EBB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 701
+  fields: {src_phrase: adonize, tar_phrase: "l\xE0m d\xE1ng, l\xE0m ra v\u1EBB ng\u01B0\u1EDDi
+      \u0111\u1EB9p trai", glossary: 1}
+- model: cat.glossarycontent
+  pk: 702
+  fields: {src_phrase: adoptability, tar_phrase: "t\xEDnh c\xF3 th\u1EC3 ch\u1EA5p
+      nh\u1EADn, t\xEDnh c\xF3 th\u1EC3 th\xF4ng qua, t\xEDnh c\xF3 th\u1EC3 nh\u1EADn
+      l\xE0m con nu\xF4i, t\xEDnh c\xF3 th\u1EC3 theo \u0111\u01B0\u1EE3c, t\xEDnh
+      c\xF3 th\u1EC3 l\xE0m theo", glossary: 1}
+- model: cat.glossarycontent
+  pk: 703
+  fields: {src_phrase: adopted, tar_phrase: "\u0111\u01B0\u1EE3c nh\u1EADn l\xE0m
+      con nu\xF4i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 704
+  fields: {src_phrase: adopter, tar_phrase: "ng\u01B0\u1EDDi nh\u1EADn nu\xF4i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 705
+  fields: {src_phrase: adoptionism, tar_phrase: "h\u1ECD thuy\u1EBFt nh\u1EADn gi\xEA-xu
+      l\xE0 con c\u1EE7a ch\xFAa", glossary: 1}
+- model: cat.glossarycontent
+  pk: 706
+  fields: {src_phrase: adorability, tar_phrase: "t\xEDnh \u0111\xE1ng t\xF4n s\xF9ng,
+      t\xEDnh \u0111\xE1ng s\xF9ng b\xE1i, t\xEDnh \u0111\xE1ng t\xF4n th\u1EDD, t\xEDnh
+      \u0111\xE1ng y\xEAu, t\xEDnh \u0111\xE1ng qu\xFD m\u1EBFn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 707
+  fields: {src_phrase: adorably, tar_phrase: "\u0111\xE1ng m\u1EBFn, \u0111\xE1ng
+      y\xEAu", glossary: 1}
+- model: cat.glossarycontent
+  pk: 708
+  fields: {src_phrase: adore, tar_phrase: "k\xEDnh y\xEAu, qu\xFD m\u1EBFn, m\xEA,
+      th\xEDch, h\u1EBFt s\u1EE9c y\xEAu chu\u1ED9ng, y\xEAu thi\u1EBFt tha, t\xF4n
+      s\xF9ng, s\xF9ng b\xE1i, t\xF4n th\u1EDD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 709
+  fields: {src_phrase: adoring, tar_phrase: "tha thi\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 710
+  fields: {src_phrase: adorn, tar_phrase: "t\xF4 \u0111i\u1EC3m, trang \u0111i\u1EC3m,
+      trang tr\xED, trang ho\xE0ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 711
+  fields: {src_phrase: adornment, tar_phrase: "\u0111\u1ED3 trang \u0111i\u1EC3m,
+      \u0111\u1ED3 trang tr\xED, s\u1EF1 t\xF4 \u0111i\u1EC3m, s\u1EF1 trang tr\xED,
+      s\u1EF1 trang ho\xE0ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 712
+  fields: {src_phrase: adp, tar_phrase: "truy c\u1EADp d\u1EEF li\u1EC7u t\u1EF1 \u0111\u1ED9ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 713
+  fields: {src_phrase: adrectal, tar_phrase: "g\u1EA7n ru\u1ED9t th\u1EB3ng, b\xEAn
+      ru\u1ED9t th\u1EB3ng, li\u1EC1n ru\u1ED9t th\u1EB3ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 714
+  fields: {src_phrase: adrenalectomy, tar_phrase: "vi\u1EC7c c\u1EAFt tuy\u1EBFn tr\xEAn
+      th\u1EADn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 715
+  fields: {src_phrase: adrenocorticotrophic, tar_phrase: "k\xEDch th\xEDch th\u01B0\u1EE3ng
+      th\u1EADn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 716
+  fields: {src_phrase: adroit, tar_phrase: "kh\xE9o l\xE9o, kh\xE9o tay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 717
+  fields: {src_phrase: adroitness, tar_phrase: "s\u1EF1 kh\xE9o l\xE9o, s\u1EF1 kh\xE9o
+      tay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 718
+  fields: {src_phrase: adscititious, tar_phrase: "ph\u1EE5 v\xE0o, th\xEAm v\xE0o,
+      b\u1ED5 sung", glossary: 1}
+- model: cat.glossarycontent
+  pk: 719
+  fields: {src_phrase: adsorbate, tar_phrase: "ch\u1EA5t b\u1ECB h\xFAt b\xE1m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 720
+  fields: {src_phrase: adsorber, tar_phrase: "m\xE1y h\xFAt b\xE1m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 721
+  fields: {src_phrase: adt, tar_phrase: "th\u1EDDi gian ban ng\xE0y \u1EDF \u0111\u1EA1i
+      t\xE2y d\u01B0\u01A1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 722
+  fields: {src_phrase: adulate, tar_phrase: "n\u1ECBnh h\xF3t, n\u1ECBnh n\u1ECDt,
+      b\u1EE3 \u0111\u1EE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 723
+  fields: {src_phrase: adulator, tar_phrase: "k\u1EBB n\u1ECBnh h\xF3t, k\u1EBB n\u1ECBnh
+      n\u1ECDt, k\u1EBB b\u1EE3 \u0111\u1EE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 724
+  fields: {src_phrase: adult, tar_phrase: "ng\u01B0\u1EDDi l\u1EDBn, ng\u01B0\u1EDDi
+      \u0111\xE3 tr\u01B0\u1EDFng th\xE0nh, tr\u01B0\u1EDFng th\xE0nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 725
+  fields: {src_phrase: adulterate, tar_phrase: "l\xE0m gi\u1EA3 m\u1EA1o, pha, pha
+      tr\u1ED9n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 726
+  fields: {src_phrase: adulterer, tar_phrase: "ng\u01B0\u1EDDi \u0111\xE0n \xF4ng
+      ngo\u1EA1i t\xECnh, ng\u01B0\u1EDDi \u0111\xE0n \xF4ng th\xF4ng d\xE2m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 727
+  fields: {src_phrase: adulterine, tar_phrase: "b\u1EA5t ch\xEDnh, kh\xF4ng h\u1EE3p
+      ph\xE1p, do ngo\u1EA1i t\xECnh m\xE0 \u0111\u1EBB ra", glossary: 1}
+- model: cat.glossarycontent
+  pk: 728
+  fields: {src_phrase: adultery, tar_phrase: "t\u1ED9i ngo\u1EA1i t\xECnh, t\u1ED9i
+      th\xF4ng d\xE2m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 729
+  fields: {src_phrase: adultlike, tar_phrase: "c\xF3 v\u1EBB tr\u01B0\u1EDFng th\xE0nh",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 730
+  fields: {src_phrase: adumbral, tar_phrase: "nhi\u1EC1u b\xF3ng r\xE2m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 731
+  fields: {src_phrase: adumbration, tar_phrase: "s\u1EF1 b\xE1o tr\u01B0\u1EDBc, \u0111i\u1EC1m
+      b\xE1o tr\u01B0\u1EDBc, s\u1EF1 che ch\u1EDF, s\u1EF1 to\u1EA3 b\xF3ng, b\xF3ng
+      t\u1ED1i, b\xF3ng r\xE2m, s\u1EF1 cho bi\u1EBFt, l\u1EDD m\u1EDD, h\xECnh \u1EA3nh
+      l\u1EDD m\u1EDD, s\u1EF1 ph\xE1c ho\u1EA1, b\u1EA3n ph\xE1c ho\u1EA1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 732
+  fields: {src_phrase: adust, tar_phrase: "bu\u1ED3n b\xE3, u s\u1EA7u, r\u1EA7u r\u0129,
+      ch\xE1y kh\xF4, kh\xF4 n\u1EE9t ra", glossary: 1}
+- model: cat.glossarycontent
+  pk: 733
+  fields: {src_phrase: advance a distance of, tar_phrase: "ti\u1EBFn \u0111\u1EBFn
+      m\u1ED9t kho\u1EA3ng c\xE1ch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 734
+  fields: {src_phrase: advance in one.'s studies, tar_phrase: "ti\u1EBFn b\u1ED9 trong
+      h\u1ECDc t\u1EADp", glossary: 1}
+- model: cat.glossarycontent
+  pk: 735
+  fields: {src_phrase: advance in the world, tar_phrase: "\u0111ang l\xEAn, \u0111ang
+      ti\u1EBFn b\u1ED9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 736
+  fields: {src_phrase: advance-guard, tar_phrase: "qu\xE2n ti\u1EC1n phong", glossary: 1}
+- model: cat.glossarycontent
+  pk: 737
+  fields: {src_phrase: advanced, tar_phrase: "cao, c\u1EA5p cao, ti\xEAn ti\u1EBFn,
+      ti\u1EBFn b\u1ED9, c\u1EA5p ti\u1EBFn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 738
+  fields: {src_phrase: advancement, tar_phrase: "s\u1EF1 th\u0103ng ch\u1EE9c, \u0111\u1EC1
+      b\u1EA1t, s\u1EF1 ti\u1EBFn l\xEAn, s\u1EF1 ti\u1EBFn t\u1EDBi, s\u1EF1 ti\u1EBFn
+      b\u1ED9, s\u1EF1 th\xFAc \u0111\u1EA9y, s\u1EF1 l\xE0m cho ti\u1EBFn l\xEAn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 739
+  fields: {src_phrase: advantageous, tar_phrase: "c\xF3 l\u1EE3i, thu\u1EADn l\u1EE3i",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 740
+  fields: {src_phrase: advantageousness, tar_phrase: "t\xEDnh c\xF3 l\u1EE3i, t\xEDnh
+      thu\u1EADn l\u1EE3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 741
+  fields: {src_phrase: advehent, tar_phrase: "\u0111\u1ED3ng t\xE2m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 742
+  fields: {src_phrase: advent, tar_phrase: "k\u1EF3 tr\xF4ng \u0111\u1EE3i, m\xF9a
+      v\u1ECDng, s\u1EF1 \u0111\u1EBFn, s\u1EF1 t\u1EDBi, s\u1EF1 gi\xE1ng sinh c\u1EE7a
+      ch\xFAa gi\xEAxu", glossary: 1}
+- model: cat.glossarycontent
+  pk: 743
+  fields: {src_phrase: adventitia, tar_phrase: "v\u1EE1 m\u1EA1ch m\xE1u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 744
+  fields: {src_phrase: adventitiousness, tar_phrase: "t\xEDnh ch\u1EA5t ngo\u1EA1i
+      lai, t\xEDnh ng\u1EABu nhi\xEAn, t\xEDnh t\xECnh c\u1EDD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 745
+  fields: {src_phrase: adventurer, tar_phrase: "k\u1EBB \u0111\u1EA1i b\u1EE3m, k\u1EBB
+      gian h\xF9ng, k\u1EBB s\u1EB5n s\xE0ng sung v\xE0o qu\xE2n \u0111\u1ED9i \u0111\xE1nh
+      thu\xEA, ng\u01B0\u1EDDi \u0111\u1EA7u c\u01A1, ng\u01B0\u1EDDi phi\xEAu l\u01B0u,
+      ng\u01B0\u1EDDi m\u1EA1o hi\u1EC3m, ng\u01B0\u1EDDi th\xEDch phi\xEAu l\u01B0u
+      m\u1EA1o hi\u1EC3m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 746
+  fields: {src_phrase: adventurism, tar_phrase: "ch\u1EE7 ngh\u0129a phi\xEAu l\u01B0u",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 747
+  fields: {src_phrase: adventurously, tar_phrase: "li\u1EC1u l\u1EC9nh, m\u1EA1o hi\u1EC3m",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 748
+  fields: {src_phrase: adverb, tar_phrase: "ph\xF3 t\u1EEB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 749
+  fields: {src_phrase: adversary, tar_phrase: "k\u1EBB \u0111\u1ECBch, k\u1EBB th\xF9,
+      \u0111\u1ED1i ph\u01B0\u01A1ng, \u0111\u1ED1i th\u1EE7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 750
+  fields: {src_phrase: adverse, tar_phrase: "\u0111\u1ED1i \u0111\u1ECBch, th\xF9
+      \u0111\u1ECBch, ngh\u1ECBch l\u1EA1i, ch\u1ED1ng \u0111\u1ED1i, b\xEAn kia,
+      \u0111\u1ED1i di\u1EC7n, b\u1EA5t l\u1EE3i, c\xF3 h\u1EA1i, ng\u01B0\u1EE3c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 751
+  fields: {src_phrase: adversity, tar_phrase: "s\u1EF1 b\u1EA5t h\u1EA1nh, v\u1EADn
+      \u0111en, v\u1EADn r\u1EE7i, ngh\u1ECBch c\u1EA3nh, tai ho\u1EA1, tai \u01B0\u01A1ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 752
+  fields: {src_phrase: advertence, tar_phrase: "s\u1EF1 ch\xFA \xFD, s\u1EF1 l\u01B0u
+      \xFD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 753
+  fields: {src_phrase: advertise, tar_phrase: "\u0111\u0103ng b\xE1o, y\u1EBFt th\u1ECB,
+      th\xF4ng b\xE1o, b\xE1o cho bi\u1EBFt, b\xE1o cho ai bi\u1EBFt tr\u01B0\u1EDBc,
+      qu\u1EA3ng c\xE1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 754
+  fields: {src_phrase: advertisement column, tar_phrase: "c\u1ED9t qu\u1EA3ng c\xE1o,
+      m\u1EE5c qu\u1EA3ng c\xE1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 755
+  fields: {src_phrase: advertising, tar_phrase: "s\u1EF1 qu\u1EA3ng c\xE1o, ngh\u1EC1
+      qu\u1EA3ng c\xE1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 756
+  fields: {src_phrase: advisability, tar_phrase: "t\xEDnh ch\u1EA5t kh\xF4n, t\xEDnh
+      ch\u1EA5t kh\xF4n ngoan, t\xEDnh ch\u1EA5t n\xEAn, t\xEDnh ch\u1EA5t th\xEDch
+      h\u1EE3p, t\xEDnh ch\u1EA5t \u0111\xE1ng theo", glossary: 1}
+- model: cat.glossarycontent
+  pk: 757
+  fields: {src_phrase: advise, tar_phrase: "b\xE1o cho bi\u1EBFt, h\u1ECFi \xFD ki\u1EBFn,
+      khuy\xEAn, khuy\xEAn b\u1EA3o, r\u0103n b\u1EA3o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 758
+  fields: {src_phrase: advise smb. to the contrary, tar_phrase: "khuy\xEAn smb. \u0111\u1EEBng
+      l\xE0m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 759
+  fields: {src_phrase: advised, tar_phrase: "\u0111\xFAng, \u0111\xFAng \u0111\u1EAFn,
+      ch\xED l\xFD, am hi\u1EC3u, hi\u1EC3u bi\u1EBFt, c\xF3 suy ngh\u0129 th\u1EADn
+      tr\u1ECDng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 760
+  fields: {src_phrase: adviser, tar_phrase: "ng\u01B0\u1EDDi khuy\xEAn b\u1EA3o, ng\u01B0\u1EDDi
+      ch\u1EC9 b\u1EA3o, c\u1ED1 v\u1EA5n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 761
+  fields: {src_phrase: advocacy, tar_phrase: "l\u1EDDi bi\u1EC7n h\u1ED9 c\u1EE7a
+      lu\u1EADt s\u01B0, s\u1EF1 b\xE0o ch\u1EEFa, nhi\u1EC7m v\u1EE5 lu\u1EADt s\u01B0,
+      s\u1EF1 \u1EE7ng h\u1ED9 t\xEDch c\u1EF1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 762
+  fields: {src_phrase: advowson, tar_phrase: "quy\u1EC1n ti\u1EBFn c\u1EED ng\u01B0\u1EDDi
+      l\xE0m m\u1EE5c s\u01B0", glossary: 1}
+- model: cat.glossarycontent
+  pk: 763
+  fields: {src_phrase: adynamia, tar_phrase: "ch\u1EE9ng m\u1EC7t l\u1EED, s\u1EF1
+      ki\u1EC7t s\u1EE9c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 764
+  fields: {src_phrase: adytum, tar_phrase: "ch\xEDnh \u0111i\u1EC7n, th\xE2m cung,
+      bu\u1ED3ng ri\xEAng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 765
+  fields: {src_phrase: aecial, tar_phrase: "thu\u1ED9c b\xE0o t\u1EED g\u1EC9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 766
+  fields: {src_phrase: aecium, tar_phrase: "t\xFAi b\xE0o t\u1EED g\u1EC9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 767
+  fields: {src_phrase: aedile, tar_phrase: "quan th\u1ECB ch\xEDnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 768
+  fields: {src_phrase: aegis, tar_phrase: "s\u1EF1 che ch\u1EDF, s\u1EF1 b\u1EA3o
+      h\u1ED9, s\u1EF1 b\u1EA3o v\u1EC7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 769
+  fields: {src_phrase: aelotropic, tar_phrase: "d\u1ECB h\u01B0\u1EDBng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 770
+  fields: {src_phrase: aeneolithic, tar_phrase: "thu\u1ED9c th\u1EDDi \u0111\u1ED3ng
+      \u0111\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 771
+  fields: {src_phrase: aeolian, tar_phrase: "th\xF4ng gi\xF3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 772
+  fields: {src_phrase: aeon, tar_phrase: "s\u1EF1 v\u0129nh vi\u1EC5n, kho\u1EA3ng
+      th\u1EDDi gian v\xF4 t\u1EADn, th\u1EDDi \u0111\u1EA1i, ni\xEAn k\u1EF7", glossary: 1}
+- model: cat.glossarycontent
+  pk: 773
+  fields: {src_phrase: aerate hay, tar_phrase: "l\xE0m tho\xE1ng c\u1ECF kh\xF4, hong
+      c\u1ECF kh\xF4", glossary: 1}
+- model: cat.glossarycontent
+  pk: 774
+  fields: {src_phrase: aerenchyma, tar_phrase: "m\xF4 kh\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 775
+  fields: {src_phrase: aerie, tar_phrase: "\u1ED5 tr\u1EE9ng \u1EA5p, nh\xE0 l\xE0m
+      tr\xEAn \u0111\u1EC9nh n\xFAi, t\u1ED5 chim l\xE0m t\xEDt tr\xEAn cao", glossary: 1}
+- model: cat.glossarycontent
+  pk: 776
+  fields: {src_phrase: aeriferous, tar_phrase: "d\u1EABn kh\xF4ng kh\xED, ch\u1EE9a
+      kh\xF4ng kh\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 777
+  fields: {src_phrase: aerify, tar_phrase: "l\xE0m ho\xE1 ra th\u1EC3 h\u01A1i, kh\xED
+      ho\xE1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 778
+  fields: {src_phrase: aero club, tar_phrase: "c\xE2u l\u1EA1c b\u1ED9 h\xE0ng kh\xF4ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 779
+  fields: {src_phrase: aeroballistics, tar_phrase: "khoa \u0111\u01B0\u1EDDng \u0111\u1EA1n
+      tr\xEAn kh\xF4ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 780
+  fields: {src_phrase: aerobatics, tar_phrase: "s\u1EF1 nh\xE0o l\u1ED9n tr\xEAn kh\xF4ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 781
+  fields: {src_phrase: aerobics, tar_phrase: "th\u1EC3 d\u1EE5c nh\u1ECBp \u0111i\u1EC7u",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 782
+  fields: {src_phrase: aerocamera, tar_phrase: "m\xE1y \u1EA3nh ch\u1EE5p tr\xEAn
+      kh\xF4ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 783
+  fields: {src_phrase: aerocyste, tar_phrase: "t\xFAi kh\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 784
+  fields: {src_phrase: aerodrome, tar_phrase: "s\xE2n bay nh\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 785
+  fields: {src_phrase: aerodynamics, tar_phrase: "kh\xED \u0111\u1ED9ng l\u1EF1c h\u1ECDc",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 786
+  fields: {src_phrase: aeroembolism, tar_phrase: "b\u1EC7nh kh\xED \xE9p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 787
+  fields: {src_phrase: aerogram, tar_phrase: "b\u1EE9c \u0111i\u1EC7n ra\u0111i\xF4",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 788
+  fields: {src_phrase: aerography, tar_phrase: "kh\xED t\u01B0\u1EE3ng h\u1ECDc",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 789
+  fields: {src_phrase: aerohydroplane, tar_phrase: "th\u1EE7y phi c\u01A1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 790
+  fields: {src_phrase: aerolith, tar_phrase: "thi\xEAn th\u1EA1ch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 791
+  fields: {src_phrase: aerology, tar_phrase: "m\xF4n kh\xED t\u01B0\u1EE3ng cao kh\xF4ng,
+      m\xF4n quy\u1EC3n kh\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 792
+  fields: {src_phrase: aeromechanics, tar_phrase: "c\u01A1 h\u1ECDc ch\u1EA5t kh\xED",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 793
+  fields: {src_phrase: aerometry, tar_phrase: "c\xE1ch \u0111o t\u1EC9 tr\u1ECDng
+      kh\xF4ng kh\xED, c\xE1ch \u0111o c\xE1c kh\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 794
+  fields: {src_phrase: aeromorphosis, tar_phrase: "s\u1EF1 bi\u1EBFn d\u1EA1ng do
+      gi\xF3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 795
+  fields: {src_phrase: aeronautic, tar_phrase: "h\xE0ng kh\xF4ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 796
+  fields: {src_phrase: aeronavigation, tar_phrase: "thu\u1EADt h\xE0ng kh\xF4ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 797
+  fields: {src_phrase: aerophobia, tar_phrase: "ch\u1EE9ng s\u1EE3 gi\xF3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 798
+  fields: {src_phrase: aerophotograph, tar_phrase: "\u1EA3nh ch\u1EE5p t\u1EEB m\xE1y
+      bay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 799
+  fields: {src_phrase: aerophyte, tar_phrase: "th\u1EF1c v\u1EADt bi\u1EC3u sinh",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 800
+  fields: {src_phrase: aeroplankton, tar_phrase: "sinh v\u1EADt trong kh\xF4ng kh\xED",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 801
+  fields: {src_phrase: aerosol, tar_phrase: "b\xECnh phun", glossary: 1}
+- model: cat.glossarycontent
+  pk: 802
+  fields: {src_phrase: aerostat, tar_phrase: "kh\xED c\u1EA7u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 803
+  fields: {src_phrase: aerostation, tar_phrase: "c\xE1ch v\u1EADn chuy\u1EC3n b\u1EB1ng
+      h\xE0ng kh\xF4ng, c\xE1ch v\u1EADn chuy\u1EC3n b\u1EB1ng kh\xED c\u1EA7u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 804
+  fields: {src_phrase: aerotechnics, tar_phrase: "k\u1EF9 thu\u1EADt h\xE0ng kh\xF4ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 805
+  fields: {src_phrase: aerotropism, tar_phrase: "t\xEDnh h\u01B0\u1EDBng kh\xED",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 806
+  fields: {src_phrase: aesculapian, tar_phrase: "th\u1EA7n y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 807
+  fields: {src_phrase: aesthetasc, tar_phrase: "th\u1EC3 kh\u1EE9u gi\xE1c, th\u1EC3
+      \u0111\xE1nh h\u01A1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 808
+  fields: {src_phrase: aesthetes, tar_phrase: "gi\xE1c quan", glossary: 1}
+- model: cat.glossarycontent
+  pk: 809
+  fields: {src_phrase: aesthetically, tar_phrase: "c\xF3 th\u1EA9m m\u1EF9, v\u1EC1
+      m\u1EB7t th\u1EA9m m\u1EF9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 810
+  fields: {src_phrase: aesthetics, tar_phrase: "m\u1EF9 h\u1ECDc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 811
+  fields: {src_phrase: aestilignosa, tar_phrase: "r\u1EEBng l\xE1 r\u1EE5ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 812
+  fields: {src_phrase: aestivarium, tar_phrase: "l\xF4 c\xE2y tr\u1ED3ng m\xF9a h\xE8",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 813
+  fields: {src_phrase: aestivation, tar_phrase: "s\u1EF1 ng\u1EE7 h\xE8", glossary: 1}
+- model: cat.glossarycontent
+  pk: 814
+  fields: {src_phrase: afar, tar_phrase: "xa, \u1EDF xa, c\xE1ch xa", glossary: 1}
+- model: cat.glossarycontent
+  pk: 815
+  fields: {src_phrase: afebrile, tar_phrase: "h\u1EBFt c\u01A1n s\u1ED1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 816
+  fields: {src_phrase: affable, tar_phrase: "l\u1ECBch s\u1EF1, nh\xE3 nh\u1EB7n,
+      ho\xE0 nh\xE3, ni\u1EC1m n\u1EDF, \xE2n c\u1EA7n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 817
+  fields: {src_phrase: affair, tar_phrase: "c\xE1i, th\u1EE9, v\u1EADt, \u0111\u1ED3,
+      m\xF3n, chuy\u1EC7n, c\xF4ng vi\u1EC7c, vi\u1EC7c l\xE0m, s\u1EF1 v\u1EE5, chuy\u1EC7n
+      t\xECnh, chuy\u1EC7n y\xEAu \u0111\u01B0\u01A1ng, v\u1EA5n \u0111\u1EC1, tr\u1EADn
+      \u0111\xE1nh nh\u1ECF, vi\u1EC7c bu\xF4n b\xE1n, vi\u1EC7c giao thi\u1EC7p,
+      vi\u1EC7c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 818
+  fields: {src_phrase: affectation, tar_phrase: "s\u1EF1 \u0111i\u1EC7u b\u1ED9, s\u1EF1
+      m\xE0u m\xE8, s\u1EF1 kh\xF4ng t\u1EF1 nhi\xEAn, s\u1EF1 b\u1ED5 nhi\u1EC7m,
+      s\u1EF1 s\u1EED d\u1EE5ng, s\u1EF1 gi\u1EA3 v\u1EDD, s\u1EF1 gi\u1EA3 b\u1ED9,
+      s\u1EF1 l\xE0m ra v\u1EBB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 819
+  fields: {src_phrase: affectedly, tar_phrase: "gi\u1EA3 t\u1EA1o, \u0111i\u1EC7u
+      b\u1ED9, m\xE0u m\xE8, kh\xF4ng t\u1EF1 nhi\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 820
+  fields: {src_phrase: affectingly, tar_phrase: "khi\u1EBFn x\xFAc \u0111\u1ED9ng,
+      khi\u1EBFn m\u1EE7i l\xF2ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 821
+  fields: {src_phrase: affection towards, tar_phrase: "khuynh h\u01B0\u1EDBng thi\xEAn
+      v\u1EC1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 822
+  fields: {src_phrase: affectionately, tar_phrase: "\xE2u y\u1EBFm, tr\xECu m\u1EBFn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 823
+  fields: {src_phrase: affective, tar_phrase: "x\xFAc \u0111\u1ED9ng, d\u1EC5 x\xFAc
+      \u0111\u1ED9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 824
+  fields: {src_phrase: afferent, tar_phrase: "h\u01B0\u1EDBng v\xE0o, d\u1EABn v\xE0o,
+      h\u01B0\u1EDBng t\xE2m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 825
+  fields: {src_phrase: affiance, tar_phrase: "\u0111\xEDnh h\xF4n, h\u1EE9a h\xF4n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 826
+  fields: {src_phrase: affiliate, tar_phrase: "nh\u1EADn l\xE0m chi nh\xE1nh, nh\u1EADn
+      l\xE0m h\u1ED9i vi\xEAn, nh\u1EADp, li\xEAn k\u1EBFt, t\xECm ngu\u1ED3n g\u1ED1c,
+      x\xE1c \u0111\u1ECBnh t\u01B0 c\xE1ch t\xE1c gi\u1EA3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 827
+  fields: {src_phrase: affinage, tar_phrase: "s\u1EF1 tinh luy\u1EC7n, s\u1EF1 tinh
+      ch\u1EBF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 828
+  fields: {src_phrase: affinity, tar_phrase: "\xE1i l\u1EF1c, m\u1ED1i quan h\u1EC7,
+      s\u1EF1 gi\u1ED1ng nhau v\u1EC1 c\u1EA5u tr\xFAc, quan h\u1EC7 th\xE2n thu\u1ED9c
+      v\u1EDBi h\u1ECD nh\xE0 v\u1EE3, quan h\u1EC7 th\xE2n thu\u1ED9c v\u1EDBi h\u1ECD
+      nh\xE0 ch\u1ED3ng, s\u1EF1 gi\u1ED1ng nhau v\u1EC1 t\xEDnh t\xECnh, s\u1EF1
+      ham th\xEDch, s\u1EF1 thu h\xFAt, s\u1EF1 h\u1EA5p d\u1EABn, s\u1EF1 l\xF4i
+      cu\u1ED1n, s\u1EF1 \u0111\u1ED3ng c\u1EA3m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 829
+  fields: {src_phrase: affirmation, tar_phrase: "l\u1EDDi kh\u1EB3ng \u0111\u1ECBnh,
+      l\u1EDDi x\xE1c nh\u1EADn, l\u1EDDi qu\u1EA3 quy\u1EBFt, s\u1EF1 kh\u1EB3ng
+      \u0111\u1ECBnh, s\u1EF1 x\xE1c nh\u1EADn, s\u1EF1 qu\u1EA3 quy\u1EBFt, s\u1EF1
+      ph\xEA chu\u1EA9n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 830
+  fields: {src_phrase: affirmatively, tar_phrase: "kh\u1EB3ng \u0111\u1ECBnh, qu\u1EA3
+      quy\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 831
+  fields: {src_phrase: affix to, tar_phrase: "\u0111\xF3ng v\xE0o, g\u1EAFn v\xE0o,
+      \u0111\xEDnh v\xE0o, th\xEAm v\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 832
+  fields: {src_phrase: afflatus, tar_phrase: "c\u1EA3m h\u1EE9ng, linh c\u1EA3m",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 833
+  fields: {src_phrase: afflicted at, tar_phrase: "\u0111au \u0111\u1EDBn v\u1EC1,
+      \u0111au bu\u1ED3n v\xEC", glossary: 1}
+- model: cat.glossarycontent
+  pk: 834
+  fields: {src_phrase: affliction, tar_phrase: "n\u1ED7i \u0111au \u0111\u1EDBn, n\u1ED7i
+      \u0111au bu\u1ED3n, n\u1ED7i \u01B0u phi\u1EC1n, n\u1ED7i kh\u1ED5 s\u1EDF,
+      tai \xE1ch, tai ho\u1EA1, ho\u1EA1n n\u1EA1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 835
+  fields: {src_phrase: affluence, tar_phrase: "s\u1EF1 gi\xE0u c\xF3, s\u1EF1 sung
+      t\xFAc, s\u1EF1 phong ph\xFA, s\u1EF1 d\u1ED3i d\xE0o, s\u1EF1 t\u1EE5 h\u1ECDp
+      \u0111\xF4ng ng\u01B0\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 836
+  fields: {src_phrase: afflux, tar_phrase: "s\u1EF1 \u0111\u1ED5 d\u1ED3n, s\u1EF1
+      ch\u1EA3y d\u1ED3n, s\u1EF1 ch\u1EA3y t\u1EE5 l\u1EA1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 837
+  fields: {src_phrase: afford, tar_phrase: "c\xF3 th\u1EC3, c\xF3 \u0111\u1EE7 s\u1EE9c,
+      c\xF3 \u0111\u1EE7 kh\u1EA3 n\u0103ng, c\xF3 \u0111\u1EE7 \u0111i\u1EC1u ki\u1EC7n,
+      cho, t\u1EA1o cho, c\u1EA5p cho, ban cho", glossary: 1}
+- model: cat.glossarycontent
+  pk: 838
+  fields: {src_phrase: afforest, tar_phrase: "bi\u1EBFn th\xE0nh khu v\u1EF1c s\u0103n
+      b\u1EAFn, bi\u1EBFn th\xE0nh r\u1EEBng b\u1EB1ng c\xE1ch tr\u1ED3ng c\xE2y l\xEAn
+      \u0111\xF3, tr\u1ED3ng c\xE2y g\xE2y r\u1EEBng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 839
+  fields: {src_phrase: affranchise, tar_phrase: "gi\u1EA3i ph\xF3ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 840
+  fields: {src_phrase: affray, tar_phrase: "s\u1EF1 huy\xEAn n\xE1o, cu\u1ED9c \u1EA9u
+      \u0111\u1EA3, cu\u1ED9c c\xE3i l\u1ED9n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 841
+  fields: {src_phrase: affricate, tar_phrase: "\xE2m t\u1EAFc x\xE1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 842
+  fields: {src_phrase: affront, tar_phrase: "\u0111\u01B0\u01A1ng \u0111\u1EA7u, l\u0103ng
+      m\u1EA1, l\u0103ng nh\u1EE5c, s\u1EC9 nh\u1EE5c, l\xE0m nh\u1EE5c, l\xE0m x\u1EA5u
+      h\u1ED5, l\xE0m m\u1EA5t th\u1EC3 di\u1EC7n, s\u1EF1 l\u0103ng m\u1EA1, s\u1EF1
+      l\u0103ng nh\u1EE5c, s\u1EF1 s\u1EC9 nh\u1EE5c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 843
+  fields: {src_phrase: affuse, tar_phrase: "r\u1EA3y n\u01B0\u1EDBc \u0111\u1EC3 r\u1EEDa
+      t\u1ED9i hay \u0111\u1EC3 ch\u1EEFa b\u1EC7nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 844
+  fields: {src_phrase: afghan hound, tar_phrase: "ch\xF3 s\u0103n afgan", glossary: 1}
+- model: cat.glossarycontent
+  pk: 845
+  fields: {src_phrase: afield, tar_phrase: "\u1EDF ngo\xE0i \u0111\u1ED3ng, \u1EDF
+      ngo\xE0i ru\u1ED9ng, ra \u0111\u1ED3ng, ra ru\u1ED9ng, \u1EDF ngo\xE0i m\u1EB7t
+      tr\u1EADn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 846
+  fields: {src_phrase: aflagellar, tar_phrase: "kh\xF4ng l\xF4ng roi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 847
+  fields: {src_phrase: aflat, tar_phrase: "ngang b\u1EB1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 848
+  fields: {src_phrase: afoot, tar_phrase: "\u0111ang ti\u1EBFn h\xE0nh, \u0111ang
+      l\xE0m, \u0111i b\u1ED9, \u0111i ch\xE2n, tr\u1EDF d\u1EADy, ho\u1EA1t \u0111\u1ED9ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 849
+  fields: {src_phrase: aforecited, tar_phrase: "\u0111\xE3 d\u1EABn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 850
+  fields: {src_phrase: aforehand, tar_phrase: "t\u1EEB tr\u01B0\u1EDBc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 851
+  fields: {src_phrase: aforenamed, tar_phrase: "\u0111\xE3 k\u1EC3 \u1EDF tr\xEAn,
+      \u0111\xE3 k\u1EC3 tr\u01B0\u1EDBc \u0111\xE2y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 852
+  fields: {src_phrase: aforethought, tar_phrase: "c\u1ED1 \xFD, c\xF3 \u0111\u1ECBnh
+      tr\u01B0\u1EDBc, c\xF3 suy t\xEDnh tr\u01B0\u1EDBc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 853
+  fields: {src_phrase: afoul, tar_phrase: "ch\u1EA1m v\xE0o, h\xFAc v\xE0o, \u0111\xE2m
+      v\xE0o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 854
+  fields: {src_phrase: afraid of, tar_phrase: "s\u1EE3, lo s\u1EE3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 855
+  fields: {src_phrase: afresh, tar_phrase: "l\u1EA1i l\u1EA7n n\u1EEFa", glossary: 1}
+- model: cat.glossarycontent
+  pk: 856
+  fields: {src_phrase: africana, tar_phrase: "b\u1ED9 s\u01B0u t\u1EADp c\xE1c t\xE0i
+      li\u1EC7u v\u1EC1 ch\xE2u phi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 857
+  fields: {src_phrase: afrikaans, tar_phrase: "ti\u1EBFng h\xE0 lan d\xF9ng \u1EDF
+      nam phi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 858
+  fields: {src_phrase: afrikanist, tar_phrase: "nh\xE0 nghi\xEAn c\u1EE9u v\u0103n
+      ho\xE1 ch\xE2u phi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 859
+  fields: {src_phrase: afro-american, tar_phrase: "ng\u01B0\u1EDDi m\u1EF9 da \u0111en,
+      ng\u01B0\u1EDDi m\u1EF9 g\u1ED1c ch\xE2u phi, thu\u1ED9c ng\u01B0\u1EDDi m\u1EF9
+      da \u0111en", glossary: 1}
+- model: cat.glossarycontent
+  pk: 860
+  fields: {src_phrase: after, tar_phrase: "\u1EDF \u0111\u1EB1ng sau, ph\xEDa sau,
+      \u0111\u1EE9ng sau, li\u1EC1n sau, m\u1EB7c d\xF9, b\u1EA5t ch\u1EA5p, ph\u1ECFng
+      theo, theo, sau, sau khi, theo sau, theo \u0111u\u1ED5i, v\u1EDBi, do, v\xEC,
+      \u0111\u1EB1ng sau, \u1EDF ph\xEDa sau, sau n\xE0y, sau \u0111\xE2y, ti\u1EBFp
+      sau", glossary: 1}
+- model: cat.glossarycontent
+  pk: 861
+  fields: {src_phrase: after a little, tar_phrase: "sau m\u1ED9t th\u1EDDi gian ng\u1EAFn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 862
+  fields: {src_phrase: after a manner fashion, tar_phrase: "t\xE0m t\u1EA1m, t\u1EA1m
+      \u0111\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 863
+  fields: {src_phrase: after due consideration, tar_phrase: "sau khi c\xF3 s\u1EF1
+      c\xE2n nh\u1EAFc th\xEDch \u0111\xE1ng, sau khi suy ngh\u0129 k\u1EF9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 864
+  fields: {src_phrase: after in a fashion, tar_phrase: "t\xE0m t\u1EA1m, t\u1EA1m
+      \u0111\u01B0\u1EE3c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 865
+  fields: {src_phrase: after one.'s own heart, tar_phrase: "\u0111\u1ED3ng l\xF2ng,
+      h\u1EE3p \xFD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 866
+  fields: {src_phrase: after shave, tar_phrase: "n\u01B0\u1EDBc hoa b\xF4i sau khi
+      c\u1EA1o r\xE2u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 867
+  fields: {src_phrase: after the manner, tar_phrase: "theo c\xE1ch", glossary: 1}
+- model: cat.glossarycontent
+  pk: 868
+  fields: {src_phrase: after you with, tar_phrase: "sau anh th\xEC \u0111\u1EBFn l\u01B0\u1EE3t
+      t\xF4i \u0111\u1EA5y nh\xE9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 869
+  fields: {src_phrase: after-fermentation, tar_phrase: "s\u1EF1 l\xEAn men ti\u1EBFp,
+      s\u1EF1 l\xEAn men th\xEAm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 870
+  fields: {src_phrase: after-growing, tar_phrase: "s\u1EF1 l\u1EDBn ti\u1EBFp, s\u1EF1
+      l\u1EDBn th\xEAm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 871
+  fields: {src_phrase: after-life, tar_phrase: "ki\u1EBFp sau, th\u1EBF gi\u1EDBi
+      b\xEAn kia, \u0111\u1EDDi sau, l\xFAc cu\u1ED1i \u0111\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 872
+  fields: {src_phrase: after-ripeing, tar_phrase: "s\u1EF1 ch\xEDn ti\u1EBFp, s\u1EF1
+      ch\xEDn th\xEAm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 873
+  fields: {src_phrase: after-shaft, tar_phrase: "t\xFAm l\xF4ng cu\u1ED1i, t\xFAm
+      l\xF4ng ph\u1EE5", glossary: 1}
+- model: cat.glossarycontent
+  pk: 874
+  fields: {src_phrase: afterbirth, tar_phrase: nhau, glossary: 1}
+- model: cat.glossarycontent
+  pk: 875
+  fields: {src_phrase: afterbreast, tar_phrase: "ng\u1EF1c sau", glossary: 1}
+- model: cat.glossarycontent
+  pk: 876
+  fields: {src_phrase: afterclap, tar_phrase: "vi\u1EC7c h\u1EADu ph\xE1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 877
+  fields: {src_phrase: afterdamp, tar_phrase: "h\u01A1i b\u1ED1c l\xEAn sau khi kh\xED
+      \u0111\u1ED9c n\u1ED5", glossary: 1}
+- model: cat.glossarycontent
+  pk: 878
+  fields: {src_phrase: afterglow, tar_phrase: "\xE1nh h\u1ED3ng ban chi\u1EC1u \u1EDF
+      ch\xE2n tr\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 879
+  fields: {src_phrase: afterlight, tar_phrase: "\xE1nh s\xE1ng ph\xEDa sau, c\xE1i
+      m\xE3i v\u1EC1 sau m\u1EDBi \u0111\u01B0\u1EE3c s\xE1ng t\u1ECF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 880
+  fields: {src_phrase: aftermost, tar_phrase: "\u1EDF \u0111u\xF4i t\xE0u, g\u1EA7n
+      \u0111u\xF4i t\xE0u nh\u1EA5t, sau c\xF9ng, sau r\u1ED1t, cu\u1ED1i c\xF9ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 881
+  fields: {src_phrase: afternoons, tar_phrase: "chi\u1EC1u chi\u1EC1u, m\u1ECDi bu\u1ED5i
+      chi\u1EC1u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 882
+  fields: {src_phrase: afterpiece, tar_phrase: "ti\u1EBFt m\u1EE5c \u0111u\xF4i, ti\u1EBFt
+      m\u1EE5c h\u1EA1 m\xE0n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 883
+  fields: {src_phrase: aftersale, tar_phrase: "sau khi b\xE1n h\xE0ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 884
+  fields: {src_phrase: aftertaste, tar_phrase: "d\u01B0 v\u1ECB", glossary: 1}
+- model: cat.glossarycontent
+  pk: 885
+  fields: {src_phrase: afterthought, tar_phrase: "c\xE1ch gi\u1EA3i quy\u1EBFt \u0111\u1EBFn
+      sau, l\u1EDDi gi\u1EA3i th\xEDch \u0111\u1EBFn sau, s\u1EF1 suy ngh\u0129 sau
+      khi h\xE0nh \u0111\u1ED9ng, \xFD ngh\u0129 n\u1EA3y ra qu\xE1 mu\u1ED9n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 886
+  fields: {src_phrase: afterword, tar_phrase: "l\u1EDDi b\u1EA1t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 887
+  fields: {src_phrase: again, tar_phrase: "\u0111\xE1p l\u1EA1i, d\u1ED9i l\u1EA1i,
+      l\u1EA1i, l\u1EA7n n\u1EEFa, n\u1EEFa, m\u1EB7t kh\xE1c, ngo\xE0i ra, h\u01A1n
+      n\u1EEFa, v\u1EA3 l\u1EA1i, v\u1EA3 ch\u0103ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 888
+  fields: {src_phrase: against, tar_phrase: "\u0111\u1ED5i l\u1EA5y, ch\u1ED1ng l\u1EA1i,
+      ng\u01B0\u1EE3c l\u1EA1i, ph\u1EA3n \u0111\u1ED1i, d\u1EF1a v\xE0o, t\u1EF3
+      v\xE0o, \xE1p v\xE0o, \u0111\u1EADp v\xE0o, ph\xF2ng, \u0111\u1EC1 ph\xF2ng,
+      ph\xF2ng xa, t\u01B0\u01A1ng ph\u1EA3n v\u1EDBi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 889
+  fields: {src_phrase: against contrary to nature, tar_phrase: "phi th\u01B0\u1EDDng,
+      si\xEAu ph\xE0m, k\u1EF3 di\u1EC7u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 890
+  fields: {src_phrase: against one's better judgment, tar_phrase: "d\xFA th\u1EA5y
+      nh\u01B0 v\u1EADy l\xE0 ngu ng\u1ED1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 891
+  fields: {src_phrase: against the grain, tar_phrase: "g\xE2y kh\xF3 ch\u1ECBu, l\xE0m
+      tr\xE1i v\u1EDBi \xFD mu\u1ED1n c\u1EE7a", glossary: 1}
+- model: cat.glossarycontent
+  pk: 892
+  fields: {src_phrase: against the odds, tar_phrase: "ch\u1ED1ng \u0111\u1ED1i m\u1EA1nh
+      m\u1EBD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 893
+  fields: {src_phrase: against time, tar_phrase: "h\u1EBFt s\u1EE9c kh\u1EA9n tr\u01B0\u01A1ng,
+      tranh th\u1EE7 th\u1EDDi gian, v\u01B0\u1EE3t th\u1EDDi gian", glossary: 1}
+- model: cat.glossarycontent
+  pk: 894
+  fields: {src_phrase: agameon, tar_phrase: "lo\xE0i v\xF4 giao", glossary: 1}
+- model: cat.glossarycontent
+  pk: 895
+  fields: {src_phrase: agamic, tar_phrase: "v\xF4 giao, v\xF4 t\xEDnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 896
+  fields: {src_phrase: agamogenesis, tar_phrase: "s\u1EF1 sinh s\u1EA3n v\xF4 t\xEDnh",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 897
+  fields: {src_phrase: agamolium, tar_phrase: "th\u1EBF h\u1EC7 v\xF4 giao, th\u1EBF
+      h\u1EC7 v\xF4 t\xEDnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 898
+  fields: {src_phrase: agamospecies, tar_phrase: "lo\xE0i v\xF4 t\xEDnh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 899
+  fields: {src_phrase: agape, tar_phrase: "h\xE1 h\u1ED1c m\u1ED3m ra", glossary: 1}
+- model: cat.glossarycontent
+  pk: 900
+  fields: {src_phrase: agaric, tar_phrase: "n\u1EA5m t\xE1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 901
+  fields: {src_phrase: agastric, tar_phrase: "thi\u1EBFu d\u1EA1 d\xE0y", glossary: 1}
+- model: cat.glossarycontent
+  pk: 902
+  fields: {src_phrase: agateware, tar_phrase: "\u0111\u1ED3 g\u1ED1m gi\u1ED1ng \u0111\xE1
+      m\xE3 n\xE3o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 903
+  fields: {src_phrase: agaze, tar_phrase: "\u0111ang nh\xECn \u0111\u0103m \u0111\u0103m",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 904
+  fields: {src_phrase: age at first egg, tar_phrase: "tu\u1ED5i \u0111\u1EBB tr\u1EE9ng
+      l\u1EA7n \u0111\u1EA7u, tu\u1ED5i b\u1EAFt \u0111\u1EA7u \u0111\u1EBB tr\u1EE9ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 905
+  fields: {src_phrase: age of discretion, tar_phrase: "tu\u1ED5i kh\xF4n l\u1EDBn,
+      tu\u1ED5i bi\u1EBFt suy ngh\u0129", glossary: 1}
+- model: cat.glossarycontent
+  pk: 906
+  fields: {src_phrase: age to breed, tar_phrase: "tu\u1ED5i th\xE0nh th\u1EE5c sinh
+      d\u1EE5c, tu\u1ED5i l\u1EA5y gi\u1ED1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 907
+  fields: {src_phrase: age-old, tar_phrase: "l\xE2u \u0111\u1EDDi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 908
+  fields: {src_phrase: agedness, tar_phrase: "tu\u1ED5i gi\xE0, s\u1EF1 nhi\u1EC1u
+      tu\u1ED5i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 909
+  fields: {src_phrase: ageless, tar_phrase: "m\xE3i m\xE3i, \u0111\u1EDDi \u0111\u1EDDi,
+      v\u0129nh vi\u1EC5n, tr\u1EBB m\xE3i kh\xF4ng gi\xE0", glossary: 1}
+- model: cat.glossarycontent
+  pk: 910
+  fields: {src_phrase: agency, tar_phrase: "\u0111\u1EA1i l\xFD, ph\xE2n \u0111i\u1EC3m,
+      chi nh\xE1nh, c\u01A1 quan, s\u1EDF, h\xE3ng, h\xE3ng th\xF4ng t\u1EA5n, s\u1EF1
+      m\xF4i gi\u1EDBi, s\u1EF1 trung gian, t\xE1c d\u1EE5ng, l\u1EF1c", glossary: 1}
+- model: cat.glossarycontent
+  pk: 911
+  fields: {src_phrase: agenesia, tar_phrase: "s\u1EF1 kh\xF4ng sinh s\u1EA3n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 912
+  fields: {src_phrase: aggiornamento, tar_phrase: "s\u1EF1 hi\u1EC7n \u0111\u1EA1i
+      ho\xE1, s\u1EF1 hi\u1EC7n \u0111\u1EA1i ho\xE1 c\xF4ng gi\xE1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 913
+  fields: {src_phrase: agglomerate, tar_phrase: "t\xEDch t\u1EE5 l\u1EA1i, ch\u1EA5t
+      \u0111\u1ED1ng l\u1EA1i, kh\u1ED1i k\u1EBFt t\u1EE5, kh\u1ED1i li\xEAn k\u1EBFt,
+      k\u1EBFt t\u1EE5, t\xEDch t\u1EE5, ch\u1EA5t \u0111\u1ED1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 914
+  fields: {src_phrase: agglomerative, tar_phrase: "c\xF3 s\u1EE9c t\xEDch t\u1EE5,
+      c\xF3 s\u1EE9c ch\u1EA5t \u0111\u1ED1ng, l\xE0m t\xEDch t\u1EE5, l\xE0m ch\u1EA5t
+      \u0111\u1ED1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 915
+  fields: {src_phrase: agglutinate, tar_phrase: "d\xEDnh l\u1EA1i, th\xE0nh ch\u1EA5t
+      d\xEDnh, l\xE0m d\xEDnh, d\xE1n l\u1EA1i, g\u1EAFn l\u1EA1i b\u1EB1ng ch\u1EA5t
+      d\xEDnh, d\xEDnh k\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 916
+  fields: {src_phrase: agglutinative, tar_phrase: "ch\u1EA5p d\xEDnh, l\xE0m d\xEDnh
+      k\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 917
+  fields: {src_phrase: agglutinogen, tar_phrase: "aglutinogen, ng\u01B0ng k\u1EBFt
+      nguy\xEAn, ch\u1EA5t g\xE2y ng\u01B0ng k\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 918
+  fields: {src_phrase: aggrandize, tar_phrase: "l\xE0m to ra, m\u1EDF r\u1ED9ng, n\xE2ng
+      cao, t\u0103ng th\xEAm, ph\xF3ng \u0111\u1EA1i, th\xEAu d\u1EC7t, t\xF4 v\u1EBD
+      th\xEAm l\xEAn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 919
+  fields: {src_phrase: aggravate, tar_phrase: "l\xE0m b\u1EF1c m\xECnh, l\xE0m ph\xE1t
+      c\xE1u, l\xE0m cho t\u1EE9c, ch\u1ECDc t\u1EE9c, l\xE0m tr\u1EA7m tr\u1ECDng
+      th\xEAm, l\xE0m n\u1EB7ng th\xEAm, l\xE0m nguy ng\u1EADp th\xEAm, l\xE0m x\u1EA5u
+      th\xEAm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 920
+  fields: {src_phrase: aggravation, tar_phrase: "\u0111i\u1EC1u l\xE0m tr\u1EA7m tr\u1ECDng
+      th\xEAm, \u0111i\u1EC1u l\xE0m n\u1EB7ng th\xEAm, \u0111i\u1EC1u l\xE0m nguy
+      ng\u1EADp th\xEAm, \u0111i\u1EC1u l\xE0m x\u1EA5u th\xEAm, s\u1EF1 l\xE0m b\u1EF1c
+      m\xECnh, s\u1EF1 ch\u1ECDc t\u1EE9c, s\u1EF1 l\xE0m tr\u1EA7m tr\u1ECDng th\xEAm,
+      s\u1EF1 l\xE0m n\u1EB7ng th\xEAm, s\u1EF1 l\xE0m nguy ng\u1EADp th\xEAm, s\u1EF1
+      l\xE0m x\u1EA5u th\xEAm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 921
+  fields: {src_phrase: aggregation, tar_phrase: "kh\u1ED1i t\u1EADp h\u1EE3p, kh\u1ED1i
+      k\u1EBFt t\u1EADp, th\u1EC3 t\u1EE5 t\u1EADp, s\u1EF1 t\u1EADp h\u1EE3p, s\u1EF1
+      k\u1EBFt h\u1EE3p, s\u1EF1 t\u1EE5 t\u1EADp, s\u1EF1 thu n\u1EA1p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 922
+  fields: {src_phrase: aggress, tar_phrase: "g\xE2y s\u1EF1, g\xE2y h\u1EA5n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 923
+  fields: {src_phrase: aggressive, tar_phrase: "c\xF4ng k\xEDch, t\u1EA5n c\xF4ng,
+      hay g\xE2y h\u1EA5n, hung h\xE3n, hung h\u0103ng, th\xE1o v\xE1t, x\u1ED1c v\xE1c,
+      x\xF4ng x\xE1o, n\u0103ng n\u1ED5", glossary: 1}
+- model: cat.glossarycontent
+  pk: 924
+  fields: {src_phrase: aggressiveness, tar_phrase: "t\xEDnh ch\u1EA5t c\xF4ng k\xEDch,
+      t\xEDnh ch\u1EA5t x\xE2m l\u01B0\u1EE3c, t\xEDnh hay g\xE2y s\u1EF1, t\xEDnh
+      g\xE2y g\u1ED7, t\xEDnh hay gay c\u1EA5n, t\xEDnh hung h\u0103ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 925
+  fields: {src_phrase: aggrieve, tar_phrase: "l\xE0m cho bu\u1ED3n phi\u1EC1n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 926
+  fields: {src_phrase: aggro, tar_phrase: "h\xE0nh vi hung h\xE3n, h\xE0nh vi hung
+      b\u1EA1o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 927
+  fields: {src_phrase: agile, tar_phrase: "nhanh nh\u1EB9n, nhanh nh\u1EA9u, l\u1EB9
+      l\xE0ng, lanh l\u1EE3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 928
+  fields: {src_phrase: agility, tar_phrase: "s\u1EF1 nhanh nh\u1EB9n, s\u1EF1 nhanh
+      nh\u1EA9u, s\u1EF1 l\u1EB9 l\xE0ng, s\u1EF1 lanh l\u1EE3i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 929
+  fields: {src_phrase: agiotage, tar_phrase: "ngh\u1EC1 \u0111\u1ED5i ti\u1EC1n, s\u1EF1
+      \u0111\u1EA7u c\u01A1 \u1EDF th\u1ECB tr\u01B0\u1EDDng ch\u1EE9ng kho\xE1n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 930
+  fields: {src_phrase: agistment, tar_phrase: "\u0111\u1ED3ng c\u1ECF cho thu\xEA,
+      vi\u1EC7c ch\u0103n nu\xF4i tr\xEAn \u0111\u1ED3ng c\u1ECF cho thu\xEA", glossary: 1}
+- model: cat.glossarycontent
+  pk: 931
+  fields: {src_phrase: agitation, tar_phrase: "s\u1EF1 kh\xEDch \u0111\u1ED9ng qu\u1EA7n
+      ch\xFAng, s\u1EF1 g\xE2y phi\u1EBFn \u0111\u1ED9ng, s\u1EF1 kh\xEDch \u0111\u1ED9ng,
+      s\u1EF1 x\xFAc \u0111\u1ED9ng, s\u1EF1 b\u1ED1i r\u1ED1i, s\u1EF1 lay \u0111\u1ED9ng,
+      s\u1EF1 rung \u0111\u1ED9ng, s\u1EF1 l\xE0m rung chuy\u1EC3n, s\u1EF1 suy \u0111i
+      t\xEDnh l\u1EA1i, s\u1EF1 suy ngh\u0129 lung, s\u1EF1 th\u1EA3o lu\u1EADn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 932
+  fields: {src_phrase: agitprop, tar_phrase: "c\u01A1 quan tuy\xEAn truy\u1EC1n c\u1ED5
+      \u0111\u1ED9ng, s\u1EF1 tuy\xEAn truy\u1EC1n c\u1ED5 \u0111\u1ED9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 933
+  fields: {src_phrase: agleam, tar_phrase: "lo\xE9 s\xE1ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 934
+  fields: {src_phrase: agley, tar_phrase: "xi\xEAn, m\xE9o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 935
+  fields: {src_phrase: aglitter, tar_phrase: "l\u1EA5p l\xE1nh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 936
+  fields: {src_phrase: aglossate, tar_phrase: "kh\xF4ng l\u01B0\u1EE1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 937
+  fields: {src_phrase: agm, tar_phrase: "h\u1ED9i ngh\u1ECB to\xE0n th\u1EC3 h\xE0ng
+      n\u0103m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 938
+  fields: {src_phrase: agnail, tar_phrase: "ch\u1ED7 x\u01B0\u1EDBc mang r\xF4", glossary: 1}
+- model: cat.glossarycontent
+  pk: 939
+  fields: {src_phrase: agnation, tar_phrase: "quan h\u1EC7 ph\xEDa cha", glossary: 1}
+- model: cat.glossarycontent
+  pk: 940
+  fields: {src_phrase: agnosia, tar_phrase: "s\u1EF1 m\u1EA5t nh\u1EADn th\u1EE9c",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 941
+  fields: {src_phrase: agnosticism, tar_phrase: "thuy\u1EBFt kh\xF4ng th\u1EC3 bi\u1EBFt,
+      thuy\u1EBFt b\u1EA5t kh\u1EA3 tri", glossary: 1}
+- model: cat.glossarycontent
+  pk: 942
+  fields: {src_phrase: ago, tar_phrase: "tr\u01B0\u1EDBc \u0111\xE2y, v\u1EC1 tr\u01B0\u1EDBc",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 943
+  fields: {src_phrase: agon, tar_phrase: "s\u1EF1 xung \u0111\u1ED9t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 944
+  fields: {src_phrase: agonistic, tar_phrase: "c\xF3 t\xEDnh ch\u1EA5t b\xFAt chi\u1EBFn,
+      c\xF3 t\xEDnh ch\u1EA5t lu\u1EADn chi\u1EBFn, cu\u1ED9c thi \u0111\u1EA5u \u0111i\u1EC1n
+      kinh, \u0111\u1EA5u v\xF5, kh\xF4ng t\u1EF1 nhi\xEAn, g\xF2 b\xF3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 945
+  fields: {src_phrase: agonizing, tar_phrase: "g\xE2y \u0111au \u0111\u1EDBn, g\xE2y
+      kh\u1ED5 s\u1EDF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 946
+  fields: {src_phrase: agony, tar_phrase: "c\u01A1n h\u1EA5p h\u1ED1i, s\u1EF1 \u0111au
+      \u0111\u1EDBn, s\u1EF1 kh\u1ED5 c\u1EF1c, s\u1EF1 th\u1ED1ng kh\u1ED5, s\u1EF1
+      qu\u1EB1n qu\u1EA1i, s\u1EF1 \u0111au \u0111\u1EDBn c\u1EF1c \u0111\xF4, s\u1EF1
+      vui th\xEDch \u0111\u1EBFn c\u1EF1c \u0111\u1ED9", glossary: 1}
+- model: cat.glossarycontent
+  pk: 947
+  fields: {src_phrase: agony column, tar_phrase: "m\u1EE5c rao vi\u1EC7c ri\xEAng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 948
+  fields: {src_phrase: agoraphobia, tar_phrase: "ch\u1EE9ng s\u1EE3 kho\u1EA3ng r\u1ED9ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 949
+  fields: {src_phrase: agouti, tar_phrase: "chu\u1ED9t lang aguti", glossary: 1}
+- model: cat.glossarycontent
+  pk: 950
+  fields: {src_phrase: agranulocyte, tar_phrase: "b\u1EA1ch c\u1EA7u kh\xF4ng h\u1EA1t",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 951
+  fields: {src_phrase: agrarianize, tar_phrase: "th\u1EF1c hi\u1EC7n c\u1EA3i c\xE1ch
+      ru\u1ED9ng \u0111\u1EA5t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 952
+  fields: {src_phrase: agree like cats and dogs, tar_phrase: "s\u1ED1ng v\u1EDBi nhau
+      nh\u01B0 ch\xF3 v\u1EDBi m\xE8o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 953
+  fields: {src_phrase: agree on, tar_phrase: "\u0111\u1ED3ng t\xECnh v\u1EC1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 954
+  fields: {src_phrase: agree with, tar_phrase: "\u0111\u1ED3ng t\xECnh v\u1EDBi, h\u1EE3p
+      v\u1EDBi, th\xEDch h\u1EE3p v\u1EDBi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 955
+  fields: {src_phrase: agreeable to, tar_phrase: "vui l\xF2ng, t\xE1n th\xE0nh, h\u1EE3p
+      v\u1EDBi, th\xEDch h\u1EE3p v\u1EDBi", glossary: 1}
+- model: cat.glossarycontent
+  pk: 956
+  fields: {src_phrase: agreeably, tar_phrase: "th\xFA v\u1ECB, d\u1EC5 ch\u1ECBu",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 957
+  fields: {src_phrase: agreement, tar_phrase: "hi\u1EC7p \u0111\u1ECBnh, hi\u1EC7p
+      ngh\u1ECB, h\u1EE3p \u0111\u1ED3ng, giao k\xE8o, s\u1EF1 b\u1EB1ng l\xF2ng,
+      s\u1EF1 t\xE1n th\xE0nh, s\u1EF1 \u0111\u1ED3ng \xFD, s\u1EF1 tho\u1EA3 thu\u1EADn,
+      s\u1EF1 h\u1EE3p, s\u1EF1 ph\xF9 h\u1EE3p, s\u1EF1 ho\xE0 h\u1EE3p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 958
+  fields: {src_phrase: agrestral, tar_phrase: "m\u1ECDc tr\xEAn \u0111\u1EA5t tr\u1ED1ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 959
+  fields: {src_phrase: agriculturalist, tar_phrase: "nh\xE0 n\xF4ng h\u1ECDc, nh\xE0
+      n\xF4ng, ng\u01B0\u1EDDi l\xE0m ru\u1ED9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 960
+  fields: {src_phrase: agriculture, tar_phrase: "n\xF4ng nghi\u1EC7p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 961
+  fields: {src_phrase: agrimotor, tar_phrase: "m\xE1y k\xE9o", glossary: 1}
+- model: cat.glossarycontent
+  pk: 962
+  fields: {src_phrase: agrium, tar_phrase: "qu\u1EA7n x\xE3 c\xE2y tr\u1ED3ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 963
+  fields: {src_phrase: agrobiologist, tar_phrase: "nh\xE0 n\xF4ng sinh h\u1ECDc",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 964
+  fields: {src_phrase: agrobotany, tar_phrase: "th\u1EF1c v\u1EADt h\u1ECDc n\xF4ng
+      nghi\u1EC7p", glossary: 1}
+- model: cat.glossarycontent
+  pk: 965
+  fields: {src_phrase: agroecology, tar_phrase: "sinh th\xE1i h\u1ECDc n\xF4ng nghi\u1EC7p",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 966
+  fields: {src_phrase: agronomics, tar_phrase: "n\xF4ng h\u1ECDc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 967
+  fields: {src_phrase: agronomy, tar_phrase: "khoa h\u1ECDc v\u1EC1 n\xF4ng nghi\u1EC7p,
+      n\xF4ng h\u1ECDc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 968
+  fields: {src_phrase: "agr\xE9ment", tar_phrase: "s\u1EF1 ch\u1EA5p thu\u1EADn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 969
+  fields: {src_phrase: ague-cake, tar_phrase: "b\u1EC7nh s\u01B0ng l\xE1 l\xE1ch do
+      s\u1ED1t r\xE9t", glossary: 1}
+- model: cat.glossarycontent
+  pk: 970
+  fields: {src_phrase: ah, tar_phrase: "a, ch\xE0, chao, \xF4i chao", glossary: 1}
+- model: cat.glossarycontent
+  pk: 971
+  fields: {src_phrase: ahead, tar_phrase: "h\u01A1n, v\u01B0\u1EE3t, tr\u01B0\u1EDBc,
+      v\u1EC1 ph\xEDa tr\u01B0\u1EDBc, \u1EDF th\u1EB3ng ph\xEDa tr\u01B0\u1EDBc,
+      nhanh v\u1EC1 ph\xEDa tr\u01B0\u1EDBc", glossary: 1}
+- model: cat.glossarycontent
+  pk: 972
+  fields: {src_phrase: aheap, tar_phrase: "ch\u1EA5t \u0111\u1ED1ng, ng\u1ED5n ngang",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 973
+  fields: {src_phrase: ahem, tar_phrase: "a h\xE8m", glossary: 1}
+- model: cat.glossarycontent
+  pk: 974
+  fields: {src_phrase: ahistoric, tar_phrase: "phi l\u1ECBch s\u1EED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 975
+  fields: {src_phrase: ahull, tar_phrase: "bu\u1ED3m cu\u1ED1n h\u1EBFt", glossary: 1}
+- model: cat.glossarycontent
+  pk: 976
+  fields: {src_phrase: aiblins, tar_phrase: "c\xF3 l\u1EBD, c\xF3 th\u1EC3", glossary: 1}
+- model: cat.glossarycontent
+  pk: 977
+  fields: {src_phrase: aid and abet smb., tar_phrase: "l\xE0 \u0111\u1ED3ng ph\u1EA1m
+      x\xFAi gi\u1EE5c c\u1EE7a smb.", glossary: 1}
+- model: cat.glossarycontent
+  pk: 978
+  fields: {src_phrase: aid station, tar_phrase: "b\u1EC7nh x\xE1 d\xE3 chi\u1EBFn",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 979
+  fields: {src_phrase: aide-de-camp, tar_phrase: "s\u0129 quan ph\u1EE5 t\xE1, s\u0129
+      quan h\u1EA7u c\u1EADn", glossary: 1}
+- model: cat.glossarycontent
+  pk: 980
+  fields: {src_phrase: aided-school, tar_phrase: "tr\u01B0\u1EDDng t\xECnh ngh\u0129a",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 981
+  fields: {src_phrase: aigrette, tar_phrase: "ch\xF9m l\xF4ng, ch\xF9m t\xF3c, ch\xF9m
+      tia s\xE1ng, c\xF2 b\u1EA1ch, c\xF2 ng\xE0, tr\xE2m, thoa d\xE1t \u0111\xE1
+      qu\xFD", glossary: 1}
+- model: cat.glossarycontent
+  pk: 982
+  fields: {src_phrase: aiguillette, tar_phrase: "d\xE2y tua", glossary: 1}
+- model: cat.glossarycontent
+  pk: 983
+  fields: {src_phrase: ail, tar_phrase: "\u0111au \u0111\u1EDBn, \u1ED1m \u0111au,
+      kh\xF3 \u1EDF, l\xE0m \u0111au \u0111\u1EDBn, l\xE0m \u0111au kh\u1ED5, l\xE0m
+      phi\u1EC1n n\xE3o, l\xE0m \u1ED1m \u0111au", glossary: 1}
+- model: cat.glossarycontent
+  pk: 984
+  fields: {src_phrase: aileron, tar_phrase: "c\xE1nh nh\u1ECF c\u1EE7a m\xE1y bay",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 985
+  fields: {src_phrase: ailment, tar_phrase: "s\u1EF1 \u0111au \u0111\u1EDBn, s\u1EF1
+      phi\u1EC1n n\xE3o, s\u1EF1 lo l\u1EAFng, s\u1EF1 \u1ED1m \u0111au b\u1EC7nh
+      t\u1EADt, s\u1EF1 kh\u1ED5 s\u1EDF", glossary: 1}
+- model: cat.glossarycontent
+  pk: 986
+  fields: {src_phrase: ailurophobe, tar_phrase: "ng\u01B0\u1EDDi gh\xE9t m\xE8o",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 987
+  fields: {src_phrase: aim, tar_phrase: "gi\xE1ng, n\u1EC7n, n\xE9m, h\u01B0\u1EDBng
+      v\xE0o, t\u1EADp trung v\xE0o, xo\xE1y v\xE0o, nh\u1EAFm m\u1EE5c \u0111\xEDch,
+      c\xF3 \xFD \u0111\u1ECBnh, ng\u1EA5p ngh\xE9, mong m\u1ECFi, nh\u1EAFm, ch\u0129a,
+      \u0111\xEDch, m\u1EE5c \u0111\xEDch, m\u1EE5c ti\xEAu, \xFD \u0111\u1ECBnh,
+      s\u1EF1 nh\u1EAFm", glossary: 1}
+- model: cat.glossarycontent
+  pk: 988
+  fields: {src_phrase: aimless, tar_phrase: "kh\xF4ng m\u1EE5c \u0111\xEDch, vu v\u01A1,
+      b\xE2ng qu\u01A1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 989
+  fields: {src_phrase: aimlessness, tar_phrase: "t\xEDnh vu v\u01A1, t\xEDnh b\xE2ng
+      qu\u01A1", glossary: 1}
+- model: cat.glossarycontent
+  pk: 990
+  fields: {src_phrase: air balloon, tar_phrase: "kh\xED c\u1EA7u", glossary: 1}
+- model: cat.glossarycontent
+  pk: 991
+  fields: {src_phrase: air base, tar_phrase: "c\u0103n c\u1EE9 kh\xF4ng qu\xE2n",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 992
+  fields: {src_phrase: air bed, tar_phrase: "n\u1EC7m b\u01A1m kh\xF4ng kh\xED, n\u1EC7m
+      h\u01A1i", glossary: 1}
+- model: cat.glossarycontent
+  pk: 993
+  fields: {src_phrase: air blast, tar_phrase: "lu\u1ED3ng kh\xF4ng kh\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 994
+  fields: {src_phrase: air brush, tar_phrase: "d\u1EE5ng c\u1EE5 phun s\u01A1n b\u1EB1ng
+      kh\xED n\xE9n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 995
+  fields: {src_phrase: air cell, tar_phrase: "t\xFAi ph\u1ED5i, ph\u1EBF nang, t\u1EBF
+      b\xE0o kh\xED", glossary: 1}
+- model: cat.glossarycontent
+  pk: 996
+  fields: {src_phrase: air commodore, tar_phrase: "chu\u1EA9n t\u01B0\u1EDBng kh\xF4ng
+      qu\xE2n", glossary: 1}
+- model: cat.glossarycontent
+  pk: 997
+  fields: {src_phrase: air hoist, tar_phrase: "thang m\xE1y kh\xED \u0111\u1ED9ng,
+      m\xE1y nh\u1EA5c kh\xED \u0111\u1ED9ng", glossary: 1}
+- model: cat.glossarycontent
+  pk: 998
+  fields: {src_phrase: air lane, tar_phrase: "\u0111\u01B0\u1EDDng h\xE0ng kh\xF4ng",
+    glossary: 1}
+- model: cat.glossarycontent
+  pk: 999
+  fields: {src_phrase: air marshal, tar_phrase: "trung t\u01B0\u1EDBng kh\xF4ng qu\xE2n
+      anh", glossary: 1}
+- model: cat.glossarycontent
+  pk: 1000
+  fields: {src_phrase: air mobile cavalry, tar_phrase: "k\u1EF5 binh bay", glossary: 1}
+- model: cat.glossarycontent
+  pk: 1001
+  fields: {src_phrase: air pump, tar_phrase: "thi\u1EBFt b\u1ECB b\u01A1m h\u01A1i",
+    glossary: 1}
 - model: auth.permission
   pk: 1
   fields: {name: Can add log entry, content_type: 1, codename: add_logentry}
