@@ -1,6 +1,49 @@
 
 # Delete index in elastic search
-curl -X DELETE 'http://localhost:9200/translation_memory'
+# curl -X DELETE 'http://localhost:9200/translation_memory'
+
+###
+
+GET http://localhost:9200/translation_memory/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "match": {
+      "src_sentence": "Love in your eyes"
+    }
+  }
+}
+
+###
+
+GET http://localhost:9200/translation_memory/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": {"src_sentence": "Love in your eyes"} },
+        { "match": {"translation_memory.id":  1} }
+      ]
+    }
+  }
+}
+###
+
+GET http://localhost:9200/translation_memory/_count
+
+###
+# Get TM in by src
+GET http://127.0.0.1:8000/get_tm_by_src_sentence/
+Content-Type: application/json
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+
+{
+  "sentence": "Love in your eyes",
+  "min_similarity": 0.3
+}
 
 ###
 
@@ -10,5 +53,22 @@ Content-Type: application/json
 Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 
 {
-  "src_sentence": "Love in your eyes"
+  "sentence": "Love in your eyes",
+  "min_similarity": 0.5,
+  "translation_memory_id": 1
 }
+
+###
+
+# Get glossary in by src
+GET http://127.0.0.1:8000/get_glossary_by_src_sentence/
+Content-Type: application/json
+Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+
+{
+  "sentence": "This marked the beginning of his lifelong vocation of studying and controlling zoonotic disease, I thought I could count on my best friend for support during this difficult time, but she proved to be a broken reed and never returned my calls.",
+  "min_similarity": 0.01,
+  "glossary_id": 1
+}
+
+

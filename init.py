@@ -22,6 +22,10 @@ os.system('python3 manage.py loaddata initial_1k_data.yaml')
 
 
 print("\n====== Rebuild in Elastic Search ====== ")
+
+os.system('curl -X DELETE "http://localhost:9200/translation_memory"')
+os.system('curl -X DELETE "http://localhost:9200/glossary"')
+
 subprocess.Popen(['echo Y | python3 manage.py search_index --rebuild'], shell=True)
 
 print("\n====== Proceess Complete ====== ")

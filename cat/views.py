@@ -45,7 +45,7 @@ import os
 
 from django.db import IntegrityError
 from django.conf import settings
-
+import Levenshtein as lev
 import sys
 sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
@@ -174,19 +174,70 @@ class FileUploadDetailView(APIView):
 @api_view(['GET'])
 def get_tm_by_src_sentence(request):
     try:
-        _src_sentence=request.data["src_sentence"]
+        sentence=request.data["sentence"]
+        min_similarity=request.data["min_similarity"]
 
-        client = Elasticsearch()      
-        q = Q("match", src_sentence=_src_sentence) 
-        s = Search(using=client, index="translation_memory").query(q)[0:20] 
+        client = Elasticsearch()     
+        if "translation_memory_id" in request.data: 
+            translation_memory_id = request.data["translation_memory_id"]
+            q = Q('bool', must=[Q('match', src_sentence=sentence), Q('match', translation_memory__id=translation_memory_id)])
+        else:
+            q = Q("match", src_sentence=sentence) 
+
+        s = Search(using=client, index=settings.INDEX_TM).query(q)[0:20] 
         res = s.execute()
 
-        dict={}
+        dict=[]
         for i in range(len(res)):
-            child={}
-            child.update({"score": res[i].meta.score})
-            child.update({"tar_sentence": res[i].tar_sentence})
-            dict.update({i:child})
+            simi = lev.ratio(sentence, res[i].src_sentence)
+            if simi>= min_similarity:
+                child={}
+                child.update({"src_sentence": res[i].src_sentence})
+                child.update({"tar_sentence": res[i].tar_sentence})
+                child.update({"similarity": round(simi, 2)})
+                dict.append(child)
+        
+        dict = sorted(dict, key = lambda i: i['similarity'], reverse=True) 
+
+        j = {"is_success":True, "err_msg": None} 
+        j.update({"result":dict})
+
+        return HttpResponse(json.dumps(j, ensure_ascii=False),
+            content_type="application/json",status=status.HTTP_200_OK)
+
+    except Exception as e:
+        j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def get_glossary_by_src_sentence(request):
+    try:
+        phrase=request.data["sentence"]
+        min_similarity=request.data["min_similarity"]
+
+        client = Elasticsearch()     
+        if "glossary_id" in request.data: 
+            glossary_id = request.data["glossary_id"]
+            q = Q('bool', must=[Q('match', src_phrase=phrase), Q('match', glossary__id=glossary_id)])
+        else:
+            q = Q("match", src_phrase=phrase) 
+
+        s = Search(using=client, index=settings.INDEX_GLOSSARY).query(q)[0:100] 
+        res = s.execute()
+
+        dict=[]
+        for i in range(len(res)):
+            simi = lev.ratio(phrase, res[i].src_phrase)
+            if simi>= min_similarity:
+                if res[i].src_phrase in phrase:
+                    child={}
+                    child.update({"src_phrase": res[i].src_phrase})
+                    child.update({"tar_phrase": res[i].tar_phrase})
+                    child.update({"similarity": round(simi, 2)})
+                    dict.append(child)
+        
+        dict = sorted(dict, key = lambda i: i['similarity'], reverse=True) 
 
         j = {"is_success":True, "err_msg": None} 
         j.update({"result":dict})

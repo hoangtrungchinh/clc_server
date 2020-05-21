@@ -29,6 +29,7 @@ urlpatterns = [
     path('file/<int:pk>/', FileUploadDetailView.as_view()),  
     # url(r'^clc_collection/$', views.clc_collection),
     url(r'^get_tm_by_src_sentence/$', views.get_tm_by_src_sentence),
+    url(r'^get_glossary_by_src_sentence/$', views.get_glossary_by_src_sentence),
     url(r'^sign_up/$', views.sign_up),
     url(r'^get-token/', v.obtain_auth_token),
     
