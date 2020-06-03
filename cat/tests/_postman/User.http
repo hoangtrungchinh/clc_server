@@ -20,6 +20,16 @@ Content-Type: application/json
 }
 
 ###
+# SIGN IN
+POST http://127.0.0.1:8000/login/ 
+Content-Type: application/json
+
+{
+    "username": "chinh",
+    "password": "123456789"
+}
+
+###
 
 # USER 2
 # SIGN UP

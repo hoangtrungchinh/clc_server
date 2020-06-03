@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework import viewsets
 
 from .models import (
@@ -78,6 +78,11 @@ class GlossaryContentViewSet(viewsets.ModelViewSet):
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+
+
+# class ProjectByUserViewSet(viewsets.ModelViewSet):
+#     queryset = Project.objects.filter()
+#     serializer_class = ProjectSerializer
 
 
 class SentenceViewSet(viewsets.ModelViewSet):
@@ -273,3 +278,10 @@ def sign_up(request):
     except Exception as e:
         j = {"is_success":False, "err_msg": ""+str(e)}
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+
+
+class login(ObtainAuthToken):
+    def post(self, request, *args, **kwargs):
+        response = super(login, self).post(request, *args, **kwargs)
+        token = Token.objects.get(key=response.data['token'])
+        return Response({'token': token.key, 'user_id': token.user_id})

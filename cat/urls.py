@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^get_glossary_by_src_sentence/$', views.get_glossary_by_src_sentence),
     url(r'^sign_up/$', views.sign_up),
     url(r'^get-token/', v.obtain_auth_token),
+    url(r'^login/', views.login.as_view()),
     
     url(r'^docs/', include_docs_urls(title='My API title', public=True))
 ]
