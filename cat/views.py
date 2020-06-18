@@ -130,9 +130,9 @@ class FileUploadView(APIView):
                 # Find src_lang
                 # import pdb; pdb.set_trace()
                 project = Project.objects.get(pk=uf.project.id)
-                if project.src_lang == "vi":
+                if project.src_lang == "Vietnamese":
                     p = Preprocessor(Language.vietnamese)    
-                elif project.src_lang == "en":
+                elif project.src_lang == "English":
                     p = Preprocessor(Language.english)    
 
                 sents = p.segment_to_sentences(text)

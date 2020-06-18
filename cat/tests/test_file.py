@@ -23,8 +23,8 @@ class TestFile(Base):
             id=1,
             name="Glossary 1",
             description="des",
-            src_lang="en",
-            tar_lang="vi",
+            src_lang="English",
+            tar_lang="Vietnamese",
             user=self.user,
         )
         self.instance_glossary.gloss_type.set([self.instance_glosstary_type1]),
@@ -33,8 +33,8 @@ class TestFile(Base):
             id = 1,
             name="TM1",
             description="des",
-            src_lang="en",
-            tar_lang="vi",
+            src_lang="English",
+            tar_lang="Vietnamese",
             user=self.user
         )
         
@@ -42,15 +42,15 @@ class TestFile(Base):
             id = 2,
             name="TM2",
             description="des",
-            src_lang="vi",
-            tar_lang="en",
+            src_lang="Vietnamese",
+            tar_lang="English",
             user=self.user
         )
         self.instance_project=Project.objects.create(
             name="project 1",
             user=self.user,
-            src_lang="en",
-            tar_lang="vi",
+            src_lang="English",
+            tar_lang="Vietnamese",
             translate_service="GG",
         )
         self.instance_project.glossary.set([self.instance_glossary]),
