@@ -75,7 +75,7 @@ class GlossaryTypeViewSet(viewsets.ModelViewSet):
         queryset = self.queryset
         user_id = self.request.query_params.get('user_id', None)
         if user_id is not None:
-            queryset = queryset.filter(glossary__user=user_id)
+            queryset = queryset.filter(user_id=user_id)
         return queryset
 
 

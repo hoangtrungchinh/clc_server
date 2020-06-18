@@ -8,12 +8,14 @@ sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
 
 class TranslationMemory(models.Model):
-    name = models.TextField(unique=True)
+    name = models.TextField()
     description = models.TextField()
     src_lang = models.TextField()
     tar_lang = models.TextField()
     user = models.ForeignKey(User, on_delete=models.PROTECT)
 
+    class Meta:
+        unique_together = ('name', 'user',)   
 
     def __str__(self):
         # return sys.path
@@ -36,22 +38,28 @@ class TMContent(models.Model):
         
 
 class GlossaryType(models.Model):
-    name = models.TextField(unique=True)
+    name = models.TextField()
     description = models.TextField()
     user = models.ForeignKey(User, on_delete=models.PROTECT)
+
+    class Meta:
+        unique_together = ('name', 'user',)   
 
     def __str__(self):
         return str(self.id) + " | " + self.name
 
 
 class Glossary(models.Model):
-    name = models.TextField(unique=True)
+    name = models.TextField()
     description = models.TextField()
     src_lang = models.TextField()
     tar_lang = models.TextField()
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     gloss_type = models.ManyToManyField(GlossaryType)
-    
+
+    class Meta:
+        unique_together = ('name', 'user',)   
+
     def __str__(self):
         return str(self.id) + " | " + self.src_lang + " | " + self.tar_lang       
 
