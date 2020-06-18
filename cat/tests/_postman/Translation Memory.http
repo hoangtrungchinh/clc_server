@@ -1,18 +1,22 @@
 ###
 GET http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+###
+GET http://127.0.0.1:8000/translation_memory/?user_id=1
+Content-Type: application/json
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 ###
 GET http://127.0.0.1:8000/translation_memory/1
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 ###
 POST http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
-  "name": "Default translation memory",
+  "name": "Default translation memory 1",
   "description": "Đây là TM mặc định, bất kỳ ai cũng có thể truy cập",
   "src_lang": "en",
   "tar_lang": "vi",
@@ -22,7 +26,7 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 POST http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
   "name": "Khoa học tự nhiên",
@@ -36,7 +40,7 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 PUT http://127.0.0.1:8000/translation_memory/3/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
   "name": "TM3 updated",
@@ -49,4 +53,4 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 DELETE http://127.0.0.1:8000/translation_memory/13/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466

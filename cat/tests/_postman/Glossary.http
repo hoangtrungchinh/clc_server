@@ -1,17 +1,21 @@
 ###
 GET http://127.0.0.1:8000/glossary/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+###
+GET http://127.0.0.1:8000/glossary/?user_id=1
+Content-Type: application/json
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 ###
 GET http://127.0.0.1:8000/glossary/1
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 ###
 POST http://127.0.0.1:8000/glossary/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
   "name": "Uncategory",
@@ -19,13 +23,13 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
   "src_lang": "en",
   "tar_lang": "vi",
   "user": 1,
-  "gloss_type": 1
+  "gloss_type": [1]
 }
 
 ###
 POST http://127.0.0.1:8000/glossary/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
   "name": "khxhnv",
@@ -39,7 +43,7 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 PUT http://127.0.0.1:8000/glossary/1/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
   "name": "khxhnv",
@@ -53,4 +57,4 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 DELETE http://127.0.0.1:8000/glossary/3/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466

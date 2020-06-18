@@ -27,14 +27,14 @@ class TMContentSerializer(serializers.ModelSerializer):
 class GlossaryTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = GlossaryType
-        fields = ('id', 'name', 'description')
+        fields = ('id', 'name', 'description', 'user')
 
 
 class GlossarySerializer(serializers.ModelSerializer):
+    # gloss_type = GlossaryTypeSerializer(many=True)
     class Meta:
         model = Glossary
         fields = ('id', 'name', 'description', 'src_lang', 'tar_lang', 'user', 'gloss_type')
-        # fields = "__all__"
 
 
 class GlossaryContentSerializer(serializers.ModelSerializer):
@@ -44,15 +44,17 @@ class GlossaryContentSerializer(serializers.ModelSerializer):
 
 
 class ProjectSerializer(serializers.ModelSerializer):
+    # translation_memory = TranslationMemorySerializer(many=True)
+    # glossary = GlossarySerializer(many=True)
+
     class Meta:
-        model = Project
+        model = Project        
         fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary')
 
 
 class FileSerializer(serializers.ModelSerializer):
     class Meta:
         model = File
-        # fields = ('id', 'file,' 'project,' 'confirm,')
         fields = "__all__"
 
 
@@ -60,6 +62,5 @@ class FileSerializer(serializers.ModelSerializer):
 class SentenceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sentence
-        # fields = ('id', 'file,' 'project,' 'confirm,')
         fields = "__all__"
 

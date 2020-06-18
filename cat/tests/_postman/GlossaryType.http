@@ -1,27 +1,33 @@
 ###
 GET http://127.0.0.1:8000/glossary_type/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+
+###
+GET http://127.0.0.1:8000/glossary_type/?user_id=1
+Content-Type: application/json
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 ###
 GET http://127.0.0.1:8000/glossary_type/2
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 ###
 POST http://127.0.0.1:8000/glossary_type/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
-  "name": "Uncategory",
-  "description": "Chưa phân nhóm"
+  "name": "Lâm nghiệp",
+  "description": "bao gồm tất cả các thuật ngữ thuộc lĩnh vực Lâm nghiệp",
+  "user": 1
 }
 
 ###
 PUT http://127.0.0.1:8000/glossary_type/2/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
   "name": "Lâm nghiệp",
@@ -31,4 +37,4 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 DELETE http://127.0.0.1:8000/glossary_type/3/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466

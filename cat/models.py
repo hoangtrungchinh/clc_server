@@ -7,7 +7,6 @@ from django.conf import settings
 sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
 
-
 class TranslationMemory(models.Model):
     name = models.TextField(unique=True)
     description = models.TextField()
@@ -39,6 +38,7 @@ class TMContent(models.Model):
 class GlossaryType(models.Model):
     name = models.TextField(unique=True)
     description = models.TextField()
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
 
     def __str__(self):
         return str(self.id) + " | " + self.name
@@ -50,7 +50,7 @@ class Glossary(models.Model):
     src_lang = models.TextField()
     tar_lang = models.TextField()
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    gloss_type = models.ForeignKey(GlossaryType, on_delete=models.PROTECT)
+    gloss_type = models.ManyToManyField(GlossaryType)
     
     def __str__(self):
         return str(self.id) + " | " + self.src_lang + " | " + self.tar_lang       

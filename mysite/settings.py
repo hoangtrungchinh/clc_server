@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INDEX_TM = 'translation_memory'
 INDEX_GLOSSARY = 'glossary'
 
+
 # Application definition
 
 INSTALLED_APPS = [

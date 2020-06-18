@@ -1,17 +1,17 @@
 ###
 GET http://127.0.0.1:8000/sentence/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 ###
 GET http://127.0.0.1:8000/sentence/2
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 ###
 POST http://127.0.0.1:8000/sentence/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
   "file": 70,
@@ -24,7 +24,7 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 POST http://127.0.0.1:8000/sentence/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
   "file": 70,
@@ -34,7 +34,7 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 PUT http://127.0.0.1:8000/sentence/45/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
   "file": 85,
@@ -48,4 +48,4 @@ Authorization: token 13176ad6710547efae340cc356b9374012c092d0
 ###
 DELETE http://127.0.0.1:8000/sentence/3/
 Content-Type: application/json
-Authorization: token 13176ad6710547efae340cc356b9374012c092d0
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466

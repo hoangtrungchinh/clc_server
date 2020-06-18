@@ -13,14 +13,17 @@ class TestGlossaryType(Base):
         self.params_default = {
             "name": "khxhnv",
             "description": "Khoa học xã hội nhân văn",
+            "user": 1
         }
         self.params = {
             "name": "Khtn",
             "description": "Khoa học tự nhiên",
+            "user": 1
         }        
         self.instance = GlossaryType.objects.create(
             name=self.params_default["name"],
             description=self.params_default["description"],
+            user=self.user
         )
 
 # VALID TESTS

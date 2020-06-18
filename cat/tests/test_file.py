@@ -16,6 +16,7 @@ class TestFile(Base):
             id=1,
             name="khtn",
             description="Khoa học tự nhiên",
+            user=self.user
         )
         
         self.instance_glossary=Glossary.objects.create(
@@ -25,8 +26,9 @@ class TestFile(Base):
             src_lang="en",
             tar_lang="vi",
             user=self.user,
-            gloss_type=self.instance_glosstary_type1,
         )
+        self.instance_glossary.gloss_type.set([self.instance_glosstary_type1]),
+
         self.instance_memory_1=TranslationMemory.objects.create(
             id = 1,
             name="TM1",
@@ -79,7 +81,7 @@ class TestFile(Base):
   
 # VALID TESTS
     def test_get_all_file(self):
-        response = self.client.get(self.uri)
+        response = self.client.get(self.uri+'?project_id='+str(self.instance_project.id))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(self.params_default["confirm"], response.data[0]["confirm"])    
 

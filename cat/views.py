@@ -53,40 +53,63 @@ from preprocessor import *
 class TranslationMemoryViewSet(viewsets.ModelViewSet):
     queryset = TranslationMemory.objects.all().order_by('id')
     serializer_class = TranslationMemorySerializer
+    
+    def get_queryset(self):
+        queryset = self.queryset
+        user_id = self.request.query_params.get('user_id', None)
+        if user_id is not None:
+            queryset = queryset.filter(user_id=user_id)
+        return queryset
 
 
 class TMContentViewSet(viewsets.ModelViewSet):
-    queryset = TMContent.objects.all()
+    queryset = TMContent.objects.all().order_by('id')
     serializer_class = TMContentSerializer
 
 
 class GlossaryTypeViewSet(viewsets.ModelViewSet):
-    queryset = GlossaryType.objects.all()
+    queryset = GlossaryType.objects.all().order_by('id')
     serializer_class = GlossaryTypeSerializer
+    
+    def get_queryset(self):
+        queryset = self.queryset
+        user_id = self.request.query_params.get('user_id', None)
+        if user_id is not None:
+            queryset = queryset.filter(glossary__user=user_id)
+        return queryset
 
 
 class GlossaryViewSet(viewsets.ModelViewSet):
-    queryset = Glossary.objects.all()
+    queryset = Glossary.objects.all().order_by('id')
     serializer_class = GlossarySerializer
+    
+    def get_queryset(self):
+        queryset = self.queryset
+        user_id = self.request.query_params.get('user_id', None)
+        if user_id is not None:
+            queryset = queryset.filter(user_id=user_id)
+        return queryset
 
 
 class GlossaryContentViewSet(viewsets.ModelViewSet):
-    queryset = GlossaryContent.objects.all()
+    queryset = GlossaryContent.objects.all().order_by('id')
     serializer_class = GlossaryContentSerializer
 
 
-class ProjectViewSet(viewsets.ModelViewSet):
-    queryset = Project.objects.all()
+class ProjectViewSet(viewsets.ModelViewSet):    
     serializer_class = ProjectSerializer
-
-
-# class ProjectByUserViewSet(viewsets.ModelViewSet):
-#     queryset = Project.objects.filter()
-#     serializer_class = ProjectSerializer
+    queryset = Project.objects.all().order_by('id')
+    
+    def get_queryset(self):
+        queryset = self.queryset
+        user_id = self.request.query_params.get('user_id', None)
+        if user_id is not None:
+            queryset = queryset.filter(user_id=user_id)
+        return queryset
 
 
 class SentenceViewSet(viewsets.ModelViewSet):
-    queryset = Sentence.objects.all()
+    queryset = Sentence.objects.all().order_by('id')
     serializer_class = SentenceSerializer
 
 
@@ -120,14 +143,14 @@ class FileUploadView(APIView):
                     if sentence_serilizer.is_valid():
                         sentence_serilizer.save()
 
-
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except ValueError:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     def get(self, request, *args, **kwargs):
-        files = File.objects.all()
+        p_id=(self.request.query_params.get('project_id'))
+        files = File.objects.filter(project_id=p_id)
         serializer = FileSerializer(files, many=True)
         return Response (serializer.data)
 
@@ -264,7 +287,10 @@ def sign_up(request):
         email = request.data["email"]
         password = request.data["password"]
 
-        # import pdb; pdb.set_trace()
+        if User.objects.filter(email=email).exists():
+            j = {"is_success":False, "err_msg": email+" already exists"}
+            return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+        
         user = User.objects.create_user(username, email, password)
         token = Token.objects.create(user=user)
 

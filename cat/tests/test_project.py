@@ -13,6 +13,7 @@ class TestProject(Base):
             id=1,
             name="khtn",
             description="Khoa học tự nhiên",
+            user=self.user
         )
         
         self.instance_glossary=Glossary.objects.create(
@@ -22,8 +23,10 @@ class TestProject(Base):
             src_lang="en",
             tar_lang="vi",
             user=self.user,
-            gloss_type=self.instance_glosstary_type1,
         )
+        self.instance_glossary.gloss_type.set([self.instance_glosstary_type1]),
+
+
         self.instance_memory_1=TranslationMemory.objects.create(
             id = 1,
             name="TM1",

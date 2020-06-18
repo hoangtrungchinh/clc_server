@@ -24,7 +24,9 @@ class TestGlossaryContent(Base):
             id=1,
             name="khtn",
             description="Khoa học tự nhiên",
+            user=self.user
         )
+
         self.instance_glossary_1=Glossary.objects.create(
             id = 1,
             name="TM1",
@@ -32,8 +34,9 @@ class TestGlossaryContent(Base):
             src_lang="en",
             tar_lang="vi",
             user=self.user, 
-            gloss_type=self.instance_glosstary_type,
-        )
+        )        
+        self.instance_glossary_1.gloss_type.set([self.instance_glosstary_type]),
+
         self.instance_glossary_2=Glossary.objects.create(
             id=2,
             name="TM2",
@@ -41,8 +44,9 @@ class TestGlossaryContent(Base):
             src_lang="vi",
             tar_lang="en",
             user=self.user,
-            gloss_type=self.instance_glosstary_type,
         )
+        self.instance_glossary_2.gloss_type.set([self.instance_glosstary_type]),
+
         self.instance = GlossaryContent.objects.create(
             src_phrase=self.params_default["src_phrase"],
             tar_phrase=self.params_default["tar_phrase"],
