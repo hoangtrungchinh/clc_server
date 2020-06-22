@@ -22,6 +22,7 @@ from .serializers import (
     ProjectSerializer,
     FileSerializer,
     SentenceSerializer,
+    GlossaryWithChildSerializer,
 )
 
 
@@ -82,6 +83,17 @@ class GlossaryTypeViewSet(viewsets.ModelViewSet):
 class GlossaryViewSet(viewsets.ModelViewSet):
     queryset = Glossary.objects.all().order_by('id')
     serializer_class = GlossarySerializer
+    
+    def get_queryset(self):
+        queryset = self.queryset
+        user_id = self.request.query_params.get('user_id', None)
+        if user_id is not None:
+            queryset = queryset.filter(user_id=user_id)
+        return queryset
+
+class GlossaryWithChildViewSet(viewsets.ModelViewSet):
+    queryset = Glossary.objects.all().order_by('id')
+    serializer_class = GlossaryWithChildSerializer
     
     def get_queryset(self):
         queryset = self.queryset

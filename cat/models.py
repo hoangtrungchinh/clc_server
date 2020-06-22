@@ -118,6 +118,3 @@ class Sentence(models.Model):
 
     def __str__(self):
         return str(self.id) + " | " + self.src_str + " | " + self.tar_str + " | " + str(self.file.id)
-
-
-        

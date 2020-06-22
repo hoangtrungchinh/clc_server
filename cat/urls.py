@@ -12,13 +12,14 @@ from django.contrib import admin
 from .views import *
 
 router = routers.DefaultRouter()
-router.register(r'translation_memory', views.TranslationMemoryViewSet)
-router.register(r'tm_content', views.TMContentViewSet)
-router.register(r'glossary_type', views.GlossaryTypeViewSet)
-router.register(r'glossary', views.GlossaryViewSet)
-router.register(r'glossary_content', views.GlossaryContentViewSet)
-router.register(r'project', views.ProjectViewSet)
-router.register(r'sentence', views.SentenceViewSet)
+router.register(r'translation_memory', views.TranslationMemoryViewSet, basename='translation_memory')
+router.register(r'tm_content', views.TMContentViewSet, basename='tm_content')
+router.register(r'glossary_type', views.GlossaryTypeViewSet, basename='glossary_type')
+router.register(r'glossary', views.GlossaryViewSet, basename='glossary')
+router.register(r'glossary_with_child', views.GlossaryWithChildViewSet, basename='glossary_with_child')
+router.register(r'glossary_content', views.GlossaryContentViewSet, basename='glossary_content')
+router.register(r'project', views.ProjectViewSet, basename='project')
+router.register(r'sentence', views.SentenceViewSet, basename='sentence')
 
 
 # Wire up our API using automatic URL routing.

@@ -1,14 +1,15 @@
 ###
-GET http://127.0.0.1:8000/glossary/
+GET http://127.0.0.1:8000/glossary_with_child/
 Content-Type: application/json
 Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+
 ###
 GET http://127.0.0.1:8000/glossary/?user_id=1
 Content-Type: application/json
 Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 ###
-GET http://127.0.0.1:8000/glossary/1
+GET http://127.0.0.1:8000/glossary_with_child/2
 Content-Type: application/json
 Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
@@ -18,16 +19,16 @@ Content-Type: application/json
 Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
 {
-  "name": "Uncategory",
+  "name": "Uncategory 10",
   "description": "Chưa phân nhóm",
   "src_lang": "en",
   "tar_lang": "vi",
   "user": 1,
-  "gloss_type": [1]
+  "gloss_type": [4]
 }
 
 ###
-POST http://127.0.0.1:8000/glossary/
+PUT http://127.0.0.1:8000/glossary/2/
 Content-Type: application/json
 Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 
@@ -37,21 +38,7 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
   "src_lang": "en",
   "tar_lang": "vi",
   "user": 1,
-  "Type": 1
-}
-
-###
-PUT http://127.0.0.1:8000/glossary/1/
-Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
-
-{
-  "name": "khxhnv",
-  "description": "Sản phẩm của trường ĐH Khoa học xhnv",
-  "src_lang": "en",
-  "tar_lang": "vi",
-  "user": 1,
-  "Type": 1
+  "gloss_type": [4,6]
 }
 
 ###

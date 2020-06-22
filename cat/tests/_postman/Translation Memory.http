@@ -54,3 +54,46 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 DELETE http://127.0.0.1:8000/translation_memory/13/
 Content-Type: application/json
 Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+
+
+
+########################################################
+
+###
+# Get TM in by src
+GET http://127.0.0.1:8000/get_tm_by_src_sentence/
+Content-Type: application/json
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+
+{
+  "sentence": "A house man will soon be in your room",
+  "min_similarity": 0.3
+}
+
+###
+
+# Get TM in by src
+GET http://127.0.0.1:8000/get_tm_by_src_sentence/
+Content-Type: application/json
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+
+{
+  "sentence": "Love in your eyes",
+  "min_similarity": 0.5,
+  "translation_memory_id": 1
+}
+
+###
+
+# Get glossary in by src
+GET http://127.0.0.1:8000/get_glossary_by_src_sentence/
+Content-Type: application/json
+Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+
+{
+  "sentence": "I thought I could count on my best friend for support during this difficult time",
+  "min_similarity": 0.00001,
+  "glossary_id": 1
+}
+
+

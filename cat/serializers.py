@@ -17,6 +17,11 @@ class TranslationMemorySerializer(serializers.ModelSerializer):
         model = TranslationMemory
         fields = ('id', 'name', 'description', 'src_lang', 'tar_lang', 'user')
 
+    def validate(self, data):
+        if data['src_lang'] == data['tar_lang']:
+            raise serializers.ValidationError("Source and Target language must be different")
+        return data
+
 
 class TMContentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -31,11 +36,21 @@ class GlossaryTypeSerializer(serializers.ModelSerializer):
 
 
 class GlossarySerializer(serializers.ModelSerializer):
-    # gloss_type = GlossaryTypeSerializer(many=True)
     class Meta:
         model = Glossary
-        fields = ('id', 'name', 'description', 'src_lang', 'tar_lang', 'user', 'gloss_type')
+        fields = ('id', 'name', 'description', 'src_lang', 'tar_lang', 'gloss_type', 'user')
 
+    def validate(self, data):
+        if data['src_lang'] == data['tar_lang']:
+            raise serializers.ValidationError("Source and Target language must be different")
+        return data
+    
+
+class GlossaryWithChildSerializer(serializers.ModelSerializer):
+    gloss_type = GlossaryTypeSerializer(many=True, read_only=True)
+    class Meta:
+        model = Glossary
+        fields = ('id', 'name', 'description', 'src_lang', 'tar_lang', 'gloss_type', 'user')
 
 class GlossaryContentSerializer(serializers.ModelSerializer):
     class Meta:
