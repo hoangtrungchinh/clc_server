@@ -166,7 +166,8 @@ REST_FRAMEWORK = {
 
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': 'http://localhost:9200'
+        # 'hosts': 'http://localhost:9200'
+        'hosts': 'http://0.0.0.0:9200'
     },
 }
 
