@@ -26,9 +26,10 @@ SECRET_KEY = 'yi(%^bh(5my=92(=qw6pmc_=!v73f1xsx%ga=s!-nvox0dsqzl'
 
 # DEBUG = False
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = ['103.90.228.121', 'localhost', '127.0.0.1']
 
 DEBUG = True
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 INDEX_TM = 'translation_memory'
 INDEX_GLOSSARY = 'glossary'
@@ -70,7 +71,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'request_logging.middleware.LoggingMiddleware',
+    # 'request_logging.middleware.LoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
