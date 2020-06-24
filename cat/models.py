@@ -66,6 +66,9 @@ class Glossary(models.Model):
     def get_user_id(self):
         return self.user.id
 
+    def get_gloss_types(self):
+        return ", ".join([p.name for p in self.gloss_type.all()])
+
     
 class GlossaryContent(models.Model):
     src_phrase = models.TextField()
@@ -93,6 +96,12 @@ class Project(models.Model):
 
     def __str__(self):
         return str(self.id) + " | " + self.name
+
+    def list_glossary(self):
+        return ", ".join([p.name for p in self.glossary.all()])
+
+    def list_translation_memory(self):
+        return ", ".join([p.name for p in self.translation_memory.all()])
         
 
 class File(models.Model):
