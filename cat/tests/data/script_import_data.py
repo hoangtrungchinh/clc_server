@@ -1,17 +1,19 @@
-file_tm = 'cat/tests/data/TM_1k.csv'
-file_glossary = 'cat/tests/data/Glossary_1K.csv'
+# file_tm = 'cat/tests/data/TM_1k.csv'
+# file_glossary = 'cat/tests/data/Glossary_1K.csv'
+file_tm = 'cat/tests/data/TM_60k.csv'
+file_glossary = 'cat/tests/data/Glossary_50K.csv'
 
 from cat.models import TMContent, GlossaryContent, TranslationMemory, Glossary
 
 import csv
-t = TranslationMemory.objects.get(pk=3)
+t = TranslationMemory.objects.get(pk=1)
 with open(file_tm, newline='') as csvfile:
   data = csv.reader(csvfile)
   for row in data:
     tm = TMContent(src_sentence=row[0], tar_sentence=row[1], translation_memory=t) 
     tm.save() 
 
-glos = Glossary.objects.get(pk=2)
+glos = Glossary.objects.get(pk=1)
 with open(file_glossary, newline='') as csvfile:
   data = csv.reader(csvfile)
   for row in data:
