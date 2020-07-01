@@ -1,0 +1,58 @@
+
+###
+GET http://103.90.228.121:8000/tm_content/19
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+
+###
+POST http://103.90.228.121:8000/tm_content/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+    "src_sentence": "Love somuch 3",
+    "tar_sentence": "Yêu rất nhiều",
+    "translation_memory": 3
+}
+
+###
+PUT http://103.90.228.121:8000/tm_content/19/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+    "src_sentence": "Love in your eyes 3",
+    "tar_sentence": "Tình yêu trong mắt em 3",
+    "translation_memory": 2
+}
+
+###
+DELETE http://103.90.228.121:8000/tm_content/19/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+###
+
+# Get TM in by sentence (in all TM)
+GET http://103.90.228.121:8000/get_tm_by_src_sentence/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+  "sentence": "I love you",
+  "min_similarity": 0.2
+}
+
+###
+
+# Get TM in by sentence in translation_memory_id
+GET http://103.90.228.121:8000/get_tm_by_src_sentence/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+  "sentence": "Love in your eyes",
+  "min_similarity": 0.5,
+  "translation_memory_id": 1
+}
+

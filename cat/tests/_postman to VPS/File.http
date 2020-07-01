@@ -1,0 +1,64 @@
+# Hiện tại Plugin không không hỗ trợ tốt với upload file (không giống với trang chủ họ nói), vậy nên để chạy được: sử dụng lệnh dước trong cmd
+
+# Upload a english file
+###
+curl -v -F "project=3" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_en.txt" http://103.90.228.121:8000/file/ -H "Authorization: token ed947616967b148feda2126f9ee234f159252fc3" 
+
+# Upload a vietnamese file
+###
+curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_vi.txt" http://103.90.228.121:8000/file/ -H "Authorization: token ed947616967b148feda2126f9ee234f159252fc3" 
+
+# update a file
+###
+curl -X PUT -v -F "project=3" -F "confirm=10" -F "file=@/home/chinh/clc_server/_postman/File.http" http://103.90.228.121:8000/file/48/ -H "Authorization: token ed947616967b148feda2126f9ee234f159252fc3" 
+
+
+# view list of files
+###
+GET http://103.90.228.121:8000/file/?project_id=1
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+
+# view list 1 file
+###
+GET http://103.90.228.121:8000/file/38/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+# delete 1 file
+###
+DELETE http://103.90.228.121:8000/file/85/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+
+# TODO: Đây là request upload file, sẽ sử dụng sau khi Plugin của vscode Updated
+###
+POST http://103.90.228.121:8000/file/
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="confirm"
+
+20
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="project"
+
+1
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Type: text/plain
+Content-Disposition: form-data; name="file"; filename="_example.txt"
+
+< /home/chinh/clc_server/_postman/_example.txt
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+###
+
+
+
+# DELETE FILE IN RANGE (just for testting)
+for i in {86..87}; do
+  curl -X DELETE "http://103.90.228.121:8000/file/$i/" -H "Authorization: token ed947616967b148feda2126f9ee234f159252fc3"
+done

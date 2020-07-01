@@ -1,0 +1,50 @@
+
+###
+POST http://103.90.228.121:8000/project/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+  "name": "pj1",
+  "user": 1,
+  "src_lang": "en",
+  "tar_lang": "vi",
+  "translate_service": "GG",
+  "translation_memory": [1],
+  "glossary": [1]
+}
+
+###
+GET http://103.90.228.121:8000/project/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+###
+GET http://103.90.228.121:8000/project/?user_id=1
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+###
+GET http://103.90.228.121:8000/project/2
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+###
+PUT http://103.90.228.121:8000/project/2/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+  "name": "pj1 updated",
+  "user": 1,
+  "src_lang": "vi",
+  "tar_lang": "en",
+  "translate_service": "GG",
+  "translation_memory": [1],
+  "glossary": [1]
+}
+
+
+###
+DELETE http://103.90.228.121:8000/project/2/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3

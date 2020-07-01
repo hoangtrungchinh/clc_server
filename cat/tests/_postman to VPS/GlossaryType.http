@@ -1,0 +1,40 @@
+###
+GET http://103.90.228.121:8000/glossary_type/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+###
+GET http://103.90.228.121:8000/glossary_type/?user_id=1
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+###
+GET http://103.90.228.121:8000/glossary_type/2
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+###
+POST http://103.90.228.121:8000/glossary_type/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+  "name": "Lâm nghiệp",
+  "description": "bao gồm tất cả các thuật ngữ thuộc lĩnh vực Lâm nghiệp",
+  "user": 1
+}
+
+###
+PUT http://103.90.228.121:8000/glossary_type/2/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+  "name": "Lâm nghiệp",
+  "description": "bao gồm tất cả các thuật ngữ thuộc lĩnh vực Lâm nghiệp"
+}
+
+###
+DELETE http://103.90.228.121:8000/glossary_type/3/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3

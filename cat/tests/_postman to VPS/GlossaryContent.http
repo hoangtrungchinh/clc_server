@@ -1,0 +1,51 @@
+
+###
+POST http://103.90.228.121:8000/glossary_content/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+  "src_phrase": "I love you",
+  "tar_phrase": "Anh yêu em",
+  "glossary": 1
+}
+
+###
+GET http://103.90.228.121:8000/glossary_content/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+###
+GET http://103.90.228.121:8000/glossary_content/2
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+###
+PUT http://103.90.228.121:8000/glossary_content/1/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+  "src_phrase": "I love you so much",
+  "tar_phrase": "Anh yêu em rất nhiều",
+  "glossary": 1
+}
+
+###
+DELETE http://103.90.228.121:8000/glossary_content/2/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+
+###
+
+# Get glossary in by sentence
+GET http://103.90.228.121:8000/get_glossary_by_src_sentence/
+Content-Type: application/json
+Authorization: token ed947616967b148feda2126f9ee234f159252fc3
+
+{
+  "sentence": "I thought I could count on my best friend for support during this difficult time",
+  "min_similarity": 0.00001,
+  "glossary_id": 1
+}
