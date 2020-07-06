@@ -23,6 +23,7 @@ from .serializers import (
     FileSerializer,
     SentenceSerializer,
     GlossaryWithChildSerializer,
+    FileWithChildSerializer,
 )
 
 
@@ -50,6 +51,7 @@ import Levenshtein as lev
 import sys
 sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
+
 
 class TranslationMemoryViewSet(viewsets.ModelViewSet):
     queryset = TranslationMemory.objects.all().order_by('id')
@@ -161,10 +163,13 @@ class FileUploadView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     def get(self, request, *args, **kwargs):
-        p_id=(self.request.query_params.get('project_id'))
-        files = File.objects.filter(project_id=p_id)
-        serializer = FileSerializer(files, many=True)
-        return Response (serializer.data)
+        try:
+            p_id=(self.request.query_params.get('project_id'))
+            files = File.objects.filter(project_id=p_id)
+            serializer = FileSerializer(files, many=True)
+            return Response (serializer.data)
+        except ValueError:
+            return Response("Please check your input", status=status.HTTP_400_BAD_REQUEST)
 
 class FileUploadDetailView(APIView):
     def get_object(self, pk):
@@ -175,7 +180,7 @@ class FileUploadDetailView(APIView):
 
     def get(self, request, pk, format=None):
         file = self.get_object(pk)
-        serializer = FileSerializer(file)
+        serializer = FileWithChildSerializer(file)
         return Response(serializer.data)       
 
     def put(self, request, pk, format=None):
@@ -290,7 +295,7 @@ def get_glossary_by_src_sentence(request):
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
 
 
-
+# TODO: Add more security
 @api_view(['POST'])
 @permission_classes((AllowAny,))
 def sign_up(request):
@@ -304,9 +309,8 @@ def sign_up(request):
             return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
         
         user = User.objects.create_user(username, email, password)
-        token = Token.objects.create(user=user)
 
-        j = {"id":user.id, "username":username, "email":email, "token": token.key }
+        j = {"id":user.id, "username":username, "email":email}
 
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
 
@@ -316,10 +320,3 @@ def sign_up(request):
     except Exception as e:
         j = {"is_success":False, "err_msg": ""+str(e)}
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
-
-
-class login(ObtainAuthToken):
-    def post(self, request, *args, **kwargs):
-        response = super(login, self).post(request, *args, **kwargs)
-        token = Token.objects.get(key=response.data['token'])
-        return Response({'token': token.key, 'user_id': token.user_id})

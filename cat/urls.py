@@ -11,6 +11,11 @@ from django.contrib import admin
 
 from .views import *
 
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 router = routers.DefaultRouter()
 router.register(r'translation_memory', views.TranslationMemoryViewSet, basename='translation_memory')
 router.register(r'tm_content', views.TMContentViewSet, basename='tm_content')
@@ -31,11 +36,15 @@ urlpatterns = [
     # url(r'^clc_collection/$', views.clc_collection),
     url(r'^get_tm_by_src_sentence/$', views.get_tm_by_src_sentence),
     url(r'^get_glossary_by_src_sentence/$', views.get_glossary_by_src_sentence),
-    url(r'^sign_up/$', views.sign_up),
-    url(r'^get-token/', v.obtain_auth_token),
-    url(r'^login/', views.login.as_view()),
     
-    url(r'^docs/', include_docs_urls(title='My API title', public=True))
+    url(r'^docs/', include_docs_urls(title='My API title', public=True)),
+
+
+
+   #  url(r'^login/', views.login.as_view()),
+    url(r'^sign_up/$', views.sign_up),
+    path('sign_in/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token_refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
 
 urlpatterns += router.urls
