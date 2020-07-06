@@ -9,6 +9,7 @@ from .models import (
     Project,
     File,
     Sentence,
+    File
 )
 
 
@@ -72,10 +73,13 @@ class FileSerializer(serializers.ModelSerializer):
         model = File
         fields = "__all__"
 
-
-
 class SentenceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sentence
         fields = "__all__"
 
+class FileWithChildSerializer(serializers.ModelSerializer):
+    sentence_set = SentenceSerializer(many=True, read_only=True)
+    class Meta:
+        model = File
+        fields = ('id', 'file', 'project', 'confirm', 'sentence_set')
