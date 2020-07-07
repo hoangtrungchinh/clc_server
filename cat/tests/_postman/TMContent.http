@@ -1,5 +1,5 @@
 ###
-GET http://127.0.0.1:8000/tm_content/
+GET http://127.0.0.1:8000/tm_content/?tm_id=4
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 ###
@@ -43,3 +43,18 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 {
     "src": "happy"
 }
+
+###
+
+# Get TM in by src
+GET http://127.0.0.1:8000/get_tm_by_src_sentence/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
+
+{
+  "sentence": "Love in your eyes",
+  "min_similarity": 0.5,
+  "translation_memory_id": 1
+}
+
+

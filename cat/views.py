@@ -69,6 +69,13 @@ class TMContentViewSet(viewsets.ModelViewSet):
     queryset = TMContent.objects.all().order_by('id')
     serializer_class = TMContentSerializer
 
+    def get_queryset(self):
+        queryset = self.queryset
+        tm_id = self.request.query_params.get('tm_id', None)
+        if tm_id is not None:
+            queryset = queryset.filter(translation_memory=tm_id)
+        return queryset
+
 
 class GlossaryTypeViewSet(viewsets.ModelViewSet):
     queryset = GlossaryType.objects.all().order_by('id')
@@ -125,7 +132,13 @@ class ProjectViewSet(viewsets.ModelViewSet):
 class SentenceViewSet(viewsets.ModelViewSet):
     queryset = Sentence.objects.all().order_by('id')
     serializer_class = SentenceSerializer
-
+    
+    def get_queryset(self):
+        queryset = self.queryset
+        file_id = self.request.query_params.get('file_id', None)
+        if file_id is not None:
+            queryset = queryset.filter(file_id=file_id)
+        return queryset
 
 class FileUploadView(APIView):
     def post(self, request, *args, **kwargs):
