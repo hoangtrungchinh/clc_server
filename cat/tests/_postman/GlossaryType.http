@@ -1,22 +1,22 @@
 ###
 GET http://127.0.0.1:8000/glossary_type/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 ###
 GET http://127.0.0.1:8000/glossary_type/?user_id=1
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 ###
 GET http://127.0.0.1:8000/glossary_type/2
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 ###
 POST http://127.0.0.1:8000/glossary_type/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "name": "Lâm nghiệp",
@@ -25,16 +25,17 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 }
 
 ###
-PUT http://127.0.0.1:8000/glossary_type/2/
+PUT http://127.0.0.1:8000/glossary_type/4/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "name": "Lâm nghiệp",
-  "description": "bao gồm tất cả các thuật ngữ thuộc lĩnh vực Lâm nghiệp"
+  "description": "bao gồm tất cả các thuật ngữ thuộc lĩnh vực Lâm nghiệp",
+  "user": 1
 }
 
 ###
 DELETE http://127.0.0.1:8000/glossary_type/3/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU

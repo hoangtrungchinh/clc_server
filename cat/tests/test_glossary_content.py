@@ -8,7 +8,7 @@ class TestGlossaryContent(Base):
     def setUp(self):
         self.view = views.GlossaryContentViewSet.as_view({'get': 'list'})
         self.uri = '/glossary_content/'
-        self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + self.token)
         # Create instance with params_default
         self.params_default = {
             "src_phrase": "Database",

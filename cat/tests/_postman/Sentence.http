@@ -1,17 +1,17 @@
 ###
 GET http://127.0.0.1:8000/sentence/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 ###
 GET http://127.0.0.1:8000/sentence/2
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 ###
 POST http://127.0.0.1:8000/sentence/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "file": 70,
@@ -24,7 +24,7 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 ###
 POST http://127.0.0.1:8000/sentence/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "file": 70,
@@ -34,7 +34,7 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 ###
 PUT http://127.0.0.1:8000/sentence/45/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "file": 85,
@@ -48,4 +48,4 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 ###
 DELETE http://127.0.0.1:8000/sentence/3/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU

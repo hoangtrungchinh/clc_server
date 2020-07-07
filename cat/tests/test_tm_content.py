@@ -8,7 +8,7 @@ class TestTMContent(Base):
     def setUp(self):
         self.view = views.TMContentViewSet.as_view({'get': 'list'})
         self.uri = '/tm_content/'
-        self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + self.token)
         # Create instance with params_default
         self.params_default = {
             "src_sentence": "Love in your eyes",

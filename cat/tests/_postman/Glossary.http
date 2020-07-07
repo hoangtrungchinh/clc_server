@@ -1,42 +1,53 @@
 ###
 GET http://127.0.0.1:8000/glossary_with_child/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 ###
 GET http://127.0.0.1:8000/glossary/?user_id=1
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 ###
 GET http://127.0.0.1:8000/glossary_with_child/2
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
-###
+###########################################################################################################################
+API: Create new Glossary
+METHOD: POST
+DESCRIPTION:
+  "name": "string",
+  "description": "string",
+  "src_lang": "string", source language (English, Vietnamese),
+  "tar_lang": "string" Target language (English, Vietnamese),
+  "user": "user_id",
+  "gloss_type": [glosssary_type_id]
+
+### SAMPLE 
 POST http://127.0.0.1:8000/glossary/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "name": "Uncategory 10",
   "description": "Chưa phân nhóm",
-  "src_lang": "en",
-  "tar_lang": "vi",
+  "src_lang": "English",
+  "tar_lang": "Vietnamese",
   "user": 1,
-  "gloss_type": [4]
+  "gloss_type": [1]
 }
 
 ###
 PUT http://127.0.0.1:8000/glossary/2/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "name": "khxhnv",
   "description": "Sản phẩm của trường ĐH Khoa học xhnv",
-  "src_lang": "en",
-  "tar_lang": "vi",
+  "src_lang": "English",
+  "tar_lang": "Vietnamese",
   "user": 1,
   "gloss_type": [4,6]
 }
@@ -44,4 +55,4 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 ###
 DELETE http://127.0.0.1:8000/glossary/3/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU

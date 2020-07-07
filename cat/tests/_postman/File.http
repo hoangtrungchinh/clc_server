@@ -2,41 +2,52 @@
 
 # Upload a english file
 ###
-curl -v -F "project=3" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_en.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466" 
+curl -v -F "project=3" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_en.txt" http://127.0.0.1:8000/file/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU" 
 
 # Upload a vietnamese file
 ###
-curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_vi.txt" http://127.0.0.1:8000/file/ -H "Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466" 
+curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_vi.txt" http://127.0.0.1:8000/file/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU" 
 
 # update a file
 ###
-curl -X PUT -v -F "project=3" -F "confirm=10" -F "file=@/home/chinh/clc_server/_postman/File.http" http://127.0.0.1:8000/file/48/ -H "Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466" 
+curl -X PUT -v -F "project=3" -F "confirm=10" -F "file=@/home/chinh/clc_server/_postman/File.http" http://127.0.0.1:8000/file/48/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU" 
 
 
 # view list of files
 ###
 GET http://127.0.0.1:8000/file/?project_id=1
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 
 # view list 1 file
 ###
-GET http://127.0.0.1:8000/file/38/
+GET http://127.0.0.1:8000/file/2/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
+
+# Update 1 file
+###
+PUT http://127.0.0.1:8000/file/2/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
+
+{
+  "project": 1,
+  "confirm": 2
+}
 
 # delete 1 file
 ###
 DELETE http://127.0.0.1:8000/file/85/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 
 # TODO: Đây là request upload file, sẽ sử dụng sau khi Plugin của vscode Updated
 ###
 POST http://127.0.0.1:8000/file/
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ----WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -60,5 +71,5 @@ Content-Disposition: form-data; name="file"; filename="_example.txt"
 
 # DELETE FILE IN RANGE (just for testting)
 for i in {86..87}; do
-  curl -X DELETE "http://127.0.0.1:8000/file/$i/" -H "Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466"
+  curl -X DELETE "http://127.0.0.1:8000/file/$i/" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU"
 done

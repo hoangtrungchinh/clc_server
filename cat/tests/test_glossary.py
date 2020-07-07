@@ -8,7 +8,7 @@ class TestGlossary(Base):
     def setUp(self):
         self.view = views.GlossaryViewSet.as_view({'get': 'list'})
         self.uri = '/glossary/'
-        self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + self.token)
         self.instance_glosstary_type1 = GlossaryType.objects.create(
             id=1,
             name="khtn",

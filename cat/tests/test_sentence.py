@@ -10,7 +10,7 @@ class TestSentence(Base):
     def setUp(self):
         self.view = views.SentenceViewSet.as_view({'get': 'list'})
         self.uri = '/sentence/'
-        self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + self.token)
         # Create instance with params_default
         self.instance_glosstary_type1 = GlossaryType.objects.create(
             id=1,

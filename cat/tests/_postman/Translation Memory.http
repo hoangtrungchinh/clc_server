@@ -1,32 +1,32 @@
 ###
 GET http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 ###
 GET http://127.0.0.1:8000/translation_memory/?user_id=1
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 ###
-GET http://127.0.0.1:8000/translation_memory/1
+GET http://127.0.0.1:8000/translation_memory/3
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 ###
 POST http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "name": "Default translation memory 1",
   "description": "Đây là TM mặc định, bất kỳ ai cũng có thể truy cập",
-  "src_lang": "en",
-  "tar_lang": "vi",
+  "src_lang": "English",
+  "tar_lang": "Vietnamese",
   "user": 1,
 }
 
 ###
 POST http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "name": "Khoa học tự nhiên",
@@ -40,7 +40,7 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 ###
 PUT http://127.0.0.1:8000/translation_memory/3/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "name": "TM3 updated",
@@ -53,7 +53,7 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 ###
 DELETE http://127.0.0.1:8000/translation_memory/13/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 
 
@@ -63,7 +63,7 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 # Get TM in by src
 GET http://127.0.0.1:8000/get_tm_by_src_sentence/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "sentence": "A house man will soon be in your room",
@@ -75,7 +75,7 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 # Get TM in by src
 GET http://127.0.0.1:8000/get_tm_by_src_sentence/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "sentence": "Love in your eyes",
@@ -88,7 +88,7 @@ Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
 # Get glossary in by src
 GET http://127.0.0.1:8000/get_glossary_by_src_sentence/
 Content-Type: application/json
-Authorization: token 40877ca59cefde907ef9d6db37c5ec253d98b466
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
   "sentence": "I thought I could count on my best friend for support during this difficult time",
