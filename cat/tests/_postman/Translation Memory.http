@@ -1,9 +1,9 @@
 ###
 GET http://127.0.0.1:8000/translation_memory/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyODIxNzc0LCJqdGkiOiI0NjVlMDRiY2FhZGI0ZjYxYTZmNTg0ODQxMDBkODlmNyIsInVzZXJfaWQiOjh9.bazZ-L73biyIBu5AZvWV42OcHDRuXfURtQ0qwyRO_g0
 ###
-GET http://127.0.0.1:8000/translation_memory/?user_id=1
+GET http://127.0.0.1:8000/translation_memory/?user_id=4
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 ###

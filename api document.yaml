@@ -69,22 +69,14 @@ paths:
         - user
 
 
-  /translation_memory/?user_id={user_id}:
+  /translation_memory/:
     get:
       operationId: translation_memory_list
       summary: "Get all translation memory of a user"
-      parameters:
-        - name: user_id
-          in: path
-          required: true
-          schema:
-            type: integer
-
       responses:
         $ref: '#/components/responses-200'
       tags:
         - translation_memory
-  /translation_memory/:
     post:
       operationId: translation_memory_create
       summary: "Create new translation memory"
@@ -165,16 +157,11 @@ paths:
 
 
 
-  /glossary_type/?user_id={user_id}:
+
+  /glossary_type/:
     get:
       operationId: glossary_type_list
       summary: "Get all glossary Type of a user"
-      parameters:
-        - name: user_id
-          in: path
-          required: true
-          schema:
-            type: integer
       responses:
         "200":
           description: "OK"
@@ -185,8 +172,6 @@ paths:
         $ref: '#/components/responses-bad'
       tags:
         - glossary_type
-
-  /glossary_type/:
     post:
       operationId: glossary_type_create
       summary: "Create a glossary type"
@@ -258,7 +243,7 @@ paths:
           type: integer
 
 
-  /glossary/?user_id={user_id}:
+  /glossary/:
     get:
       operationId: glossary_list
       summary: Get all glossary of a user"
@@ -278,7 +263,6 @@ paths:
         $ref: '#/components/responses-bad'
       tags:
         - glossary
-  /glossary/:
     post:
       operationId: glossary_create
       summary: "Create a glossary"
@@ -445,16 +429,10 @@ paths:
         schema:
           type: integer
         
-  /project/?user_id={user_id}:
+  /project/:
     get:
       operationId: project_list
       summary: "Get all projects of a user"
-      parameters:
-        - name: user_id
-          in: path
-          required: true
-          schema:
-            type: integer
       responses:
         "200":
           description: "OK"

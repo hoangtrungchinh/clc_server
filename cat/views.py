@@ -58,10 +58,7 @@ class TranslationMemoryViewSet(viewsets.ModelViewSet):
     serializer_class = TranslationMemorySerializer
     
     def get_queryset(self):
-        queryset = self.queryset
-        user_id = self.request.query_params.get('user_id', None)
-        if user_id is not None:
-            queryset = queryset.filter(user_id=user_id)
+        queryset = self.queryset.filter(user_id=self.request.user.id)
         return queryset
 
 
@@ -70,7 +67,7 @@ class TMContentViewSet(viewsets.ModelViewSet):
     serializer_class = TMContentSerializer
 
     def get_queryset(self):
-        queryset = self.queryset
+        queryset = self.queryset.filter(translation_memory__user__id = self.request.user.id)
         tm_id = self.request.query_params.get('tm_id', None)
         if tm_id is not None:
             queryset = queryset.filter(translation_memory=tm_id)
@@ -82,10 +79,7 @@ class GlossaryTypeViewSet(viewsets.ModelViewSet):
     serializer_class = GlossaryTypeSerializer
     
     def get_queryset(self):
-        queryset = self.queryset
-        user_id = self.request.query_params.get('user_id', None)
-        if user_id is not None:
-            queryset = queryset.filter(user_id=user_id)
+        queryset = self.queryset.filter(user_id=self.request.user.id)
         return queryset
 
 
@@ -94,10 +88,7 @@ class GlossaryViewSet(viewsets.ModelViewSet):
     serializer_class = GlossarySerializer
     
     def get_queryset(self):
-        queryset = self.queryset
-        user_id = self.request.query_params.get('user_id', None)
-        if user_id is not None:
-            queryset = queryset.filter(user_id=user_id)
+        queryset = self.queryset.filter(user_id=self.request.user.id)
         return queryset
 
 class GlossaryWithChildViewSet(viewsets.ModelViewSet):
@@ -105,10 +96,7 @@ class GlossaryWithChildViewSet(viewsets.ModelViewSet):
     serializer_class = GlossaryWithChildSerializer
     
     def get_queryset(self):
-        queryset = self.queryset
-        user_id = self.request.query_params.get('user_id', None)
-        if user_id is not None:
-            queryset = queryset.filter(user_id=user_id)
+        queryset = self.queryset.filter(user_id=self.request.user.id)
         return queryset
 
 
@@ -122,10 +110,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all().order_by('id')
     
     def get_queryset(self):
-        queryset = self.queryset
-        user_id = self.request.query_params.get('user_id', None)
-        if user_id is not None:
-            queryset = queryset.filter(user_id=user_id)
+        queryset = self.queryset.filter(user_id=self.request.user.id)
         return queryset
 
 
@@ -134,7 +119,7 @@ class SentenceViewSet(viewsets.ModelViewSet):
     serializer_class = SentenceSerializer
     
     def get_queryset(self):
-        queryset = self.queryset
+        queryset = self.queryset.filter(file__project__user__id = self.request.user.id)
         file_id = self.request.query_params.get('file_id', None)
         if file_id is not None:
             queryset = queryset.filter(file_id=file_id)
@@ -178,7 +163,7 @@ class FileUploadView(APIView):
     def get(self, request, *args, **kwargs):
         try:
             p_id=(self.request.query_params.get('project_id'))
-            files = File.objects.filter(project_id=p_id)
+            files = File.objects.filter(project_id=p_id, project__user__id = self.request.user.id)
             serializer = FileSerializer(files, many=True)
             return Response (serializer.data)
         except ValueError:
@@ -187,7 +172,7 @@ class FileUploadView(APIView):
 class FileUploadDetailView(APIView):
     def get_object(self, pk):
         try:
-            return File.objects.get(pk=pk)
+            return File.objects.get(pk=pk, project__user__id = self.request.user.id)
         except File.DoesNotExist:
             raise Http404
 
