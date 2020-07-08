@@ -33,6 +33,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('file/', FileUploadView.as_view()),  
     path('file/<int:pk>/', FileUploadDetailView.as_view()),  
+    url(r'^file_download/$', views.file_download),
     # url(r'^clc_collection/$', views.clc_collection),
     url(r'^get_tm_by_src_sentence/$', views.get_tm_by_src_sentence),
     url(r'^get_glossary_by_src_sentence/$', views.get_glossary_by_src_sentence),

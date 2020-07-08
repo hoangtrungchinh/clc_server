@@ -619,7 +619,24 @@ paths:
           description: "Success"
       tags:
         - file
-  
+
+  /file_download/:
+    get:
+      operationId: file_download
+      summary: "Download translated file"
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/FileDownload"
+      responses:
+        $ref: '#/components/responses-201'
+      tags:
+        - file
+
+
+
   /sentence/?file_id={file_id}:
     get:
       operationId: sentence_list
@@ -1152,6 +1169,16 @@ definitions:
         readOnly: true
       translation_memory_id:
         title: id of translation memory need to find
+        type: integer
+        readOnly: true
+
+  FileDownload:
+    required:
+      - file_id
+    type: object
+    properties:
+      file_id:
+        title: Id of file need to be download
         type: integer
         readOnly: true
 
