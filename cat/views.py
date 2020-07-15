@@ -24,6 +24,7 @@ from .serializers import (
     SentenceSerializer,
     GlossaryWithChildSerializer,
     FileWithChildSerializer,
+    ImportTMSerializer
 )
 
 
@@ -125,6 +126,8 @@ class SentenceViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(file_id=file_id)
         return queryset
 
+#TODO: fix bug post data to another user
+#TODO: fix bug security in upload file (upload to project not belongs to me)
 class FileUploadView(APIView):
     def post(self, request, *args, **kwargs):
         try:
@@ -351,3 +354,35 @@ def sign_up(request):
     except Exception as e:
         j = {"is_success":False, "err_msg": ""+str(e)}
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+
+import openpyxl
+from rest_framework.parsers import MultiPartParser
+
+class ImportTMView(APIView):
+    parser_classes = (MultiPartParser,)
+    def post(self, request, *args, **kwargs):
+        try:
+            serializer = ImportTMSerializer(data=request.data)    
+            tm_id=request.data["tm_id"]
+            if serializer.is_valid():
+                tm=TranslationMemory.objects.get(pk=tm_id, user = self.request.user.id)
+                # import pdb; pdb.set_trace() 
+
+                file_obj = request.FILES['tm_file']
+
+                wb = openpyxl.load_workbook(file_obj)
+                ws = wb[wb.sheetnames[0]]
+
+                for row in ws.iter_rows(min_row=2):
+                    TMContent.objects.create(
+                        src_sentence=row[0].value,
+                        tar_sentence=row[1].value,
+                        translation_memory_id=tm_id
+                    )
+                
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except TranslationMemory.DoesNotExist:
+            return Response({"detail":"tm_id not found"}, status=status.HTTP_404_NOT_FOUND)
+        except ValueError:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

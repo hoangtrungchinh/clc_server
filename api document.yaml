@@ -759,6 +759,30 @@ paths:
       tags:
         - tm_content
 
+  /tm_content_import/:
+    post:
+      operationId: tm_content_import
+      summary: "import content of translation memory from file excel"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                tm_id:
+                  type: integer
+                tm_file:
+                  type: string 
+                  format: base64
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/TMContent"
+        $ref: "#/components/responses-bad"
+      tags:
+        - tm_content
+
   /tm_content/{id}/:
     get:
       operationId: tm_content_read

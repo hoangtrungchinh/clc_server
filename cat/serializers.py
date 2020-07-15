@@ -29,6 +29,10 @@ class TMContentSerializer(serializers.ModelSerializer):
         model = TMContent
         fields = ('id', 'src_sentence', 'tar_sentence', 'translation_memory')        
 
+class ImportTMSerializer(serializers.Serializer):
+    tm_id = serializers.IntegerField()
+    tm_file = serializers.FileField()
+
 
 class GlossaryTypeSerializer(serializers.ModelSerializer):
     class Meta:
