@@ -24,7 +24,8 @@ from .serializers import (
     SentenceSerializer,
     GlossaryWithChildSerializer,
     FileWithChildSerializer,
-    ImportTMSerializer
+    ImportTMSerializer,
+    ImportGlossarySerializer,
 )
 
 
@@ -50,6 +51,10 @@ from django.db import IntegrityError
 from django.conf import settings
 import Levenshtein as lev
 import sys
+import openpyxl
+from rest_framework.parsers import MultiPartParser
+from django.db import IntegrityError
+
 sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
 
@@ -355,8 +360,38 @@ def sign_up(request):
         j = {"is_success":False, "err_msg": ""+str(e)}
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
 
-import openpyxl
-from rest_framework.parsers import MultiPartParser
+
+
+class ImportGlossaryView(APIView):
+    parser_classes = (MultiPartParser,)
+    def post(self, request, *args, **kwargs):
+        try:
+            serializer = ImportGlossarySerializer(data=request.data)    
+            glossary_id=request.data["glossary_id"]
+            if serializer.is_valid():
+                glossary=Glossary.objects.get(pk=glossary_id, user = self.request.user.id)
+                # import pdb; pdb.set_trace() 
+
+                file_obj = request.FILES['glossary_file']
+
+                wb = openpyxl.load_workbook(file_obj)
+                ws = wb[wb.sheetnames[0]]
+
+                for row in ws.iter_rows(min_row=2):
+                    GlossaryContent.objects.create(
+                        src_phrase=row[0].value,
+                        tar_phrase=row[1].value,
+                        glossary_id=glossary_id
+                    )
+
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except Glossary.DoesNotExist:
+            return Response({"detail":"glossary_id not found"}, status=status.HTTP_404_NOT_FOUND)
+        except IntegrityError:
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except ValueError:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class ImportTMView(APIView):
     parser_classes = (MultiPartParser,)
@@ -384,5 +419,7 @@ class ImportTMView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except TranslationMemory.DoesNotExist:
             return Response({"detail":"tm_id not found"}, status=status.HTTP_404_NOT_FOUND)
+        except IntegrityError:
+            return Response(serializer.data, status=status.HTTP_200_OK)
         except ValueError:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

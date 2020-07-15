@@ -31,7 +31,7 @@ class TMContent(models.Model):
     translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.CASCADE)
     
     class Meta:
-        unique_together = ('src_sentence', 'tar_sentence',)   
+        unique_together = ('src_sentence', 'tar_sentence', 'translation_memory')   
         
     def __str__(self):
         return str(self.id) + " | " + self.src_sentence + " | " + self.tar_sentence
@@ -76,7 +76,7 @@ class GlossaryContent(models.Model):
     glossary = models.ForeignKey(Glossary, on_delete=models.CASCADE)
     
     class Meta:
-        unique_together = ('src_phrase', 'tar_phrase',)    
+        unique_together = ('src_phrase', 'tar_phrase','glossary')    
     def __str__(self):
         return str(self.id) + " | " + self.src_phrase + " | " + self.tar_phrase
 

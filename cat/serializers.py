@@ -33,6 +33,10 @@ class ImportTMSerializer(serializers.Serializer):
     tm_id = serializers.IntegerField()
     tm_file = serializers.FileField()
 
+class ImportGlossarySerializer(serializers.Serializer):
+    glossary_id = serializers.IntegerField()
+    glossary_file = serializers.FileField()
+
 
 class GlossaryTypeSerializer(serializers.ModelSerializer):
     class Meta:

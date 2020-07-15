@@ -34,6 +34,7 @@ urlpatterns = [
     path('file/', FileUploadView.as_view()),  
     path('file/<int:pk>/', FileUploadDetailView.as_view()),  
     path('tm_content_import/', ImportTMView.as_view()),  
+    path('glossary_content_import/', ImportGlossaryView.as_view()),  
     url(r'^file_download/$', views.file_download),
     # url(r'^clc_collection/$', views.clc_collection),
     url(r'^get_tm_by_src_sentence/$', views.get_tm_by_src_sentence),
