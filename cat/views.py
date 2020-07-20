@@ -26,6 +26,7 @@ from .serializers import (
     FileWithChildSerializer,
     ImportTMSerializer,
     ImportGlossarySerializer,
+    MachineTranslateSerializer,
 )
 
 
@@ -55,9 +56,12 @@ import openpyxl
 from rest_framework.parsers import MultiPartParser
 from django.db import IntegrityError
 
+from django.core.files import File as _File
+from django.http import HttpResponse, Http404
 sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
-
+import requests
+import ast
 
 class TranslationMemoryViewSet(viewsets.ModelViewSet):
     queryset = TranslationMemory.objects.all().order_by('id')
@@ -222,9 +226,50 @@ class FileUploadDetailView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+# TODO: https://docs.python.org/3.6/library/concurrent.futures.html
+@api_view(['POST'])
+def machine_translate(request):
+    try:
+        serializer = MachineTranslateSerializer(data=request.data)    
+        
+        if serializer.is_valid():
+            src_lang=serializer.initial_data["src_lang"]
+            tar_lang=serializer.initial_data["tar_lang"]
+            sentence=serializer.initial_data["sentence"]
+            url = "https://api.mymemory.translated.net/get?langpair=%s|%s&key=9d62199240694d4c2176&q=%s" % (src_lang, tar_lang, sentence)
+            response = requests.get(url)
 
-from django.core.files import File as _File
-from django.http import HttpResponse, Http404
+            byte_str = response.content
+            dict_str = byte_str.decode("UTF-8")
+            
+            data = json.loads(dict_str)
+            dict=[]
+            # arr = data["matches"]
+
+            # for i in range(len(arr)):
+            #     if float(arr[i]["match"]) >= 0.8:
+            #         child={}
+            #         child.update({"translation": arr[i]["translation"]})
+            #         child.update({"match": arr[i]["match"]})
+            #         child.update({"source": "mymemory"})
+            #         dict.append(child)
+
+            child={}
+            child.update({"translation": data["responseData"]["translatedText"]})
+            child.update({"source": "mymemory"})
+            dict.append(child)
+
+            j = {"is_success":True, "err_msg": None} 
+            j.update({"result":dict})
+            return HttpResponse(json.dumps(j, ensure_ascii=False),
+                content_type="application/json",status=status.HTTP_200_OK)
+        j = {"is_success":False, "err_msg":  serializer.errors}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+    except ValueError as e:
+        j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+
+
 @api_view(['GET'])
 def file_download(request):
     try:

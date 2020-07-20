@@ -348,6 +348,7 @@ paths:
         schema:
           type: integer
 
+
   /get_glossary_by_src_sentence/:
     get:
       operationId: get_glossary_by_src_sentence_list
@@ -362,7 +363,32 @@ paths:
         $ref: '#/components/responses-200'
       tags:
         - glossary_content
-        
+
+
+  /glossary_content_import/:
+    post:
+      operationId: glossary_content_import
+      summary: "Import content of glossary from file excel"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                glossary_id:
+                  type: integer
+                glossary_file:
+                  type: string 
+                  format: base64
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/TMContent"
+        $ref: "#/components/responses-bad"
+      tags:
+        - glossary_content
+
   /glossary_content/:
     post:
       operationId: glossary_content_create

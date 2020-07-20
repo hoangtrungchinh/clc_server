@@ -12,7 +12,12 @@ from .models import (
     File
 )
 
-
+ENGLISH = 'en'
+VIETNAMESE = 'vi'
+LANGUAGE = [
+    (ENGLISH, 'en'),
+    (VIETNAMESE, 'vi')
+]
 class TranslationMemorySerializer(serializers.ModelSerializer):
     class Meta:
         model = TranslationMemory
@@ -36,6 +41,11 @@ class ImportTMSerializer(serializers.Serializer):
 class ImportGlossarySerializer(serializers.Serializer):
     glossary_id = serializers.IntegerField()
     glossary_file = serializers.FileField()
+
+class MachineTranslateSerializer(serializers.Serializer):
+    src_lang = serializers.ChoiceField(LANGUAGE)
+    tar_lang = serializers.ChoiceField(LANGUAGE)
+    sentence = serializers.CharField()
 
 
 class GlossaryTypeSerializer(serializers.ModelSerializer):
