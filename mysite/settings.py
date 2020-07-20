@@ -107,7 +107,7 @@ DATABASES = {
         'NAME': 'cat',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'HOST': '172.17.0.1',
         'PORT': '5433',
     }
 }
@@ -194,7 +194,7 @@ REST_FRAMEWORK = {
 ELASTICSEARCH_DSL = {
     'default': {
         # 'hosts': 'http://localhost:9200'
-        'hosts': 'http://0.0.0.0:9201'
+        'hosts': '172.17.0.1:9201'
     },
 }
 
