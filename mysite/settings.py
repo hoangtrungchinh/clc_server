@@ -191,10 +191,13 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 
+ELAS_HOST = '172.17.0.1'
+ELAS_PORT = '9201'
+
 ELASTICSEARCH_DSL = {
     'default': {
         # 'hosts': 'http://localhost:9200'
-        'hosts': '172.17.0.1:9201'
+        'hosts': ELAS_HOST+":"+ELAS_PORT
     },
 }
 
