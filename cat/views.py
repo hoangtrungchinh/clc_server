@@ -62,6 +62,9 @@ sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
 import requests
 import ast
+import concurrent.futures
+import urllib.request
+from googletrans import Translator
 
 class TranslationMemoryViewSet(viewsets.ModelViewSet):
     queryset = TranslationMemory.objects.all().order_by('id')
@@ -225,9 +228,27 @@ class FileUploadDetailView(APIView):
         file.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+def machine_traslate(engine, src_lang, tar_lang, sentence):
+    if engine == "mymemory":
+        url = "https://api.mymemory.translated.net/get?langpair=%s|%s&key=%s&q=%s" % (src_lang, tar_lang, settings.MYMEMORY_KEY,sentence)
+        response = requests.get(url)
+        byte_str = response.content
+        dict_str = byte_str.decode("UTF-8")    
+        data = json.loads(dict_str)
+        child={}
+        child.update({"translation": data["responseData"]["translatedText"]})
+        child.update({"source": "MyMemory"})
+        return child
+    elif engine == "google":
+        translator = Translator()
+        res = translator.translate(sentence, src=src_lang, dest=tar_lang)
+        child={}
+        child.update({"translation": res.text})
+        child.update({"source": "GoogleTranslate"})
+        return child
 
-# TODO: https://docs.python.org/3.6/library/concurrent.futures.html
-@api_view(['POST'])
+
+@api_view(['GET'])
 def machine_translate(request):
     try:
         serializer = MachineTranslateSerializer(data=request.data)    
@@ -236,28 +257,13 @@ def machine_translate(request):
             src_lang=serializer.initial_data["src_lang"]
             tar_lang=serializer.initial_data["tar_lang"]
             sentence=serializer.initial_data["sentence"]
-            url = "https://api.mymemory.translated.net/get?langpair=%s|%s&key=9d62199240694d4c2176&q=%s" % (src_lang, tar_lang, sentence)
-            response = requests.get(url)
-
-            byte_str = response.content
-            dict_str = byte_str.decode("UTF-8")
-            
-            data = json.loads(dict_str)
             dict=[]
-            # arr = data["matches"]
+            ENGINE=["mymemory", "google"]
 
-            # for i in range(len(arr)):
-            #     if float(arr[i]["match"]) >= 0.8:
-            #         child={}
-            #         child.update({"translation": arr[i]["translation"]})
-            #         child.update({"match": arr[i]["match"]})
-            #         child.update({"source": "mymemory"})
-            #         dict.append(child)
-
-            child={}
-            child.update({"translation": data["responseData"]["translatedText"]})
-            child.update({"source": "mymemory"})
-            dict.append(child)
+            with concurrent.futures.ThreadPoolExecutor(max_workers = 2) as executor:
+                res = {executor.submit(machine_traslate, e, src_lang, tar_lang, sentence): e for e in ENGINE}
+                for future in concurrent.futures.as_completed(res):
+                    dict.append(future.result())
 
             j = {"is_success":True, "err_msg": None} 
             j.update({"result":dict})
@@ -274,7 +280,6 @@ def machine_translate(request):
 def file_download(request):
     try:
         f = File.objects.get(id=request.data["file_id"], project__user__id = request.user.id)
-        # import pdb; pdb.set_trace() 
         path = f.file.path
         
         with open(path, 'r') as file :

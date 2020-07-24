@@ -21,6 +21,7 @@ DOCUMENT_FOLDER="documents"
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'yi(%^bh(5my=92(=qw6pmc_=!v73f1xsx%ga=s!-nvox0dsqzl'
+MYMEMORY_KEY = '9d62199240694d4c2176'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
