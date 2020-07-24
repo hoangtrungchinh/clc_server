@@ -108,7 +108,7 @@ DATABASES = {
         'NAME': 'cat',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'HOST': '172.17.0.1',
         'PORT': '5433',
     }
 }
@@ -192,10 +192,13 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 
+ELAS_HOST = '172.17.0.1'
+ELAS_PORT = '9201'
+
 ELASTICSEARCH_DSL = {
     'default': {
         # 'hosts': 'http://localhost:9200'
-        'hosts': 'http://0.0.0.0:9201'
+        'hosts': ELAS_HOST+":"+ELAS_PORT
     },
 }
 

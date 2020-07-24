@@ -311,7 +311,7 @@ def get_tm_by_src_sentence(request):
         sentence=request.data["sentence"]
         min_similarity=request.data["min_similarity"]
 
-        client = Elasticsearch()     
+        client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])     
         if "translation_memory_id" in request.data: 
             translation_memory_id = request.data["translation_memory_id"]
             q = Q('bool', must=[Q('match', src_sentence=sentence), Q('match', translation_memory__id=translation_memory_id)])
@@ -350,7 +350,7 @@ def get_glossary_by_src_sentence(request):
         phrase=request.data["sentence"]
         min_similarity=request.data["min_similarity"]
 
-        client = Elasticsearch()     
+        client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])     
         if "glossary_id" in request.data: 
             glossary_id = request.data["glossary_id"]
             q = Q('bool', must=[Q('match', src_phrase=phrase), Q('match', glossary__id=glossary_id)])
