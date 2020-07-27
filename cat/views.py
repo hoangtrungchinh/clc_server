@@ -228,7 +228,7 @@ class FileUploadDetailView(APIView):
         file.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-def machine_traslate(engine, src_lang, tar_lang, sentence):
+def machine_translation_service(engine, src_lang, tar_lang, sentence):
     if engine == "mymemory":
         url = "https://api.mymemory.translated.net/get?langpair=%s|%s&key=%s&q=%s" % (src_lang, tar_lang, settings.MYMEMORY_KEY,sentence)
         response = requests.get(url)
@@ -258,10 +258,10 @@ def machine_translate(request):
             tar_lang=serializer.initial_data["tar_lang"]
             sentence=serializer.initial_data["sentence"]
             dict=[]
-            ENGINE=["mymemory", "google"]
+            SERVICES=["mymemory", "google"]
 
             with concurrent.futures.ThreadPoolExecutor(max_workers = 2) as executor:
-                res = {executor.submit(machine_traslate, e, src_lang, tar_lang, sentence): e for e in ENGINE}
+                res = {executor.submit(machine_translation_service, e, src_lang, tar_lang, sentence): e for e in SERVICES}
                 for future in concurrent.futures.as_completed(res):
                     dict.append(future.result())
 
@@ -357,14 +357,14 @@ def get_glossary_by_src_sentence(request):
         else:
             q = Q("match", src_phrase=phrase) 
 
-        s = Search(using=client, index=settings.INDEX_GLOSSARY).query(q)[0:100] 
+        s = Search(using=client, index=settings.INDEX_GLOSSARY).query(q)[0:int(settings.ELAS_NUM_GLOSSARY_RETURN)] 
         res = s.execute()
 
         dict=[]
         for i in range(len(res)):
             simi = lev.ratio(phrase, res[i].src_phrase)
             if simi>= min_similarity:
-                if res[i].src_phrase in phrase:
+                if res[i].src_phrase.lower() in phrase.lower():
                     child={}
                     child.update({"src_phrase": res[i].src_phrase})
                     child.update({"tar_phrase": res[i].tar_phrase})

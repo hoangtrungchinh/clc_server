@@ -36,7 +36,7 @@ DELETE http://127.0.0.1:8000/glossary_content/2/
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
-
+###
 
 # Get glossary in by src
 GET http://127.0.0.1:8000/get_glossary_by_src_sentence/
@@ -44,7 +44,7 @@ Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
-  "sentence": "I thought I could count on my best friend for support during this difficult time",
+  "sentence": "I thought I could count on my best friend for support during this difficult time, To hail curses on somebody; to heap insults upon somebody; to hurl a stream of abuse at somebody, zip code a quick-tempered person a means to an end a man of unsound mind",
   "min_similarity": 0.00001,
   "glossary_id": 1
 }
