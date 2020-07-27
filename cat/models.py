@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 import os
 import sys
 from django.conf import settings
+from multiselectfield import MultiSelectField
 
 sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
@@ -10,8 +11,8 @@ from preprocessor import *
 class TranslationMemory(models.Model):
     name = models.TextField()
     description = models.TextField()
-    src_lang = models.TextField()
-    tar_lang = models.TextField()
+    src_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
+    tar_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
 
     class Meta:
@@ -52,8 +53,8 @@ class GlossaryType(models.Model):
 class Glossary(models.Model):
     name = models.TextField()
     description = models.TextField()
-    src_lang = models.TextField()
-    tar_lang = models.TextField()
+    src_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
+    tar_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     gloss_type = models.ManyToManyField(GlossaryType)
 
@@ -85,9 +86,9 @@ class GlossaryContent(models.Model):
 class Project(models.Model):
     name = models.TextField()
     user = models.ForeignKey(User, on_delete=models.PROTECT)
-    src_lang = models.TextField()
-    tar_lang = models.TextField()
-    translate_service = models.TextField()
+    src_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
+    tar_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
+    translate_service = MultiSelectField(choices=settings.TRANSLATION_SERVICE)
     translation_memory = models.ManyToManyField(TranslationMemory)
     glossary = models.ManyToManyField(Glossary)
 

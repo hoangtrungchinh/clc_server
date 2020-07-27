@@ -56,6 +56,7 @@ INSTALLED_APPS = [
 
     'rest_framework.authtoken',
     'drf_yasg',
+    'multiselectfield',
 
     # 'django_postgres_dropdb',
     # 'django_postgres_createdb',
@@ -157,7 +158,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+VIETNAMESE = 'vi'
+ENGLISH = 'en'
+LANGUAGE = [
+    (ENGLISH, 'English'),
+    (VIETNAMESE, 'Vietnamese')
+]
 
+TRANSLATION_SERVICE = [
+    ('gt', 'Google Translate'),
+    ('mm', 'My Memory'),
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

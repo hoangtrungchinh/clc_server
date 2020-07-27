@@ -1023,10 +1023,11 @@ definitions:
         type: string
         minLength: 1
       translate_service:
-        description: Serveice selected (GTrans, Bing..)
+        description: List services (gg=Google Translate, mm=My Memory)
         title: Translate service
-        type: string
-        minLength: 1
+        type: array
+        items:
+          type: string
       translation_memory:
         description: ids of translation memory
         type: array

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-
+from django.conf import settings
 from .models import (
     TranslationMemory,
     TMContent,
@@ -12,12 +12,7 @@ from .models import (
     File
 )
 
-ENGLISH = 'en'
-VIETNAMESE = 'vi'
-LANGUAGE = [
-    (ENGLISH, 'en'),
-    (VIETNAMESE, 'vi')
-]
+
 class TranslationMemorySerializer(serializers.ModelSerializer):
     class Meta:
         model = TranslationMemory
@@ -43,8 +38,8 @@ class ImportGlossarySerializer(serializers.Serializer):
     glossary_file = serializers.FileField()
 
 class MachineTranslateSerializer(serializers.Serializer):
-    src_lang = serializers.ChoiceField(LANGUAGE)
-    tar_lang = serializers.ChoiceField(LANGUAGE)
+    src_lang = serializers.ChoiceField(settings.LANGUAGE)
+    tar_lang = serializers.ChoiceField(settings.LANGUAGE)
     sentence = serializers.CharField()
 
 
@@ -76,11 +71,15 @@ class GlossaryContentSerializer(serializers.ModelSerializer):
         model = GlossaryContent
         fields = ('id', 'src_phrase', 'tar_phrase', 'glossary')
 
-
+from rest_framework import fields
+class CustomMultipleChoiceField(fields.MultipleChoiceField):
+    def to_representation(self, value):
+        return list(super().to_representation(value))
+        
 class ProjectSerializer(serializers.ModelSerializer):
     # translation_memory = TranslationMemorySerializer(many=True)
     # glossary = GlossarySerializer(many=True)
-
+    translate_service = CustomMultipleChoiceField(choices=settings.TRANSLATION_SERVICE)
     class Meta:
         model = Project        
         fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary')

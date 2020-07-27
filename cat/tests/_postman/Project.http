@@ -9,7 +9,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
   "user": 1,
   "src_lang": "en",
   "tar_lang": "vi",
-  "translate_service": "GG",
+  "translate_service": ["mm"],
   "translation_memory": [1],
   "glossary": [1]
 }
@@ -38,7 +38,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
   "user": 1,
   "src_lang": "vi",
   "tar_lang": "en",
-  "translate_service": "GG",
+  "translate_service": ["gt","mm"],
   "translation_memory": [1],
   "glossary": [1]
 }

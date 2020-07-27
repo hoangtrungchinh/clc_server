@@ -3,7 +3,7 @@ from rest_framework import status
 from cat import views
 from cat.models import TranslationMemory
 import copy
-
+from django.conf import settings
 class TestTranslationMemory(Base):
     def setUp(self):
         self.view = views.TranslationMemoryViewSet.as_view({'get': 'list'})
@@ -12,15 +12,15 @@ class TestTranslationMemory(Base):
         self.params_default = {
             "name": "TM_1",
             "description": "des",
-            "src_lang": "en",
-            "tar_lang": "vi",
+            "src_lang": settings.ENGLISH,
+            "tar_lang": settings.VIETNAMESE,
             "user": 1
         }
         self.params = {
             "name": "TM_2",
             "description": "des",
-            "src_lang": "vi",
-            "tar_lang": "en",
+            "src_lang": settings.VIETNAMESE,
+            "tar_lang": settings.ENGLISH,
             "user": 1
         }
         # Create instance with params_default

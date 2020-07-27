@@ -3,8 +3,8 @@ from rest_framework import status
 from cat import views
 from cat.models import GlossaryType, Glossary, TranslationMemory, Project, File
 from django.core.files import File as SysFile
-from django.conf import settings
 import os, copy
+from django.conf import settings
 
 class TestFile(Base):
     def setUp(self):
@@ -23,8 +23,8 @@ class TestFile(Base):
             id=1,
             name="Glossary 1",
             description="des",
-            src_lang="English",
-            tar_lang="Vietnamese",
+            src_lang=settings.ENGLISH,
+            tar_lang=settings.VIETNAMESE,
             user=self.user,
         )
         self.instance_glossary.gloss_type.set([self.instance_glosstary_type1]),
@@ -33,8 +33,8 @@ class TestFile(Base):
             id = 1,
             name="TM1",
             description="des",
-            src_lang="English",
-            tar_lang="Vietnamese",
+            src_lang=settings.ENGLISH,
+            tar_lang=settings.VIETNAMESE,
             user=self.user
         )
         
@@ -42,15 +42,15 @@ class TestFile(Base):
             id = 2,
             name="TM2",
             description="des",
-            src_lang="Vietnamese",
-            tar_lang="English",
+            src_lang=settings.VIETNAMESE,
+            tar_lang=settings.ENGLISH,
             user=self.user
         )
         self.instance_project=Project.objects.create(
             name="project 1",
             user=self.user,
-            src_lang="English",
-            tar_lang="Vietnamese",
+            src_lang=settings.ENGLISH,
+            tar_lang=settings.VIETNAMESE,
             translate_service="GG",
         )
         self.instance_project.glossary.set([self.instance_glossary]),
@@ -94,6 +94,9 @@ class TestFile(Base):
         print(self.params["file"])
         response = self.client.post(self.uri, self.params)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        if os.path.exists(response.data['file']):
+            os.remove(response.data['file'])
+  
 
     def test_update_file(self):
         response = self.client.put(self.uri + str(self.instance.id) + "/", self.params)
