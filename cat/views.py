@@ -27,6 +27,7 @@ from .serializers import (
     ImportTMSerializer,
     ImportGlossarySerializer,
     MachineTranslateSerializer,
+    SentenceWithIDSerializer,
 )
 
 
@@ -65,7 +66,7 @@ import ast
 import concurrent.futures
 import urllib.request
 from googletrans import Translator
-
+from django.db import transaction
 class TranslationMemoryViewSet(viewsets.ModelViewSet):
     queryset = TranslationMemory.objects.all().order_by('id')
     serializer_class = TranslationMemorySerializer
@@ -273,6 +274,28 @@ def machine_translate(request):
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
     except ValueError as e:
         j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+
+
+@api_view(['PUT'])
+def multi_sentences(request):
+    try:
+        # multi_serializer = SentenceWithIDSerializer(data=request.data, many=True)    
+        with transaction.atomic():
+            for sentence in request.data:
+                sen_obj = Sentence.objects.get(pk=sentence['id'])
+                serializer = SentenceSerializer(sen_obj, data=sentence)
+                
+                if serializer.is_valid():
+                    serializer.save()
+                else:
+                    j = {"is_success":False, "err_msg":  "Failed to Update data: "}
+                    return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+            j = {"is_success":True, "err_msg": None} 
+            return HttpResponse(json.dumps(j, ensure_ascii=False),
+                content_type="application/json",status=status.HTTP_200_OK)
+    except ValueError as e:
+        j = {"is_success":False, "err_msg":  "Failed to Update data: "+str(e)}
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
 
 

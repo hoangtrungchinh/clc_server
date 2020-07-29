@@ -40,6 +40,7 @@ urlpatterns = [
     url(r'^get_tm_by_src_sentence/$', views.get_tm_by_src_sentence),
     url(r'^get_glossary_by_src_sentence/$', views.get_glossary_by_src_sentence),
     url(r'^machine_translate/$', views.machine_translate),
+    url(r'^multi_sentences/$', views.multi_sentences),
     
     url(r'^docs/', include_docs_urls(title='My API title', public=True)),
 

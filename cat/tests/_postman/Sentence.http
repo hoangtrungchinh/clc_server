@@ -32,12 +32,12 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 }
 
 ###
-PUT http://127.0.0.1:8000/sentence/45/
+PUT http://127.0.0.1:8000/sentence/11/
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 
 {
-  "file": 85,
+  "file": 2,
   "src_str": "Tôi yêu em 2",
   "tar_str": "I love you 2",
   "score": 25,
@@ -49,3 +49,29 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 DELETE http://127.0.0.1:8000/sentence/3/
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
+
+###
+PUT http://127.0.0.1:8000/multi_sentences/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
+
+[
+  {
+    "id": 11,
+    "src_str": "Google LLC is an company",
+    "tar_str": "Google LLC là một công ty",
+    "score": 0,
+    "is_confirmed": false,
+    "tag": "0",
+    "file": 2
+  },
+  {
+    "id": 12,
+    "src_str": "It is considered one of the Big Four technology companies",
+    "tar_str": "Nó được nhắc đến là 1 trong 4 công ty công nghệ lớn",
+    "score": 0,
+    "is_confirmed": false,
+    "tag": "0",
+    "file": 2
+  }
+]

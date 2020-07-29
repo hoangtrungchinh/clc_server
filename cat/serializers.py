@@ -93,7 +93,13 @@ class FileSerializer(serializers.ModelSerializer):
 class SentenceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sentence
-        fields = "__all__"
+        fields = ('id', 'src_str','tar_str','score','is_confirmed','tag','file')
+
+class SentenceWithIDSerializer(serializers.ModelSerializer):
+    id = serializers.CharField()
+    class Meta:
+        model = Sentence
+        fields = ('id', 'src_str','tar_str','score','is_confirmed','tag','file')
 
 class FileWithChildSerializer(serializers.ModelSerializer):
     sentence_set = SentenceSerializer(many=True, read_only=True)

@@ -89,6 +89,17 @@ class TestSentence(Base):
             is_confirmed=self.params_default["is_confirmed"],
             tag=self.params_default["tag"],
         )
+        self.multi_params = [
+            {
+                "id":self.instance.id,
+                "file": self.instance_file.id,
+                "src_str": "Tôi yêu em rất nhiều",
+                "tar_str": "I love you so much",
+                "score": 24,
+                "is_confirmed": True,
+                "tag": "Fine"
+            }
+        ]
         
     def tearDown(self):
         if os.path.exists(self.instance_file.file.path):
@@ -118,6 +129,15 @@ class TestSentence(Base):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.params["id"]=response.data["id"]
         self.assertEqual(response.data, self.params)
+
+    def test_update_multi_sentence(self):
+        import json
+        response = self.client.put('/multi_sentences/', self.multi_params, format='json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        byte_str = response.content
+        dict_str = byte_str.decode("UTF-8")    
+        data = json.loads(dict_str)
+        self.assertEqual(data["is_success"], True)
 
     def test_delete_sentence(self):
         response = self.client.delete(self.uri + str(self.instance.id) + "/")
