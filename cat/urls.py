@@ -25,6 +25,8 @@ router.register(r'glossary_with_child', views.GlossaryWithChildViewSet, basename
 router.register(r'glossary_content', views.GlossaryContentViewSet, basename='glossary_content')
 router.register(r'project', views.ProjectViewSet, basename='project')
 router.register(r'sentence', views.SentenceViewSet, basename='sentence')
+router.register(r'corpus', views.CorpusViewSet, basename='corpus')
+router.register(r'corpus_content', views.CorpusContentViewSet, basename='corpus_content')
 
 
 # Wire up our API using automatic URL routing.
@@ -41,6 +43,7 @@ urlpatterns = [
     url(r'^get_glossary_by_src_sentence/$', views.get_glossary_by_src_sentence),
     url(r'^machine_translate/$', views.machine_translate),
     url(r'^multi_sentences/$', views.multi_sentences),
+    url(r'^import_corpus/$', views.import_corpus),
     
     url(r'^docs/', include_docs_urls(title='My API title', public=True)),
 

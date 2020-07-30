@@ -128,3 +128,25 @@ class Sentence(models.Model):
 
     def __str__(self):
         return str(self.id) + " | " + self.src_str + " | " + self.tar_str + " | " + str(self.file.id)
+
+
+class Corpus(models.Model):
+    name  = models.TextField()
+    language = models.CharField(choices=settings.LANGUAGE, max_length=2)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    description = models.TextField()
+
+    def __str__(self):
+        return str(self.id) + " | " + self.name + " | " + self.language
+    def get_user_id(self):
+        return self.user.id
+
+class CorpusContent(models.Model):
+    corpus = models.ForeignKey(Corpus, on_delete=models.CASCADE)
+    phrase = models.TextField()
+
+    def __str__(self):
+        return str(self.id) + " | " + self.phrase
+
+    class Meta:
+        unique_together = ('corpus', 'phrase')   

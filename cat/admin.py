@@ -10,6 +10,8 @@ from .models import (
     Project,
     File,
     Sentence,
+    Corpus,
+    CorpusContent,
 )
 
 
@@ -45,6 +47,14 @@ class SentenceAdmin(admin.ModelAdmin):
     list_display = ("id", "file", "src_str", "tar_str", "score", "is_confirmed", "tag")
 
 
+class CorpusAdmin(admin.ModelAdmin):
+    list_display = ("id", "name", "language", "user", "description")
+
+
+class CorpusContentAdmin(admin.ModelAdmin):
+    list_display = ("id", "phrase", "corpus")
+
+
 
 
 admin.site.register(TranslationMemory, TranslationMemoryAdmin)
@@ -55,4 +65,6 @@ admin.site.register(GlossaryContent, GlossaryContentAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(File, FileAdmin)
 admin.site.register(Sentence, SentenceAdmin)
+admin.site.register(Corpus, CorpusAdmin)
+admin.site.register(CorpusContent, CorpusContentAdmin)
 

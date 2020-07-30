@@ -9,7 +9,9 @@ from .models import (
     Project,
     File,
     Sentence,
-    File
+    File,
+    Corpus,
+    CorpusContent
 )
 
 
@@ -106,3 +108,17 @@ class FileWithChildSerializer(serializers.ModelSerializer):
     class Meta:
         model = File
         fields = ('id', 'file', 'project', 'confirm', 'sentence_set')
+
+
+
+class CorpusSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Corpus
+        fields = ("id", "name", "language", "user", "description")
+
+
+class CorpusContentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CorpusContent
+        fields = ("id", "corpus", "phrase")
+

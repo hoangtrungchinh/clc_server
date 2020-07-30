@@ -34,6 +34,7 @@ DEBUG = True
 
 INDEX_TM = 'translation_memory'
 INDEX_GLOSSARY = 'glossary'
+INDEX_CORPUS = 'corpus'
 
 
 # Application definition

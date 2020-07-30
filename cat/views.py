@@ -11,6 +11,8 @@ from .models import (
     Project,
     File,
     Sentence,
+    Corpus,
+    CorpusContent,
 )
 
 from .serializers import (
@@ -28,6 +30,8 @@ from .serializers import (
     ImportGlossarySerializer,
     MachineTranslateSerializer,
     SentenceWithIDSerializer,
+    CorpusSerializer,
+    CorpusContentSerializer,
 )
 
 
@@ -75,6 +79,14 @@ class TranslationMemoryViewSet(viewsets.ModelViewSet):
         queryset = self.queryset.filter(user_id=self.request.user.id)
         return queryset
 
+class CorpusViewSet(viewsets.ModelViewSet):
+    queryset = Corpus.objects.all().order_by('id')
+    serializer_class = CorpusSerializer
+    
+    def get_queryset(self):
+        queryset = self.queryset.filter(user_id=self.request.user.id)
+        return queryset
+
 
 class TMContentViewSet(viewsets.ModelViewSet):
     queryset = TMContent.objects.all().order_by('id')
@@ -85,6 +97,17 @@ class TMContentViewSet(viewsets.ModelViewSet):
         tm_id = self.request.query_params.get('tm_id', None)
         if tm_id is not None:
             queryset = queryset.filter(translation_memory=tm_id)
+        return queryset
+
+class CorpusContentViewSet(viewsets.ModelViewSet):
+    queryset = CorpusContent.objects.all().order_by('id')
+    serializer_class = CorpusContentSerializer
+
+    def get_queryset(self):
+        queryset = self.queryset.filter(corpus__user__id = self.request.user.id)
+        corpus_id = self.request.query_params.get('corpus_id', None)
+        if corpus_id is not None:
+            queryset = queryset.filter(corpus=corpus_id)
         return queryset
 
 
@@ -275,6 +298,62 @@ def machine_translate(request):
     except ValueError as e:
         j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+
+
+import ebooklib
+from ebooklib import epub
+from bs4 import BeautifulSoup
+
+
+@api_view(['POST'])
+def import_corpus(request):
+    try:
+        if "file" not in request.data:
+            return Response({"file":["This field is required."]}, status=status.HTTP_400_BAD_REQUEST)      
+        request_data = request.data
+        file_name = request.FILES['file'].name
+        request_data["name"] = file_name
+
+        serializer = CorpusSerializer(data=request_data)      
+        if serializer.is_valid():
+            content = ''
+            if file_name.endswith('.epub'):
+                book = epub.read_epub(request_data["file"])
+                for item in book.get_items_of_type(ebooklib.ITEM_DOCUMENT):
+                    soup = BeautifulSoup(item.content, 'html5lib')
+                    content = content + soup.get_text()
+
+                content = content.replace('\n', '\r\n')
+            elif file_name.endswith('.txt'):
+                content = (request_data["file"].read()).decode("utf-8") 
+                import pdb; pdb.set_trace() 
+            else:
+                return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
+
+            # Find src_lang
+            if request_data["language"] == settings.VIETNAMESE:
+                p = Preprocessor(Language.vietnamese)    
+            elif request_data["language"]  == settings.ENGLISH:
+                p = Preprocessor(Language.english)    
+            else:
+                return Response({"detail":"Invalid Language"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+            sents = p.segment_to_sentences(content)
+            sents_cnt = len(sents)
+            
+            corpus = serializer.save()
+            for idx in range(0, sents_cnt):                
+                sentence_refactor = p.preprocess(sents[idx])
+                sentence_serilizer = CorpusContentSerializer(data = {"phrase":sentence_refactor,"corpus":corpus.id})
+                if sentence_serilizer.is_valid():
+                    sentence_serilizer.save()
+
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    except ValueError:
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 @api_view(['PUT'])
