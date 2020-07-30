@@ -91,7 +91,6 @@ class TestFile(Base):
         self.assertEqual(self.params_default["confirm"], response.data["confirm"])                
 
     def test_create_file(self):
-        print(self.params["file"])
         response = self.client.post(self.uri, self.params)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         if os.path.exists(response.data['file']):

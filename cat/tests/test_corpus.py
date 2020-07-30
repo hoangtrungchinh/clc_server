@@ -87,7 +87,6 @@ class TestCorpus(Base):
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
-        # import pdb; pdb.set_trace() 
     def test_create_corpus_without_fields(self):
         err_params = copy.copy(self.params)
         err_params.pop("name", None)
@@ -124,7 +123,6 @@ class TestCorpus(Base):
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
-        # import pdb; pdb.set_trace() 
     def test_update_corpus_without_fields(self):
         err_params = copy.copy(self.params)
         err_params.pop("name", None)

@@ -166,13 +166,16 @@ class SentenceViewSet(viewsets.ModelViewSet):
 #TODO: fix bug security in upload file (upload to project not belongs to me)
 class FileUploadView(APIView):
     def post(self, request, *args, **kwargs):
+        from django.utils.datastructures import MultiValueDictKeyError
+
         try:
             serializer = FileSerializer(data=request.data)
             if "file" not in request.data:
                 return Response({"file":["This field is required."]}, status=status.HTTP_400_BAD_REQUEST)          
             if serializer.is_valid():
                 text = ''
-                if request.FILES['file'].name.endswith('.txt'):
+                # import pdb; pdb.set_trace()
+                if request.FILES['file'].name.lower().endswith('.txt'):
                     uf = serializer.save()
                     # Read from file
                     inp_path = os.path.join(settings.BASE_DIR, uf.file.path)
@@ -200,6 +203,8 @@ class FileUploadView(APIView):
 
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except MultiValueDictKeyError:
+            return Response({"file":["Invalid file"]}, status=status.HTTP_400_BAD_REQUEST)          
         except ValueError:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
@@ -321,14 +326,14 @@ def import_corpus(request):
         serializer = CorpusSerializer(data=request_data)      
         if serializer.is_valid():
             content = ''
-            if file_name.endswith('.epub'):
+            if file_name.lower().endswith('.epub'):
                 book = epub.read_epub(request_data["file"])
                 for item in book.get_items_of_type(ebooklib.ITEM_DOCUMENT):
                     soup = BeautifulSoup(item.content, 'html5lib')
                     content = content + soup.get_text()
 
                 content = content.replace('\n', '\r\n')
-            elif file_name.endswith('.txt'):
+            elif file_name.lower().endswith('.txt'):
                 content = (request_data["file"].read()).decode("utf-8")
             else:
                 return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
@@ -362,7 +367,6 @@ def import_corpus(request):
 @api_view(['PUT'])
 def multi_sentences(request):
     try:
-        # multi_serializer = SentenceWithIDSerializer(data=request.data, many=True)    
         with transaction.atomic():
             for sentence in request.data:
                 sen_obj = Sentence.objects.get(pk=sentence['id'])
@@ -525,7 +529,10 @@ class ImportGlossaryView(APIView):
             glossary_id=request.data["glossary_id"]
             if serializer.is_valid():
                 glossary=Glossary.objects.get(pk=glossary_id, user = self.request.user.id)
-                # import pdb; pdb.set_trace() 
+                # Check invalid file type
+                file_name = request.FILES['tm_file'].name
+                if not file_name.lower().endswith(('.xls', '.xlsx')):
+                    return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
 
                 file_obj = request.FILES['glossary_file']
 
@@ -556,7 +563,10 @@ class ImportTMView(APIView):
             tm_id=request.data["tm_id"]
             if serializer.is_valid():
                 tm=TranslationMemory.objects.get(pk=tm_id, user = self.request.user.id)
-                # import pdb; pdb.set_trace() 
+                # Check invalid file type
+                file_name = request.FILES['tm_file'].name
+                if not file_name.lower().endswith(('.xls', '.xlsx')):
+                    return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
 
                 file_obj = request.FILES['tm_file']
 
