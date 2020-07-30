@@ -8,6 +8,10 @@ curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests
 ###
 curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_vi.txt" http://127.0.0.1:8000/file/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU" 
 
+# Upload a not .txt file
+###
+curl -v -F "project=1" -F "confirm=1" -F "file=@/home/chinh/Downloads/Ebooks-en/Manual of the Warrior of Light - Paulo Coelho.epub" http://127.0.0.1:8000/file/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU" 
+
 # update a file
 ###
 curl -X PUT -v -F "project=3" -F "confirm=10" -F "file=@/home/chinh/clc_server/_postman/File.http" http://127.0.0.1:8000/file/48/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU" 
@@ -39,7 +43,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 
 # delete 1 file
 ###
-DELETE http://127.0.0.1:8000/file/1/
+DELETE http://127.0.0.1:8000/file/3/
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
 

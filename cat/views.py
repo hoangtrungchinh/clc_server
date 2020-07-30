@@ -168,23 +168,27 @@ class FileUploadView(APIView):
     def post(self, request, *args, **kwargs):
         try:
             serializer = FileSerializer(data=request.data)
-            # import pdb; pdb.set_trace() 
             if "file" not in request.data:
                 return Response({"file":["This field is required."]}, status=status.HTTP_400_BAD_REQUEST)          
             if serializer.is_valid():
-                uf = serializer.save()
-                # Read from file
-                inp_path = os.path.join(settings.BASE_DIR, uf.file.path)
-                with open(inp_path, 'r', encoding='utf8') as f:
-                    text = f.read()
-                
+                text = ''
+                if request.FILES['file'].name.endswith('.txt'):
+                    uf = serializer.save()
+                    # Read from file
+                    inp_path = os.path.join(settings.BASE_DIR, uf.file.path)
+                    with open(inp_path, 'r', encoding='utf8') as f:
+                        text = f.read()
+                else:    
+                    return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
+
                 # Find src_lang
-                # import pdb; pdb.set_trace()
                 project = Project.objects.get(pk=uf.project.id)
                 if project.src_lang == settings.VIETNAMESE:
                     p = Preprocessor(Language.vietnamese)    
                 elif project.src_lang == settings.ENGLISH:
                     p = Preprocessor(Language.english)    
+                else:
+                    return Response({"detail":"Invalid Language"}, status=status.HTTP_400_BAD_REQUEST)
 
                 sents = p.segment_to_sentences(text)
                 sents_cnt = len(sents)
@@ -325,8 +329,7 @@ def import_corpus(request):
 
                 content = content.replace('\n', '\r\n')
             elif file_name.endswith('.txt'):
-                content = (request_data["file"].read()).decode("utf-8") 
-                import pdb; pdb.set_trace() 
+                content = (request_data["file"].read()).decode("utf-8")
             else:
                 return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
 
