@@ -857,6 +857,49 @@ paths:
           type: integer
 
 
+  /get_corpus_by_phrase/:
+    get:
+      operationId: get_corpus_by_phrase_list
+      summary: "Find all sententce contain phrase in copus"
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/Corpus"
+      responses:
+        $ref: '#/components/responses-200'
+      tags:
+        - corpus
+
+  /import_corpus/:
+    post:
+      operationId: import_corpus
+      summary: "Import file .txt or .epub to Corpus"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: base64
+                  description: only support ".txt" and ".pub"
+                user:
+                  type: integer
+                language:
+                  type: string
+                  description: only support "en" and "vi"
+                description:
+                  type: string
+
+      responses:
+        $ref: '#/components/responses-201'
+      tags:
+        - corpus
+
+
 definitions:
   Glossary:
     required:
@@ -1099,6 +1142,27 @@ definitions:
         title: Translation memory
         description: id of translation memory
         type: integer
+
+  Corpus:
+    required:
+      - phrase
+    type: object
+    properties:
+      id:
+        title: ID
+        type: integer
+        readOnly: true
+      phrase:
+        title: phrase
+        description: phrase want to find in copus
+        type: string
+        minLength: 1
+      user_id:
+        title: user id
+        description: Id of user (Optional), if it's blank, The engine will search in copus of everyone
+        type: string
+        minLength: 1
+
 
   TranslationMemory:
     required:

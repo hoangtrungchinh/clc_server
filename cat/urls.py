@@ -41,6 +41,7 @@ urlpatterns = [
     # url(r'^clc_collection/$', views.clc_collection),
     url(r'^get_tm_by_src_sentence/$', views.get_tm_by_src_sentence),
     url(r'^get_glossary_by_src_sentence/$', views.get_glossary_by_src_sentence),
+    url(r'^get_corpus_by_phrase/$', views.get_corpus_by_phrase),
     url(r'^machine_translate/$', views.machine_translate),
     url(r'^multi_sentences/$', views.multi_sentences),
     url(r'^import_corpus/$', views.import_corpus),

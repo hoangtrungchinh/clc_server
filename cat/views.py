@@ -427,7 +427,7 @@ def get_tm_by_src_sentence(request):
         else:
             q = Q("match", src_sentence=sentence) 
 
-        s = Search(using=client, index=settings.INDEX_TM).query(q)[0:20] 
+        s = Search(using=client, index=settings.INDEX_TM).query(q)[0:int(settings.ELAS_NUM_TM_RETURN)] 
         res = s.execute()
 
         dict=[]
@@ -482,6 +482,38 @@ def get_glossary_by_src_sentence(request):
         
         dict = sorted(dict, key = lambda i: i['similarity'], reverse=True) 
 
+        j = {"is_success":True, "err_msg": None} 
+        j.update({"result":dict})
+
+        return HttpResponse(json.dumps(j, ensure_ascii=False),
+            content_type="application/json",status=status.HTTP_200_OK)
+
+    except Exception as e:
+        j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+def get_corpus_by_phrase(request):
+    try:
+        phrase=request.data["phrase"]
+
+        client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])     
+        if "user_id" in request.data: 
+            user_id = request.data["user_id"]
+            q = Q('bool', must=[Q('match_phrase', phrase=phrase), Q('match', corpus__user=user_id)])
+        else:
+            q = Q("match_phrase", phrase=phrase) 
+
+        s = Search(using=client, index=settings.INDEX_CORPUS).query(q)[0:int(settings.ELAS_NUM_CORPUS_RETURN)] 
+        res = s.execute()
+
+        dict=[]
+        for i in range(len(res)):
+            child={}
+            child.update({"phrase": res[i].phrase})
+            child.update({"source": res[i].corpus.name})
+            dict.append(child)
+        
         j = {"is_success":True, "err_msg": None} 
         j.update({"result":dict})
 
