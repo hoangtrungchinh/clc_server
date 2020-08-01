@@ -71,6 +71,10 @@ import concurrent.futures
 import urllib.request
 from googletrans import Translator
 from django.db import transaction
+
+import ebooklib
+from ebooklib import epub
+from bs4 import BeautifulSoup
 class TranslationMemoryViewSet(viewsets.ModelViewSet):
     queryset = TranslationMemory.objects.all().order_by('id')
     serializer_class = TranslationMemorySerializer
@@ -309,9 +313,58 @@ def machine_translate(request):
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
 
 
-import ebooklib
-from ebooklib import epub
-from bs4 import BeautifulSoup
+@api_view(['GET'])
+def glossary_find_online_info(request):
+    try:
+        S = requests.Session()
+        url = "https://en.wikipedia.org/w/api.php"
+        
+        query = request.query_params.get('query', None)
+        if query is  None:
+            j = {"is_success":False, "err_msg":  "Failed to Search data: "+str(e)}
+            return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+        
+        params = {
+            "action": "query",
+            "format": "json",
+            "list": "search",
+            "srlimit": "1",
+            "srsearch": query
+        }
+
+        R = S.get(url=url, params=params)
+        data = R.json()['query']['search']
+         
+        if data != []:
+            dict = {}
+            dict["snippet"] =  BeautifulSoup(data[0]['snippet'], 'html5lib').get_text() + "..."
+            dict["title"] =  data[0]['title']
+            pageid = data[0]['pageid']
+            
+            params = {
+                "action":"query",
+                "prop":"info",
+                "format": "json",
+                "pageids":data[0]['pageid'],
+                "inprop":"url"
+            }
+            R = S.get(url=url, params=params)
+            
+            data = R.json()
+
+            dict["url"] =  data["query"]['pages'][str(pageid)]['fullurl']
+
+            j = {"is_success":True, "err_msg": None}
+            j.update({"result":dict})
+        else:
+            j = {"is_success":False, "err_msg": "Wiki dont have it"}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+
+    except ValueError as e:
+        j = {"is_success":False, "err_msg":  "Failed to Search data: "+str(e)}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+
+
 
 
 @api_view(['POST'])

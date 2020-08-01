@@ -349,6 +349,22 @@ paths:
           type: integer
 
 
+  /glossary_find_online_info/?query={phrase}}:
+    get:
+      operationId: glossary_find_online_info
+      summary: Get information of phrase on the Internet
+      parameters:
+        - in: query
+          name: query
+          description: Phrase need to find info
+          required: true
+          schema:
+            type: string
+      responses:
+        $ref: '#/components/responses-200'
+      tags:
+        - glossary_content
+
   /get_glossary_by_src_sentence/:
     get:
       operationId: get_glossary_by_src_sentence_list

@@ -2,7 +2,7 @@ from cat.tests.base import Base
 from rest_framework import status
 from cat import views
 from cat.models import GlossaryContent, Glossary, GlossaryType
-import copy
+import copy, json
 
 class TestGlossaryContent(Base):
     def setUp(self):
@@ -157,4 +157,20 @@ class TestGlossaryContent(Base):
         self.client.credentials()
         response = self.client.delete(self.uri + str(self.instance.id) + "/")
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED) 
-      
+
+
+    def test_find_glossary_info_online(self):
+        response = self.client.get("/glossary_find_online_info/?query=virus HIV")
+        self.assertEqual(response.status_code, status.HTTP_200_OK) 
+        byte_str = response.content
+        dict_str = byte_str.decode("UTF-8")    
+        data = json.loads(dict_str)
+        self.assertEqual(data["is_success"], True)
+
+    def test_find_glossary_info_online_with_bad_result(self):
+        response = self.client.get("/glossary_find_online_info/?query=qưertyuijhgfvgb")
+        self.assertEqual(response.status_code, status.HTTP_200_OK) 
+        byte_str = response.content
+        dict_str = byte_str.decode("UTF-8")    
+        data = json.loads(dict_str)
+        self.assertEqual(data["is_success"], False)

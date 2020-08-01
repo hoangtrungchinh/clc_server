@@ -45,6 +45,7 @@ urlpatterns = [
     url(r'^machine_translate/$', views.machine_translate),
     url(r'^multi_sentences/$', views.multi_sentences),
     url(r'^import_corpus/$', views.import_corpus),
+    url(r'^glossary_find_online_info/$', views.glossary_find_online_info),
     
     url(r'^docs/', include_docs_urls(title='My API title', public=True)),
 
