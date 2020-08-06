@@ -32,6 +32,7 @@ from .serializers import (
     SentenceWithIDSerializer,
     CorpusSerializer,
     CorpusContentSerializer,
+    ProjectWithChildSerializer,
 )
 
 
@@ -128,13 +129,21 @@ class GlossaryViewSet(viewsets.ModelViewSet):
     queryset = Glossary.objects.all().order_by('id')
     serializer_class = GlossarySerializer
     
-    def get_queryset(self):
+def get_queryset(self):
         queryset = self.queryset.filter(user_id=self.request.user.id)
         return queryset
 
 class GlossaryWithChildViewSet(viewsets.ModelViewSet):
     queryset = Glossary.objects.all().order_by('id')
     serializer_class = GlossaryWithChildSerializer
+    
+    def get_queryset(self):
+        queryset = self.queryset.filter(user_id=self.request.user.id)
+        return queryset
+
+class ProjectWithChildViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.all().order_by('id')
+    serializer_class = ProjectWithChildSerializer
     
     def get_queryset(self):
         queryset = self.queryset.filter(user_id=self.request.user.id)

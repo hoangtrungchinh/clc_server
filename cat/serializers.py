@@ -85,6 +85,14 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project        
         fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary')
+        
+class ProjectWithChildSerializer(serializers.ModelSerializer):
+    translate_service = CustomMultipleChoiceField(choices=settings.TRANSLATION_SERVICE)
+    translation_memory = TranslationMemorySerializer(many=True, read_only=True)
+    glossary = GlossarySerializer(many=True, read_only=True)
+    class Meta:
+        model = Project        
+        fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary')
 
 
 class FileSerializer(serializers.ModelSerializer):

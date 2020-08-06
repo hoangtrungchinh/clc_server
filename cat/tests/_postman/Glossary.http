@@ -19,8 +19,8 @@ METHOD: POST
 DESCRIPTION:
   "name": "string",
   "description": "string",
-  "src_lang": "string", source language (English, Vietnamese),
-  "tar_lang": "string" Target language (English, Vietnamese),
+  "src_lang": "string", source language (en, vi),
+  "tar_lang": "string" Target language (en, vi),
   "user": "user_id",
   "gloss_type": [glosssary_type_id]
 
@@ -32,10 +32,10 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 {
   "name": "Uncategory 10",
   "description": "Chưa phân nhóm",
-  "src_lang": "English",
-  "tar_lang": "Vietnamese",
+  "src_lang": "en",
+  "tar_lang": "vi",
   "user": 1,
-  "gloss_type": [1]
+  "gloss_type": [2]
 }
 
 ###
@@ -46,10 +46,10 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 {
   "name": "khxhnv",
   "description": "Sản phẩm của trường ĐH Khoa học xhnv",
-  "src_lang": "English",
-  "tar_lang": "Vietnamese",
+  "src_lang": "en",
+  "tar_lang": "vi",
   "user": 1,
-  "gloss_type": [4,6]
+  "gloss_type": [3,2]
 }
 
 ###
