@@ -129,7 +129,7 @@ class GlossaryViewSet(viewsets.ModelViewSet):
     queryset = Glossary.objects.all().order_by('id')
     serializer_class = GlossarySerializer
     
-def get_queryset(self):
+    def get_queryset(self):
         queryset = self.queryset.filter(user_id=self.request.user.id)
         return queryset
 
