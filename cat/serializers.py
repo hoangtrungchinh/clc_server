@@ -1,5 +1,7 @@
 from rest_framework import serializers
 from django.conf import settings
+import ntpath
+from rest_framework import fields
 from .models import (
     TranslationMemory,
     TMContent,
@@ -59,8 +61,7 @@ class GlossarySerializer(serializers.ModelSerializer):
     def validate(self, data):
         if data['src_lang'] == data['tar_lang']:
             raise serializers.ValidationError("Source and Target language must be different")
-        return data
-    
+        return data    
 
 class GlossaryWithChildSerializer(serializers.ModelSerializer):
     gloss_type = GlossaryTypeSerializer(many=True, read_only=True)
@@ -73,14 +74,11 @@ class GlossaryContentSerializer(serializers.ModelSerializer):
         model = GlossaryContent
         fields = ('id', 'src_phrase', 'tar_phrase', 'glossary')
 
-from rest_framework import fields
 class CustomMultipleChoiceField(fields.MultipleChoiceField):
     def to_representation(self, value):
         return list(super().to_representation(value))
         
 class ProjectSerializer(serializers.ModelSerializer):
-    # translation_memory = TranslationMemorySerializer(many=True)
-    # glossary = GlossarySerializer(many=True)
     translate_service = CustomMultipleChoiceField(choices=settings.TRANSLATION_SERVICE)
     class Meta:
         model = Project        
@@ -94,11 +92,14 @@ class ProjectWithChildSerializer(serializers.ModelSerializer):
         model = Project        
         fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary')
 
-
 class FileSerializer(serializers.ModelSerializer):
+    filename = serializers.SerializerMethodField()
+    def get_filename(self, obj):
+        return ntpath.basename(obj.file.name)
+
     class Meta:
         model = File
-        fields = "__all__"
+        fields = ('id','file', 'project', 'confirm', 'filename')
 
 class SentenceSerializer(serializers.ModelSerializer):
     class Meta:
@@ -117,13 +118,10 @@ class FileWithChildSerializer(serializers.ModelSerializer):
         model = File
         fields = ('id', 'file', 'project', 'confirm', 'sentence_set')
 
-
-
 class CorpusSerializer(serializers.ModelSerializer):
     class Meta:
         model = Corpus
         fields = ("id", "name", "language", "user", "description")
-
 
 class CorpusContentSerializer(serializers.ModelSerializer):
     class Meta:

@@ -175,6 +175,7 @@ class SentenceViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(file_id=file_id)
         return queryset
 
+
 #TODO: fix bug post data to another user
 #TODO: fix bug security in upload file (upload to project not belongs to me)
 class FileUploadView(APIView):
@@ -226,6 +227,7 @@ class FileUploadView(APIView):
             p_id=(self.request.query_params.get('project_id'))
             files = File.objects.filter(project_id=p_id, project__user__id = self.request.user.id)
             serializer = FileSerializer(files, many=True)
+            print(serializer.data)
             return Response (serializer.data)
         except ValueError:
             return Response("Please check your input", status=status.HTTP_400_BAD_REQUEST)
