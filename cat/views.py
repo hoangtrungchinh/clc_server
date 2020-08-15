@@ -626,7 +626,7 @@ class ImportGlossaryView(APIView):
             if serializer.is_valid():
                 glossary=Glossary.objects.get(pk=glossary_id, user = self.request.user.id)
                 # Check invalid file type
-                file_name = request.FILES['tm_file'].name
+                file_name = request.FILES['glossary_file'].name
                 if not file_name.lower().endswith(('.xls', '.xlsx')):
                     return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
 
