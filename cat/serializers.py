@@ -16,11 +16,20 @@ from .models import (
     CorpusContent
 )
 
+from rest_framework.validators import UniqueTogetherValidator
+
 
 class TranslationMemorySerializer(serializers.ModelSerializer):
     class Meta:
         model = TranslationMemory
         fields = ('id', 'name', 'description', 'src_lang', 'tar_lang', 'user')
+        validators = [
+            UniqueTogetherValidator(
+                queryset=TranslationMemory.objects.all(),
+                message='This name is exist',
+                fields=['name', 'user']
+            )
+        ]
 
     def validate(self, data):
         if data['src_lang'] == data['tar_lang']:
@@ -51,12 +60,27 @@ class GlossaryTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = GlossaryType
         fields = ('id', 'name', 'description', 'user')
+        validators = [
+            UniqueTogetherValidator(
+                queryset=GlossaryType.objects.all(),
+                message='This name is exist',
+                fields=['name', 'user']
+            )
+        ]
+
 
 
 class GlossarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Glossary
         fields = ('id', 'name', 'description', 'src_lang', 'tar_lang', 'gloss_type', 'user')
+        validators = [
+            UniqueTogetherValidator(
+                queryset=Glossary.objects.all(),
+                message='This name is exist',
+                fields=['name', 'user']
+            )
+        ]
 
     def validate(self, data):
         if data['src_lang'] == data['tar_lang']:
@@ -83,6 +107,14 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project        
         fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary')
+        validators = [
+            UniqueTogetherValidator(
+                queryset=Project.objects.all(),
+                message='This name is exist',
+                fields=['name', 'user']
+            )
+        ]
+
         
 class ProjectWithChildSerializer(serializers.ModelSerializer):
     translate_service = CustomMultipleChoiceField(choices=settings.TRANSLATION_SERVICE)
