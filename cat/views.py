@@ -478,7 +478,7 @@ def file_download(request):
 
 
 
-@api_view(['GET'])
+@api_view(['POST'])
 def get_tm_by_src_sentence(request):
     try:
         sentence=request.data["sentence"]
@@ -487,7 +487,7 @@ def get_tm_by_src_sentence(request):
         client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])     
         if "translation_memory_id" in request.data: 
             translation_memory_id = request.data["translation_memory_id"]
-            q = Q('bool', must=[Q('match', src_sentence=sentence), Q('match', translation_memory__id=translation_memory_id)])
+            q = Q('bool', must=[Q('match', src_sentence=sentence), Q('terms', translation_memory__id=translation_memory_id)])
         else:
             q = Q("match", src_sentence=sentence) 
 
@@ -501,6 +501,7 @@ def get_tm_by_src_sentence(request):
                 child={}
                 child.update({"src_sentence": res[i].src_sentence})
                 child.update({"tar_sentence": res[i].tar_sentence})
+                child.update({"translation_memory": res[i].translation_memory.name})
                 child.update({"similarity": round(simi, 2)})
                 dict.append(child)
         
@@ -517,16 +518,16 @@ def get_tm_by_src_sentence(request):
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
 
 
-@api_view(['GET'])
+@api_view(['POST'])
 def get_glossary_by_src_sentence(request):
     try:
         phrase=request.data["sentence"]
-        min_similarity=request.data["min_similarity"]
+        min_similarity=float(request.data["min_similarity"])
 
         client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])     
         if "glossary_id" in request.data: 
             glossary_id = request.data["glossary_id"]
-            q = Q('bool', must=[Q('match', src_phrase=phrase), Q('match', glossary__id=glossary_id)])
+            q = Q('bool', must=[Q('match', src_phrase=phrase), Q('terms', glossary__id=glossary_id)])
         else:
             q = Q("match", src_phrase=phrase) 
 
@@ -542,6 +543,7 @@ def get_glossary_by_src_sentence(request):
                     child.update({"src_phrase": res[i].src_phrase})
                     child.update({"tar_phrase": res[i].tar_phrase})
                     child.update({"similarity": round(simi, 2)})
+                    child.update({"glossary": res[i].glossary.name})
                     dict.append(child)
         
         dict = sorted(dict, key = lambda i: i['similarity'], reverse=True) 
@@ -556,7 +558,7 @@ def get_glossary_by_src_sentence(request):
         j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
 
-@api_view(['GET'])
+@api_view(['POST'])
 def get_corpus_by_phrase(request):
     try:
         phrase=request.data["phrase"]

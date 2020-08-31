@@ -366,7 +366,7 @@ paths:
         - glossary_content
 
   /get_glossary_by_src_sentence/:
-    get:
+    post:
       operationId: get_glossary_by_src_sentence_list
       summary: "Get all glossary in a sentence"
       parameters:
@@ -779,7 +779,7 @@ paths:
 
 
   /get_tm_by_src_sentence/:
-    get:
+    post:
       operationId: get_tm_by_src_sentence_list
       summary: "Find target sentence from source one"
       parameters:
@@ -908,7 +908,7 @@ paths:
 
 
   /get_corpus_by_phrase/:
-    get:
+    post:
       operationId: get_corpus_by_phrase_list
       summary: "Find all sententce contain phrase in copus"
       parameters:
