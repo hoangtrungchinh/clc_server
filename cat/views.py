@@ -524,10 +524,17 @@ def get_glossary_by_src_sentence(request):
         phrase=request.data["sentence"]
         min_similarity=float(request.data["min_similarity"])
 
-        client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])     
+        client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])   
+
         if "glossary_id" in request.data: 
             glossary_id = request.data["glossary_id"]
-            q = Q('bool', must=[Q('match', src_phrase=phrase), Q('terms', glossary__id=glossary_id)])
+            a_list = glossary_id.split(".")            
+          
+            map_object = map(int, a_list)
+            list_of_integers = list(map_object)
+            
+            
+            q = Q('bool', must=[Q('match', src_phrase=phrase), Q('terms', glossary__id=list_of_integers)])
         else:
             q = Q("match", src_phrase=phrase) 
 
