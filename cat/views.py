@@ -482,8 +482,8 @@ def file_download(request):
 def get_tm_by_src_sentence(request):
     try:
         sentence=request.data["sentence"]
-        min_similarity=request.data["min_similarity"]
-
+        min_similarity=float(request.data["min_similarity"])
+        # import pdb; pdb.set_trace()
         client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])     
         if "translation_memory_id" in request.data: 
             translation_memory_id = request.data["translation_memory_id"]
@@ -528,13 +528,8 @@ def get_glossary_by_src_sentence(request):
 
         if "glossary_id" in request.data: 
             glossary_id = request.data["glossary_id"]
-            a_list = glossary_id.split(".")            
-          
-            map_object = map(int, a_list)
-            list_of_integers = list(map_object)
             
-            
-            q = Q('bool', must=[Q('match', src_phrase=phrase), Q('terms', glossary__id=list_of_integers)])
+            q = Q('bool', must=[Q('match', src_phrase=phrase), Q('terms', glossary__id=glossary_id)])
         else:
             q = Q("match", src_phrase=phrase) 
 
