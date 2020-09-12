@@ -106,7 +106,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     translate_service = CustomMultipleChoiceField(choices=settings.TRANSLATION_SERVICE)
     class Meta:
         model = Project        
-        fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary')
+        fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary', 'insert_translation_memory')
         validators = [
             UniqueTogetherValidator(
                 queryset=Project.objects.all(),

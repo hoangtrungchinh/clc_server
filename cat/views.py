@@ -46,7 +46,7 @@ from rest_framework.parsers import FileUploadParser
 
 from django.contrib.auth.models import User
 
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse, HttpResponse, Http404
 
 from elasticsearch import Elasticsearch 
 from elasticsearch_dsl import Search, Q
@@ -63,7 +63,6 @@ from rest_framework.parsers import MultiPartParser
 from django.db import IntegrityError
 
 from django.core.files import File as _File
-from django.http import HttpResponse, Http404
 sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
 import requests

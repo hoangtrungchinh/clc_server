@@ -1091,6 +1091,7 @@ definitions:
       - translate_service
       - translation_memory
       - glossary
+      - insert_translation_memory"
     type: object
     properties:
       id:
@@ -1133,6 +1134,10 @@ definitions:
         items:
           type: integer
         uniqueItems: true
+      insert_translation_memory:
+        title: insert_translation_memory
+        description: id of tm will be inserted to  when user commit sentence
+        type: integer
   ProjectWithChild:
     required:
       - name
@@ -1142,6 +1147,7 @@ definitions:
       - translate_service
       - translation_memory
       - glossary
+      - insert_translation_memory
     type: object
     properties:
       id:
@@ -1184,6 +1190,10 @@ definitions:
         items:
           type: integer
         uniqueItems: true
+      insert_translation_memory:
+        title: insert_translation_memory
+        description: id of tm will be inserted to  when user commit sentence
+        type: integer
   Sentence:
     required:
       - src_str

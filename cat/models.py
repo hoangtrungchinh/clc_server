@@ -91,6 +91,7 @@ class Project(models.Model):
     translate_service = MultiSelectField(choices=settings.TRANSLATION_SERVICE)
     translation_memory = models.ManyToManyField(TranslationMemory)
     glossary = models.ManyToManyField(Glossary)
+    insert_translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.PROTECT, related_name='%(class)s_requests_insert')
 
     class Meta:
         unique_together = ('name', 'user',)
@@ -125,6 +126,7 @@ class Sentence(models.Model):
     score = models.FloatField(default=0)
     is_confirmed = models.BooleanField(default=False)
     tag = models.TextField(blank=True)
+    tm_content = models.ForeignKey(TMContent , blank=True, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return str(self.id) + " | " + self.src_str + " | " + self.tar_str + " | " + str(self.file.id)
