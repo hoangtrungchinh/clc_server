@@ -53,7 +53,8 @@ class TestProject(Base):
             "tar_lang": settings.VIETNAMESE,
             "translate_service": ["gg"],
             "translation_memory": [1,2],
-            "glossary": [1]
+            "glossary": [1],
+            "insert_translation_memory": 1
         }
 
         self.params = {
@@ -63,7 +64,8 @@ class TestProject(Base):
             "tar_lang": settings.ENGLISH,
             "translate_service": ["mm"],
             "translation_memory": [1],
-            "glossary": [1]
+            "glossary": [1],
+            "insert_translation_memory": 1
         }
         # Create instance with params_default
         self.instance=Project.objects.create(
@@ -72,6 +74,7 @@ class TestProject(Base):
             src_lang=self.params_default["src_lang"],
             tar_lang=self.params_default["tar_lang"],
             translate_service=self.params_default["translate_service"],
+            insert_translation_memory=self.instance_memory_1
         )
         self.instance.glossary.set([self.instance_glossary]),
         self.instance.translation_memory.set([self.instance_memory_1, self.instance_memory_2]),

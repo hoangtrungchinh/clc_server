@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'drf_yasg',
     'multiselectfield',
+    'django_extensions'
 
     # 'django_postgres_dropdb',
     # 'django_postgres_createdb',
