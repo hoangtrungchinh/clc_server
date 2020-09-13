@@ -475,6 +475,45 @@ def file_download(request):
         j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
         return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
 
+# TODO: write test for api sentence_commit
+@api_view(['PUT'])
+def sentence_commit(request):
+    try:
+        tar_str=request.data["tar_str"]
+        is_confirmed=request.data["is_confirmed"]
+        sentence_id=request.data["sentence_id"]
+
+        user_id = request.user.id
+
+        sentence = Sentence.objects.get(pk=sentence_id, file__project__user_id=user_id)
+        sentence.tar_str = tar_str
+        sentence.is_confirmed = is_confirmed
+
+        if is_confirmed == True or is_confirmed == 'True':
+            if sentence.tm_content:
+                tm_content = sentence.tm_content
+                tm_content.tar_sentence = tar_str
+                tm_content.src_sentence = sentence.src_str
+                tm_content.save()
+            else:
+                tm = sentence.file.project.insert_translation_memory
+                tm_content = TMContent.objects.create(translation_memory=tm, tar_sentence = tar_str, src_sentence = sentence.src_str)
+                sentence.tm_content=tm_content
+
+            sentence.save()
+        else:
+            sentence.save()
+            tm_content = sentence.tm_content
+            tm_content.delete()
+
+        j = {"is_success":True, "err_msg": None} 
+
+        return HttpResponse(json.dumps(j, ensure_ascii=False),
+            content_type="application/json",status=status.HTTP_200_OK)
+
+    except Exception as e:
+        j = {"is_success":False, "err_msg":  str(e)}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['POST'])

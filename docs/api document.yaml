@@ -777,6 +777,24 @@ paths:
         schema:
           type: integer
 
+  "/sentence_commit/":
+    put:
+      operationId: sentence_commit
+      summary: "Commit sentence to tm"
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/Sentence_commit"
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: "#/definitions/Sentence_commit"
+        $ref: "#/components/responses-bad"
+      tags:
+        - sentence
 
   /get_tm_by_src_sentence/:
     post:
@@ -1228,6 +1246,30 @@ definitions:
         title: File
         description: id of file
         type: integer
+  Sentence_commit:
+    required:
+      - sentence_id
+      - tar_str
+      - is_confirmed
+    type: object
+    properties:
+      sentence_id:
+        title: sentence id
+        description: id of sentence
+        type: string
+        minLength: 1
+      tar_str:
+        description: target string
+        title: Tar str
+        type: string
+      is_confirmed:
+        description: if confirmed, it will be saved in translation memory
+        title: Is confirmed
+        type: boolean
+
+
+
+
   TMContent:
     required:
       - src_sentence

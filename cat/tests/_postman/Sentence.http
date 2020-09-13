@@ -75,3 +75,15 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
     "file": 2
   }
 ]
+
+
+###
+PUT http://127.0.0.1:8000/sentence_commit/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyNDEyMjg1LCJqdGkiOiI3YjM5ZTcxODNjYTQ0MTVhODJiOWI5MjY1OTQxNWYzNiIsInVzZXJfaWQiOjF9.9itEwl_cLjV8YYuyQahV8qQlhkiQsB_HFb_9qGk4kVU
+
+{
+  "sentence_id": 346,
+  "tar_str": "Nó được coi là một trong Bốn công ty công nghệ lớn nhất, cùng với Amazon, Apple và Microsoft.",
+  "is_confirmed": false
+}
