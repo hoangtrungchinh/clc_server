@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+    postgres:
+        image: postgres
+        ports:
+            - "5433:5432"
+        environment:
+            POSTGRES_PASSWORD: postgres
+            PGDATA: data_postgres
+
+    server:
+        image: chinhrb/clc_server:v6
+        ports:
+            - "8000:8000"
+        tty: true    
+        depends_on:
+            - postgres
+            - elasticsearch
+            
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1
+        ports:
+            - "9201:9200"
+        environment:
+            - discovery.type=single-node

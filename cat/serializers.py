@@ -106,7 +106,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     translate_service = CustomMultipleChoiceField(choices=settings.TRANSLATION_SERVICE)
     class Meta:
         model = Project        
-        fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary', 'insert_translation_memory')
+        fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'searchable_translation_memory', 'glossary', 'writable_translation_memory')
         validators = [
             UniqueTogetherValidator(
                 queryset=Project.objects.all(),
@@ -118,11 +118,12 @@ class ProjectSerializer(serializers.ModelSerializer):
         
 class ProjectWithChildSerializer(serializers.ModelSerializer):
     translate_service = CustomMultipleChoiceField(choices=settings.TRANSLATION_SERVICE)
-    translation_memory = TranslationMemorySerializer(many=True, read_only=True)
+    searchable_translation_memory = TranslationMemorySerializer(many=True, read_only=True)
+    writable_translation_memory = TranslationMemorySerializer(read_only=True)
     glossary = GlossarySerializer(many=True, read_only=True)
     class Meta:
         model = Project        
-        fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'translation_memory', 'glossary')
+        fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'searchable_translation_memory', 'glossary', 'writable_translation_memory')
 
 class FileSerializer(serializers.ModelSerializer):
     filename = serializers.SerializerMethodField()

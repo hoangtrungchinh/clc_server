@@ -52,10 +52,10 @@ class TestSentence(Base):
             src_lang="en",
             tar_lang="vi",
             translate_service="GG",
-            insert_translation_memory=self.instance_memory_1
+            writable_translation_memory=self.instance_memory_1
         )
         self.instance_project.glossary.set([self.instance_glossary]),
-        self.instance_project.translation_memory.set([self.instance_memory_1, self.instance_memory_2]),
+        self.instance_project.searchable_translation_memory.set([self.instance_memory_1, self.instance_memory_2]),
         self.file = SysFile(open(os.path.join(os.path.abspath(os.path.dirname(__file__)),"data", '_ex_en.txt'), 'r'))
 
         self.instance_file=File.objects.create(

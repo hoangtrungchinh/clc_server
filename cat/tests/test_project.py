@@ -52,9 +52,9 @@ class TestProject(Base):
             "src_lang": settings.ENGLISH,
             "tar_lang": settings.VIETNAMESE,
             "translate_service": ["gg"],
-            "translation_memory": [1,2],
+            "searchable_translation_memory": [1,2],
             "glossary": [1],
-            "insert_translation_memory": 1
+            "writable_translation_memory": 1
         }
 
         self.params = {
@@ -63,9 +63,9 @@ class TestProject(Base):
             "src_lang": settings.VIETNAMESE,
             "tar_lang": settings.ENGLISH,
             "translate_service": ["mm"],
-            "translation_memory": [1],
+            "searchable_translation_memory": [1],
             "glossary": [1],
-            "insert_translation_memory": 1
+            "writable_translation_memory": 1
         }
         # Create instance with params_default
         self.instance=Project.objects.create(
@@ -74,10 +74,10 @@ class TestProject(Base):
             src_lang=self.params_default["src_lang"],
             tar_lang=self.params_default["tar_lang"],
             translate_service=self.params_default["translate_service"],
-            insert_translation_memory=self.instance_memory_1
+            writable_translation_memory=self.instance_memory_1
         )
         self.instance.glossary.set([self.instance_glossary]),
-        self.instance.translation_memory.set([self.instance_memory_1, self.instance_memory_2]),
+        self.instance.searchable_translation_memory.set([self.instance_memory_1, self.instance_memory_2]),
 
 
 # VALID TESTS
@@ -145,7 +145,7 @@ class TestProject(Base):
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         err_params = copy.copy(self.params)
-        err_params["translation_memory"] = ""
+        err_params["searchable_translation_memory"] = ""
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         err_params = copy.copy(self.params)
@@ -171,7 +171,7 @@ class TestProject(Base):
         response = self.client.post(self.uri, err_params)        
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         err_params = copy.copy(self.params)
-        err_params.pop("translation_memory", None)
+        err_params.pop("searchable_translation_memory", None)
         response = self.client.post(self.uri, err_params)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         err_params = copy.copy(self.params)
@@ -201,7 +201,7 @@ class TestProject(Base):
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
         err_params = copy.copy(self.params)
-        err_params["translation_memory"] = ""
+        err_params["searchable_translation_memory"] = ""
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
         err_params = copy.copy(self.params)
@@ -233,7 +233,7 @@ class TestProject(Base):
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
         err_params = copy.copy(self.params)
-        err_params.pop("translation_memory", None)
+        err_params.pop("searchable_translation_memory", None)
         response = self.client.post(self.uri + str(self.instance.id) + "/", err_params)
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
         err_params = copy.copy(self.params)

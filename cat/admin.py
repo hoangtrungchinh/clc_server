@@ -36,7 +36,7 @@ class GlossaryContentAdmin(admin.ModelAdmin):
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ("id", "name", "user", "src_lang", "tar_lang", "translate_service", "list_glossary", "list_translation_memory", "insert_translation_memory")
+    list_display = ("id", "name", "user", "src_lang", "tar_lang", "translate_service", "list_glossary", "list_translation_memory", "writable_translation_memory")
 
 
 class FileAdmin(admin.ModelAdmin):

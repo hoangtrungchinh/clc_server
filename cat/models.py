@@ -89,9 +89,12 @@ class Project(models.Model):
     src_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
     tar_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
     translate_service = MultiSelectField(choices=settings.TRANSLATION_SERVICE)
-    translation_memory = models.ManyToManyField(TranslationMemory)
     glossary = models.ManyToManyField(Glossary)
-    insert_translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.PROTECT, related_name='%(class)s_requests_insert')
+    searchable_translation_memory = models.ManyToManyField(TranslationMemory)
+    writable_translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.PROTECT, related_name='%(class)s_requests_insert')
+    # translation_memory = models.ManyToManyField(TranslationMemory)
+    # insert_translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.PROTECT, related_name='%(class)s_requests_insert')
+
 
     class Meta:
         unique_together = ('name', 'user',)
@@ -103,7 +106,7 @@ class Project(models.Model):
         return ", ".join([p.name for p in self.glossary.all()])
 
     def list_translation_memory(self):
-        return ", ".join([p.name for p in self.translation_memory.all()])
+        return ", ".join([p.name for p in self.searchable_translation_memory.all()])
         
 
 class File(models.Model):
