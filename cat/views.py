@@ -496,7 +496,7 @@ def sentence_commit(request):
                 tm_content.src_sentence = sentence.src_str
                 tm_content.save()
             else:
-                tm = sentence.file.project.insert_translation_memory
+                tm = sentence.file.project.writable_translation_memory
                 tm_content = TMContent.objects.create(translation_memory=tm, tar_sentence = tar_str, src_sentence = sentence.src_str)
                 sentence.tm_content=tm_content
 
@@ -703,7 +703,7 @@ class ImportTMView(APIView):
                 tm=TranslationMemory.objects.get(pk=tm_id, user = self.request.user.id)
                 # Check invalid file type
                 file_name = request.FILES['tm_file'].name
-                if not file_name.lower().endswith(('.xls', '.xlsx')):
+                if not file_name.lower().endswith(('.xlsx')):
                     return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
 
                 file_obj = request.FILES['tm_file']

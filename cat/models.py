@@ -92,9 +92,6 @@ class Project(models.Model):
     glossary = models.ManyToManyField(Glossary)
     searchable_translation_memory = models.ManyToManyField(TranslationMemory)
     writable_translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.PROTECT, related_name='%(class)s_requests_insert')
-    # translation_memory = models.ManyToManyField(TranslationMemory)
-    # insert_translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.PROTECT, related_name='%(class)s_requests_insert')
-
 
     class Meta:
         unique_together = ('name', 'user',)
