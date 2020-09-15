@@ -497,7 +497,7 @@ def sentence_commit(request):
                 tm_content.save()
             else:
                 tm = sentence.file.project.writable_translation_memory
-                tm_content = TMContent.objects.create(translation_memory=tm, tar_sentence = tar_str, src_sentence = sentence.src_str)
+                tm_content, created = TMContent.objects.get_or_create(translation_memory=tm, tar_sentence = tar_str, src_sentence = sentence.src_str)
                 sentence.tm_content=tm_content
 
             sentence.save()
