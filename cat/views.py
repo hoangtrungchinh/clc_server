@@ -284,14 +284,14 @@ def machine_translation_service(engine, src_lang, tar_lang, sentence):
         data = json.loads(dict_str)
         child={}
         child.update({"translation": data["responseData"]["translatedText"]})
-        child.update({"source": "MyMemory"})
+        child.update({"source": "My Memory"})
         return child
     elif engine == "google":
         translator = Translator()
         res = translator.translate(sentence, src=src_lang, dest=tar_lang)
         child={}
         child.update({"translation": res.text})
-        child.update({"source": "GoogleTranslate"})
+        child.update({"source": "Google Translate"})
         return child
 
 
@@ -450,6 +450,33 @@ def multi_sentences(request):
 
 @api_view(['GET'])
 def file_download(request):
+    try:
+        f = File.objects.get(id=request.data["file_id"], project__user__id = request.user.id)
+        path = f.file.path
+        
+        with open(path, 'r') as file :
+            filedata = file.read()
+
+        for s in f.sentence_set.all():
+            filedata = filedata.replace(s.src_str, s.tar_str, 1)
+
+        new_path = os.path.splitext(path)[0]+" (export)" + os.path.splitext(path)[1]
+        
+        # with open(new_path, 'w') as file:
+        #     file.write(filedata)
+        # print(os.path.basename(new_path))
+
+        response = HttpResponse(filedata, content_type="text/plain")
+        response['Content-Disposition'] = 'attachment; filename={0}'.format(os.path.basename(new_path))
+        return response
+    except File.DoesNotExist:
+        raise Http404
+    except Exception as e:
+        j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
+        return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET'])
+def tm_download(request):
     try:
         f = File.objects.get(id=request.data["file_id"], project__user__id = request.user.id)
         path = f.file.path
