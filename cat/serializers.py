@@ -50,6 +50,11 @@ class ImportGlossarySerializer(serializers.Serializer):
     glossary_id = serializers.IntegerField()
     glossary_file = serializers.FileField()
 
+class ImportCorpusSerializer(serializers.Serializer):
+    corpus_id = serializers.IntegerField()
+    corpus_file = serializers.FileField()
+    language = serializers.ChoiceField(settings.LANGUAGE)
+
 class MachineTranslateSerializer(serializers.Serializer):
     src_lang = serializers.ChoiceField(settings.LANGUAGE)
     tar_lang = serializers.ChoiceField(settings.LANGUAGE)

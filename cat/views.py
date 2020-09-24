@@ -28,6 +28,7 @@ from .serializers import (
     FileWithChildSerializer,
     ImportTMSerializer,
     ImportGlossarySerializer,
+    ImportCorpusSerializer,
     MachineTranslateSerializer,
     SentenceWithIDSerializer,
     CorpusSerializer,
@@ -753,3 +754,59 @@ class ImportTMView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         except ValueError:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+def import_exist_corpus(request):
+    try:
+        serializer = ImportCorpusSerializer(data=request.data)    
+        corpus_id=request.data["corpus_id"]
+        request_data = request.data
+        if serializer.is_valid():
+            corpus=Corpus.objects.get(pk=corpus_id, user = request.user.id)
+            # Check invalid file type
+            file_name = request.FILES['corpus_file'].name
+            if not file_name.lower().endswith(('.txt', '.epub')):
+                return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
+
+            file_obj = request.FILES['corpus_file']
+
+            content = ''
+            if file_name.lower().endswith('.epub'):
+                book = epub.read_epub(request_data["corpus_file"])
+                for item in book.get_items_of_type(ebooklib.ITEM_DOCUMENT):
+                    soup = BeautifulSoup(item.content, 'html5lib')
+                    content = content + soup.get_text()
+
+                content = content.replace('\n', '\r\n')
+            elif file_name.lower().endswith('.txt'):
+                content = (request_data["corpus_file"].read()).decode("utf-8")
+            else:
+                return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
+
+            # Find src_lang
+            if request_data["language"] == settings.VIETNAMESE:
+                p = Preprocessor(Language.vietnamese)    
+            elif request_data["language"]  == settings.ENGLISH:
+                p = Preprocessor(Language.english)    
+            else:
+                return Response({"detail":"Invalid Language"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+            sents = p.segment_to_sentences(content)
+            sents_cnt = len(sents)
+            
+            for idx in range(0, sents_cnt):                
+                sentence_refactor = p.preprocess(sents[idx])
+                sentence_serilizer = CorpusContentSerializer(data = {"phrase":sentence_refactor,"corpus":corpus_id})
+                if sentence_serilizer.is_valid():
+                    sentence_serilizer.save()
+
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    except Glossary.DoesNotExist:
+        return Response({"detail":"corpus_id not found"}, status=status.HTTP_404_NOT_FOUND)
+    except IntegrityError:
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    except ValueError:
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -953,7 +953,7 @@ paths:
                 file:
                   type: string
                   format: base64
-                  description: only support ".txt" and ".pub"
+                  description: only support ".txt" and ".epub"
                 user:
                   type: integer
                 language:
@@ -963,7 +963,32 @@ paths:
                   type: string
 
       responses:
-        $ref: '#/components/responses-201'
+        $ref: '#/components/responses-200'
+      tags:
+        - corpus
+
+  /import_exist_corpus/:
+    post:
+      operationId: import_exist_corpus
+      summary: "Import file .txt or .epub to exist Corpus"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                corpus_file:
+                  type: string
+                  format: base64
+                  description: only support ".txt" and ".epub"
+                corpus_id:
+                  type: integer
+                language:
+                  type: string
+                  description: only support "en" and "vi"
+
+      responses:
+        $ref: '#/components/responses-200'
       tags:
         - corpus
 

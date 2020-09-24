@@ -46,6 +46,7 @@ urlpatterns = [
     url(r'^machine_translate/$', views.machine_translate),
     url(r'^multi_sentences/$', views.multi_sentences),
     url(r'^import_corpus/$', views.import_corpus),
+    url(r'^import_exist_corpus/$', views.import_exist_corpus),
     url(r'^glossary_find_online_info/$', views.glossary_find_online_info),
     url(r'^sentence_commit/$', views.sentence_commit),
     
