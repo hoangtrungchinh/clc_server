@@ -983,9 +983,6 @@ paths:
                   description: only support ".txt" and ".epub"
                 corpus_id:
                   type: integer
-                language:
-                  type: string
-                  description: only support "en" and "vi"
 
       responses:
         $ref: '#/components/responses-200'

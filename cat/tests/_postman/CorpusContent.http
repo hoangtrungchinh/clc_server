@@ -46,12 +46,12 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 
 # Get corpus in by phrase
-GET http://127.0.0.1:8000/get_corpus_by_phrase/
+POST http://127.0.0.1:8000/get_corpus_by_phrase/
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
 
 {
-  "phrase": "However difficult"
+  "phrase": "september"
 }
 
 
@@ -64,9 +64,30 @@ curl -v -F "language=vi" -F  "user=1" -F "description=1" -F "file=@/home/chinh/c
 curl -v -F "corpus_id=1" -F "language=en" -F "corpus_file=@/home/lw/clc_server/cat/tests/data/_ex_en.txt" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
 ###
 
-curl -v -F "corpus_id=2" -F "language=vi" -F "corpus_file=@/home/lw/Downloads/epub - VH co dien nuoc ngoai/Chàng lái buôn thành Venise - William Shakespeare.epub" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
+curl -v -F "corpus_id=2" -F "language=vi" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/epub/vi/Chàng lái buôn thành Venise - William Shakespeare.epub" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
 ###
 
-curl -v -F "corpus_id=1" -F "language=en" -F "corpus_file=@/home/lw/Downloads/The Woman in the Window - A. J. Finn.epub" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
+curl -v -F "corpus_id=1" -F "language=en" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/epub/en/A Lover_s Complaint (Dodo Press - William Shakespeare.epub" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
+
+curl -v -F "corpus_id=1" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/txt/en/file 1.txt" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
 
 
+###
+
+# Get corpus in by phrase
+curl --request GET 
+	--url 'https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=wat' 
+	--header 'x-rapidapi-host: mashape-community-urban-dictionary.p.rapidapi.com' 
+	--header 'x-rapidapi-key: 16817ca4a8msh60890ba17a4a014p180294jsn0c72b5abd417'
+
+
+###
+
+# Get corpus in by phrase
+POST http://127.0.0.1:8000/get_corpus_by_phrase/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+
+{
+  "phrase": "september"
+}

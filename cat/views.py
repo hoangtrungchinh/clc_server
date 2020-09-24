@@ -785,9 +785,9 @@ def import_exist_corpus(request):
                 return Response({"detail":"Invalid file type"}, status=status.HTTP_400_BAD_REQUEST)
 
             # Find src_lang
-            if request_data["language"] == settings.VIETNAMESE:
+            if corpus.language == settings.VIETNAMESE:
                 p = Preprocessor(Language.vietnamese)    
-            elif request_data["language"]  == settings.ENGLISH:
+            elif corpus.language  == settings.ENGLISH:
                 p = Preprocessor(Language.english)    
             else:
                 return Response({"detail":"Invalid Language"}, status=status.HTTP_400_BAD_REQUEST)
@@ -804,7 +804,7 @@ def import_exist_corpus(request):
 
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    except Glossary.DoesNotExist:
+    except Corpus.DoesNotExist:
         return Response({"detail":"corpus_id not found"}, status=status.HTTP_404_NOT_FOUND)
     except IntegrityError:
         return Response(serializer.data, status=status.HTTP_200_OK)
