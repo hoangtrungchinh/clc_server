@@ -159,7 +159,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
     queryset = Project.objects.all().order_by('id')
     
-    def get_queryset(self):
+    def get_queryset(self):        
         queryset = self.queryset.filter(user_id=self.request.user.id)
         return queryset
 
@@ -226,8 +226,13 @@ class FileUploadView(APIView):
         try:
             p_id=(self.request.query_params.get('project_id'))
             files = File.objects.filter(project_id=p_id, project__user__id = self.request.user.id)
+            for f in files:
+                empty_row = Sentence.objects.filter(file_id=f.id, tar_str = "").count()
+                all_row = Sentence.objects.filter(file_id=f.id).count()
+                f.confirm = 100*(1-empty_row/all_row)
+                f.save()
+
             serializer = FileSerializer(files, many=True)
-            print(serializer.data)
             return Response (serializer.data)
         except ValueError:
             return Response("Please check your input", status=status.HTTP_400_BAD_REQUEST)
