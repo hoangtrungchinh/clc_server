@@ -1,3 +1,4 @@
+django-extensions==3.0.9
 Django==2.2.12
 elasticsearch-dsl==7.2.0
 django-elasticsearch-dsl==7.1.1
@@ -6,7 +7,7 @@ drf-yasg==1.17.1
 python-Levenshtein==0.12.0
 psycopg2-binary
 djangorestframework-jwt==1.11.0
-openpyxl==2.5.1  
+openpyxl==2.5.1
 googletrans==3.0.0
 djangorestframework-simplejwt==4.4.0
 django-request-logging==0.7.1

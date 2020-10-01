@@ -40,7 +40,7 @@ class TranslationMemorySerializer(serializers.ModelSerializer):
 class TMContentSerializer(serializers.ModelSerializer):
     class Meta:
         model = TMContent
-        fields = ('id', 'src_sentence', 'tar_sentence', 'translation_memory')        
+        fields = ('id', 'src_sentence', 'tar_sentence', 'translation_memory')
 
 class ImportTMSerializer(serializers.Serializer):
     tm_id = serializers.IntegerField()
@@ -58,6 +58,7 @@ class MachineTranslateSerializer(serializers.Serializer):
     src_lang = serializers.ChoiceField(settings.LANGUAGE)
     tar_lang = serializers.ChoiceField(settings.LANGUAGE)
     sentence = serializers.CharField()
+    service = serializers.MultipleChoiceField(choices=settings.TRANSLATION_SERVICE )
 
 
 class GlossaryTypeSerializer(serializers.ModelSerializer):
@@ -89,7 +90,7 @@ class GlossarySerializer(serializers.ModelSerializer):
     def validate(self, data):
         if data['src_lang'] == data['tar_lang']:
             raise serializers.ValidationError("Source and Target language must be different")
-        return data    
+        return data
 
 class GlossaryWithChildSerializer(serializers.ModelSerializer):
     gloss_type = GlossaryTypeSerializer(many=True, read_only=True)
@@ -105,11 +106,11 @@ class GlossaryContentSerializer(serializers.ModelSerializer):
 class CustomMultipleChoiceField(fields.MultipleChoiceField):
     def to_representation(self, value):
         return list(super().to_representation(value))
-        
+
 class ProjectSerializer(serializers.ModelSerializer):
     translate_service = CustomMultipleChoiceField(choices=settings.TRANSLATION_SERVICE)
     class Meta:
-        model = Project        
+        model = Project
         fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'searchable_translation_memory', 'glossary', 'writable_translation_memory')
         validators = [
             UniqueTogetherValidator(
@@ -119,14 +120,14 @@ class ProjectSerializer(serializers.ModelSerializer):
             )
         ]
 
-        
+
 class ProjectWithChildSerializer(serializers.ModelSerializer):
     translate_service = CustomMultipleChoiceField(choices=settings.TRANSLATION_SERVICE)
     searchable_translation_memory = TranslationMemorySerializer(many=True, read_only=True)
     writable_translation_memory = TranslationMemorySerializer(read_only=True)
     glossary = GlossarySerializer(many=True, read_only=True)
     class Meta:
-        model = Project        
+        model = Project
         fields = ('id', 'name', 'user', 'src_lang', 'tar_lang', 'translate_service', 'searchable_translation_memory', 'glossary', 'writable_translation_memory')
 
 class FileSerializer(serializers.ModelSerializer):

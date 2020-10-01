@@ -66,7 +66,7 @@ INSTALLED_APPS = [
 
 SITE_ID=1
 
-MIDDLEWARE = [        
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -170,6 +170,7 @@ LANGUAGE = [
 TRANSLATION_SERVICE = [
     ('gt', 'Google Translate'),
     ('mm', 'My Memory'),
+    ('onmt', 'Open-NMT'),
 ]
 
 # Internationalization
