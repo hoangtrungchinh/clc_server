@@ -12,8 +12,8 @@ from django.contrib import admin
 from .views import *
 
 from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
+  TokenObtainPairView,
+  TokenRefreshView,
 )
 
 router = routers.DefaultRouter()
@@ -33,31 +33,31 @@ router.register(r'corpus_content', views.CorpusContentViewSet, basename='corpus_
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('file/', FileUploadView.as_view()),  
-    path('file/<int:pk>/', FileUploadDetailView.as_view()),  
-    path('tm_content_import/', ImportTMView.as_view()),  
-    path('glossary_content_import/', ImportGlossaryView.as_view()),  
-    url(r'^file_download/$', views.file_download),
-    # url(r'^clc_collection/$', views.clc_collection),
-    url(r'^get_tm_by_src_sentence/$', views.get_tm_by_src_sentence),
-    url(r'^get_glossary_by_src_sentence/$', views.get_glossary_by_src_sentence),
-    url(r'^get_corpus_by_phrase/$', views.get_corpus_by_phrase),
-    url(r'^machine_translate/$', views.machine_translate),
-    url(r'^multi_sentences/$', views.multi_sentences),
-    url(r'^import_corpus/$', views.import_corpus),
-    url(r'^import_exist_corpus/$', views.import_exist_corpus),
-    url(r'^glossary_find_online_info/$', views.glossary_find_online_info),
-    url(r'^sentence_commit/$', views.sentence_commit),
-    
-    url(r'^docs/', include_docs_urls(title='My API title', public=True)),
+  path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+  path('file/', FileUploadView.as_view()),
+  path('file/<int:pk>/', FileUploadDetailView.as_view()),
+  path('tm_content_import/', ImportTMView.as_view()),
+  path('glossary_content_import/', ImportGlossaryView.as_view()),
+  url(r'^file_download/$', views.file_download),
+  # url(r'^clc_collection/$', views.clc_collection),
+  url(r'^get_tm_by_src_sentence/$', views.get_tm_by_src_sentence),
+  url(r'^get_glossary_by_src_sentence/$', views.get_glossary_by_src_sentence),
+  url(r'^get_corpus_by_phrase/$', views.get_corpus_by_phrase),
+  url(r'^machine_translate/$', views.machine_translate),
+  url(r'^multi_sentences/$', views.multi_sentences),
+  url(r'^import_corpus/$', views.import_corpus),
+  url(r'^import_exist_corpus/$', views.import_exist_corpus),
+  url(r'^glossary_find_online_info/$', views.glossary_find_online_info),
+  url(r'^sentence_commit/$', views.sentence_commit),
+
+  url(r'^docs/', include_docs_urls(title='My API title', public=True)),
 
 
 
    #  url(r'^login/', views.login.as_view()),
-    url(r'^sign_up/$', views.sign_up),
-    path('sign_in/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('token_refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+  url(r'^sign_up/$', views.sign_up),
+  path('sign_in/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+  path('token_refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
 
 urlpatterns += router.urls
@@ -68,12 +68,12 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 schema_view = get_schema_view(
    openapi.Info(
-      title="Snippets API",
-      default_version='v1',
-      description="Test description",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@snippets.local"),
-      license=openapi.License(name="BSD License"),
+    title="Snippets API",
+    default_version='v1',
+    description="Test description",
+    terms_of_service="https://www.google.com/policies/terms/",
+    contact=openapi.Contact(email="contact@snippets.local"),
+    license=openapi.License(name="BSD License"),
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
