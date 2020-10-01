@@ -40,7 +40,7 @@ Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
 
 {
-  "phrase": "warrior",
+  "phrase": "love",
   "user_id": 1
 }
 ###
@@ -75,9 +75,9 @@ curl -v -F "corpus_id=1" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/
 ###
 
 # Get corpus in by phrase
-curl --request GET 
-	--url 'https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=wat' 
-	--header 'x-rapidapi-host: mashape-community-urban-dictionary.p.rapidapi.com' 
+curl --request GET
+	--url 'https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=wat'
+	--header 'x-rapidapi-host: mashape-community-urban-dictionary.p.rapidapi.com'
 	--header 'x-rapidapi-key: 16817ca4a8msh60890ba17a4a014p180294jsn0c72b5abd417'
 
 
