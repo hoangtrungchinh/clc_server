@@ -300,6 +300,21 @@ def machine_translation_service(engine, src_lang, tar_lang, sentence):
     child.update({"translation": res.text})
     child.update({"source": "Google Translate"})
     return child
+  elif engine == "onmt":
+    response=""
+    if (src_lang == "en" and tar_lang == "vi"):
+      response = requests.post(settings.ONMT_URL, data=json.dumps([{"src": sentence, "id": settings.ONMT_MODEL_EN_VI}]), headers = {'Content-Type': 'application/json'})
+    elif (src_lang == "vi" and tar_lang == "en"):
+      response = requests.post(settings.ONMT_URL, data=json.dumps([{"src": sentence, "id": settings.ONMT_MODEL_VI_EN}]), headers = {'Content-Type': 'application/json'})
+      
+    byte_str = response.content
+    dict_str = byte_str.decode("UTF-8")
+    data = json.loads(dict_str)
+    child={}
+    
+    child.update({"translation": data[0][0]["tgt"]})
+    child.update({"source": "Open-NMT"})
+    return child
 
 
 @api_view(['GET'])
@@ -307,14 +322,13 @@ def machine_translate(request):
   try:
     serializer = MachineTranslateSerializer(data=request.data)
     if serializer.is_valid():
-      # import pdb; pdb.set_trace()
       service=serializer.initial_data["service"]
       src_lang=serializer.initial_data["src_lang"]
       tar_lang=serializer.initial_data["tar_lang"]
       sentence=serializer.initial_data["sentence"]
       dict=[]
 
-      with concurrent.futures.ThreadPoolExecutor(max_workers = 2) as executor:
+      with concurrent.futures.ThreadPoolExecutor(max_workers = 3) as executor:
         res = {executor.submit(machine_translation_service, e, src_lang, tar_lang, sentence): e for e in service}
         for future in concurrent.futures.as_completed(res):
           dict.append(future.result())

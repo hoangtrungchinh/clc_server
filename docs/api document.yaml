@@ -990,6 +990,44 @@ paths:
         - corpus
 
 
+  /machine_translate/:
+    get:
+      operationId: machine_translate
+      summary: "Translate sentence from google, Open-NMT, My Memory"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                src_lang:
+                  title: Src lang
+                  description: source language ("en", "vi")
+                  type: string
+                  minLength: 1
+                tar_lang:
+                  title: Tar lang
+                  description: target language ("en", "vi")
+                  type: string
+                  minLength: 1
+                sentence:
+                  title: sentence
+                  description: sentence need to translated
+                  type: string
+                  minLength: 1
+                service:
+                  description: List services (gg=Google Translate, mm=My Memory, onmt=Open-NMT)
+                  title: Translate service
+                  type: array
+                  items:
+                    type: string
+
+      responses:
+        $ref: '#/components/responses-200'
+      tags:
+        - machine_translate
+
+
 definitions:
   Glossary:
     required:
@@ -1015,12 +1053,10 @@ definitions:
         minLength: 1
       src_lang:
         title: Src lang
-        description: source language
-        type: string
-        minLength: 1
+        description: source language ("en", "vi") 1
       tar_lang:
         title: Tar lang
-        description: target language
+        description: target language ("en", "vi")
         type: string
         minLength: 1
       gloss_type:
@@ -1104,12 +1140,10 @@ definitions:
         minLength: 1
       src_lang:
         title: Src lang
-        description: source language
-        type: string
-        minLength: 1
+        description: source language ("en", "vi") 1
       tar_lang:
         title: Tar lang
-        description: target language
+        description: target language ("en", "vi")
         type: string
         minLength: 1
       gloss_type:
@@ -1147,12 +1181,11 @@ definitions:
         description: id of user
         type: integer
       src_lang:
-        description: source language of this project
-        title: Src lang
+        description: source language ("en", "vi")
         type: string
         minLength: 1
       tar_lang:
-        description: target language of this project
+        description: target language ("en", "vi")
         title: Tar lang
         type: string
         minLength: 1
@@ -1203,12 +1236,11 @@ definitions:
         description: id of user
         type: integer
       src_lang:
-        description: source language of this project
-        title: Src lang
+        description: source language ("en", "vi") 
         type: string
         minLength: 1
       tar_lang:
-        description: target language of this project
+        description: target language ("en", "vi")
         title: Tar lang
         type: string
         minLength: 1
@@ -1362,12 +1394,10 @@ definitions:
         minLength: 1
       src_lang:
         title: Src lang
-        description: source language
-        type: string
-        minLength: 1
+        description: source language ("en", "vi") 1
       tar_lang:
         title: Tar lang
-        description: target language
+        description: target language ("en", "vi")
         type: string
         minLength: 1
       user:

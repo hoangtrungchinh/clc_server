@@ -217,6 +217,12 @@ REST_FRAMEWORK = {
   }
 }
 
+ONMT_HOST = '0.0.0.0'
+ONMT_PORT = '5000'
+ONMT_URL = 'http://' + ONMT_HOST + ':' + ONMT_PORT + '/translator/translate'
+ONMT_MODEL_EN_VI = 0
+ONMT_MODEL_VI_EN = 1
+
 ELAS_HOST = '172.17.0.1'
 ELAS_PORT = '9201'
 ELAS_NUM_GLOSSARY_RETURN = '100'
