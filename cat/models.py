@@ -88,7 +88,7 @@ class Project(models.Model):
   user = models.ForeignKey(User, on_delete=models.PROTECT)
   src_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
   tar_lang = models.CharField(choices=settings.LANGUAGE, max_length=2)
-  translate_service = MultiSelectField(choices=settings.TRANSLATION_SERVICE)
+  translate_service = MultiSelectField(choices=settings.TRANSLATION_SERVICE, max_length=200)
   glossary = models.ManyToManyField(Glossary)
   searchable_translation_memory = models.ManyToManyField(TranslationMemory)
   writable_translation_memory = models.ForeignKey(TranslationMemory, on_delete=models.PROTECT, related_name='%(class)s_requests_insert')

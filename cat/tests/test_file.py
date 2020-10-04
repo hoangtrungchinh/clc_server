@@ -51,7 +51,7 @@ class TestFile(Base):
       user=self.user,
       src_lang=settings.ENGLISH,
       tar_lang=settings.VIETNAMESE,
-      translate_service="GG",
+      translate_service=["gt"],
       writable_translation_memory=self.instance_memory_1
     )
     self.instance_project.glossary.set([self.instance_glossary]),

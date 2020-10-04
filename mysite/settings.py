@@ -170,7 +170,7 @@ LANGUAGE = [
 TRANSLATION_SERVICE = [
   ('gt', 'Google Translate'),
   ('mm', 'My Memory'),
-  ('onmt', 'Open-NMT'),
+  ('onmt', 'Open NMT')
 ]
 
 # Internationalization
@@ -212,8 +212,8 @@ REST_FRAMEWORK = {
     ],
 
   'DEFAULT_THROTTLE_RATES': {
-    'anon': '5/minute',
-    'user': '30/minute'
+    'anon': '500/minute',
+    'user': '3000/minute'
   }
 }
 

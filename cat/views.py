@@ -569,7 +569,6 @@ def get_tm_by_src_sentence(request):
   try:
     sentence=request.data["sentence"]
     min_similarity=float(request.data["min_similarity"])
-    # import pdb; pdb.set_trace()
     client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])
     if "translation_memory_id" in request.data:
       translation_memory_id = request.data["translation_memory_id"]
