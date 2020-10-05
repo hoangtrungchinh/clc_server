@@ -17,3 +17,4 @@ django-multiselectfield==0.1.12
 EbookLib==0.17.1
 beautifulsoup4==4.8.2
 html5lib==1.0.1
+semantic-text-similarity==1.0.3  

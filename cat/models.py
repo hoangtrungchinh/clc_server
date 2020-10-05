@@ -5,6 +5,9 @@ import sys
 from django.conf import settings
 from multiselectfield import MultiSelectField
 
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 sys.path.append(os.path.join(settings.BASE_DIR,'preprocessing_python'))
 from preprocessor import *
 
@@ -152,3 +155,24 @@ class CorpusContent(models.Model):
 
   class Meta:
     unique_together = ('corpus', 'phrase')
+
+
+class Config(models.Model):
+  user = models.ForeignKey(User, on_delete=models.PROTECT)
+  min_similarity_for_gloss  = models.FloatField(default=0.8)
+  min_similarity_for_tm  = models.FloatField(default=0.8)
+  similarity_type = models.CharField(max_length=20, choices=settings.SIMILARITY_TYPE, default=settings.SIMILARITY_TYPE[0][0])
+
+  def __str__(self):
+    return str(self.id) + " | " + str(self.user.id) + " | " + str(self.min_similarity_for_gloss) + " | " + str(self.min_similarity_for_tm) + " | " + str(self.similarity_type)
+
+  def get_user_id(self):
+    return self.user.id
+  class Meta:
+    unique_together = ('user', 'min_similarity_for_gloss', 'min_similarity_for_tm', 'similarity_type')
+
+
+@receiver(post_save, sender=User)
+def create_config(sender, instance, created, **kwargs):
+  if created:
+    Config.objects.create(user=instance, min_similarity_for_gloss=0.8, min_similarity_for_tm=0.8, similarity_type = settings.SIMILARITY_TYPE[0][0])

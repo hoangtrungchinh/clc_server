@@ -173,6 +173,11 @@ TRANSLATION_SERVICE = [
   ('onmt', 'Open NMT')
 ]
 
+SIMILARITY_TYPE = [
+  ('lev', 'Lexical Similarity: Levenshtein'),
+  ('bert', 'Semantic Similarity: BERT Model')
+]
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 

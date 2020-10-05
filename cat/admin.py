@@ -12,6 +12,7 @@ from .models import (
   Sentence,
   Corpus,
   CorpusContent,
+  Config
 )
 
 
@@ -54,6 +55,9 @@ class CorpusAdmin(admin.ModelAdmin):
 class CorpusContentAdmin(admin.ModelAdmin):
   list_display = ("id", "phrase", "corpus")
 
+class ConfigAdmin(admin.ModelAdmin):
+  list_display = ("id", "user", "min_similarity_for_gloss", "min_similarity_for_tm", "similarity_type")
+
 
 
 
@@ -67,4 +71,5 @@ admin.site.register(File, FileAdmin)
 admin.site.register(Sentence, SentenceAdmin)
 admin.site.register(Corpus, CorpusAdmin)
 admin.site.register(CorpusContent, CorpusContentAdmin)
+admin.site.register(Config, ConfigAdmin)
 
