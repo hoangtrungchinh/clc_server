@@ -52,12 +52,26 @@ Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
 
 {
-  "sentence": "Love in your eyes",
+  "sentence": "When I was young I listen to the radio",
   "min_similarity": 0.5,
-  "translation_memory_id": [1,2]
+  "translation_memory_id": [1,2],
+  "similarity_type": "lev"
+}
+###
+
+# Get TM in by src
+POST http://127.0.0.1:8000/get_tm_by_src_sentence/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+
+{
+  "sentence": "When I was young I listen to the radio",
+  "min_similarity": 0.5,
+  "translation_memory_id": [1,2],
+  "similarity_type": "bert"
 }
 
-
+# lev or bert
 # Upload a english file
 ###
 curl -v -F "tm_id=3" -F "tm_file=@/home/chinh/Documents/en-vi-2-sentences.xlsx" http://127.0.0.1:8000/tm_content_import/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI" 

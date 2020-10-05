@@ -44,6 +44,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework.parsers import FileUploadParser
+from semantic_text_similarity.models import ClinicalBertSimilarity
 
 from django.contrib.auth.models import User
 
@@ -54,7 +55,7 @@ from elasticsearch_dsl import Search, Q
 
 import json
 import os
-
+import time
 from django.db import IntegrityError
 from django.conf import settings
 import Levenshtein as lev
@@ -567,6 +568,8 @@ def sentence_commit(request):
 @api_view(['POST'])
 def get_tm_by_src_sentence(request):
   try:
+    start_time = time.time()
+    similarity_type=request.data["similarity_type"]
     sentence=request.data["sentence"]
     min_similarity=float(request.data["min_similarity"])
     client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])
@@ -579,20 +582,32 @@ def get_tm_by_src_sentence(request):
     s = Search(using=client, index=settings.INDEX_TM).query(q)[0:int(settings.ELAS_NUM_TM_RETURN)]
     res = s.execute()
 
+
     dict=[]
-    for i in range(len(res)):
-      simi = lev.ratio(sentence, res[i].src_sentence)
-      if simi>= min_similarity:
-        child={}
-        child.update({"src_sentence": res[i].src_sentence})
-        child.update({"tar_sentence": res[i].tar_sentence})
-        child.update({"translation_memory": res[i].translation_memory.name})
-        child.update({"similarity": round(simi, 2)})
-        dict.append(child)
+    if similarity_type == "bert":
+      model = ClinicalBertSimilarity(device='cpu', batch_size=10)
+      for i in range(len(res)):
+        simi = model.predict([(sentence, res[i].src_sentence)])[0]
+        if simi *0.2 >= min_similarity:
+          child={}
+          child.update({"src_sentence": res[i].src_sentence})
+          child.update({"tar_sentence": res[i].tar_sentence})
+          child.update({"translation_memory": res[i].translation_memory.name})
+          child.update({"similarity": (round(simi*0.2, 2)).astype(float)})
+          dict.append(child)
+    elif similarity_type == "lev":
+      for i in range(len(res)):
+        simi = lev.ratio(sentence, res[i].src_sentence)
+        if simi>= min_similarity:
+          child={}
+          child.update({"src_sentence": res[i].src_sentence})
+          child.update({"tar_sentence": res[i].tar_sentence})
+          child.update({"translation_memory": res[i].translation_memory.name})
+          child.update({"similarity": round(simi, 2)})
+          dict.append(child)
 
     dict = sorted(dict, key = lambda i: i['similarity'], reverse=True)
-
-    j = {"is_success":True, "err_msg": None}
+    j = {"is_success":True, "err_msg": None, "time": time.time() - start_time}
     j.update({"result":dict})
 
     return HttpResponse(json.dumps(j, ensure_ascii=False),

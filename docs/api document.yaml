@@ -1455,6 +1455,7 @@ definitions:
       - sentence
       - min_similarity
       - translation_memory_id
+      - similarity_type
     type: object
     properties:
       sentence:
@@ -1469,6 +1470,11 @@ definitions:
         title: id of translation memory need to find
         type: integer
         readOnly: true
+      similarity_type:
+        title: The way to measure similarity(lev=levenshtein, bert = BERT model)
+        description: Value is "lev" or "bert"
+        type: string
+        minLength: 1
 
   FileDownload:
     required:
