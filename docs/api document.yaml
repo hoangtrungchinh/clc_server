@@ -853,6 +853,47 @@ paths:
       tags:
         - tm_content
 
+  /config/:
+    get:
+      operationId: config_list
+      summary: "Get all config in a user"
+      responses:
+        "200":
+          description: "Success"
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Config"
+        $ref: "#/components/responses-bad-notfound"
+      tags:
+        - config
+
+  /config/patch/:
+    patch:
+      operationId: config_update
+      summary: "Update a config"
+      parameters:
+        - name: id
+          in: path
+          description: A unique integer value identifying this config.
+          required: true
+          schema:
+            type: integer
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/Config"
+      responses:
+        "200":
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Config"
+        $ref: "#/components/responses-bad-notfound"
+      tags:
+        - config
+
+
   /tm_content_import/:
     post:
       operationId: tm_content_import
@@ -1469,6 +1510,27 @@ definitions:
       translation_memory_id:
         title: id of translation memory need to find
         type: integer
+        readOnly: true
+      similarity_type:
+        title: The way to measure similarity(lev=levenshtein, bert = BERT model)
+        description: Value is "lev" or "bert"
+        type: string
+        minLength: 1
+
+  Config:
+    required:
+      - min_similarity_for_gloss
+      - min_similarity_for_tm
+      - similarity_type
+    type: object
+    properties:
+      min_similarity_for_gloss:
+        title: The min similarity accepted when query for glossary
+        type: float
+        readOnly: true
+      min_similarity_for_tm:
+        title: The min similarity accepted when query for tm
+        type: float
         readOnly: true
       similarity_type:
         title: The way to measure similarity(lev=levenshtein, bert = BERT model)

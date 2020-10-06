@@ -13,7 +13,8 @@ from .models import (
   Sentence,
   File,
   Corpus,
-  CorpusContent
+  CorpusContent,
+  Config
 )
 
 from rest_framework.validators import UniqueTogetherValidator
@@ -165,4 +166,9 @@ class CorpusContentSerializer(serializers.ModelSerializer):
   class Meta:
     model = CorpusContent
     fields = ("id", "corpus", "phrase")
+
+class ConfigSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Config
+    fields = ('id', 'user', 'min_similarity_for_gloss', 'min_similarity_for_tm', 'similarity_type')
 

@@ -13,6 +13,7 @@ from .models import (
   Sentence,
   Corpus,
   CorpusContent,
+  Config
 )
 
 from .serializers import (
@@ -34,6 +35,7 @@ from .serializers import (
   CorpusSerializer,
   CorpusContentSerializer,
   ProjectWithChildSerializer,
+  ConfigSerializer
 )
 
 
@@ -45,7 +47,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework.parsers import FileUploadParser
 from semantic_text_similarity.models import ClinicalBertSimilarity
-
+from rest_framework.decorators import action
 from django.contrib.auth.models import User
 
 from django.http import JsonResponse, HttpResponse, Http404
@@ -175,6 +177,23 @@ class SentenceViewSet(viewsets.ModelViewSet):
     if file_id is not None:
       queryset = queryset.filter(file_id=file_id)
     return queryset
+
+
+class ConfigViewSet(viewsets.ModelViewSet):
+  serializer_class = ConfigSerializer
+  queryset = Config.objects.all().order_by('id')
+
+  def get_queryset(self):
+    queryset = self.queryset.filter(user_id=self.request.user.id)
+    return queryset
+
+  @action(detail=False, methods=['patch'])
+  def patch(self, request, pk=None):
+    instance = self.queryset.get(user_id=self.request.user.id)
+    serializer = self.serializer_class(instance, data=request.data, partial=True)
+    serializer.is_valid(raise_exception=True)
+    serializer.save()
+    return Response(serializer.data)
 
 
 #TODO: fix bug post data to another user

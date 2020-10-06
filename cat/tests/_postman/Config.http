@@ -1,0 +1,27 @@
+
+GET http://127.0.0.1:8000/config/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+
+###
+PATCH http://127.0.0.1:8000/config/5/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+
+{
+  "min_similarity_for_gloss": 0.7,
+  "min_similarity_for_tm": 0.7,
+  "similarity_type": "bert"
+}
+
+###
+PATCH http://127.0.0.1:8000/config/patch/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+
+{
+  "min_similarity_for_gloss": 0.2,
+  "min_similarity_for_tm": 0.2,
+  "similarity_type": "lev"
+}
+

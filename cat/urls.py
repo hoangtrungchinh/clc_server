@@ -27,6 +27,7 @@ router.register(r'glossary_content', views.GlossaryContentViewSet, basename='glo
 router.register(r'project', views.ProjectViewSet, basename='project')
 router.register(r'sentence', views.SentenceViewSet, basename='sentence')
 router.register(r'corpus', views.CorpusViewSet, basename='corpus')
+router.register(r'config', views.ConfigViewSet, basename='config')
 router.register(r'corpus_content', views.CorpusContentViewSet, basename='corpus_content')
 
 
@@ -51,7 +52,6 @@ urlpatterns = [
   url(r'^sentence_commit/$', views.sentence_commit),
 
   url(r'^docs/', include_docs_urls(title='My API title', public=True)),
-
 
 
    #  url(r'^login/', views.login.as_view()),
