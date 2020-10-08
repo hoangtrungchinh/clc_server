@@ -16,11 +16,10 @@ services:
         environment:
             - discovery.type=single-node
 
-    # server:
-    #     image: chinhrb/clc_server:v6
-    #     ports:
-    #         - "8000:8000"
-    #     tty: true
-    #     depends_on:
-    #         - postgres
-    #         - elasticsearch
+    onmt:
+        build: ./onmt
+        ports:
+            - "5000:5000"        
+        command: python3 server.py --ip "0.0.0.0" --port 5000 --url_root "/translator" --config "./available_models/conf.json"
+
+# sudo docker run clc_onmt_1 /clc_onmt python3 server.py --ip "0.0.0.0" --port 5000 --url_root "/translator" --config "./available_models/conf.json"
