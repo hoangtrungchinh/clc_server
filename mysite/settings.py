@@ -27,7 +27,7 @@ MYMEMORY_KEY = '9d62199240694d4c2176'
 
 # DEBUG = False
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
-ALLOWED_HOSTS = ['103.90.228.121', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 DEBUG = True
 # ALLOWED_HOSTS = []
