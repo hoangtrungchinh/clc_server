@@ -342,6 +342,7 @@ def machine_translation_service(engine, src_lang, tar_lang, sentence):
 @api_view(['GET'])
 def machine_translate(request):
   try:
+    start_time = time.time()
     serializer = MachineTranslateSerializer(data=request.data)
     if serializer.is_valid():
       service=serializer.initial_data["service"]
@@ -355,7 +356,7 @@ def machine_translate(request):
         for future in concurrent.futures.as_completed(res):
           dict.append(future.result())
 
-      j = {"is_success":True, "err_msg": None}
+      j = {"is_success":True, "err_msg": None, "time": time.time() - start_time}
       j.update({"result":dict})
       return HttpResponse(json.dumps(j, ensure_ascii=False),
         content_type="application/json",status=status.HTTP_200_OK)
