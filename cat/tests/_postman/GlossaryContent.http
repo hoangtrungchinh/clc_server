@@ -57,6 +57,6 @@ curl -v -F "glossary_id=6" -F "glossary_file=@/home/chinh/Documents/en-vi-2-glos
 
 ###
 # Get glossary in by src
-GET http://127.0.0.1:8000/glossary_find_online_info/?query=virus HIV
+GET http://127.0.0.1:8000/glossary_find_online_info/?query=Gà tre&src_lang=vi
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI

@@ -371,11 +371,16 @@ def machine_translate(request):
 def glossary_find_online_info(request):
   try:
     S = requests.Session()
-    url = "https://en.wikipedia.org/w/api.php"
+    src_lang = request.query_params.get('src_lang', None)
+    url = "https://" + str(src_lang) + ".wikipedia.org/w/api.php"
 
     query = request.query_params.get('query', None)
-    if query is  None:
+    if query is None or src_lang is None:
       j = {"is_success":False, "err_msg":  "Failed to Search data: "+str(e)}
+      return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+    # import pdb; pdb.set_trace()
+    if src_lang not in settings.ARR_LANGUAGE:
+      j = {"is_success":False, "err_msg":  "Bad language"}
       return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
 
     params = {
@@ -667,6 +672,7 @@ def get_glossary_by_src_sentence(request):
           child.update({"tar_phrase": res[i].tar_phrase})
           child.update({"similarity": round(simi, 2)})
           child.update({"glossary": res[i].glossary.name})
+          child.update({"src_lang": res[i].glossary.src_lang})
           dict.append(child)
 
     dict = sorted(dict, key = lambda i: i['similarity'], reverse=True)
