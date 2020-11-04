@@ -59,9 +59,6 @@ INSTALLED_APPS = [
   'drf_yasg',
   'multiselectfield',
   'django_extensions'
-
-  # 'django_postgres_dropdb',
-  # 'django_postgres_createdb',
 ]
 
 SITE_ID=1
