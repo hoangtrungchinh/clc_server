@@ -1,13 +1,15 @@
 version: '3.3'
+
 services:
     postgres:
         image: postgres
         ports:
             - "5433:5432"
+        volumes:
+            - ./init.sql:/docker-entrypoint-initdb.d/init.sql
         environment:
-            POSTGRES_PASSWORD: postgres
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
             PGDATA: data_postgres
-
 
     elasticsearch:
         image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1
@@ -19,7 +21,19 @@ services:
     onmt:
         build: ./onmt
         ports:
-            - "5000:5000"        
+            - "5001:5000"
         command: python3 server.py --ip "0.0.0.0" --port 5000 --url_root "/translator" --config "./available_models/conf.json"
+
+    server:
+        build: ./server
+        ports:
+            - "8001:8000"
+        command: python3 manage.py runserver 0.0.0.0:8000
+
+    client:
+        build: ./client
+        ports:
+            - "7001:7000"
+        command: python3 manage.py runserver 0.0.0.0:7000
 
 # sudo docker run clc_onmt_1 /clc_onmt python3 server.py --ip "0.0.0.0" --port 5000 --url_root "/translator" --config "./available_models/conf.json"
