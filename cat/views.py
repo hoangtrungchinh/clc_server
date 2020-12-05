@@ -80,7 +80,7 @@ import ebooklib
 from ebooklib import epub
 from bs4 import BeautifulSoup
 
-# BertSimilarityModel = ClinicalBertSimilarity(device='cpu', batch_size=10)
+BertSimilarityModel = ClinicalBertSimilarity(device='cpu', batch_size=10)
 class TranslationMemoryViewSet(viewsets.ModelViewSet):
   queryset = TranslationMemory.objects.all().order_by('id')
   serializer_class = TranslationMemorySerializer
@@ -613,8 +613,7 @@ def get_tm_by_src_sentence(request):
     dict=[]
     if similarity_type == "bert":
       for i in range(len(res)):
-        # simi = BertSimilarityModel.predict([(sentence, res[i].src_sentence)])[0]
-        simi=""
+        simi = BertSimilarityModel.predict([(sentence, res[i].src_sentence)])[0]
         if simi *0.2 >= min_similarity:
           child={}
           child.update({"src_sentence": res[i].src_sentence})

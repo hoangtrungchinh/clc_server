@@ -1,19 +1,21 @@
-- B0: Tải và cài đặt Docker
+- Step 0: Download and install Docker
 
-- B1: Giải nén thư mục này, mở Ternimal hoặc PowerShell, cd vào thư mục "clc" này rồi chạy lệnh phía dưới (Lần đầu chạy khá lâu do phải tải file xuống, các lần sau sẽ rất nhanh):
-docker-compose up
+- Step 1: Unzip this folder, Open Ternimal/PowerShell, cd to "clc" path and run:
+docker-compose up --build
+Note: Just build for the first time, for the second time: run "docker-compose up"
 
-- B2: Sau khi hoàn tất, chạy lệnh sau:
+- Step 2: After completing, run:
 docker exec -d clc_server_1 git -C /clc_server pull ; docker exec -d clc_server_1 pip3 install -r /clc_server/requirements.txt ; docker exec -d clc_server_1 python3 /clc_server/manage.py runserver 0.0.0.0:8000
 
-- Ghi chú: có thể tự tạo user cho server, hoặc có thể dùng user mặc định phía dưới
-DEFAULT USER:
+- Accesss to sdfsdfsdf, login with account
 username: chinh
 pass: 123456789
 
 
 
-- Trong trường hợp Client kết nối sai IP với server: tiến hành như sau:
-1 - chạy lệnh "docker network inspect clc_default", tìm Gateway (VD là 172.19.0.1)
-2 - Vào .env, đổi "SERVER_URL=http://172.18.0.1:8000" thành "SERVER_URL=http://172.18.0.1:8000"
+- In case of Client cannot conect to Server for wrong IP (default 172.18.0.1):
+1 - Run "docker network inspect clc_default", Find Gateway (VD là 172.19.0.1)
+2 - Vào .env, đổi "SERVER_URL=http://172.18.0.1:8000" thành "SERVER_URL=http://172.19.0.1:8000"
 3 - Run "docker-compose build server"
+docker-compose up -d server
+
