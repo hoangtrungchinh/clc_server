@@ -10,3 +10,10 @@ docker exec -d clc_server_1 git -C /clc_server pull ; docker exec -d clc_server_
 DEFAULT USER:
 username: chinh
 pass: 123456789
+
+
+
+- Trong trường hợp Client kết nối sai IP với server: tiến hành như sau:
+1 - chạy lệnh "docker network inspect clc_default", tìm Gateway (VD là 172.19.0.1)
+2 - Vào .env, đổi "SERVER_URL=http://172.18.0.1:8000" thành "SERVER_URL=http://172.18.0.1:8000"
+3 - Run "docker-compose build server"

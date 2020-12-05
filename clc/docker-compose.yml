@@ -12,12 +12,14 @@ services:
             DATABASE_NAME: ${DATABASE_NAME}
             PGDATA: data_postgres
 
-    # elasticsearch:
-    #     image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1
-    #     ports:
-    #         - "9201:9200"
-    #     environment:
-    #         - discovery.type=single-node
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1
+        ports:
+            - "9201:9200"
+        environment:
+            - discovery.type=single-node
+        depends_on:
+            - postgres
 
     # onmt:
     #     build: ./onmt
@@ -25,11 +27,13 @@ services:
     #         - "5001:5000"
     #     command: python3 server.py --ip "0.0.0.0" --port 5000 --url_root "/translator" --config "./available_models/conf.json"
 
-    # server:
-    #     build: ./server
-    #     ports:
-    #         - "8001:8000"
-    #     command: python3 manage.py runserver 0.0.0.0:8000
+    server:
+        build: ./server
+        ports:
+            - "8001:8000"
+        command: python3 manage.py runserver 0.0.0.0:8000
+        depends_on:
+            - elasticsearch
 
     # client:
     #     build: ./client
@@ -38,5 +42,7 @@ services:
     #     ports:
     #         - "7001:7000"
     #     command: python3 manage.py runserver 0.0.0.0:7000
+    #     depends_on:
+    #         - server
 
 # sudo docker run clc_onmt_1 /clc_onmt python3 server.py --ip "0.0.0.0" --port 5000 --url_root "/translator" --config "./available_models/conf.json"
