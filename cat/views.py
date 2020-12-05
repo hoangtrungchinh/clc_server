@@ -80,7 +80,7 @@ import ebooklib
 from ebooklib import epub
 from bs4 import BeautifulSoup
 
-BertSimilarityModel = ClinicalBertSimilarity(device='cpu', batch_size=10)
+# BertSimilarityModel = ClinicalBertSimilarity(device='cpu', batch_size=10)
 class TranslationMemoryViewSet(viewsets.ModelViewSet):
   queryset = TranslationMemory.objects.all().order_by('id')
   serializer_class = TranslationMemorySerializer
@@ -328,12 +328,12 @@ def machine_translation_service(engine, src_lang, tar_lang, sentence):
       response = requests.post(settings.ONMT_URL, data=json.dumps([{"src": sentence, "id": settings.ONMT_MODEL_EN_VI}]), headers = {'Content-Type': 'application/json'})
     elif (src_lang == "vi" and tar_lang == "en"):
       response = requests.post(settings.ONMT_URL, data=json.dumps([{"src": sentence, "id": settings.ONMT_MODEL_VI_EN}]), headers = {'Content-Type': 'application/json'})
-      
+
     byte_str = response.content
     dict_str = byte_str.decode("UTF-8")
     data = json.loads(dict_str)
     child={}
-    
+
     child.update({"translation": data[0][0]["tgt"]})
     child.update({"source": "Open-NMT"})
     return child
@@ -613,7 +613,8 @@ def get_tm_by_src_sentence(request):
     dict=[]
     if similarity_type == "bert":
       for i in range(len(res)):
-        simi = BertSimilarityModel.predict([(sentence, res[i].src_sentence)])[0]
+        # simi = BertSimilarityModel.predict([(sentence, res[i].src_sentence)])[0]
+        simi=""
         if simi *0.2 >= min_similarity:
           child={}
           child.update({"src_sentence": res[i].src_sentence})
