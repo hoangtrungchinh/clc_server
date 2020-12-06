@@ -105,7 +105,7 @@ DATABASES = {
     'NAME': 'cat',
     'USER': 'postgres',
     'PASSWORD': os.environ['POSTGRES_PASSWORD'],
-    'HOST': '172.17.0.1',
+    'HOST': '127.0.0.1',
     'PORT': '5433',
   }
 }
@@ -216,13 +216,14 @@ REST_FRAMEWORK = {
   }
 }
 
-ONMT_HOST = os.environ['ONMT_HOST']
+ONMT_HOST = '127.0.0.1'
+# ONMT_HOST = os.environ['ONMT_HOST']
 ONMT_PORT = '5000'
 ONMT_URL = 'http://' + ONMT_HOST + ':' + ONMT_PORT + '/translator/translate'
 ONMT_MODEL_EN_VI = 0
 ONMT_MODEL_VI_EN = 1
 
-ELAS_HOST = '172.17.0.1'
+ELAS_HOST = '127.0.0.1'
 ELAS_PORT = '9201'
 ELAS_NUM_GLOSSARY_RETURN = '100'
 ELAS_NUM_TM_RETURN = '10'
