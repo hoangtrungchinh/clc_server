@@ -105,7 +105,7 @@ DATABASES = {
     'NAME': 'cat',
     'USER': 'postgres',
     'PASSWORD': os.environ['POSTGRES_PASSWORD'],
-    'HOST': '127.0.0.1',
+    'HOST': os.environ['DB_IP'],
     'PORT': '5432',
   }
 }
@@ -216,14 +216,15 @@ REST_FRAMEWORK = {
   }
 }
 
-ONMT_HOST = '127.0.0.1'
-# ONMT_HOST = os.environ['ONMT_HOST']
+# ONMT_IP = '127.0.0.1'
+ONMT_IP = os.environ['ONMT_IP']
+# ONMT_IP = os.environ['DB_GATEWAY']
 ONMT_PORT = '5000'
-ONMT_URL = 'http://' + ONMT_HOST + ':' + ONMT_PORT + '/translator/translate'
+ONMT_URL = 'http://' + ONMT_IP + ':' + ONMT_PORT + '/translator/translate'
 ONMT_MODEL_EN_VI = 0
 ONMT_MODEL_VI_EN = 1
 
-ELAS_HOST = '127.0.0.1'
+ELAS_IP = os.environ['ELAS_IP']
 ELAS_PORT = '9200'
 ELAS_NUM_GLOSSARY_RETURN = '100'
 ELAS_NUM_TM_RETURN = '10'
@@ -232,7 +233,7 @@ ELAS_NUM_CORPUS_RETURN = '100'
 ELASTICSEARCH_DSL = {
   'default': {
     # 'hosts': 'http://localhost:9200'
-    'hosts': ELAS_HOST+":"+ELAS_PORT
+    'hosts': ELAS_IP+":"+ELAS_PORT
   },
 }
 
