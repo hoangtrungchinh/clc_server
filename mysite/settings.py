@@ -105,8 +105,7 @@ DATABASES = {
     'NAME': 'cat',
     'USER': 'postgres',
     'PASSWORD': os.environ['POSTGRES_PASSWORD'],
-    'HOST': '172.21.0.1',
-    # 'HOST': os.environ['DB_IP'],
+    'HOST': os.environ['DB_IP'],
     'PORT': '5433',
   }
 }
