@@ -9,6 +9,8 @@ docker exec clc_server_1 git -C /clc_server pull ;
 docker exec clc_server_1 pip3 install -r /clc_server/requirements.txt ;
 docker exec clc_server_1 python3 /clc_server/manage.py makemigrations ;
 docker exec clc_server_1 python3 /clc_server/manage.py migrate ;
+docker exec clc_server_1 python3 /clc_server/manage.py createsuperuser ;
+{% comment %} docker exec clc_server_1 export ONMT_HOST=172.28.0.1 ; {% endcomment %}
 
 
 
