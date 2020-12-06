@@ -74,6 +74,8 @@ import ast
 import concurrent.futures
 import urllib.request
 from googletrans import Translator
+translator = Translator(service_urls=['translate.googleapis.com'])
+
 from django.db import transaction
 
 import ebooklib
@@ -316,7 +318,6 @@ def machine_translation_service(engine, src_lang, tar_lang, sentence):
     child.update({"source": "My Memory"})
     return child
   elif engine == "gt":
-    translator = Translator()
     res = translator.translate(sentence, src=src_lang, dest=tar_lang)
     child={}
     child.update({"translation": res.text})

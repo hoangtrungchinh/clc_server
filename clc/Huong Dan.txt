@@ -1,11 +1,16 @@
 - Step 0: Download and install Docker
 
 - Step 1: Unzip this folder, Open Ternimal/PowerShell, cd to "clc" path and run:
-docker-compose up --build
-Note: Just build for the first time, for the second time: run "docker-compose up"
+docker-compose up
 
 - Step 2: After completing, run:
 docker exec -d clc_server_1 git -C /clc_server pull ; docker exec -d clc_server_1 pip3 install -r /clc_server/requirements.txt ; docker exec -d clc_server_1 python3 /clc_server/manage.py runserver 0.0.0.0:8000
+docker exec clc_server_1 git -C /clc_server pull ;
+docker exec clc_server_1 pip3 install -r /clc_server/requirements.txt ;
+docker exec clc_server_1 python3 /clc_server/manage.py makemigrations ;
+docker exec clc_server_1 python3 /clc_server/manage.py migrate ;
+
+
 
 - Accesss to sdfsdfsdf, login with account
 username: chinh

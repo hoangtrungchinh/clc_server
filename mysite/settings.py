@@ -216,7 +216,7 @@ REST_FRAMEWORK = {
   }
 }
 
-ONMT_HOST = '0.0.0.0'
+ONMT_HOST = os.environ['ONMT_HOST']
 ONMT_PORT = '5000'
 ONMT_URL = 'http://' + ONMT_HOST + ':' + ONMT_PORT + '/translator/translate'
 ONMT_MODEL_EN_VI = 0
