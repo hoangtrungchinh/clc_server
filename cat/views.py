@@ -600,7 +600,7 @@ def get_tm_by_src_sentence(request):
     similarity_type=request.data["similarity_type"]
     sentence=request.data["sentence"]
     min_similarity=float(request.data["min_similarity"])
-    client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])
+    client = Elasticsearch([{'host':settings.ELAS_IP, 'port':settings.ELAS_PORT}])
     if "translation_memory_id" in request.data:
       translation_memory_id = request.data["translation_memory_id"]
       q = Q('bool', must=[Q('match', src_sentence=sentence), Q('terms', translation_memory__id=translation_memory_id)])
@@ -651,7 +651,7 @@ def get_glossary_by_src_sentence(request):
     phrase=request.data["sentence"]
     min_similarity=float(request.data["min_similarity"])
 
-    client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])
+    client = Elasticsearch([{'host':settings.ELAS_IP, 'port':settings.ELAS_PORT}])
 
     if "glossary_id" in request.data:
       glossary_id = request.data["glossary_id"]
@@ -693,7 +693,7 @@ def get_corpus_by_phrase(request):
   try:
     phrase=request.data["phrase"]
 
-    client = Elasticsearch([{'host':settings.ELAS_HOST, 'port':settings.ELAS_PORT}])
+    client = Elasticsearch([{'host':settings.ELAS_IP, 'port':settings.ELAS_PORT}])
     if "user_id" in request.data:
       user_id = request.data["user_id"]
       q = Q('bool', must=[Q('match_phrase', phrase=phrase), Q('match', corpus__user=user_id)])
