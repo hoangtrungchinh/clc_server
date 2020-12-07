@@ -106,7 +106,7 @@ DATABASES = {
     'USER': 'postgres',
     'PASSWORD': os.environ['POSTGRES_PASSWORD'],
     'HOST': os.environ['DB_IP'],
-    'PORT': '5433',
+    'PORT': '5432',
   }
 }
 
