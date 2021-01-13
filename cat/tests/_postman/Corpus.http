@@ -1,17 +1,17 @@
 ###
 GET http://127.0.0.1:8000/corpus/?user_id=1
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 ###
 GET http://127.0.0.1:8000/corpus/4
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
-### SAMPLE 
+### SAMPLE
 POST http://127.0.0.1:8000/corpus/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
   "name": "Uncategory 10",
@@ -23,7 +23,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 PUT http://127.0.0.1:8000/corpus/16/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
   "name": "Uncategory 10 updated",
@@ -35,5 +35,5 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 DELETE http://127.0.0.1:8000/corpus/16/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 ###

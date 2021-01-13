@@ -106,7 +106,7 @@ DATABASES = {
     'USER': 'postgres',
     'PASSWORD': os.environ['POSTGRES_PASSWORD'],
     'HOST': os.environ['DB_IP'],
-    'PORT': '5432',
+    'PORT': os.environ['DB_PORT'],
   }
 }
 
@@ -225,7 +225,7 @@ ONMT_MODEL_EN_VI = 0
 ONMT_MODEL_VI_EN = 1
 
 ELAS_IP = os.environ['ELAS_IP']
-ELAS_PORT = '9200'
+ELAS_PORT = os.environ['ELAS_PORT']
 ELAS_NUM_GLOSSARY_RETURN = '100'
 ELAS_NUM_TM_RETURN = '10'
 ELAS_NUM_CORPUS_RETURN = '100'

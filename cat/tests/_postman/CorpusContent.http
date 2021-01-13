@@ -1,17 +1,17 @@
 ###
 GET http://127.0.0.1:8000/corpus_content/?corpus_id=4
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 ###
 GET http://127.0.0.1:8000/corpus_content/7819
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 
 ###
 POST http://127.0.0.1:8000/corpus_content/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
     "phrase": "Tình yêu trong mắt em",
@@ -21,7 +21,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 PUT http://127.0.0.1:8000/corpus_content/7819/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
     "phrase": "Tình yêu trong mắt anh",
@@ -31,13 +31,13 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 DELETE http://127.0.0.1:8000/corpus_content/7819/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 ###
 
 # Get corpus in by phrase
 POST http://127.0.0.1:8000/get_corpus_by_phrase/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
   "phrase": "love",
@@ -48,7 +48,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 # Get corpus in by phrase
 POST http://127.0.0.1:8000/get_corpus_by_phrase/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
   "phrase": "september"
@@ -57,19 +57,19 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 
 ###
 
-curl -v -F "language=vi" -F  "user=1" -F "description=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_en.txt" http://127.0.0.1:8000/import_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
+curl -v -F "language=vi" -F  "user=1" -F "description=1" -F "file=@/home/chinh/clc_server/cat/tests/data/_ex_en.txt" http://127.0.0.1:8000/import_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ"
 
 ###
 
-curl -v -F "corpus_id=1" -F "language=en" -F "corpus_file=@/home/lw/clc_server/cat/tests/data/_ex_en.txt" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
+curl -v -F "corpus_id=1" -F "language=en" -F "corpus_file=@/home/lw/clc_server/cat/tests/data/_ex_en.txt" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ"
 ###
 
-curl -v -F "corpus_id=2" -F "language=vi" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/epub/vi/Chàng lái buôn thành Venise - William Shakespeare.epub" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
+curl -v -F "corpus_id=2" -F "language=vi" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/epub/vi/Chàng lái buôn thành Venise - William Shakespeare.epub" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ"
 ###
 
-curl -v -F "corpus_id=1" -F "language=en" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/epub/en/A Lover_s Complaint (Dodo Press - William Shakespeare.epub" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
+curl -v -F "corpus_id=1" -F "language=en" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/epub/en/A Lover_s Complaint (Dodo Press - William Shakespeare.epub" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ"
 
-curl -v -F "corpus_id=1" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/txt/en/file 1.txt" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI"
+curl -v -F "corpus_id=1" -F "corpus_file=@/home/chinh/clc_server/cat/tests/data/txt/en/file 1.txt" http://127.0.0.1:8000/import_exist_corpus/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ"
 
 
 ###
@@ -86,7 +86,7 @@ curl --request GET
 # Get corpus in by phrase
 POST http://127.0.0.1:8000/get_corpus_by_phrase/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
   "phrase": "september"

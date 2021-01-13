@@ -73,8 +73,8 @@ import requests
 import ast
 import concurrent.futures
 import urllib.request
-from googletrans import Translator
-translator = Translator(service_urls=['translate.googleapis.com'])
+from pygoogletranslation import Translator
+translator = Translator()
 
 from django.db import transaction
 
@@ -377,7 +377,7 @@ def glossary_find_online_info(request):
 
     query = request.query_params.get('query', None)
     if query is None or src_lang is None:
-      j = {"is_success":False, "err_msg":  "Failed to Search data: "+str(e)}
+      j = {"is_success":False, "err_msg":  "Src language or query is none "}
       return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
     # import pdb; pdb.set_trace()
     if src_lang not in settings.ARR_LANGUAGE:

@@ -1,17 +1,17 @@
 ###
 GET http://127.0.0.1:8000/glossary_with_child/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 ###
 GET http://127.0.0.1:8000/glossary/?user_id=1
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 ###
 GET http://127.0.0.1:8000/glossary_with_child/6
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 ###########################################################################################################################
 API: Create new Glossary
@@ -24,10 +24,10 @@ DESCRIPTION:
   "user": "user_id",
   "gloss_type": [glosssary_type_id]
 
-### SAMPLE 
+### SAMPLE
 POST http://127.0.0.1:8000/glossary/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
   "name": "Uncategory 10",
@@ -41,7 +41,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 PUT http://127.0.0.1:8000/glossary/2/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
   "name": "khxhnv",
@@ -55,5 +55,5 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 DELETE http://127.0.0.1:8000/glossary/3/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 ###

@@ -1,17 +1,17 @@
 ###
 GET http://127.0.0.1:8000/tm_content/?tm_id=10
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 ###
 GET http://127.0.0.1:8000/tm_content/19
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 
 ###
 POST http://127.0.0.1:8000/tm_content/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
     "src_sentence": "Love in your eyes",
@@ -22,7 +22,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 PUT http://127.0.0.1:8000/tm_content/19/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
     "src_sentence": "Love in your eyes 3",
@@ -33,12 +33,12 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 DELETE http://127.0.0.1:8000/tm_content/19/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 ###
 # sear by tar
 GET http://127.0.0.1:8000/get_tm_by_src/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
     "src": "happy"
@@ -49,7 +49,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 # Get TM in by src
 POST http://127.0.0.1:8000/get_tm_by_src_sentence/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
   "sentence": "I am listening to the radio",
@@ -62,7 +62,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 # Get TM in by src
 POST http://127.0.0.1:8000/get_tm_by_src_sentence/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
 
 {
   "sentence": "I am listening to the radio",
@@ -74,4 +74,4 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 # lev or bert
 # Upload a english file
 ###
-curl -v -F "tm_id=3" -F "tm_file=@/home/chinh/Documents/en-vi-2-sentences.xlsx" http://127.0.0.1:8000/tm_content_import/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA5MzExNjI5LCJqdGkiOiI4ZTExODMzNTBkMWU0YzA2YWUwYjAyNzIzMThjNTgxYSIsInVzZXJfaWQiOjF9.2jLhEoRRqFQU5gSMcQLKRfNFqvIG3kzSMs9_nRRwRFI" 
+curl -v -F "tm_id=3" -F "tm_file=@/home/chinh/Documents/en-vi-2-sentences.xlsx" http://127.0.0.1:8000/tm_content_import/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ"
