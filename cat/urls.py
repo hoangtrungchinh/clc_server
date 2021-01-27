@@ -50,6 +50,7 @@ urlpatterns = [
   url(r'^import_exist_corpus/$', views.import_exist_corpus),
   url(r'^glossary_find_online_info/$', views.glossary_find_online_info),
   url(r'^sentence_commit/$', views.sentence_commit),
+  url(r'^translation_memory_download/$', views.translation_memory_download),
 
   url(r'^docs/', include_docs_urls(title='My API title', public=True)),
 

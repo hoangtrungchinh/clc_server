@@ -75,3 +75,14 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiY
 # Upload a english file
 ###
 curl -v -F "tm_id=3" -F "tm_file=@/home/chinh/Documents/en-vi-2-sentences.xlsx" http://127.0.0.1:8000/tm_content_import/ -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ"
+
+
+###
+# Get TM in by src
+POST http://127.0.0.1:8000/translation_memory_download/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE5MjE4NDUxLCJqdGkiOiI2MWMyYzdkZjY2ZDA0ZWMyYWM2NmViODJjYTY3NjA3NiIsInVzZXJfaWQiOjF9.hrKh6HylSmcG-kFDOvDcC-1rfRTErhpOUZG2-xNbNGQ
+
+{
+  "translation_memory_id": 2
+}

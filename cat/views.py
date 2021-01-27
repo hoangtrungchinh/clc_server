@@ -525,32 +525,66 @@ def file_download(request):
     j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
     return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['GET'])
-def tm_download(request):
+import xlwt
+
+@api_view(['POST'])
+def translation_memory_download(request):
   try:
-    f = File.objects.get(id=request.data["file_id"], project__user__id = request.user.id)
-    path = f.file.path
+    start_time = time.time()
 
-    with open(path, 'r') as file :
-      filedata = file.read()
+    translation_memory_id=request.data["translation_memory_id"]
+    query = TMContent.objects.filter(translation_memory__id=translation_memory_id).order_by('id')
+    # queryset = TMContent.objects.filter(translation_memory__id=translation_memory_id).order_by('id')
 
-    for s in f.sentence_set.all():
-      filedata = filedata.replace(s.src_str, s.tar_str, 1)
+    dict = ""
 
-    new_path = os.path.splitext(path)[0]+" (export)" + os.path.splitext(path)[1]
+    response = HttpResponse(content_type='application/ms-excel')
+    response['Content-Disposition'] = 'attachment; filename="users.xls"'
 
-    # with open(new_path, 'w') as file:
-    #     file.write(filedata)
-    # print(os.path.basename(new_path))
+    wb = xlwt.Workbook(encoding='utf-8')
+    ws = wb.add_sheet('Users')
 
-    response = HttpResponse(filedata, content_type="text/plain")
-    response['Content-Disposition'] = 'attachment; filename={0}'.format(os.path.basename(new_path))
+    # Sheet header, first row
+    row_num = 0
+
+    font_style = xlwt.XFStyle()
+    font_style.font.bold = True
+
+    # Sheet body, remaining rows
+    font_style = xlwt.XFStyle()
+
+    # import pdb; pdb.set_trace()
+    for i in range(len(query)):
+      ws.write(i+1, 1, query[i].src_sentence, font_style)
+      ws.write(i+1, 2, query[i].tar_sentence, font_style)
+
+    wb.save(response)
     return response
-  except File.DoesNotExist:
-    raise Http404
+
+
+    # for i in range(len(res)):
+    #   child={}
+    #   child.update({"src_sentence": res[i].src_sentence})
+    #   child.update({"tar_sentence": res[i].tar_sentence})
+    #   child.update({"translation_memory": res[i].translation_memory.name})
+    #   dict.append(child)
+
+
+    dict = sorted(dict, key = lambda i: i['similarity'], reverse=True)
+    j = {"is_success":True, "err_msg": None, "time": time.time() - start_time}
+    j.update({"result":dict})
+
+    return HttpResponse(json.dumps(j, ensure_ascii=False),
+      content_type="application/json",status=status.HTTP_200_OK)
+
   except Exception as e:
     j = {"is_success":False, "err_msg":  "Failed to Get data: "+str(e)}
-    return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_400_BAD_REQUEST)
+    return HttpResponse(json.dumps(j, ensure_ascii=False), content_type="application/json",status=status.HTTP_200_OK)
+
+
+
+
+
 
 # TODO: write test for api sentence_commit
 @api_view(['PUT'])
